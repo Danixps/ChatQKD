@@ -1,0 +1,8 @@
+click
+qiskit-aer
+qiskit
+flask
+dask
+typer
+blinker
+numpy
