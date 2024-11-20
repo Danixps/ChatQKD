@@ -52,7 +52,24 @@ def start_sender():
         #como enviar algo a un sockety
         
         conn.sendall(serialized_circuits)
-    
+        conn.shutdown(socket.SHUT_WR)
+        
+        
+        print("Cicuito de bits de bob recibidos")
+        data = b""
+        while True:
+            packet = conn.recv(4096)
+            if not packet:
+                break
+            data += packet
+        
+        # Deserializar los circuitos
+        received_circuits = pickle.loads(data)
+        bob_results = []
+        print ("Circuitos recibidos de Bob: ", received_circuits)
+
+
+        
         
             
         

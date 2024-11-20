@@ -1,4 +1,7 @@
 import socket
+
+
+import socket
 import numpy as np
 import pickle
 from qiskit import QuantumCircuit, transpile
@@ -48,9 +51,10 @@ def start_reciever():
         # enviar los resultados de bob a alice
         serialized_results = pickle.dumps(bob_results)
         
-        client_socket.sendall(serialized_results)
+        #client_socket.sendall(serialized_results)
       
         print("Resultados enviados a Alice")
+        client_socket.sendall(serialized_results)
 
 
     except Exception as e:
