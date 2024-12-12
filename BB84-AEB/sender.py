@@ -12,14 +12,16 @@ def start_sender():
 
     try:
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Permite reutilizar el socket
         server_socket.bind(('localhost', 65458))
+
         server_socket.listen(1)
         print("Servidor en espera de conexión...")
 
         #programa de enviar qbits BB84
         # Convertir cada carácter a su valor ASCII y luego a binario
-        alice_bits = np.random.randint(2, size=20)  # Generar 128 bits aleatorios
-        n_bits = 20
+        alice_bits = np.random.randint(2, size=30)  # Generar 128 bits aleatorios
+        n_bits = 30
         # alice genera aleatoriamente las bases para cada bit (elige entre 'Z' o 'X')
         alice_bases = np.random.choice(['Z', 'X'], size=n_bits)
         print ("Alice's bits: ", alice_bits)
@@ -136,11 +138,24 @@ def start_sender():
 
         
         
-            
+        conn.close()
+        server_socket.close()
         
         
     except KeyboardInterrupt:
         print("Servidor interrumpido por el usuario")
+    
+        if conn:
+            conn.close()
+        server_socket.close()
+        server_socket1.close()
+    except KeyboardInterrupt:
+        print("Servidor interrumpido por el usuario")
+    
+        if conn:
+            conn.close()
+        server_socket.close()
+        server_socket1.close()
     finally:
         if conn:
             conn.close()

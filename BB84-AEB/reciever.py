@@ -16,7 +16,6 @@ def start_receiver():
             print("No se recibió la longitud de los datos de Eva")
             return
         data_length = struct.unpack('!I', data_length)[0]
-        print("size", data_length)
 
         # Recibir los circuitos de Eva
         data = b""
@@ -28,28 +27,8 @@ def start_receiver():
 
         # Deserializar los circuitos
         received_circuits = pickle.loads(data)
-        bob_results = received_circuits
         
-
-        # # Recibir la longitud de las bases de Eva
-        # data_length = client_socket.recv(4)
-        # if not data_length:
-        #     print("No se recibió la longitud de las bases de Eva")
-        #     return
-        # data_length = struct.unpack('!I', data_length)[0]
-        # print("size", data_length)
-
-        # # Recibir las bases de Eva
-        # data = b""
-        # while len(data) < data_length:
-        #     packet = client_socket.recv(4096)
-        #     if not packet:
-        #         break
-        #     data += packet
-
-        # # Deserializar las bases
-        # bob_bases = pickle.loads(data)
-        # print("Qbits recibidos:", bob_bases)
+        
 
         # Generar bases aleatorias del mismo tamaño que los qubits recibidos
         num_qubits = len(received_circuits)
@@ -92,13 +71,14 @@ def start_receiver():
         client_socket1.sendall(data_length)
         client_socket1.sendall(serialized_circuits)
 
-        client_socket1.close()
+        
         
 
     except Exception as e:
         print(f"Error: {e}")
+
     finally:
-        
+    
         client_socket.close()
         client_socket1.close()
         print("Conexión cerrada")

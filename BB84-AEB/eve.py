@@ -59,6 +59,7 @@ def start_reciever():
         print("Eva's bits results:", eva_bits)
         
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Permite reutilizar el socket
         server_socket.bind(('localhost', 65431))
         server_socket.listen(1)
         conn, addr = server_socket.accept()
@@ -103,11 +104,19 @@ def start_reciever():
         conn.sendall(serialized_bases_eva)
         print("Bases de Eva enviadas a Bob")
 
-
-       
+        
+        conn.close()
+        server_socket.close()
+        client_socket.close()
     except Exception as e:
         
         print(f"Error: {e}")
+        if conn:
+            conn.close()
+        server_socket.close()
+        client_socket.close()
+    except KeyboardInterrupt:
+   
         if conn:
             conn.close()
         server_socket.close()
