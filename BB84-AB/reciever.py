@@ -1,6 +1,6 @@
 import socket
 
-
+import struct
 import socket
 import numpy as np
 import pickle
@@ -10,17 +10,25 @@ from qiskit.visualization import plot_histogram
 
 def start_reciever():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client_socket.connect(('localhost', 65451))
+    client_socket.connect(('localhost', 65452))
     
     try:
+
         # Recibir los datos serializados
+        data_length = client_socket.recv(4)
+        if not data_length:
+            print("No se recibió la longitud de los datos de Alice")
+            return
+        data_length = struct.unpack('!I', data_length)[0]
+
+    # Recibir los circuitos de Alice
         data = b""
-        while True:
+        while len(data) < data_length:
             packet = client_socket.recv(4096)
             if not packet:
                 break
             data += packet
-        
+
         # Deserializar los circuitos
         received_circuits = pickle.loads(data)
         bob_results = []
@@ -50,13 +58,16 @@ def start_reciever():
         print("Bob's bits results:", bob_results)
         # enviar los resultados de bob a alice
         serialized_results = pickle.dumps(bob_results)
+        serialized_bases_bob = pickle.dumps(bob_bases)
+  
         
-        #client_socket.sendall(serialized_results)
-      
+    
+        print ("Enviando bases a Alices")
+        client_socket.sendall(serialized_bases_bob)
         print("Resultados enviados a Alice")
         client_socket.sendall(serialized_results)
 
-
+       
     except Exception as e:
         print(f"Error: {e}")
     finally:
