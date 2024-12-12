@@ -8,9 +8,11 @@ import random
 
 def start_sender():
     conn = None
+    conn1 = None
+
     try:
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket.bind(('localhost', 65454))
+        server_socket.bind(('localhost', 65458))
         server_socket.listen(1)
         print("Servidor en espera de conexión...")
 
@@ -58,25 +60,52 @@ def start_sender():
         #como enviar algo a un sockety
         
         conn.sendall(serialized_circuits)
- 
-        data = conn.recv(4096)
-        bases_bob = pickle.loads(data)
-
-        print("Base de Bob:", bases_bob)
         
-        print("Cicuito de bits de bob recibidos")
+ 
 
-        matching_bases = alice_bases == bases_bob  # Crear un array booleano de coincidencias
+    
+        server_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket1.bind(('localhost', 65489))
+        server_socket1.listen(1)
+        conn1, addr1 = server_socket1.accept()
+        print(f"Conectado con {addr1}")
+        # Recibir los circuitos de Eva
+
+        data_length = conn1.recv(4)
+        data_length = struct.unpack('!I', data_length)[0]
+        data = b""
+        print("data_length", data_length)
+        while len(data) < data_length:
+            packet = conn1.recv(4096)
+            if not packet:
+                break
+            data += packet
+        # Deserializar los circuitos
+        received_circuits_bases = pickle.loads(data)
+        bob_bases = received_circuits_bases
+        print("Bases de Bob:", bob_bases)
+
+        data_length1= conn1.recv(4)
+        data_length1= struct.unpack('!I', data_length1)[0]
+        data = b""
+        while len(data) < data_length1:
+            packet = conn1.recv(4096)
+            if not packet:
+                break
+            data += packet
+        # Deserializar los circuitos
+        received_circuits = pickle.loads(data)
+        bob_results_bits = received_circuits
+        print("Circuito de Bob:", bob_results_bits)
+
+
+
+        matching_bases = alice_bases == bob_bases # Crear un array booleano de coincidencias
 
 
         print ("Coincidencia en las bases:", matching_bases)
-        data = conn.recv(4096)
-
-        bob_results = pickle.loads(data)
-  
-    
-        print ("Circuitos recibidos de Bob: ", bob_results)
-        bob_key = np.array(bob_results)[matching_bases]
+ 
+        bob_key = np.array(bob_results_bits)[matching_bases]
         
         alice_key = alice_bits[matching_bases]  # Seleccionar los bits de Alice donde las bases coinciden
 
@@ -115,6 +144,8 @@ def start_sender():
     finally:
         if conn:
             conn.close()
+        if conn1:
+            conn1.close()
         server_socket.close()
         print("Socket cerrado")
         

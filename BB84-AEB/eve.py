@@ -10,7 +10,7 @@ from qiskit.visualization import plot_histogram
 
 def start_reciever():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client_socket.connect(('localhost', 65454))
+    client_socket.connect(('localhost', 65458))
  
     conn = None
     try:
@@ -59,7 +59,7 @@ def start_reciever():
         print("Eva's bits results:", eva_bits)
         
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket.bind(('localhost', 65457))
+        server_socket.bind(('localhost', 65431))
         server_socket.listen(1)
         conn, addr = server_socket.accept()
         # enviar los resultados de bob a alice
@@ -86,27 +86,38 @@ def start_reciever():
             circuits_eva.append(qc)
             circuits = circuits_eva
     
-        print ("Enviando bases a Alices")
-        data_length = struct.pack('!I', len(circuits))
+         # Enviar los resultados de Eva a Bob
+        serialized_results = pickle.dumps(circuits)
+        serialized_bases_eva = pickle.dumps(eva_bases)
+        
+        # Enviar la longitud de los datos primero
+        data_length = struct.pack('!I', len(serialized_results))
         conn.sendall(data_length)
-    
-        data_length1 = struct.pack('!I', circuits))
-        conn.sendall(data_length1)
+        # Enviar los resultados de Eva a Bob
+        conn.sendall(serialized_results)
+        print("Resultados de Eva enviados a Bob")
 
+        # Enviar las bases de Eva a Bob
+        data_length = struct.pack('!I', len(serialized_bases_eva))
+        conn.sendall(data_length)
+        conn.sendall(serialized_bases_eva)
         print("Bases de Eva enviadas a Bob")
 
-        conn.close()
-        server_socket.close()
-        client_socket.close()
 
        
     except Exception as e:
         
         print(f"Error: {e}")
-        conn.close()
+        if conn:
+            conn.close()
         server_socket.close()
         client_socket.close()
-
+    finally:
+        if conn:
+            conn.close()
+        client_socket.close()
+        server_socket.close()
+        print("Socket cerrado")
 
 
 # Ejecutar el receptor
