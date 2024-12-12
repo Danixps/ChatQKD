@@ -98,7 +98,7 @@ def start_sender():
         # Deserializar los circuitos
         received_circuits = pickle.loads(data)
         bob_results_bits = received_circuits
-        print("Circuito de Bob:", bob_results_bits)
+        print("Bits resultantes de Bob:", bob_results_bits)
 
 
 
@@ -112,26 +112,29 @@ def start_sender():
         alice_key = alice_bits[matching_bases]  # Seleccionar los bits de Alice donde las bases coinciden
 
 
-        alice_key_part1 = alice_key[:len(alice_key)//2]
-        bob_key_part1 = bob_key[:len(bob_key)//2]
-        bob_key_part2 = bob_key[len(bob_key)//2:]
-        
-        print ("Alice's key part 1:", alice_key_part1)
-        print ("Bob's key part 1  :", bob_key_part1)
+            # Elegir una cantidad aleatoria de bits, mínimo 3 bits
+        min_bits = 3
+        num_bits = random.randint(min_bits, len(alice_key)-1)  # Número de bits aleatorios
 
 
-       # Validación de la clave
-        if (alice_key_part1 == bob_key_part1).all():
+
+        # Crear subconjuntos de bits
+        alice_subkey = alice_key[:num_bits]
+        bob_subkey = bob_key[:num_bits]
+        bob_subkey2 = bob_key[num_bits:]
+
+        # Comparar los subconjuntos
+        if (alice_subkey == bob_subkey).all():
             print("\nThe key exchange was successful!")
-            bob_result_key = np.concatenate((bob_key_part1, bob_key_part2))
-            print("The complete key is:", bob_result_key)
+            print("Alice's subkey:", alice_subkey)
+            print("Bob's subkey: ", bob_subkey)
         else:
-            print("\nThere is someone who tried to intercept the key!")
+            print("\nThe keys do not match. Potential interception detected.")
+            print("Alice's subkey: ", alice_subkey)
+            print("Bob's subkey:   ", bob_subkey)
 
-
-
-        
-        
+                
+                
       
     
 
