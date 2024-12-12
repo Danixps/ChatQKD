@@ -113,7 +113,7 @@ def start_sender():
 
 
             # Elegir una cantidad aleatoria de bits, mínimo 3 bits
-        min_bits = 3
+        min_bits = 1
         num_bits = random.randint(min_bits, len(alice_key)-1)  # Número de bits aleatorios
 
 
@@ -128,6 +128,8 @@ def start_sender():
             print("\nThe key exchange was successful!")
             print("Alice's subkey:", alice_subkey)
             print("Bob's subkey: ", bob_subkey)
+            result_key = np.concatenate(( bob_subkey, bob_subkey2))
+            print("The complete key is:", result_key)
         else:
             print("\nThe keys do not match. Potential interception detected.")
             print("Alice's subkey: ", alice_subkey)
