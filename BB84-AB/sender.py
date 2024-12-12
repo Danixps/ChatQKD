@@ -10,14 +10,15 @@ def start_sender():
     conn = None
     try:
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket.bind(('localhost', 65452))
+        server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Permite reutilizar el socket
+        server_socket.bind(('localhost', 65450))
         server_socket.listen(1)
         print("Servidor en espera de conexión...")
 
         #programa de enviar qbits BB84
         # Convertir cada carácter a su valor ASCII y luego a binario
-        alice_bits = np.random.randint(2, size=20)  # Generar 128 bits aleatorios
-        n_bits = 20
+        alice_bits = np.random.randint(2, size=30)  # Generar 128 bits aleatorios
+        n_bits = 30
         # alice genera aleatoriamente las bases para cada bit (elige entre 'Z' o 'X')
         alice_bases = np.random.choice(['Z', 'X'], size=n_bits)
         print ("Alice's bits: ", alice_bits)
@@ -80,10 +81,17 @@ def start_sender():
         
         alice_key = alice_bits[matching_bases]  # Seleccionar los bits de Alice donde las bases coinciden
 
+     # Elegir una cantidad aleatoria de bits, mínimo 3 bits
+        min_bits = 1
+        num_bits = random.randint(min_bits, len(alice_key)-1)  # Número de bits aleatorios
 
-        alice_key_part1 = alice_key[:len(alice_key)//2]
-        bob_key_part1 = bob_key[:len(bob_key)//2]
-        bob_key_part2 = bob_key[len(bob_key)//2:]
+
+
+        # Crear subconjuntos de bits
+        alice_key_part1 = alice_key[:num_bits]
+        bob_key_part1 = bob_key[:num_bits]
+        bob_key_part2 = bob_key[num_bits:]
+
         
         print ("Alice's key part 1:", alice_key_part1)
         print ("Bob's key part 1  :", bob_key_part1)
