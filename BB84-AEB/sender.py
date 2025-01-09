@@ -8,13 +8,14 @@ from qiskit import QuantumCircuit
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 import hashlib
-
+import hashlib
+import tkinter as tk
+from tkinter import messagebox
 # Función que intenta enlazar un socket
 def bind_socket(server_socket, address, event, stop_event, conn_list):
     try:
         server_socket.bind(address)
         server_socket.listen(1)
-        print(f"Esperando conexión en {address}...")
 
         # Esperar conexión si el evento global no está activado
         while not event.is_set():
@@ -35,22 +36,13 @@ def bind_socket(server_socket, address, event, stop_event, conn_list):
         server_socket.close()
 
 
-def decrypt_message(encrypted_message, aes_key):
-    # Extraer el IV (primeros 16 bytes)
-    iv = encrypted_message[:AES.block_size]
-    ciphertext = encrypted_message[AES.block_size:]  # El resto es el mensaje cifrado
-    
-    # Crear el objeto de descifrado con el IV
-    cipher = AES.new(aes_key, AES.MODE_CBC, iv)
-    
-    # Intentar descifrar el mensaje
-    try:
-        plaintext = unpad(cipher.decrypt(ciphertext), AES.block_size)  # Eliminar padding
-    except (ValueError, KeyError) as e:
-        print("Error en el descifrado:", e)  # Imprimir error en caso de fallo
-        return None
-    
-    return plaintext.decode()  # Decodificar el mensaje descifrado
+def decrypt_message(encrypted_message, aes_key, tag, nonce):
+    cipher_dec = AES.new(aes_key, AES.MODE_GCM, nonce=nonce)
+    plaintext_dec = cipher_dec.decrypt_and_verify(encrypted_message, tag)
+
+    # Mostrar el mensaje descifrado
+    return plaintext_dec.decode()
+
 # Función para derivar una clave AES a partir de la clave compartida
 def derive_aes_key(shared_key):
     # Derivamos una clave de 16 bytes para AES-128
@@ -60,13 +52,14 @@ def derive_aes_key(shared_key):
 # Función para cifrar el mensaje con AES
 # Función de Alice para cifrar el mensaje
 def encrypt_message(message, aes_key):
-    # Crear un cipher con un IV aleatorio
-    cipher = AES.new(aes_key, AES.MODE_CBC)
-    # Asegurarse de que el mensaje está correctamente acolchonado
-    ciphertext = cipher.encrypt(pad(message.encode(), AES.block_size))
-    # Concatenar el IV con el mensaje cifrado
-    
-    return cipher.iv + ciphertext
+    from Crypto.Cipher import AES
+    from Crypto.Random import get_random_bytes
+    nonce = get_random_bytes(12)  # Tamaño recomendado para GCM
+
+    # Cifrado
+    cipher = AES.new(aes_key, AES.MODE_GCM, nonce=nonce)
+    ciphertext, tag = cipher.encrypt_and_digest(message)
+    return [ciphertext, tag, nonce]
 
 
 def start_sender():
@@ -74,6 +67,7 @@ def start_sender():
     conn1 = None
     connclose = None
     try:
+        print(f"Esperando conexión...")
         # Crear eventos para coordinar hilos
         connection_event = threading.Event()
         stop_event = threading.Event()
@@ -107,13 +101,13 @@ def start_sender():
         print(f"Conexión establecida exitosamente con: {conn.getpeername()}")
 
         # Simulación del envío de bits BB84
-        alice_bits = np.random.randint(2, size=30)  # Generar 30 bits aleatorios
-        alice_bases = np.random.choice(['Z', 'X'], size=30)  # Bases aleatorias para cada bit
+        alice_bits = np.random.randint(2, size=50)  # Generar 30 bits aleatorios
+        alice_bases = np.random.choice(['Z', 'X'], size=50)  # Bases aleatorias para cada bit
         print("Alice's bits: ", alice_bits)
         print("Alice's bases: ", alice_bases)
 
         circuits = []
-        for i in range(30):
+        for i in range(50):
             qc = QuantumCircuit(1, 1)
             if alice_bits[i] == 1:
                 qc.x(0)
@@ -173,51 +167,101 @@ def start_sender():
 
 
 
-        # Crear subconjuntos de bits
-        alice_subkey = alice_key[:num_bits]
-        bob_subkey = bob_key[:num_bits]
-        bob_subkey2 = bob_key[num_bits:]
+        # Asegurarnos de que num_bits no sea mayor que la longitud de las claves
+        num_bits = min(num_bits, len(alice_key), len(bob_key))
 
+        # Generar índices aleatorios para los subconjuntos
+        # Crear subconjunto de Alice
+        alice_indices = random.sample(range(len(alice_key)), num_bits)  # Generar num_bits índices aleatorios para alice_key
+
+        # Crear subconjunto de Bob
+        bob_indices = random.sample(range(len(bob_key)), num_bits)  # Generar num_bits índices aleatorios para bob_key
+
+        # Crear los subconjuntos seleccionando los bits usando los índices aleatorios
+        alice_subkey = ''.join([str(alice_key[i]) for i in sorted(alice_indices)])
+        bob_subkey = ''.join([str(bob_key[i]) for i in sorted(alice_indices)])
+
+        # Segunda parte de la subclave de Bob (el complemento de los índices aleatorios)
+        remaining_bob_indices = list(set(range(len(bob_key))) - set(alice_indices))
+        bob_subkey2 = ''.join([str(bob_key[i]) for i in sorted(remaining_bob_indices)])
         # Comparar los subconjuntos
-        if (alice_subkey == bob_subkey).all():
+        if alice_subkey == bob_subkey:
             print("\nThe key exchange was successful!")
             print("Alice's subkey:", alice_subkey)
             print("Bob's subkey: ", bob_subkey)
-            result_key = np.concatenate(( bob_subkey, bob_subkey2))
+            result_key = bob_subkey2
             print("The complete key is:", result_key)
             # Crear una clave AES a partir de la clave compartida
             shared_key = np.concatenate((alice_key, bob_key))
             aes_key = derive_aes_key(shared_key)
 
-            print("Clave AES generada:", aes_key)
+    
 
             # Ahora, vamos a permitir que Alice y Bob se envíen mensajes cifrados
             def send_message():
-                message = input("Escribe tu mensaje: ")
+                # Obtener el mensaje del cuadro de texto
+                message = message_entry.get()
+                message = message.encode()
                 if message == "exit":
-                    conn.close()
-                    return
+                    # Si el mensaje es "exit", cerramos la conexión y salimos
+                    conn1.close()
+                    root.quit()
+                else:
+                    # Cifrar el mensaje
+                    encrypted_message = encrypt_message(message, aes_key)
+                    # Empaquetar la clave AES y el mensaje cifrado en una lista
+                    array_aeskey_and_message = [aes_key, encrypted_message]
+                    # Enviar el mensaje cifrado y la clave AES a través de la conexión
+                    conn1.sendall(pickle.dumps(array_aeskey_and_message))  
+                    print(f"Mensaje enviado: {message}")
                 
-                encrypted_message = encrypt_message(message, aes_key)
-                array_aeskey_and_message = [aes_key, encrypted_message]
-                conn1.sendall(pickle.dumps(array_aeskey_and_message))
-            
-                print(encrypted_message)
-                decrypted_message = decrypt_message(encrypted_message, aes_key)
-                print(f"Mensaje enviado: {decrypted_message} ")
-                print("Mensaje enviado de forma segura.")
+                    # Recibir el mensaje cifrado de vuelta
+                    # encrypted_response = conn1.recv(1024)
+                    # decrypted_response = decrypt_message(encrypted_response, aes_key)
+                    # print(f"Mensaje recibido: {decrypted_response}")
+                    root.destroy()  # Cierra la ventana
+            # Configuración de la interfaz gráfica
+            root = tk.Tk()
+            root.title("Alice - Enviar Mensaje")
 
-                # Recibir el mensaje cifrado de vuelta
-                # encrypted_response = conn1.recv(1024)
-                # decrypted_response = decrypt_message(encrypted_response, aes_key)
-                # print(f"Mensaje recibido: {decrypted_response}")
+            message_label = tk.Label(root, text="Escribe tu mensaje:")
+            message_label.pack(pady=10)
 
-            send_message()
+            message_entry = tk.Entry(root, width=50)
+            message_entry.pack(pady=10)
+
+            send_button = tk.Button(root, text="Enviar", command=send_message )
+            send_button.pack(pady=20)
+
+            exit_button = tk.Button(root, text="Salir", command=root.quit)
+            exit_button.pack(pady=5)
+            root.mainloop()
+            data = conn1.recv(1024)  # Tamaño del buffer (ajústalo según sea necesario)
+            array_aeskey_and_message = pickle.loads(data)
+
+            # Extraer la clave AES y el mensaje cifrado
+            aes_key_received, encrypted_message_received = array_aeskey_and_message
+            ciphertext, tag, nonce = encrypted_message_received
+
+            # Descifrar el mensaje
+            decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+            if decrypted_message:
+                # Código para imprimir en verde y negrita
+                print(f"\033[1;32mMensaje descifrado: {decrypted_message}\033[0m")
+
+            else:
+                print("Error al descifrar el mensaje.")
         else:
             print("\nThe keys do not match. Potential interception detected.")
             print("Alice's subkey: ", alice_subkey)
             print("Bob's subkey:   ", bob_subkey)
-        
+            conn.close()
+            conn1.close()
+            server_socket1.close()
+            server_socket2.close()
+            server_socket3.close()
+
+
 
         conn.close()
         conn1.close()
