@@ -109,14 +109,27 @@ def start_sender():
 
     #print(result) # uncomment for detailed result
 
-
     print(circuits[0].name)
+    print (circuits[0].draw())
     print(result.get_counts(circuits[0]))
+
     print(circuits[1].name)
+    print (circuits[1].draw())
     print(result.get_counts(circuits[1]))
+
     print(circuits[2].name)
+    print (circuits[2].draw())
     print(result.get_counts(circuits[2]))
-    print (list(result.get_counts(circuits[0]).keys())[0]) # extract the key from the dict and transform it to str; execution result of the i-th circuit
+
+    print(circuits[3].name)
+    print (circuits[3].draw())
+    print(result.get_counts(circuits[3]))
+
+    print(circuits[4].name)
+    print (circuits[4].draw())
+    print(result.get_counts(circuits[4]))
+    
+    
     
 
     # print(plot_histogram(counts))
@@ -159,7 +172,7 @@ def start_sender():
         if (aliceMeasurementChoices[i] == 2 and bobMeasurementChoices[i] == 1) or (aliceMeasurementChoices[i] == 3 and bobMeasurementChoices[i] == 2):
             aliceKey.append(aliceResults[i]) # record the i-th result obtained by Alice as the bit of the secret key k
             bobKey.append(- bobResults[i]) # record the multiplied by -1 i-th result obtained Bob as the bit of the secret key k'
-            
+
     keyLength = len(aliceKey) # length of the secret key
     abKeyMismatches = 0 # number of mismatching bits in Alice's and Bob's keys
 
