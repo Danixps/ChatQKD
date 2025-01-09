@@ -1,75 +1,101 @@
 import socket
+import threading
 import numpy as np
 import pickle
-from qiskit import QuantumCircuit  
 import struct
 import random
+from qiskit import QuantumCircuit
 
+# Función que intenta enlazar un socket
+def bind_socket(server_socket, address, event, stop_event, conn_list):
+    try:
+        server_socket.bind(address)
+        server_socket.listen(1)
+        print(f"Esperando conexión en {address}...")
+        
+        # Esperar conexión si el evento global no está activado
+        while not event.is_set():
+            server_socket.settimeout(1)  # Tiempo de espera de 1 segundo
+            try:
+                conn, addr = server_socket.accept()
+                print(f"Conexión aceptada en {address}")
+                conn_list.append(conn)
+                event.set()  # Indica que una conexión fue exitosa
+                break
+            except socket.timeout:
+                if stop_event.is_set():  # Detener si otro socket ya conectó
+                    print(f"Terminando espera en {address}")
+                    break
+    except Exception as e:
+        print(f"Error en {address}: {e}")
+    finally:
+        server_socket.close()
 
 def start_sender():
     conn = None
     conn1 = None
-
+    connclose = None
     try:
-        server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Permite reutilizar el socket
-        server_socket.bind(('localhost', 65458))
+        # Crear eventos para coordinar hilos
+        connection_event = threading.Event()
+        stop_event = threading.Event()
+        conn_list = []
 
-        server_socket.listen(1)
-        print("Servidor en espera de conexión...")
+        # Crear sockets para los dos puertos
+        server_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket1.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  #
+        server_socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket2.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  #
+        # Crear hilos para escuchar en los dos puertos
+        thread1 = threading.Thread(target=bind_socket, args=(server_socket1, ('localhost', 65431), connection_event, stop_event, conn_list))
+        thread2 = threading.Thread(target=bind_socket, args=(server_socket2, ('localhost', 65458), connection_event, stop_event, conn_list))
 
-        #programa de enviar qbits BB84
-        # Convertir cada carácter a su valor ASCII y luego a binario
-        alice_bits = np.random.randint(2, size=30)  # Generar 128 bits aleatorios
-        n_bits = 30
-        # alice genera aleatoriamente las bases para cada bit (elige entre 'Z' o 'X')
-        alice_bases = np.random.choice(['Z', 'X'], size=n_bits)
-        print ("Alice's bits: ", alice_bits)
-        print ("Alice's bases: ", alice_bases)
+        thread1.start()
+        thread2.start()
 
-        # Codifico los bits y bases de Alice en qbits
-        # Alice codifica los bits en qubits y los envía a Bob
-        circuits = []  # Lista para almacenar los circuitos cuánticos que representa cada qubit enviado
+        # Esperar a que uno de los hilos establezca conexión
+        connection_event.wait()
 
-        for i in range(n_bits):
+        # Indicar a los otros hilos que deben detenerse
+        stop_event.set()
+
+        # Esperar a que ambos hilos terminen
+        thread1.join()
+        thread2.join()
+
+        # Tomar la conexión establecida
+        conn = conn_list[0]
+        
+        print(f"Conexión establecida exitosamente con: {conn.getpeername()}")
+        
+
+        # Simulación del envío de bits BB84
+        alice_bits = np.random.randint(2, size=30)  # Generar 30 bits aleatorios
+        alice_bases = np.random.choice(['Z', 'X'], size=30)  # Bases aleatorias para cada bit
+        print("Alice's bits: ", alice_bits)
+        print("Alice's bases: ", alice_bases)
+
+        circuits = []
+        for i in range(30):
             qc = QuantumCircuit(1, 1)
-
-            # Preparar el estado basado en el bit y la base de Alice
             if alice_bits[i] == 1:
-                qc.x(0)  # Aplicar puerta X si el bit de Alice es 1
-
-
+                qc.x(0)
             if alice_bases[i] == 'X':
-                qc.h(0)  # Cambiar a la base X si la base de Alice es 1 (estados superposicion si es un 1 lo convierte en un | - > y si es un 0 en un | + >)
-
+                qc.h(0)
             circuits.append(qc)
 
-        # Ahora tenemos los qubits de Alice
-        
-
-        # Serializar los circuitos
         serialized_circuits = pickle.dumps(circuits)
-
-        
-        
-        
-        conn, addr = server_socket.accept()
-
-
         data_length = struct.pack('!I', len(serialized_circuits))
         conn.sendall(data_length)
-        print(f"Conectado con {addr}")
-        #como enviar algo a un sockety
-        
         conn.sendall(serialized_circuits)
-        
- 
+        print("Qubits enviados exitosamente.")
 
     
-        server_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket1.bind(('localhost', 65489))
-        server_socket1.listen(1)
-        conn1, addr1 = server_socket1.accept()
+        server_socket3 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket3.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  #
+        server_socket3.bind(('localhost', 65489))
+        server_socket3.listen(1)
+        conn1, addr1 = server_socket3.accept()
         print(f"Conectado con {addr1}")
         # Recibir los circuitos de Eva
 
@@ -144,29 +170,46 @@ def start_sender():
         
         
         conn.close()
-        server_socket.close()
-        
+        conn1.close()
+        server_socket1.close()
+        server_socket2.close()
+        server_socket3.close()
+
+    
         
     except KeyboardInterrupt:
         print("Servidor interrumpido por el usuario")
     
         if conn:
             conn.close()
-        server_socket.close()
+        if conn1:
+            conn1.close()
+     
+
         server_socket1.close()
+        server_socket2.close()
+        server_socket3.close()
     except KeyboardInterrupt:
         print("Servidor interrumpido por el usuario")
     
         if conn:
             conn.close()
-        server_socket.close()
+        if conn1:
+            conn1.close()            
+   
         server_socket1.close()
+        server_socket2.close()
+        server_socket3.close()
     finally:
         if conn:
             conn.close()
         if conn1:
             conn1.close()
-        server_socket.close()
+        server_socket1.close()
+        server_socket2.close()
+        server_socket3.close()
+
+
         print("Socket cerrado")
         
 

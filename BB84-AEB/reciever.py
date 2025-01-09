@@ -71,7 +71,8 @@ def start_receiver():
         client_socket1.sendall(data_length)
         client_socket1.sendall(serialized_circuits)
 
-        
+        client_socket.close()
+        client_socket1.close()
         
 
     except Exception as e:

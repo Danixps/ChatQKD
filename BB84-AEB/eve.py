@@ -105,8 +105,9 @@ def start_reciever():
         print("Bases de Eva enviadas a Bob")
 
         
-        conn.close()
+        
         server_socket.close()
+        conn.close()
         client_socket.close()
     except Exception as e:
         
