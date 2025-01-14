@@ -72,9 +72,9 @@ def start_sender():
     bobMeasurements = [measureB1, measureB2, measureB3]
 
     # Define the number of singlets N
-    numberOfSinglets = 500
-    aliceMeasurementChoices = [random.randint(1, 3) for i in range(numberOfSinglets)]
-    bobMeasurementChoices = [random.randint(1, 3) for i in range(numberOfSinglets)]
+    numberOfSinglets = 5000
+    aliceMeasurementChoices = [random.randint(1, 3) for _ in range(numberOfSinglets)]
+    bobMeasurementChoices = [random.randint(1, 3) for _ in range(numberOfSinglets)]
 
     circuits = []  # List to store circuits
 

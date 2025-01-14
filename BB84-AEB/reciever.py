@@ -2,14 +2,13 @@ import socket
 import struct
 import numpy as np
 import pickle
-from qiskit import QuantumCircuit, transpile
+from qiskit import transpile
 from qiskit_aer import Aer
 from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad, unpad
 import hashlib
 import tkinter as tk
-from tkinter import messagebox
 
+import time
 # Función para derivar una clave AES a partir de la clave compartida
 def derive_aes_key(shared_key):
     # Derivamos una clave de 16 bytes para AES-128
@@ -92,17 +91,16 @@ def start_receiver():
         # Serializar las bases de Bob
         client_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket1.connect(('localhost', 65489))
-        # Serializar los circuitos
-        serialized_bases = pickle.dumps(bob_bases)
-        serialized_circuits = pickle.dumps(bob_result)
-        data_length = struct.pack('!I', num_qubits)
-        client_socket1.sendall(data_length)
+        # Serializar los circuito
+        serialized_bases = b"".join(bob_bases)
+        serialized_bits = "".join(map(str, bob_result)).encode('utf-8')
+       
         client_socket1.sendall(serialized_bases)
-        import time
+        
+        
         time.sleep(1)
-        data_length = struct.pack('!I', num_qubits)
-        client_socket1.sendall(data_length)
-        client_socket1.sendall(serialized_circuits)
+  
+        client_socket1.sendall(serialized_bits)
 
         # Aquí Bob recibe la clave compartida y la utiliza para descifrar un mensaje (simulado)
         # Simulación de la clave derivada

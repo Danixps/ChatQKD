@@ -12,6 +12,7 @@ import hashlib
 import tkinter as tk
 from tkinter import messagebox
 # Función que intenta enlazar un socket
+SIZE=30
 def bind_socket(server_socket, address, event, stop_event, conn_list):
     try:
         server_socket.bind(address)
@@ -101,13 +102,13 @@ def start_sender():
         print(f"Conexión establecida exitosamente con: {conn.getpeername()}")
 
         # Simulación del envío de bits BB84
-        alice_bits = np.random.randint(2, size=50)  # Generar 30 bits aleatorios
-        alice_bases = np.random.choice(['Z', 'X'], size=50)  # Bases aleatorias para cada bit
+        alice_bits = np.random.randint(2, size=SIZE)  # Generar 30 bits aleatorios
+        alice_bases = np.random.choice(['Z', 'X'], size=SIZE)  # Bases aleatorias para cada bit
         print("Alice's bits: ", alice_bits)
         print("Alice's bases: ", alice_bases)
 
         circuits = []
-        for i in range(50):
+        for i in range(SIZE):
             qc = QuantumCircuit(1, 1)
             if alice_bits[i] == 1:
                 qc.x(0)
@@ -128,37 +129,47 @@ def start_sender():
         conn1, addr1 = server_socket3.accept()
         print(f"Conectado con {addr1}")
 
-        # Recibir los circuitos de Eva
-        data_length = conn1.recv(4)
-        data_length = struct.unpack('!I', data_length)[0]
-        data = b""
-        while len(data) < data_length:
+
+        data = []
+        data_length1 = SIZE
+        while len(b"".join(data)) < SIZE:
             packet = conn1.recv(4096)
             if not packet:
+                print("No se recibieron datos")
                 break
-            data += packet
-
+            data.append(packet)
+        print("Datos recibidos: ", len(b"".join(data)), "byt")
         # Deserializar los circuitos
-        received_circuits_bases = pickle.loads(data)
-        bob_bases = received_circuits_bases
+        # Decodificar los datos y convertirlos en un array de numpy
+        bob_bases_str = b"".join(data).decode()
+        bob_bases_str = bob_bases_str.strip()
+        print ("Bob's bases: ", bob_bases_str)
+        # Extracción de la parte relevante (después de los dos puntos)
+   
+
+        # Conversión a un array de caracteres en NumPy
+        bob_bases = np.array(list(bob_bases_str))
+        #quitar los vacios
+        bob_bases = bob_bases[bob_bases != '']
+
         print("Bases de Bob:", bob_bases)
 
-        data_length1 = conn1.recv(4)
-        data_length1 = struct.unpack('!I', data_length1)[0]
         data = b""
-        while len(data) < data_length1:
+        while len(data) < SIZE:
             packet = conn1.recv(4096)
             if not packet:
                 break
             data += packet
-        received_circuits = pickle.loads(data)
-        bob_results_bits = received_circuits
+        bob_results_str = data.decode()
+        bob_results_bits = np.array(list(bob_results_str)).astype(int)
+        print("Bob's results:", bob_results_str)
         print("Bits resultantes de Bob:", bob_results_bits)
-
+        print ("Bob's bases: ", bob_bases)
+        print ("Alice's bases: ", alice_bases)
         matching_bases = alice_bases == bob_bases
         print("Coincidencia en las bases:", matching_bases)
 
-        bob_key = np.array(bob_results_bits)[matching_bases]
+        bob_key = bob_results_bits[matching_bases]
         alice_key = alice_bits[matching_bases]  # Seleccionar los bits de Alice donde las bases coinciden
 
             # Elegir una cantidad aleatoria de bits, mínimo 3 bits
@@ -216,7 +227,7 @@ def start_sender():
                     print(f"Mensaje enviado: {message}")
                 
                     # Recibir el mensaje cifrado de vuelta
-                    # encrypted_response = conn1.recv(1024)
+                    # encrypted_response = conn1.recv(SIZE)
                     # decrypted_response = decrypt_message(encrypted_response, aes_key)
                     # print(f"Mensaje recibido: {decrypted_response}")
                     root.destroy()  # Cierra la ventana
