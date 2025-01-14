@@ -2,6 +2,7 @@ import socket
 import struct
 import numpy as np
 import pickle
+import threading
 from qiskit import transpile
 from qiskit_aer import Aer
 from Crypto.Cipher import AES
@@ -97,8 +98,7 @@ def start_receiver():
        
         client_socket1.sendall(serialized_bases)
         
-        
-        time.sleep(1)
+        time.sleep(0.01)
   
         client_socket1.sendall(serialized_bits)
 
@@ -125,28 +125,35 @@ def start_receiver():
        
                     # Ahora, vamos a permitir que Alice y Bob se envíen mensajes cifrados
         def send_message():
-                # Obtener el mensaje del cuadro de texto
-            message = message_entry.get()
-            message = message.encode()
-            if message == "exit":
-                    # Si el mensaje es "exit", cerramos la conexión y salimos
-                client_socket1.close()
-                root.quit()
-            else:
-                    # Cifrar el mensaje
-                encrypted_message = encrypt_message(message, aes_key)
-                    # Empaquetar la clave AES y el mensaje cifrado en una lista
-                array_aeskey_and_message = [aes_key, encrypted_message]
-                    # Enviar el mensaje cifrado y la clave AES a través de la conexión
-                client_socket1.sendall(pickle.dumps(array_aeskey_and_message))  
-                print(f"Mensaje enviado: {message}")
-                root.destroy()  # Cierra la ventana
-                    # Recibir el mensaje cifrado de vuelta
-                    # encrypted_response = conn1.recv(1024)
-                    # decrypted_response = decrypt_message(encrypted_response, aes_key)
-                    # print(f"Mensaje recibido: {decrypted_response}")
+                message = message_entry.get()
+                message = message.encode()
+                if message == b"exit":
+                    client_socket1.close()
+                    root.quit()
+                else:
+                    encrypted_message = encrypt_message(message, aes_key)
+                    array_aeskey_and_message = [aes_key, encrypted_message]
+                    client_socket1.sendall(pickle.dumps(array_aeskey_and_message))
+                    print(f"Mensaje enviado: {message}")
 
-            # Configuración de la interfaz gráfica
+        def receive_messages():
+                while True:
+                    try:
+                        data = client_socket1.recv(1024)
+                        if not data:
+                            break
+                        array_aeskey_and_message = pickle.loads(data)
+                        aes_key_received, encrypted_message_received = array_aeskey_and_message
+                        ciphertext, tag, nonce = encrypted_message_received
+                        decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+                        print(f"\033[1;32mMensaje recibido: {decrypted_message}\033[0m")
+                    except Exception as e:
+                        print(f"Error al recibir mensaje: {e}")
+                        break
+
+        receive_thread = threading.Thread(target=receive_messages)
+        receive_thread.start()
+
         root = tk.Tk()
         root.title("Bob - Enviar Mensaje")
 
@@ -156,15 +163,19 @@ def start_receiver():
         message_entry = tk.Entry(root, width=50)
         message_entry.pack(pady=10)
 
-        send_button = tk.Button(root, text="Enviar", command=send_message )
+        send_button = tk.Button(root, text="Enviar", command=send_message)
         send_button.pack(pady=20)
 
-        exit_button = tk.Button(root, text="Salir", command=root.quit)
+        def quit_and_close():
+                root.destroy()
+                client_socket1.close()
+                
+
+        exit_button = tk.Button(root, text="Salir", command=quit_and_close)
         exit_button.pack(pady=5)
         root.mainloop()
-        client_socket.close()
-        client_socket1.close()
-    
+
+        receive_thread.join()
 
     except Exception as e:
         print(f"Error: {e}")
