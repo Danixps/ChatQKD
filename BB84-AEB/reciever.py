@@ -7,7 +7,10 @@ from qiskit import transpile
 from qiskit_aer import Aer
 from Crypto.Cipher import AES
 import hashlib
+from datetime import datetime
 import tkinter as tk
+
+from Crypto.Random import get_random_bytes
 
 import time
 # Función para derivar una clave AES a partir de la clave compartida
@@ -16,9 +19,19 @@ def derive_aes_key(shared_key):
     key = hashlib.sha256(shared_key).digest()[:16]
     return key
 
+def derive_aes_key(shared_key):
+    key = hashlib.sha256(shared_key).digest()[:16]
+    return key
+
 def encrypt_message(message, aes_key):
     from Crypto.Cipher import AES
     from Crypto.Random import get_random_bytes
+    nonce = get_random_bytes(12)
+    cipher = AES.new(aes_key, AES.MODE_GCM, nonce=nonce)
+    ciphertext, tag = cipher.encrypt_and_digest(message)
+    return [ciphertext, tag, nonce]
+
+def encrypt_message(message, aes_key):
     nonce = get_random_bytes(12)  # Tamaño recomendado para GCM
 
     # Cifrado
@@ -27,11 +40,6 @@ def encrypt_message(message, aes_key):
     return [ciphertext, tag, nonce]
 
 # Función para descifrar el mensaje con AES
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import unpad
-
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import unpad
 def decrypt_message(encrypted_message, aes_key, tag, nonce):
     cipher_dec = AES.new(aes_key, AES.MODE_GCM, nonce=nonce)
     plaintext_dec = cipher_dec.decrypt_and_verify(encrypted_message, tag)
@@ -94,20 +102,67 @@ def start_receiver():
         client_socket1.connect(('localhost', 65489))
         # Serializar los circuito
         serialized_bases = b"".join(bob_bases)
-        serialized_bits = "".join(map(str, bob_result)).encode('utf-8')
+        
        
         client_socket1.sendall(serialized_bases)
-        
+    
         time.sleep(0.01)
-  
-        client_socket1.sendall(serialized_bits)
+        
+        data = []
+        # client_socket1.sendall(serialized_bits) ARREGLAR
+        while len(data) < num_qubits:
+            packet = client_socket1.recv(4096)
+            if not packet:
+                break
+            data.append(packet)
+        alice_bases_str = b"".join(data).decode()
+        alice_bases = np.array(list(alice_bases_str))
+        alice_bases = alice_bases[alice_bases != '']
+        
+        indices = alice_bases[-(num_qubits // 3):]  # Usamos `//` para división entera
+        alice_bases = alice_bases[:num_qubits]
+        
+        
+        print("Bases de Alice:", alice_bases)
+
+        matching_bases = alice_bases == bob_bases
+        bases_coincidentes = alice_bases[matching_bases]
+      
+        indices_comprobacion_enteros = [ord(x) for x in indices]
+        print("Índices para comprobación:",  indices_comprobacion_enteros)
+
+       # Verifica que bits_coincidentes tenga el tipo correcto
+        bits_coincidentes = np.array(bob_result)[matching_bases]
+
+        # Ahora, accede a los bits de comprobación usando índices enteros
+        # Si `indices_comprobacion_enteros` tiene índices válidos para bits_coincidentes:
+        bob_bits_seleccionados = [bits_coincidentes[i-1] for i in indices_comprobacion_enteros]
+
+        print("Bits de comprobación:", bob_bits_seleccionados)
+
+
+
+
+
+        
+        client_socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        client_socket2.connect(('localhost', 65480))
+        bob_bits_seleccionados_str = [str(x).encode() for x in bob_bits_seleccionados]
+        client_socket2.sendall(b"".join(bob_bits_seleccionados_str))
+      
+        print ("Bits de comprobación enviados")
+      
+        matching_bases = alice_bases == bob_bases
+        bases_coincidentes = bob_bases[matching_bases]
+        print("Coincidencia en las bases:", matching_bases)
+        print("Bases coincidentes:", bases_coincidentes)
 
         # Aquí Bob recibe la clave compartida y la utiliza para descifrar un mensaje (simulado)
         # Simulación de la clave derivada
         shared_key = np.array(bob_result)  # La clave compartida derivada de los resultados
         aes_key = derive_aes_key(shared_key.tobytes())  # Derivamos la clave AES
 
-        data = client_socket1.recv(1024)  # Tamaño del buffer (ajústalo según sea necesario)
+        data = client_socket2.recv(1024)  # Tamaño del buffer (ajústalo según sea necesario)
         array_aeskey_and_message = pickle.loads(data)
 
         # Extraer la clave AES y el mensaje cifrado
@@ -118,44 +173,69 @@ def start_receiver():
         decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
         if decrypted_message:
             # Código para imprimir en verde y negrita
+        
             print(f"\033[1;32mMensaje descifrado: {decrypted_message}\033[0m")
 
         else:
             print("Error al descifrar el mensaje.")
        
                     # Ahora, vamos a permitir que Alice y Bob se envíen mensajes cifrados
+  # Ahora, vamos a permitir que Alice y Bob se envíen mensajes cifrados
         def send_message():
-                message = message_entry.get()
-                message = message.encode()
-                if message == b"exit":
-                    client_socket1.close()
-                    root.quit()
-                else:
-                    encrypted_message = encrypt_message(message, aes_key)
-                    array_aeskey_and_message = [aes_key, encrypted_message]
-                    client_socket1.sendall(pickle.dumps(array_aeskey_and_message))
-                    print(f"Mensaje enviado: {message}")
+            message = message_entry.get()
+            message = message.encode()
+            if message == b"exit":
+                client_socket2.close()
+                root.quit()
+            else:
+                encrypted_message = encrypt_message(message, aes_key)
+                array_aeskey_and_message = [aes_key, encrypted_message]
+                client_socket2.sendall(pickle.dumps(array_aeskey_and_message))
+                timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                display_message(f"Yo    - {timestamp}: {message.decode('utf-8')}")
+                print(f"Mensaje enviado: {message.decode('utf-8')}")
 
         def receive_messages():
-                while True:
-                    try:
-                        data = client_socket1.recv(1024)
-                        if not data:
-                            break
-                        array_aeskey_and_message = pickle.loads(data)
-                        aes_key_received, encrypted_message_received = array_aeskey_and_message
-                        ciphertext, tag, nonce = encrypted_message_received
-                        decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
-                        print(f"\033[1;32mMensaje recibido: {decrypted_message}\033[0m")
-                    except Exception as e:
-                        print(f"Error al recibir mensaje: {e}")
+            while True:
+                try:
+                    data = client_socket2.recv(1024)
+                    if not data:
                         break
+                    array_aeskey_and_message = pickle.loads(data)
+                    aes_key_received, encrypted_message_received = array_aeskey_and_message
+                    ciphertext, tag, nonce = encrypted_message_received
+                    decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+                    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    display_message(f"Alice - {timestamp}: {decrypted_message}")
+                except Exception as e:
+                    print(f"Error al recibir mensaje: {e}")
+                    break
 
+        def display_message(message):
+            message_display.config(state=tk.NORMAL)
+            message_display.insert(tk.END, message + "\n")
+            message_display.config(state=tk.DISABLED)
+            message_display.see(tk.END)
+
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        
         receive_thread = threading.Thread(target=receive_messages)
         receive_thread.start()
 
         root = tk.Tk()
         root.title("Bob - Enviar Mensaje")
+
+        
+
+        
+
+        send_button = tk.Button(root, text="Enviar", command=send_message)
+        send_button.pack(pady=20)
+
+        message_display = tk.Text(root, state=tk.DISABLED, width=50, height=15)
+        message_display.pack(pady=10)
+
+        display_message(f"Alice - {timestamp}: {decrypted_message}")
 
         message_label = tk.Label(root, text="Escribe tu mensaje:")
         message_label.pack(pady=10)
@@ -163,13 +243,9 @@ def start_receiver():
         message_entry = tk.Entry(root, width=50)
         message_entry.pack(pady=10)
 
-        send_button = tk.Button(root, text="Enviar", command=send_message)
-        send_button.pack(pady=20)
-
         def quit_and_close():
-                root.destroy()
-                client_socket1.close()
-                
+            root.destroy()
+            client_socket2.close()
 
         exit_button = tk.Button(root, text="Salir", command=quit_and_close)
         exit_button.pack(pady=5)
@@ -183,6 +259,7 @@ def start_receiver():
     finally:
         client_socket.close()
         client_socket1.close()
+        client_socket2.close()
         print("Conexión cerrada")
 
 # Ejecutar el receptor

@@ -6,12 +6,12 @@ import struct
 import random
 from qiskit import QuantumCircuit
 from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad, unpad
+from datetime import datetime
 import hashlib
 import tkinter as tk
-from tkinter import messagebox
+import os
 
-SIZE = 30
+SIZE = 100
 
 def bind_socket(server_socket, address, event, stop_event, conn_list):
     try:
@@ -55,6 +55,7 @@ def encrypt_message(message, aes_key):
 def start_sender():
     conn = None
     conn1 = None
+    conn2 = None
     try:
         print(f"Esperando conexión...")
         connection_event = threading.Event()
@@ -103,83 +104,125 @@ def start_sender():
 
         server_socket3 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server_socket3.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+       
         server_socket3.bind(('localhost', 65489))
         server_socket3.listen(1)
         conn1, addr1 = server_socket3.accept()
         print(f"Conectado con {addr1}")
 
         data = []
-        data_length1 = SIZE
+       
         while len(b"".join(data)) < SIZE:
             packet = conn1.recv(4096)
             if not packet:
                 print("No se recibieron datos")
                 break
             data.append(packet)
-        print("Datos recibidos: ", len(b"".join(data)), "byt")
+
 
         bob_bases_str = b"".join(data).decode().strip()
         bob_bases = np.array(list(bob_bases_str))
         bob_bases = bob_bases[bob_bases != '']
         print("Bases de Bob:", bob_bases)
-
+        
+        send_alice_bases = b"".join(alice_bases)
+        conn1.sendall(send_alice_bases )
         data = b""
-        while len(data) < SIZE:
-            packet = conn1.recv(4096)
-            if not packet:
-                break
-            data += packet
-        bob_results_str = data.decode()
-        bob_results_bits = np.array(list(bob_results_str)).astype(int)
-        print("Bob's results:", bob_results_str)
-        print("Bits resultantes de Bob:", bob_results_bits)
-        print("Bob's bases: ", bob_bases)
+
+
+       
         print("Alice's bases: ", alice_bases)
         matching_bases = alice_bases == bob_bases
         print("Coincidencia en las bases:", matching_bases)
 
-        bob_key = bob_results_bits[matching_bases]
-        alice_key = alice_bits[matching_bases]
+        
+        bases_coincidentes = alice_bases[matching_bases]
+        bits_coincidentes = alice_bits[matching_bases]
+        coincidentes_indices = np.where(bases_coincidentes)[0]
+        selected_indices = np.random.choice(coincidentes_indices+1, SIZE//3, replace=False)
+        print("Índices para comprobación:", selected_indices)
 
-        min_bits = 1
-        num_bits = random.randint(min_bits, len(alice_key)-1)
+        alice_bits_seleccionados = [bits_coincidentes[i-1] for i in selected_indices]
+        alice_bits_seleccionados = np.array(list(alice_bits_seleccionados), dtype=int)
+        print("Bits de comprbación", alice_bits_seleccionados)
 
-        num_bits = min(num_bits, len(alice_key), len(bob_key))
 
-        alice_indices = random.sample(range(len(alice_key)), num_bits)
-        bob_indices = random.sample(range(len(bob_key)), num_bits)
 
-        alice_subkey = ''.join([str(alice_key[i]) for i in sorted(alice_indices)])
-        bob_subkey = ''.join([str(bob_key[i]) for i in sorted(alice_indices)])
 
-        remaining_bob_indices = list(set(range(len(bob_key))) - set(alice_indices))
-        bob_subkey2 = ''.join([str(bob_key[i]) for i in sorted(remaining_bob_indices)])
+        
+        
+        conn1.sendall(b"".join(selected_indices))
+       
+        data = []
+        
 
-        if alice_subkey == bob_subkey:
+   
+        conn1.close()
+        server_socket3.close()
+        server_socket4 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket4.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+       
+        server_socket4.bind(('localhost', 65480))
+        server_socket4.listen(1)
+        conn2, addr1 = server_socket4.accept()
+
+        
+       
+        data = conn2.recv(1024)
+           
+     
+        bob_bits_str = b"".join(bytes([x]) for x in data).decode()
+
+        print ("Bits de comprobación recibidos", bob_bits_str)
+        bob_bits_comprobacion = np.array(list(bob_bits_str), dtype=int)
+       
+        print("Bits de comprobación de Bob:",  bob_bits_comprobacion)
+
+
+
+
+        #listas de posiciones aleatorias de las bases coincidentes
+
+
+     
+
+
+
+        
+
+        
+
+        if np.array_equal(alice_bits_seleccionados, bob_bits_comprobacion):
+            print("Intercambio de claves exitoso")
             print("\nThe key exchange was successful!")
-            print("Alice's subkey:", alice_subkey)
-            print("Bob's subkey: ", bob_subkey)
-            result_key = bob_subkey2
-            print("The complete key is:", result_key)
-            shared_key = np.concatenate((alice_key, bob_key))
-            aes_key = derive_aes_key(shared_key)
+            print("Alice's subkey:", alice_bits_seleccionados)
+            print("Bob's subkey: ", bob_bits_comprobacion)
+            print ("Los bits coincidentes son: ", bits_coincidentes)
+            #quiitar a bits_coincidentes los bits de comprobación
+           
+            key = [x for i, x in enumerate(bits_coincidentes) if i not in selected_indices-1]
+            print("The complete key is:", key)
+           
+            aes_key = derive_aes_key(bytes(key))
 
             def send_message():
                 message = message_entry.get()
                 message = message.encode()
                 if message == b"exit":
-                    conn1.close()
+                    conn2.close()
                     root.quit()
                 else:
                     encrypted_message = encrypt_message(message, aes_key)
                     array_aeskey_and_message = [aes_key, encrypted_message]
-                    conn1.sendall(pickle.dumps(array_aeskey_and_message))
+                    conn2.sendall(pickle.dumps(array_aeskey_and_message))
+                    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    display_message(f"Yo - {timestamp}: {message.decode('utf-8')}")
                     print(f"Mensaje enviado: {message}")
 
             def receive_messages():
                 while True:
                     try:
-                        data = conn1.recv(1024)
+                        data = conn2.recv(1024)
                         if not data:
                             break
                         array_aeskey_and_message = pickle.loads(data)
@@ -187,15 +230,32 @@ def start_sender():
                         ciphertext, tag, nonce = encrypted_message_received
                         decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
                         print(f"\033[1;32mMensaje recibido: {decrypted_message}\033[0m")
+                        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                        display_message(f"Bob - {timestamp}: {decrypted_message}")
                     except Exception as e:
                         print(f"Error al recibir mensaje: {e}")
                         break
 
+            def display_message(message):
+                message_display.config(state=tk.NORMAL)
+                message_display.insert(tk.END, message + "\n")
+                message_display.config(state=tk.DISABLED)
+                message_display.see(tk.END)
             receive_thread = threading.Thread(target=receive_messages)
             receive_thread.start()
 
             root = tk.Tk()
             root.title("Alice - Enviar Mensaje")
+
+            
+
+            
+
+            send_button = tk.Button(root, text="Enviar", command=send_message)
+            send_button.pack(pady=20)
+
+            message_display = tk.Text(root, state=tk.DISABLED, width=50, height=15)
+            message_display.pack(pady=10)
 
             message_label = tk.Label(root, text="Escribe tu mensaje:")
             message_label.pack(pady=10)
@@ -203,12 +263,13 @@ def start_sender():
             message_entry = tk.Entry(root, width=50)
             message_entry.pack(pady=10)
 
-            send_button = tk.Button(root, text="Enviar", command=send_message)
-            send_button.pack(pady=20)
-
             def quit_and_close():
-                conn1.close()
+                conn2.close()
+                server_socket1.close()
+                server_socket2.close()
+                server_socket3.close()
                 root.destroy()
+                os._exit(0)
 
             exit_button = tk.Button(root, text="Salir", command=quit_and_close)
             exit_button.pack(pady=5)
@@ -217,14 +278,21 @@ def start_sender():
             receive_thread.join()
         else:
             print("\nThe keys do not match. Potential interception detected.")
-            print("Alice's subkey: ", alice_subkey)
-            print("Bob's subkey:   ", bob_subkey)
+            print("Alice's subkey: ", alice_bits_seleccionados)
+            print("Bob's subkey:   ", bob_bits_comprobacion)
 
-        conn.close()
-        conn1.close()
+        if conn:
+            conn.close()
+        if conn1:
+            conn1.close()
+        if conn2:
+            conn2.close()
+
         server_socket1.close()
         server_socket2.close()
         server_socket3.close()
+        server_socket4.close()
+
 
     except KeyboardInterrupt:
         print("Servidor interrumpido por el usuario")
@@ -232,11 +300,17 @@ def start_sender():
             conn.close()
         if conn1:
             conn1.close()
+        if conn2:
+            conn2.close()
         server_socket1.close()
         server_socket2.close()
         server_socket3.close()
+        server_socket4.close()
+
 
     finally:
+        if conn2:
+            conn2.close()
         if conn:
             conn.close()
         if conn1:
@@ -244,6 +318,8 @@ def start_sender():
         server_socket1.close()
         server_socket2.close()
         server_socket3.close()
+        server_socket4.close()
+
         print("Socket cerrado")
 
 start_sender()
