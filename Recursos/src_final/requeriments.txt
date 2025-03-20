@@ -1,0 +1,10 @@
+click
+qiskit-aer
+qiskit
+flask
+dask
+typer
+blinker
+numpy
+python3-tk
+tkinter
