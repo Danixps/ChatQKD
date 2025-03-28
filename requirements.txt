@@ -6,5 +6,5 @@ dask
 typer
 blinker
 numpy
-python3-tk
-tkinter
+pygame
+pycryptodome

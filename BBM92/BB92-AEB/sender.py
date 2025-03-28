@@ -6,12 +6,17 @@ import struct
 import random
 from qiskit import QuantumCircuit
 from Crypto.Cipher import AES
+from qiskit import transpile
 from datetime import datetime
 import hashlib
+from qiskit_aer import AerSimulator
+import numpy as np
 import tkinter as tk
 import os
-
-SIZE = 100
+from qiskit_aer import Aer
+from qiskit import QuantumCircuit
+SIZE = 6
+from qiskit.quantum_info import Statevector
 
 def bind_socket(server_socket, address, event, stop_event, conn_list):
     try:
@@ -87,16 +92,114 @@ def start_sender():
         print("Alice's bits: ", alice_bits)
         print("Alice's bases: ", alice_bases)
 
-        circuits = []
-        for i in range(SIZE):
-            qc = QuantumCircuit(1, 1)
-            if alice_bits[i] == 1:
-                qc.x(0)
-            if alice_bases[i] == 'X':
-                qc.h(0)
-            circuits.append(qc)
+        # circuits = []
+        # for i in range(SIZE):
+        #     qc = QuantumCircuit(1, 1)
+        #     if alice_bits[i] == 1:
+        #         qc.x(0)
+        #     if alice_bases[i] == 'X':
+        #         qc.h(0)
+        #     circuits.append(qc)
 
-        serialized_circuits = pickle.dumps(circuits)
+        bob_result = []
+        backend = Aer.get_backend('qasm_simulator')
+        for i in range(1):
+            # Crear un circuito cuántico con 2 qubits
+            full_qc = QuantumCircuit(2, 2)
+
+            # Aplicar puerta Hadamard al qubit de Alice (qubit 0)
+            full_qc.h(0)
+
+            # Aplicar puerta CNOT (controlada por Alice y dirigida a Bob)
+            full_qc.cx(0, 1)
+            
+            # Transpilar el circuito para optimización antes de la ejecución
+            transpiled_qc = transpile(full_qc, Aer.get_backend('statevector_simulator'))
+
+            # Usar el backend adecuado para obtener el statevector
+            simulator = Aer.get_backend('statevector_simulator')
+            
+
+            # Ejecutar el circuito cuántico optimizado y obtener el estado cuántico
+            result = simulator.run(transpiled_qc).result()
+
+            # Obtener el vector de estado cuántico
+            statevector = result.get_statevector()
+
+            # Mostrar el estado cuántico completo
+            print("Estado cuántico:", statevector)
+            print("prueba", statevector[3])
+            sv = Statevector.from_instruction(full_qc)
+
+            # Crear el statevector de Bob (ya normalizado)
+            sv = Statevector([0.70710678+0.j, 0.+0.j, 0.+0.j, 0.70710678+0.j])
+            from qiskit.quantum_info import partial_trace
+            # Calcular la matriz de densidad reducida de Bob (quitamos el qubit 0)
+            bob_density_matrix = partial_trace(sv, [0])
+
+
+            outcome_bob, post_state_bob = sv.measure()[0]  # Medimos solo el qubit 1
+
+            print("Resultado de la medición de A:", outcome_bob)
+
+
+
+
+
+            # Obtener los autovalores y autovectores (para extraer el estado puro si aplica)
+            eigvals, eigvecs = np.linalg.eigh(bob_density_matrix.data)
+
+            # El estado cuántico puro de Bob es el autovector con el mayor autovalor
+            bob_state = eigvecs[:, np.argmax(eigvals)]
+
+            print("Estado del qubit de Bob (normalizado):", bob_state)
+
+                # Crear un circuito de 1 qubit
+            qc = QuantumCircuit(1,1)
+
+            # Inicializar el qubit con el estado dado
+            qc.initialize(bob_state, 0)
+
+            print(qc)
+            qc.measure(0, 0)  # Medir el qubit
+
+            # Transpilar y ejecutar en el backend
+            compiled_circuit = transpile(qc, backend)
+            job = backend.run(compiled_circuit, shots=10)  # Ejecutar el circuito.
+
+            result = job.result()
+            bob_result.append(result.get_counts())
+            print("Resultados de Bob:", bob_result)
+            # state = Statevector.from_label("+-rl")
+            # qc = QuantumCircuit(4)
+            # qc.prepare_state(bob_state, [0, 1, 2, 3])
+            # print("hoal)")
+            
+
+
+
+            # qc.measure(0, 0)
+            # compiled_circuit = transpile(qc, backend)
+            # job = backend.run(compiled_circuit, shots=1)  # Ejecutar el circuito.
+
+            # result = job.result()
+            # measured_bit = int(list(result.get_counts().keys())[0])  # Obtener el bit medido
+
+
+            # Imprimir el estado del qubit de Bob
+            # print("XXXXXXXEstado del qubit de Bob (qubit 1):", measured_bit)
+            # Medir directamente el statevector
+ 
+            
+
+            outcome, post_state = sv.measure()
+
+            print("Resultado de la medición:", outcome)
+            print("Estado cuántico post-medición:", post_state)
+
+        bob_qc=[]
+   
+        serialized_circuits = pickle.dumps(bob_qc)
         data_length = struct.pack('!I', len(serialized_circuits))
         conn.sendall(data_length)
         conn.sendall(serialized_circuits)

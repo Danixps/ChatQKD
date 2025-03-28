@@ -9,29 +9,47 @@ from Crypto.Cipher import AES
 import hashlib
 from datetime import datetime
 import tkinter as tk
-from Crypto.Random import get_random_bytes
-import time
 
+from Crypto.Random import get_random_bytes
+
+import time
 # Función para derivar una clave AES a partir de la clave compartida
+def derive_aes_key(shared_key):
+    # Derivamos una clave de 16 bytes para AES-128
+    key = hashlib.sha256(shared_key).digest()[:16]
+    return key
+
 def derive_aes_key(shared_key):
     key = hashlib.sha256(shared_key).digest()[:16]
     return key
 
 def encrypt_message(message, aes_key):
-    nonce = get_random_bytes(12)  # Tamaño recomendado para GCM
+    from Crypto.Cipher import AES
+    from Crypto.Random import get_random_bytes
+    nonce = get_random_bytes(12)
     cipher = AES.new(aes_key, AES.MODE_GCM, nonce=nonce)
     ciphertext, tag = cipher.encrypt_and_digest(message)
     return [ciphertext, tag, nonce]
 
+def encrypt_message(message, aes_key):
+    nonce = get_random_bytes(12)  # Tamaño recomendado para GCM
+
+    # Cifrado
+    cipher = AES.new(aes_key, AES.MODE_GCM, nonce=nonce)
+    ciphertext, tag = cipher.encrypt_and_digest(message)
+    return [ciphertext, tag, nonce]
+
+# Función para descifrar el mensaje con AES
 def decrypt_message(encrypted_message, aes_key, tag, nonce):
     cipher_dec = AES.new(aes_key, AES.MODE_GCM, nonce=nonce)
     plaintext_dec = cipher_dec.decrypt_and_verify(encrypted_message, tag)
+
+    # Mostrar el mensaje descifrado
     return plaintext_dec.decode()
 
-# Función para iniciar el receptor
-def start_receiver(ip_destino):
+def start_receiver():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client_socket.connect((ip_destino, 65431))  # Usar la IP proporcionada por el usuario
+    client_socket.connect(('localhost', 65431))
     
     try:
         # Recibir los datos serializados
@@ -82,24 +100,28 @@ def start_receiver(ip_destino):
         # Serializar las bases de Bob
         client_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket1.connect(('localhost', 65489))
+        # Serializar los circuito
         serialized_bases = b"".join(bob_bases)
-        client_socket1.sendall(serialized_bases)
         
+       
+        client_socket1.sendall(serialized_bases)
+    
         time.sleep(0.01)
         
         data = []
+        # client_socket1.sendall(serialized_bits) ARREGLAR
         while len(data) < num_qubits:
             packet = client_socket1.recv(4096)
             if not packet:
                 break
             data.append(packet)
-        
         alice_bases_str = b"".join(data).decode()
         alice_bases = np.array(list(alice_bases_str))
         alice_bases = alice_bases[alice_bases != '']
         
         indices = alice_bases[-(num_qubits // 3):]  # Usamos `//` para división entera
         alice_bases = alice_bases[:num_qubits]
+        
         
         print("Bases de Alice:", alice_bases)
 
@@ -109,19 +131,56 @@ def start_receiver(ip_destino):
         indices_comprobacion_enteros = [ord(x) for x in indices]
         print("Índices para comprobación:",  indices_comprobacion_enteros)
 
+       # Verifica que bits_coincidentes tenga el tipo correcto
         bits_coincidentes = np.array(bob_result)[matching_bases]
+
+        # Ahora, accede a los bits de comprobación usando índices enteros
+        # Si `indices_comprobacion_enteros` tiene índices válidos para bits_coincidentes:
         bob_bits_seleccionados = [bits_coincidentes[i-1] for i in indices_comprobacion_enteros]
 
         print("Bits de comprobación:", bob_bits_seleccionados)
 
-        # Establecer la conexión para el siguiente paso
+
+
+
+
+        
         client_socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket2.connect(('localhost', 65480))
         bob_bits_seleccionados_str = [str(x).encode() for x in bob_bits_seleccionados]
         client_socket2.sendall(b"".join(bob_bits_seleccionados_str))
+      
         print ("Bits de comprobación enviados")
+      
+        matching_bases = alice_bases == bob_bases
+        bases_coincidentes = bob_bases[matching_bases]
+        print("Coincidencia en las bases:", matching_bases)
+        print("Bases coincidentes:", bases_coincidentes)
 
-        # Procesar mensajes
+        # Aquí Bob recibe la clave compartida y la utiliza para descifrar un mensaje (simulado)
+        # Simulación de la clave derivada
+        shared_key = np.array(bob_result)  # La clave compartida derivada de los resultados
+        aes_key = derive_aes_key(shared_key.tobytes())  # Derivamos la clave AES
+
+        data = client_socket2.recv(1024)  # Tamaño del buffer (ajústalo según sea necesario)
+        array_aeskey_and_message = pickle.loads(data)
+
+        # Extraer la clave AES y el mensaje cifrado
+        aes_key_received, encrypted_message_received = array_aeskey_and_message
+        ciphertext, tag, nonce = encrypted_message_received
+
+        # Descifrar el mensaje
+        decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+        if decrypted_message:
+            # Código para imprimir en verde y negrita
+        
+            print(f"\033[1;32mMensaje descifrado: {decrypted_message}\033[0m")
+
+        else:
+            print("Error al descifrar el mensaje.")
+       
+                    # Ahora, vamos a permitir que Alice y Bob se envíen mensajes cifrados
+  # Ahora, vamos a permitir que Alice y Bob se envíen mensajes cifrados
         def send_message():
             message = message_entry.get()
             message = message.encode()
@@ -163,9 +222,12 @@ def start_receiver(ip_destino):
         receive_thread = threading.Thread(target=receive_messages)
         receive_thread.start()
 
-        # Interfaz gráfica para enviar y recibir mensajes
         root = tk.Tk()
         root.title("Bob - Enviar Mensaje")
+
+        
+
+        
 
         send_button = tk.Button(root, text="Enviar", command=send_message)
         send_button.pack(pady=20)
@@ -200,25 +262,5 @@ def start_receiver(ip_destino):
         client_socket2.close()
         print("Conexión cerrada")
 
-# Ventana para ingresar la IP
-def ask_for_ip():
-    def on_connect():
-        ip_destino = ip_entry.get()
-        start_receiver(ip_destino)
-        root.quit()
-
-    root = tk.Tk()
-    root.title("Conectar al servidor")
-
-    ip_label = tk.Label(root, text="Introduce la IP del servidor:")
-    ip_label.pack(pady=10)
-
-    ip_entry = tk.Entry(root, width=30)
-    ip_entry.pack(pady=10)
-
-    connect_button = tk.Button(root, text="Conectar", command=on_connect)
-    connect_button.pack(pady=20)
-
-    root.mainloop()
-
-ask_for_ip()  # Iniciar la ventana para ingresar la IP
+# Ejecutar el receptor
+start_receiver()
