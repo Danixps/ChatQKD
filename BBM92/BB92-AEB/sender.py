@@ -15,7 +15,8 @@ import tkinter as tk
 import os
 from qiskit_aer import Aer
 from qiskit import QuantumCircuit
-SIZE = 6
+SIZE = 1
+from qc import qc
 from qiskit.quantum_info import Statevector
 
 def bind_socket(server_socket, address, event, stop_event, conn_list):
@@ -87,123 +88,45 @@ def start_sender():
         conn = conn_list[0]
         print(f"Conexión establecida exitosamente con: {conn.getpeername()}")
 
-        alice_bits = np.random.randint(2, size=SIZE)
+       
+
         alice_bases = np.random.choice(['Z', 'X'], size=SIZE)
-        print("Alice's bits: ", alice_bits)
-        print("Alice's bases: ", alice_bases)
 
-        # circuits = []
-        # for i in range(SIZE):
-        #     qc = QuantumCircuit(1, 1)
-        #     if alice_bits[i] == 1:
-        #         qc.x(0)
-        #     if alice_bases[i] == 'X':
-        #         qc.h(0)
-        #     circuits.append(qc)
-
-        bob_result = []
-        backend = Aer.get_backend('qasm_simulator')
-        for i in range(1):
-            # Crear un circuito cuántico con 2 qubits
-            full_qc = QuantumCircuit(2, 2)
-
-            # Aplicar puerta Hadamard al qubit de Alice (qubit 0)
-            full_qc.h(0)
-
-            # Aplicar puerta CNOT (controlada por Alice y dirigida a Bob)
-            full_qc.cx(0, 1)
-            
-            # Transpilar el circuito para optimización antes de la ejecución
-            transpiled_qc = transpile(full_qc, Aer.get_backend('statevector_simulator'))
-
-            # Usar el backend adecuado para obtener el statevector
-            simulator = Aer.get_backend('statevector_simulator')
-            
-
-            # Ejecutar el circuito cuántico optimizado y obtener el estado cuántico
-            result = simulator.run(transpiled_qc).result()
-
-            # Obtener el vector de estado cuántico
-            statevector = result.get_statevector()
-
-            # Mostrar el estado cuántico completo
-            print("Estado cuántico:", statevector)
-            print("prueba", statevector[3])
-            sv = Statevector.from_instruction(full_qc)
-
-            # Crear el statevector de Bob (ya normalizado)
-            sv = Statevector([0.70710678+0.j, 0.+0.j, 0.+0.j, 0.70710678+0.j])
-            from qiskit.quantum_info import partial_trace
-            # Calcular la matriz de densidad reducida de Bob (quitamos el qubit 0)
-            bob_density_matrix = partial_trace(sv, [0])
-
-
-            outcome_bob, post_state_bob = sv.measure()[0]  # Medimos solo el qubit 1
-
-            print("Resultado de la medición de A:", outcome_bob)
-
-
-
-
-
-            # Obtener los autovalores y autovectores (para extraer el estado puro si aplica)
-            eigvals, eigvecs = np.linalg.eigh(bob_density_matrix.data)
-
-            # El estado cuántico puro de Bob es el autovector con el mayor autovalor
-            bob_state = eigvecs[:, np.argmax(eigvals)]
-
-            print("Estado del qubit de Bob (normalizado):", bob_state)
-
-                # Crear un circuito de 1 qubit
-            qc = QuantumCircuit(1,1)
-
-            # Inicializar el qubit con el estado dado
-            qc.initialize(bob_state, 0)
-
-            print(qc)
-            qc.measure(0, 0)  # Medir el qubit
-
-            # Transpilar y ejecutar en el backend
-            compiled_circuit = transpile(qc, backend)
-            job = backend.run(compiled_circuit, shots=10)  # Ejecutar el circuito.
-
-            result = job.result()
-            bob_result.append(result.get_counts())
-            print("Resultados de Bob:", bob_result)
-            # state = Statevector.from_label("+-rl")
-            # qc = QuantumCircuit(4)
-            # qc.prepare_state(bob_state, [0, 1, 2, 3])
-            # print("hoal)")
-            
-
-
-
-            # qc.measure(0, 0)
-            # compiled_circuit = transpile(qc, backend)
-            # job = backend.run(compiled_circuit, shots=1)  # Ejecutar el circuito.
-
-            # result = job.result()
-            # measured_bit = int(list(result.get_counts().keys())[0])  # Obtener el bit medido
-
-
-            # Imprimir el estado del qubit de Bob
-            # print("XXXXXXXEstado del qubit de Bob (qubit 1):", measured_bit)
-            # Medir directamente el statevector
- 
-            
-
-            outcome, post_state = sv.measure()
-
-            print("Resultado de la medición:", outcome)
-            print("Estado cuántico post-medición:", post_state)
-
-        bob_qc=[]
+        alice_bases = ['Z']
    
-        serialized_circuits = pickle.dumps(bob_qc)
+        print("Alice's bases: ", alice_bases)
+        circuits_bob = []
+
+
+        for i in range(SIZE):
+            qc = QuantumCircuit(2, 2)
+            qc.h(0)       # Hadamard en qubit 0 => lo pone en superposición
+            qc.cx(0, 1)   # CNOT con control en qubit 0 y objetivo en qubit 1 => crea entrelazamiento
+
+            circuits_bob.append(qc)
+
+        serialized_circuits = pickle.dumps(circuits_bob)
         data_length = struct.pack('!I', len(serialized_circuits))
+
+        data_length = struct.pack('!I', SIZE)  # Enviar longitud correcta
         conn.sendall(data_length)
         conn.sendall(serialized_circuits)
         print("Qubits enviados exitosamente.")
+
+        # Alice mide su qubit
+        if alice_bases[0] == 'X':
+            qc.h(0)  # Cambiar a la base X
+        qc.measure(0, 0)  # Medir el qubit 0
+
+        # Ejecutar la medición con simulador por defecto
+        backend = Aer.get_backend('qasm_simulator')
+        compiled_circuit = transpile(qc, backend)
+        job = backend.run(compiled_circuit, shots=1, seed_simulator=12345)  # <- semilla aquí
+        result = job.result()
+
+        measured_bit = int(list(result.get_counts().keys())[0])  # Obtener el bit medido
+        print("Resultado de medición de Alice (qubit 0):", measured_bit)
+
 
         server_socket3 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server_socket3.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -239,47 +162,47 @@ def start_sender():
         print("Coincidencia en las bases:", matching_bases)
 
         
-        bases_coincidentes = alice_bases[matching_bases]
-        bits_coincidentes = alice_bits[matching_bases]
-        coincidentes_indices = np.where(bases_coincidentes)[0]
-        selected_indices = np.random.choice(coincidentes_indices+1, SIZE//3, replace=False)
-        print("Índices para comprobación:", selected_indices)
+        # bases_coincidentes = alice_bases[matching_bases]
+        # bits_coincidentes = alice_bits[matching_bases]
+        # coincidentes_indices = np.where(bases_coincidentes)[0]
+        # selected_indices = np.random.choice(coincidentes_indices+1, SIZE//3, replace=False)
+        # print("Índices para comprobación:", selected_indices)
 
-        alice_bits_seleccionados = [bits_coincidentes[i-1] for i in selected_indices]
-        alice_bits_seleccionados = np.array(list(alice_bits_seleccionados), dtype=int)
-        print("Bits de comprbación", alice_bits_seleccionados)
+        # alice_bits_seleccionados = [bits_coincidentes[i-1] for i in selected_indices]
+        # alice_bits_seleccionados = np.array(list(alice_bits_seleccionados), dtype=int)
+        # print("Bits de comprbación", alice_bits_seleccionados)
 
 
 
 
         
         
-        conn1.sendall(b"".join(selected_indices))
+        # conn1.sendall(b"".join(selected_indices))
        
-        data = []
+        # data = []
         
 
    
-        conn1.close()
-        server_socket3.close()
-        server_socket4 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket4.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        # conn1.close()
+        # server_socket3.close()
+        # server_socket4 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # server_socket4.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
        
-        server_socket4.bind(('localhost', 65480))
-        server_socket4.listen(1)
-        conn2, addr1 = server_socket4.accept()
+        # server_socket4.bind(('localhost', 65480))
+        # server_socket4.listen(1)
+        # conn2, addr1 = server_socket4.accept()
 
         
        
-        data = conn2.recv(1024)
+        # data = conn2.recv(1024)
            
      
-        bob_bits_str = b"".join(bytes([x]) for x in data).decode()
+        # bob_bits_str = b"".join(bytes([x]) for x in data).decode()
 
-        print ("Bits de comprobación recibidos", bob_bits_str)
-        bob_bits_comprobacion = np.array(list(bob_bits_str), dtype=int)
+        # print ("Bits de comprobación recibidos", bob_bits_str)
+        # bob_bits_comprobacion = np.array(list(bob_bits_str), dtype=int)
        
-        print("Bits de comprobación de Bob:",  bob_bits_comprobacion)
+        # print("Bits de comprobación de Bob:",  bob_bits_comprobacion)
 
 
 

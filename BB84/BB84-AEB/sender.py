@@ -11,8 +11,21 @@ import hashlib
 import tkinter as tk
 import os
 
-SIZE = 100
+SIZE = 10
 
+import sys
+# ...
+if len(sys.argv) > 1:
+    try:
+        SIZE = int(sys.argv[1])
+        print(f"El tamaño recibido es: {SIZE}")
+    except ValueError:
+        print("El argumento debe ser un entero.")
+        sys.exit(1)
+else:
+    print("No se recibió ningún argumento.")
+    sys.exit(1)
+    
 def bind_socket(server_socket, address, event, stop_event, conn_list):
     try:
         server_socket.bind(address)
