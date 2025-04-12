@@ -66,8 +66,8 @@ def start_receiver():
 
         # Recibir los circuitos de Eva
         data = b""
-        while len(data) < data_length:
-            packet = client_socket.recv(4096)
+        while len(data) < int(data_length):
+            packet = client_socket.recv(40960)
             if not packet:
                 break
             data += packet
@@ -83,26 +83,40 @@ def start_receiver():
         print("Contenido de received_circuits:", received_circuits)
         
         # Generar bases aleatorias del mismo tamaño que los qubits recibidos
-        num_qubits = data_length
-        bob_bases = np.random.choice(['X', 'Z'], size=num_qubits)
-        bob_bases = ['Z']
-        circuits = received_circuits
-        qc = circuits[0].copy()
 
+        num_qubits = len(received_circuits)
+        bob_bases = np.random.choice(['X', 'Z'], size=num_qubits)
+  
+        circuits = received_circuits
+        
 
         print("Bases de Bob:", bob_bases)
+
+        seeds= [817234, 56298, 993201, 122345, 388822, 47291, 851024, 110099, 65287, 709350]
+        for i in range(num_qubits):
         
-        if bob_bases[0] == 'X':
-            qc.h(1)  # Cambiar a la base X para medir si Bob usa la base X
+            qc = circuits[i].copy()
+            if bob_bases[i] == 'X':
+                qc.h(0)  # Cambiar a la base X para medir si Bob usa la base X
 
-        qc.measure(1, 1)  # Medir el qubit
-        # Configurar el simulador con statevector
-        backend = Aer.get_backend('qasm_simulator')
-        compiled_circuit = transpile(qc, backend)
-        job = backend.run(compiled_circuit, shots=1, seed_simulator=12345)  # <- semilla aquí
-        result = job.result()
+            qc.measure(0, 0)  # Medir el qubit
+            # Configurar el simulador con statevector
+            backend = Aer.get_backend('qasm_simulator')
+            compiled_circuit = transpile(qc, backend)
+            job = backend.run(compiled_circuit, shots=1000, seed_simulator=seeds[i])  # <- semilla aquí
+            result = job.result()
+            counts = result.get_counts()
 
-        measured_bit = int(list(result.get_counts().keys())[0])  # Obtener el bit medido
+                        # Si solo estás midiendo el qubit 1 (como parece en tu código)
+            most_common_bitstring = max(counts, key=counts.get)
+            
+            measured_bit = int(most_common_bitstring[-1])  # <- o [0] dependiendo del qubit
+
+
+
+            bob_result.append(measured_bit)
+
+        print("Resultados de Bob:", bob_result)
         print("Resultado de medición de Bob (qubit 1):", measured_bit)
 
 
@@ -120,7 +134,8 @@ def start_receiver():
         time.sleep(0.01)
         
         data = []
-        # client_socket1.sendall(serialized_bits) ARREGLAR
+        serialized_bases = b"".join(bob_bases)
+        client_socket1.sendall(serialized_bases) 
         while len(data) < num_qubits:
             packet = client_socket1.recv(4096)
             if not packet:
@@ -135,19 +150,19 @@ def start_receiver():
         
         
         print("Bases de Alice:", alice_bases)
+        # Comparar bases
+        matching_bases = alice_bases == bob_bases  # Esto devuelve True o False
+        print("Bases coincidentes:", matching_bases)
 
-        matching_bases = alice_bases == bob_bases
-        bases_coincidentes = alice_bases[matching_bases]
-      
+        # Filtrar las bases coincidentes
+        # Esto te da los índices de las bases que coinciden
         indices_comprobacion_enteros = [ord(x) for x in indices]
-        print("Índices para comprobación:",  indices_comprobacion_enteros)
+        print("Índices para comprobación:", indices_comprobacion_enteros)
 
-       # Verifica que bits_coincidentes tenga el tipo correcto
-        bits_coincidentes = np.array(bob_result)[matching_bases]
-
+      
         # Ahora, accede a los bits de comprobación usando índices enteros
         # Si `indices_comprobacion_enteros` tiene índices válidos para bits_coincidentes:
-        bob_bits_seleccionados = [bits_coincidentes[i-1] for i in indices_comprobacion_enteros]
+        bob_bits_seleccionados = np.array([bob_result[i] for i in indices_comprobacion_enteros])
 
         print("Bits de comprobación:", bob_bits_seleccionados)
 
@@ -156,39 +171,39 @@ def start_receiver():
 
 
         
-        # client_socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        # client_socket2.connect(('localhost', 65480))
-        # bob_bits_seleccionados_str = [str(x).encode() for x in bob_bits_seleccionados]
-        # client_socket2.sendall(b"".join(bob_bits_seleccionados_str))
+        client_socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        client_socket2.connect(('localhost', 65480))
+        bob_bits_seleccionados_str = [str(x).encode() for x in bob_bits_seleccionados]
+        client_socket2.sendall(b"".join(bob_bits_seleccionados_str))
       
-        # print ("Bits de comprobación enviados")
+        print ("Bits de comprobación enviados")
       
-        # matching_bases = alice_bases == bob_bases
-        # bases_coincidentes = bob_bases[matching_bases]
-        # print("Coincidencia en las bases:", matching_bases)
-        # print("Bases coincidentes:", bases_coincidentes)
+        matching_bases = alice_bases == bob_bases
+        bases_coincidentes = bob_bases[matching_bases]
+        print("Coincidencia en las bases:", matching_bases)
+        print("Bases coincidentes:", bases_coincidentes)
 
-        # # Aquí Bob recibe la clave compartida y la utiliza para descifrar un mensaje (simulado)
-        # # Simulación de la clave derivada
-        # shared_key = np.array(bob_result)  # La clave compartida derivada de los resultados
-        # aes_key = derive_aes_key(shared_key.tobytes())  # Derivamos la clave AES
+        # Aquí Bob recibe la clave compartida y la utiliza para descifrar un mensaje (simulado)
+        # Simulación de la clave derivada
+        shared_key = np.array(bob_result)  # La clave compartida derivada de los resultados
+        aes_key = derive_aes_key(shared_key.tobytes())  # Derivamos la clave AES
 
-        # data = client_socket2.recv(1024)  # Tamaño del buffer (ajústalo según sea necesario)
-        # array_aeskey_and_message = pickle.loads(data)
+        data = client_socket2.recv(1024)  # Tamaño del buffer (ajústalo según sea necesario)
+        array_aeskey_and_message = pickle.loads(data)
 
-        # # Extraer la clave AES y el mensaje cifrado
-        # aes_key_received, encrypted_message_received = array_aeskey_and_message
-        # ciphertext, tag, nonce = encrypted_message_received
+        # Extraer la clave AES y el mensaje cifrado
+        aes_key_received, encrypted_message_received = array_aeskey_and_message
+        ciphertext, tag, nonce = encrypted_message_received
 
-        # # Descifrar el mensaje
-        # decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
-        # if decrypted_message:
-        #     # Código para imprimir en verde y negrita
+        # Descifrar el mensaje
+        decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+        if decrypted_message:
+            # Código para imprimir en verde y negrita
         
-        #     print(f"\033[1;32mMensaje descifrado: {decrypted_message}\033[0m")
+            print(f"\033[1;32mMensaje descifrado: {decrypted_message}\033[0m")
 
-        # else:
-        #     print("Error al descifrar el mensaje.")
+        else:
+            print("Error al descifrar el mensaje.")
        
                     # Ahora, vamos a permitir que Alice y Bob se envíen mensajes cifrados
   # Ahora, vamos a permitir que Alice y Bob se envíen mensajes cifrados

@@ -15,8 +15,8 @@ import tkinter as tk
 import os
 from qiskit_aer import Aer
 from qiskit import QuantumCircuit
-SIZE = 1
-from qc import qc
+SIZE = 10
+
 from qiskit.quantum_info import Statevector
 
 def bind_socket(server_socket, address, event, stop_event, conn_list):
@@ -92,40 +92,51 @@ def start_sender():
 
         alice_bases = np.random.choice(['Z', 'X'], size=SIZE)
 
-        alice_bases = ['Z']
-   
+      
         print("Alice's bases: ", alice_bases)
         circuits_bob = []
-
+        alice_bits = []
 
         for i in range(SIZE):
             qc = QuantumCircuit(2, 2)
+            qc.x([0, 1])
             qc.h(0)       # Hadamard en qubit 0 => lo pone en superposición
             qc.cx(0, 1)   # CNOT con control en qubit 0 y objetivo en qubit 1 => crea entrelazamiento
 
             circuits_bob.append(qc)
+        seeds = [817234, 56298, 993201, 122345, 388822, 47291, 851024, 110099, 65287, 709350]
 
         serialized_circuits = pickle.dumps(circuits_bob)
         data_length = struct.pack('!I', len(serialized_circuits))
-
-        data_length = struct.pack('!I', SIZE)  # Enviar longitud correcta
         conn.sendall(data_length)
         conn.sendall(serialized_circuits)
         print("Qubits enviados exitosamente.")
 
+        for i in range(SIZE):
         # Alice mide su qubit
-        if alice_bases[0] == 'X':
-            qc.h(0)  # Cambiar a la base X
-        qc.measure(0, 0)  # Medir el qubit 0
+            qc = circuits_bob[i].copy()
+            if alice_bases[i] == 'X':
+                qc.h(0)  # Cambiar a la base X
+            qc.measure(0, 0)  # Medir el qubit 0
 
-        # Ejecutar la medición con simulador por defecto
-        backend = Aer.get_backend('qasm_simulator')
-        compiled_circuit = transpile(qc, backend)
-        job = backend.run(compiled_circuit, shots=1, seed_simulator=12345)  # <- semilla aquí
-        result = job.result()
+            # Ejecutar la medición con simulador por defecto
+            backend = Aer.get_backend('qasm_simulator')
+            compiled_circuit = transpile(qc, backend)
+            job = backend.run(compiled_circuit, shots=1000, seed_simulator=seeds[i])  # <- semilla aquí
+            result = job.result()
+            counts = result.get_counts()
+          
+                                # Si solo estás midiendo el qubit 1 (como parece en tu código)
+            most_common_bitstring = max(counts, key=counts.get)
+            
+            measured_bit = int(most_common_bitstring[-1])  # <- o [0] dependiendo del qubit
 
-        measured_bit = int(list(result.get_counts().keys())[0])  # Obtener el bit medido
-        print("Resultado de medición de Alice (qubit 0):", measured_bit)
+            alice_bits.append(measured_bit)
+
+        
+        print("Resultados de Alice:", alice_bits)
+        
+
 
 
         server_socket3 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -162,47 +173,55 @@ def start_sender():
         print("Coincidencia en las bases:", matching_bases)
 
         
-        # bases_coincidentes = alice_bases[matching_bases]
-        # bits_coincidentes = alice_bits[matching_bases]
-        # coincidentes_indices = np.where(bases_coincidentes)[0]
-        # selected_indices = np.random.choice(coincidentes_indices+1, SIZE//3, replace=False)
-        # print("Índices para comprobación:", selected_indices)
-
-        # alice_bits_seleccionados = [bits_coincidentes[i-1] for i in selected_indices]
-        # alice_bits_seleccionados = np.array(list(alice_bits_seleccionados), dtype=int)
-        # print("Bits de comprbación", alice_bits_seleccionados)
-
-
-
-
-        
-        
-        # conn1.sendall(b"".join(selected_indices))
+                # Filtrar los índices donde las bases coinciden (esto te da los índices donde True en matching_bases)
+        indices_coincidentes = np.array([i for i, match in enumerate(matching_bases) if match])
        
-        # data = []
+
+        # Ahora, puedes usar estos índices para extraer los bits correspondientes de alice_bits
+        bits_coincidentes = [alice_bits[i] for i in indices_coincidentes]
+
+        print("Índices para comprobación:", indices_coincidentes)
+        print("bits_coincidentes:", bits_coincidentes)
+
+        half_size = len(indices_coincidentes) // 2  # Tamaño de la mitad de los índices
+
+        # Convierte indices_coincidentes en una lista y selecciona aleatoriamente
+        indices_coincidentes_lista = indices_coincidentes.tolist()
+        selected_indices = np.random.choice(indices_coincidentes_lista, SIZE//3, replace=False)
+
+        print("Bits de comprbación", selected_indices)
+
+
+
+
+        
+        
+        conn1.sendall(b"".join(selected_indices))
+       
+        data = []
         
 
    
-        # conn1.close()
-        # server_socket3.close()
-        # server_socket4 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        # server_socket4.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        conn1.close()
+        server_socket3.close()
+        server_socket4 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket4.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
        
-        # server_socket4.bind(('localhost', 65480))
-        # server_socket4.listen(1)
-        # conn2, addr1 = server_socket4.accept()
+        server_socket4.bind(('localhost', 65480))
+        server_socket4.listen(1)
+        conn2, addr1 = server_socket4.accept()
 
         
        
-        # data = conn2.recv(1024)
+        data = conn2.recv(1024)
            
      
-        # bob_bits_str = b"".join(bytes([x]) for x in data).decode()
+        bob_bits_str = b"".join(bytes([x]) for x in data).decode()
 
-        # print ("Bits de comprobación recibidos", bob_bits_str)
-        # bob_bits_comprobacion = np.array(list(bob_bits_str), dtype=int)
+        print ("Bits de comprobación recibidos", bob_bits_str)
+        bob_bits_comprobacion = np.array(list(bob_bits_str), dtype=int)
        
-        # print("Bits de comprobación de Bob:",  bob_bits_comprobacion)
+        print("Bits de comprobación de Bob:",  bob_bits_comprobacion)
 
 
 
@@ -216,7 +235,8 @@ def start_sender():
 
         
 
-        
+        alice_bits_seleccionados = np.array([alice_bits[i] for i in selected_indices])
+        print (alice_bits_seleccionados)
 
         if np.array_equal(alice_bits_seleccionados, bob_bits_comprobacion):
             print("Intercambio de claves exitoso")
@@ -226,7 +246,7 @@ def start_sender():
             print ("Los bits coincidentes son: ", bits_coincidentes)
             #quiitar a bits_coincidentes los bits de comprobación
            
-            key = [x for i, x in enumerate(bits_coincidentes) if i not in selected_indices-1]
+            key = [x for i, x in enumerate(bits_coincidentes) if i not in indices_coincidentes-1]
             print("The complete key is:", key)
            
             aes_key = derive_aes_key(bytes(key))
@@ -304,7 +324,7 @@ def start_sender():
             receive_thread.join()
         else:
             print("\nThe keys do not match. Potential interception detected.")
-            print("Alice's subkey: ", alice_bits_seleccionados)
+            print("Alice's subkey: ", selected_indices)
             print("Bob's subkey:   ", bob_bits_comprobacion)
 
         if conn:
