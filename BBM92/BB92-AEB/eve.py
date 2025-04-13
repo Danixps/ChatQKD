@@ -37,7 +37,7 @@ def start_reciever():
         num_qubits = len(received_circuits)
         eva_bases = np.random.choice(['X', 'Z'], size=num_qubits)
         print("Bases de Eva:", eva_bases)
-        
+        seeds= [817234, 56298, 993201, 122345, 388822, 47291, 851024, 110099, 65287, 709350]
         circuits = received_circuits
         backend = Aer.get_backend('qasm_simulator')
         for i in range(num_qubits):
@@ -50,7 +50,7 @@ def start_reciever():
 
             # Transpilar y ejecutar en el backend
             compiled_circuit = transpile(qc, backend)
-            job = backend.run(compiled_circuit, shots=1) # devuelve los resultados de la ejecución del circuito.
+            job = backend.run(compiled_circuit, shots=1000, seed_simulator=seeds[i]) # devuelve los resultados de la ejecución del circuito.
 
             result = job.result()
             measured_bit = int(list(result.get_counts().keys())[0])  # Obtener el bit medido

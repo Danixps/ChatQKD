@@ -15,7 +15,7 @@ import tkinter as tk
 import os
 from qiskit_aer import Aer
 from qiskit import QuantumCircuit
-SIZE = 10
+SIZE = 9
 
 from qiskit.quantum_info import Statevector
 
