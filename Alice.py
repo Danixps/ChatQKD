@@ -8,8 +8,8 @@ import sys
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Construcción de rutas relativas
-ruta_bb84 = os.path.join(base_dir, "BB84", "BB84-AEB", "sender.py")
-ruta_bbm92 = os.path.join(base_dir, "BBM92", "BBM92-AEB", "sender.py")
+ruta_bb84 = os.path.join(base_dir, "BB84", "sender.py")
+ruta_bbm92 = os.path.join(base_dir, "BBM92", "sender.py")
 print(ruta_bb84)
 protocol_files = {
     "BB84": ruta_bb84,
