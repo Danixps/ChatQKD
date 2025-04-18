@@ -10,9 +10,10 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 # Diccionario que asocia el nombre del protocolo a la ruta del script a ejecutar
 
 ruta_bb84 = os.path.join(base_dir, "BB84", "BB84-AEB", "reciever.py")
+ruta_bbm92 =  os.path.join(base_dir, "BBM92", "BBM92-AEB", "reciever.py")
 protocol_files = {
     "BB84": ruta_bb84,
-    "BBM92": "/ruta/a/otro_archivo.py",  # Reemplaza esta ruta con la del otro protocolo
+    "BBM92": ruta_bbm92,  # Reemplaza esta ruta con la del otro protocolo
     "E91": "/ruta/a/otro_archivo.py",  # Reemplaza esta ruta con la del otro protocolo
     "SARG04": "/ruta/a/otro_archivo.py"  # Reemplaza esta ruta con la del otro protocolo
 }

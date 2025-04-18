@@ -15,8 +15,19 @@ import tkinter as tk
 import os
 from qiskit_aer import Aer
 from qiskit import QuantumCircuit
-SIZE = 9
-
+SIZE = 5
+import sys
+# ...
+if len(sys.argv) > 1:
+    try:
+        SIZE = int(sys.argv[1])
+        print(f"El tamaño recibido es: {SIZE}")
+    except ValueError:
+        print("El argumento debe ser un entero.")
+        sys.exit(1)
+else:
+    print("No se recibió ningún argumento.")
+    sys.exit(1)
 from qiskit.quantum_info import Statevector
 
 def bind_socket(server_socket, address, event, stop_event, conn_list):
@@ -163,7 +174,7 @@ def start_sender():
         print("Bases de Bob:", bob_bases)
         
         send_alice_bases = b"".join(alice_bases)
-        conn1.sendall(send_alice_bases )
+        #conn1.sendall(send_alice_bases )
         data = b""
 
 
@@ -193,10 +204,16 @@ def start_sender():
 
 
 
+        #conn1.sendall(b"".join(selected_indices))
+        
+        selected_indices_bytes = [str(i).encode() for i in selected_indices]
+        selected_indices_bytes = [bytes([i]) for i in selected_indices]
+
+        conn1.sendall(send_alice_bases + b'|' + b"".join(selected_indices_bytes))
+
 
         
-        
-        conn1.sendall(b"".join(selected_indices))
+       
        
         data = []
         
@@ -207,7 +224,7 @@ def start_sender():
         server_socket4 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server_socket4.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
        
-        server_socket4.bind(('localhost', 65480))
+        server_socket4.bind(('localhost', 65533))
         server_socket4.listen(1)
         conn2, addr1 = server_socket4.accept()
 

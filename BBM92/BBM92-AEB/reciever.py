@@ -53,6 +53,7 @@ def decrypt_message(encrypted_message, aes_key, tag, nonce):
     return plaintext_dec.decode()
 
 def start_receiver():
+    client_socket2 = None  # Aseguramos que la variable siempre exista
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect(('localhost', 65431))
     
@@ -120,7 +121,7 @@ def start_receiver():
         print("Resultado de medición de Bob (qubit 1):", measured_bit)
 
 
-
+        time.sleep(0.01)
 
         # Serializar las bases de Bob
         client_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -136,12 +137,23 @@ def start_receiver():
         data = []
         serialized_bases = b"".join(bob_bases)
         client_socket1.sendall(serialized_bases) 
-        while len(data) < num_qubits:
-            packet = client_socket1.recv(4096)
-            if not packet:
-                break
-            data.append(packet)
-        alice_bases_str = b"".join(data).decode()
+        # while len(data) <= num_qubits:
+        #     packet = client_socket1.recv(4096)
+        #     if not packet:
+        #         break
+        #     data.append(packet)
+        
+        data = client_socket1.recv(4096)
+        bases_part, indices_part = data.split(b'|')
+        print (bases_part)
+        print(indices_part)
+        alice_bases_str = bases_part.decode()
+     
+        indices_comprobacion_enteros = list(indices_part)
+        print(alice_bases_str)
+        print(indices_comprobacion_enteros)
+
+        # print(selected_indices_str)
         alice_bases = np.array(list(alice_bases_str))
         alice_bases = alice_bases[alice_bases != '']
         
@@ -156,10 +168,10 @@ def start_receiver():
 
         # Filtrar las bases coincidentes
         # Esto te da los índices de las bases que coinciden
-        indices_comprobacion_enteros = [ord(x) for x in indices]
+        
         print("Índices para comprobación:", indices_comprobacion_enteros)
 
-      
+   
         # Ahora, accede a los bits de comprobación usando índices enteros
         # Si `indices_comprobacion_enteros` tiene índices válidos para bits_coincidentes:
         bob_bits_seleccionados = np.array([bob_result[i] for i in indices_comprobacion_enteros])
@@ -172,7 +184,10 @@ def start_receiver():
 
         
         client_socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client_socket2.connect(('localhost', 65480))
+   
+        # Asegurarse de que el servidor está listo
+        time.sleep(2)  # Espera 2 segundos antes de intentar conectar
+        client_socket2.connect(('localhost', 65533))
         bob_bits_seleccionados_str = [str(x).encode() for x in bob_bits_seleccionados]
         client_socket2.sendall(b"".join(bob_bits_seleccionados_str))
       
