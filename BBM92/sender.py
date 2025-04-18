@@ -16,6 +16,8 @@ import os
 from qiskit_aer import Aer
 from qiskit import QuantumCircuit
 SIZE = 5
+import random
+import time
 import sys
 # ...
 if len(sys.argv) > 1:
@@ -115,11 +117,21 @@ def start_sender():
             qc.cx(0, 1)   # CNOT con control en qubit 0 y objetivo en qubit 1 => crea entrelazamiento
 
             circuits_bob.append(qc)
-        seeds = [817234, 56298, 993201, 122345, 388822, 47291, 851024, 110099, 65287, 709350]
+      
+        seeds = [random.randint(0, 255) for _ in range(SIZE)]
+
+
 
         serialized_circuits = pickle.dumps(circuits_bob)
-        data_length = struct.pack('!I', len(serialized_circuits))
-        conn.sendall(data_length)
+        
+   
+        seeds_bytes = [bytes([x]) for x in seeds]
+     
+
+        conn.sendall(b"".join(seeds_bytes))
+        import time 
+        time.sleep(0.1)
+
         conn.sendall(serialized_circuits)
         print("Qubits enviados exitosamente.")
 

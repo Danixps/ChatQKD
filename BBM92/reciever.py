@@ -59,33 +59,63 @@ def start_receiver():
     
     try:
         # Recibir los datos serializados
-        data_length = client_socket.recv(4)
-        if not data_length:
-            print("No se recibió la longitud de los datos de Eva")
-            return
-        data_length = struct.unpack('!I', data_length)[0]
+        # data_length = client_socket.recv(4)
+        # if not data_length:
+        #     print("No se recibió la longitud de los datos de Eva")
+        #     return
 
+        data = client_socket.recv(4096)
+        seeds_bytes = data.split(b'|')
+        
+
+        # Unir todos los bytes primero
+        unidos = b''.join(seeds_bytes)
+
+        # Luego convertir cada byte a entero
+        seeds = list(unidos)
+
+        print(seeds)
+        data_length = len(seeds)
+        time.sleep(1)
         # Recibir los circuitos de Eva
         data = b""
-        while len(data) < int(data_length):
-            packet = client_socket.recv(40960)
-            if not packet:
-                break
+        # while len(data) < data_length:
+        #     packet = client_socket.recv(40960000000)
+        #     if not packet:
+        #         break
+        #     data += packet
+        # data = b""
+        count = 0
+        # while len(data) < data_length:
+        #     packet = client_socket.recv(9999999999)
+        #     if not packet: break
+        #     data += packet
+        #     count = count +1
+
+        
+     
+        while len(data) < data_length:
+            packet = client_socket.recv(9999999999)
+            if not packet: break
             data += packet
+        received_circuits = pickle.loads(data)
+       
+
+
+        
 
         # Deserializar los circuitos
 
-
+        
 
         bob_result =[]
-        received_circuits = pickle.loads(data)
+        # received_circuits = pickle.loads(data)
         # Diagnóstico: Imprimir el tipo y contenido de received_circuits
-        print("Tipo de received_circuits:", type(received_circuits))
-        print("Contenido de received_circuits:", received_circuits)
+        
         
         # Generar bases aleatorias del mismo tamaño que los qubits recibidos
 
-        num_qubits = len(received_circuits)
+        num_qubits = data_length
         bob_bases = np.random.choice(['X', 'Z'], size=num_qubits)
   
         circuits = received_circuits
@@ -93,7 +123,7 @@ def start_receiver():
 
         print("Bases de Bob:", bob_bases)
 
-        seeds= [817234, 56298, 993201, 122345, 388822, 47291, 851024, 110099, 65287, 709350]
+        
         for i in range(num_qubits):
         
             qc = circuits[i].copy()
