@@ -50,6 +50,7 @@ O instalar manualmente
 pip install -r requirements.txt
 ```
 🚀 Ejecución
+
 Cada agente tiene su propio script.
 
 Por ejemplo, para Alice:
