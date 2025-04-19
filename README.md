@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 Cada agente tiene su propio script.
 
-Por ejemplo, para Alice:
+Ejemplo:
 
 ```bash
 # Ejecutar Alice
