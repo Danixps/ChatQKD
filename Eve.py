@@ -9,7 +9,7 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 # Diccionario que asocia el nombre del protocolo a la ruta del script a ejecutar
 
 ruta_bb84 = os.path.join(base_dir, "BB84", "BB84-AEB", "eve.py")
-ruta_bbm92 =  os.path.join(base_dir, "BBM92", "BBM92-AEB", "eve.py")
+ruta_bbm92 =  os.path.join(base_dir, "BBM92", "eve.py")
 print(ruta_bb84)
 protocol_files = {
     "BB84": ruta_bb84,
