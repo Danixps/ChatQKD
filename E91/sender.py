@@ -8,6 +8,7 @@ from qiskit import QuantumCircuit
 from Crypto.Cipher import AES
 from qiskit import transpile
 from datetime import datetime
+import math
 import hashlib
 import re
 from qiskit_aer import AerSimulator
@@ -18,7 +19,7 @@ from qiskit_aer import Aer
 from qiskit import QuantumCircuit
 SIZE = 5
 import random
-import time
+
 import sys
 # ...
 if len(sys.argv) > 1:
@@ -414,7 +415,7 @@ def start_sender():
         #     print("No hay violación cuántica detectada.")
 
         
-        print("TAMAÑOS", len(alice_bits), len(bob_results))
+     
         for i in range(SIZE):
 
 
@@ -483,19 +484,21 @@ def start_sender():
         # CHSH inequality test
         print('Valor de la correlación CHSH: ' + str(round(corr, 3)))
 
+        limite_inferior = (0.15 * (-2 * math.sqrt(2))) - (2 * math.sqrt(2)) 
+        limite_superior = ((-2 * math.sqrt(2)- 0.15 * + (-2 * math.sqrt(2)))) 
 
+        print("Limite inferior:", limite_inferior)
+        print("Limite superior:", limite_superior)
 
-        
 
         alice_bits_seleccionados = np.array([alice_bits[i] for i in selected_indices])
         print (alice_bits_seleccionados)
 
-        if np.array_equal(alice_bits_seleccionados, bob_bits_comprobacion):
-            print("Intercambio de claves exitoso")
+        if corr > limite_inferior and corr < limite_superior:
+            
+            print("Intercambio de claves exitoso. La correlacion CHSH está dentro del margen permitido de -2√2 +/-15%)")
             print("\nThe key exchange was successful!")
-            print("Alice's subkey:", alice_bits_seleccionados)
-            print("Bob's subkey: ", bob_bits_comprobacion)
-            print ("Los bits coincidentes son: ", bits_coincidentes)
+        
             #quiitar a bits_coincidentes los bits de comprobación
            
             key = [x for i, x in enumerate(bits_coincidentes) if i not in indices_coincidentes-1]
