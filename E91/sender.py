@@ -1,0 +1,623 @@
+import socket
+import threading
+import numpy as np
+import pickle
+import struct
+import random
+from qiskit import QuantumCircuit
+from Crypto.Cipher import AES
+from qiskit import transpile
+from datetime import datetime
+import hashlib
+import re
+from qiskit_aer import AerSimulator
+import numpy as np
+import tkinter as tk
+import os
+from qiskit_aer import Aer
+from qiskit import QuantumCircuit
+SIZE = 5
+import random
+import time
+import sys
+# ...
+if len(sys.argv) > 1:
+    try:
+        SIZE = int(sys.argv[1])
+        print(f"El tamaño recibido es: {SIZE}")
+    except ValueError:
+        print("El argumento debe ser un entero.")
+        sys.exit(1)
+else:
+    print("No se recibió ningún argumento.")
+    sys.exit(1)
+from qiskit.quantum_info import Statevector
+
+def bind_socket(server_socket, address, event, stop_event, conn_list):
+    try:
+        server_socket.bind(address)
+        server_socket.listen(1)
+
+        while not event.is_set():
+            server_socket.settimeout(1)
+            try:
+                conn, addr = server_socket.accept()
+                print(f"Conexión aceptada en {address}")
+                conn_list.append(conn)
+                event.set()
+                break
+            except socket.timeout:
+                if stop_event.is_set():
+                    print(f"Terminando espera en {address}")
+                    break
+    except Exception as e:
+        print(f"Error en {address}: {e}")
+    finally:
+        server_socket.close()
+
+def decrypt_message(encrypted_message, aes_key, tag, nonce):
+    cipher_dec = AES.new(aes_key, AES.MODE_GCM, nonce=nonce)
+    plaintext_dec = cipher_dec.decrypt_and_verify(encrypted_message, tag)
+    return plaintext_dec.decode()
+
+def derive_aes_key(shared_key):
+    key = hashlib.sha256(shared_key).digest()[:16]
+    return key
+
+def encrypt_message(message, aes_key):
+    from Crypto.Cipher import AES
+    from Crypto.Random import get_random_bytes
+    nonce = get_random_bytes(12)
+    cipher = AES.new(aes_key, AES.MODE_GCM, nonce=nonce)
+    ciphertext, tag = cipher.encrypt_and_digest(message)
+    return [ciphertext, tag, nonce]
+
+def start_sender():
+    conn = None
+    conn1 = None
+    conn2 = None
+    try:
+        print(f"Esperando conexión...")
+        connection_event = threading.Event()
+        stop_event = threading.Event()
+        conn_list = []
+
+        server_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket1.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        server_socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket2.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
+        thread1 = threading.Thread(target=bind_socket, args=(server_socket1, ('localhost', 65431), connection_event, stop_event, conn_list))
+        thread2 = threading.Thread(target=bind_socket, args=(server_socket2, ('localhost', 65458), connection_event, stop_event, conn_list))
+
+        thread1.start()
+        thread2.start()
+
+        connection_event.wait()
+        stop_event.set()
+
+        thread1.join()
+        thread2.join()
+
+        conn = conn_list[0]
+        print(f"Conexión establecida exitosamente con: {conn.getpeername()}")
+
+       
+
+        alice_bases = np.random.choice(['Z', 'X', 'W'], size=SIZE)
+
+      
+        print("Alice's bases: ", alice_bases)
+        circuits_bob = []
+        alice_bits = []
+
+        for i in range(SIZE):
+            qc = QuantumCircuit(2, 2)
+            qc.x([0, 1])
+            qc.h(0)       # Hadamard en qubit 0 => lo pone en superposición
+            qc.cx(0, 1)   # CNOT con control en qubit 0 y objetivo en qubit 1 => crea entrelazamiento
+
+            circuits_bob.append(qc)
+      
+        seeds = [random.randint(0, 255) for _ in range(SIZE)]
+
+
+
+        
+   
+        seeds_bytes = [bytes([x]) for x in seeds]
+     
+        conn.sendall(struct.pack('!I', SIZE))  # Envía primero el tamaño (4 bytes, formato network byte order)
+        conn.sendall(b"".join(seeds_bytes))
+        import time 
+        time.sleep(0.1)
+        serialized_circuits = pickle.dumps(circuits_bob)
+        data_length = len(serialized_circuits)
+        conn.sendall(struct.pack('!I', data_length))  # Envía primero el tamaño (4 bytes, formato network byte order)
+        conn.sendall(serialized_circuits)         
+     
+        print("Qubits enviados exitosamente.")
+
+        for i in range(SIZE):
+        # Alice mide su qubit
+            qc = circuits_bob[i].copy()
+            if alice_bases[i] == 'X':
+                qc.h(0)  # Cambiar a la base X
+            if alice_bases[i] == 'W':
+                qc.s(0)  # Cambiar a la base X
+                qc.h(0)
+                qc.t(0)
+                qc.h(0)
+            # if alice_bases[i] == 'Z':
+            qc.measure(0, 0)  # Medir el qubit 0
+
+            # Ejecutar la medición con simulador por defecto
+            backend = Aer.get_backend('qasm_simulator')
+            compiled_circuit = transpile(qc, backend)
+            job = backend.run(compiled_circuit, shots=1, seed_simulator=seeds[i])  # <- semilla aquí
+            result = job.result()
+            counts = result.get_counts()
+          
+                                # Si solo estás midiendo el qubit 1 (como parece en tu código)
+            most_common_bitstring = max(counts, key=counts.get)
+            
+            measured_bit = int(most_common_bitstring[-1])  # <- o [0] dependiendo del qubit
+
+            alice_bits.append(measured_bit)
+
+        
+        print("Resultados de Alice:", alice_bits)
+        
+
+        
+
+        server_socket3 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket3.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+       
+        server_socket3.bind(('localhost', 65489))
+        server_socket3.listen(1)
+        conn1, addr1 = server_socket3.accept()
+        print(f"Conectado con {addr1}")
+
+        data = []
+       
+        # while len(b"".join(data)) < SIZE:
+        #     packet = conn1.recv(4096)
+        #     if not packet:
+        #         print("No se recibieron datos")
+        #         break
+        #     data.append(packet)
+
+
+        # bob_bases_str = b"".join(data).decode().strip()
+        time.sleep(1)
+        data = b""
+           # Recibir datos hasta encontrar el delimitador "|"
+        data = b""
+        while b"|" not in data:
+            packet = conn1.recv(999999)  # Tamaño del buffer de recepción
+            if not packet:
+                break
+            data += packet
+
+        # Dividir los datos recibidos en bases y resultados
+        if b"|" in data:
+            bases_part, result_part = data.split(b'|', 1)
+        
+         # Decodificar las bases y los resultados de bytes a string
+       
+
+        # Convertir las bases y los resultados a listas de enteros
+        bob_bases = ''.join(chr(b) for b in bases_part if b != 0)
+        bob_results = [int(r) for r in result_part]
+
+        # Imprimir los resultados
+        print("Bases recibidas de Bob:", bob_bases)
+        print("Resultados recibidos de Bob:", bob_results)
+        
+        bob_bases = np.array(list(bob_bases))
+        bob_bases = bob_bases[bob_bases != '']
+        print("Bases de Bob:", bob_bases)
+        
+        send_alice_bases = b"".join(alice_bases)
+        #conn1.sendall(send_alice_bases )
+        data = b""
+
+
+        #################################################################
+        #################################################################
+        #################################################################
+        #################################################################
+        b_chshresult = []
+        a_chshresult = []
+
+        for i in range(SIZE):
+        
+            
+            qc = QuantumCircuit(2,2)
+            qc.x(0)
+            qc.x(1)
+            qc.h(0)
+            qc.cx(0, 1)
+            if alice_bases[i] == 'X':
+                qc.h(0)  # Cambiar a la base X
+            if alice_bases[i] == 'W':
+                qc.s(0)  # Cambiar a la base X
+                qc.h(0)
+                qc.t(0)
+                qc.h(0)
+        
+            if bob_bases[i] == 'V':
+                qc.s(1)  
+                qc.h(1)
+                qc.tdg(1)
+                qc.h(1)
+            if bob_bases[i] == 'W':
+                qc.s(1)  # Cambiar a la base X
+                qc.h(1)
+                qc.t(1)
+                qc.h(1)
+            # if bob_bases[i] == 'Z':
+            qc.measure(0, 0)  # Medir el qubit     
+            qc.measure(1, 1)  # Medir el qubit
+            # Configurar el simulador con statevector
+            backend = Aer.get_backend('qasm_simulator')
+            compiled_circuit = transpile(qc, backend)
+            job = backend.run(compiled_circuit, shots=1, seed_simulator=seeds[i])  # <- semilla aquí
+            result = job.result()
+            counts = result.get_counts()
+
+            most_common_bitstring = max(counts, key=counts.get)
+
+            # Los dos bits correspondientes a los qubits 0 y 1
+            bit_qubit_0 = int(most_common_bitstring[1])  # Primer bit (qubit 0)
+            bit_qubit_1 = int(most_common_bitstring[0])  # Segundo bit (qubit 1)
+
+            # Almacenar los resultados de las mediciones
+            b_chshresult.append(bit_qubit_1)  # Resultado de Bob (qubit 1)
+            a_chshresult.append(bit_qubit_0)  # Resultado de Alice (qubit 0)
+
+
+        print ("Ejemplo chsh Bob", b_chshresult)
+        print ("Ejemplo chsh Alice", a_chshresult)
+
+        
+        print("Resultados de Alice:", alice_bits)
+       
+        print("Alice's bases: ", alice_bases)
+
+        print(len(alice_bases), len(bob_bases))
+
+        matching_bases = alice_bases == bob_bases
+        print("Coincidencia en las bases:", matching_bases)
+
+        
+                # Filtrar los índices donde las bases coinciden (esto te da los índices donde True en matching_bases)
+        indices_coincidentes = np.array([i for i, match in enumerate(matching_bases) if match])
+       
+
+        # Ahora, puedes usar estos índices para extraer los bits correspondientes de alice_bits
+        bits_coincidentes = [alice_bits[i] for i in indices_coincidentes]
+        
+
+        print("Índices para comprobación:", indices_coincidentes)
+        print("bits_coincidentes:", bits_coincidentes)
+
+        half_size = len(indices_coincidentes) // 2  # Tamaño de la mitad de los índices
+
+        # Convierte indices_coincidentes en una lista y selecciona aleatoriamente
+        indices_coincidentes_lista = indices_coincidentes.tolist()
+        # Verificar si la cantidad de elementos disponibles es mayor o igual que la muestra solicitada
+        sample_size = SIZE // 6
+
+        if len(indices_coincidentes_lista) >= sample_size:
+            selected_indices = np.random.choice(indices_coincidentes_lista, sample_size, replace=False)
+        else:
+            print(f"No hay suficientes elementos en indices_coincidentes_lista para seleccionar {sample_size} sin reemplazo.")
+
+
+        print("Bits de comprbación", selected_indices)
+
+
+
+        #conn1.sendall(b"".join(selected_indices))
+        
+        # selected_indices_bytes = [str(i).encode() for i in selected_indices]
+        # selected_indices_bytes = [bytes([i]) for i in selected_indices]
+
+        selected_indices_bytes = b''.join(int(i).to_bytes(2, byteorder='big') for i in selected_indices)
+
+
+        conn1.sendall(send_alice_bases + b'|' + selected_indices_bytes)
+
+
+
+        
+       
+       
+        data = []
+        
+
+   
+        conn1.close()
+        server_socket3.close()
+        server_socket4 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket4.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+       
+        server_socket4.bind(('localhost', 65533))
+        server_socket4.listen(1)
+        conn2, addr1 = server_socket4.accept()
+
+        
+       
+        data = conn2.recv(1024)
+           
+     
+        bob_bits_str = b"".join(bytes([x]) for x in data).decode()
+
+        print ("Bits de comprobación recibidos", bob_bits_str)
+        bob_bits_comprobacion = np.array(list(bob_bits_str), dtype=int)
+       
+        print("Bits de comprobación de Bob:",  bob_bits_comprobacion)
+
+
+
+
+          # Definir las correlaciones para las diferentes combinaciones de bases
+        E_11 = 0
+        E_12 = 0
+        E_21 = 0
+        E_22 = 0
+        countA1B1 = [0, 0, 0, 0] # XW observable
+        countA1B3 = [0, 0, 0, 0] # XV observable
+        countA3B1 = [0, 0, 0, 0] # ZW observable
+        countA3B3 = [0, 0, 0, 0] # ZV observable
+        abPatterns = [
+        re.compile('..00$'), # search for the '..00' output (Alice obtained -1 and Bob obtained -1)
+        re.compile('..01$'), # search for the '..01' output
+        re.compile('..10$'), # search for the '..10' output (Alice obtained -1 and Bob obtained 1)
+        re.compile('..11$')  # search for the '..11' output
+        ]
+
+        
+       
+        # # Recorremos las bases y los resultados de Alice y Bob
+        # for i in range(len(alice_bases)):
+        #     # Solo consideramos las coincidencias entre las bases de Alice y Bob
+        #     if alice_bases[i] == bob_bases[i]:
+        #         correlation = 1 if alice_bits[i] == bob_results[i] else -1
+
+        #         # Según la base elegida, asignamos el valor de la correlación
+        #         if alice_bases[i] == 'Z' and bob_bases[i] == 'Z':
+        #             E_11 += correlation
+        #         elif alice_bases[i] == 'Z' and bob_bases[i] == 'W':
+        #             E_12 += correlation
+        #         elif alice_bases[i] == 'W' and bob_bases[i] == 'Z':
+        #             E_21 += correlation
+        #         elif alice_bases[i] == 'W' and bob_bases[i] == 'W':
+        #             E_22 += correlation
+
+        # # Promediamos las correlaciones para obtener los valores E(θA, θB)
+        # E_11 /= np.count_nonzero(np.array(alice_bases) == 'Z')
+        # E_12 /= np.count_nonzero(np.array(alice_bases) == 'Z')
+        # E_21 /= np.count_nonzero(np.array(alice_bases) == 'W')
+        # E_22 /= np.count_nonzero(np.array(alice_bases) == 'W')
+
+        # # Calcular el valor de S
+        # S = abs(E_11 + E_12 + E_21 - E_22)
+        # print(f"CHSH value: {S}")
+
+        # # Verificar si se viola la desigualdad CHSH
+        # if S > 2:
+        #     print("Violación cuántica de la desigualdad CHSH detectada!")
+        # else:
+        #     print("No hay violación cuántica detectada.")
+
+        
+        print("TAMAÑOS", len(alice_bits), len(bob_results))
+        for i in range(SIZE):
+
+
+            # if the spins of the qubits of the i-th singlet were projected onto the a_1/b_1 directions
+            if (alice_bases[i] == 'X' and bob_bases[i] == 'W'):
+                    if a_chshresult[i] == 1 and b_chshresult[i] == 1:
+                        countA1B1[3] += 1
+                    if a_chshresult[i] == 1 and b_chshresult[i] == 0:
+                        countA1B1[2] += 1
+                    if a_chshresult[i] == 0 and b_chshresult[i] == 1:
+                        countA1B1[1] += 1
+                    if a_chshresult[i] == 0 and b_chshresult[i] == 0:
+                        countA1B1[0] += 1
+
+            if (alice_bases[i] == 'X' and bob_bases[i] == 'V'):
+                    if a_chshresult[i] == 1 and b_chshresult[i] == 1:
+                        countA1B3[3] += 1
+                    if a_chshresult[i] == 1 and b_chshresult[i] == 0:
+                        countA1B3[2] += 1
+                    if a_chshresult[i] == 0 and b_chshresult[i] == 1:
+                        countA1B3[1] += 1
+                    if a_chshresult[i] == 0 and b_chshresult[i] == 0:
+                        countA1B3[0] += 1
+
+                      
+
+            if (alice_bases[i] == 'Z' and bob_bases[i] == 'W'):
+                    if a_chshresult[i] == 1 and b_chshresult[i] == 1:
+                        countA3B1[3] += 1
+                    if a_chshresult[i] == 1 and b_chshresult[i] == 0:
+                        countA3B1[2] += 1
+                    if a_chshresult[i] == 0 and b_chshresult[i] == 1:
+                        countA3B1[1] += 1
+                    if a_chshresult[i] == 0 and b_chshresult[i] == 0:
+                        countA3B1[0] += 1
+                        
+                        
+            # if the spins of the qubits of the i-th singlet were projected onto the a_3/b_3 directions
+            if (alice_bases[i] == 'Z' and bob_bases[i] == 'V'):
+                    if a_chshresult[i] == 1 and b_chshresult[i] == 1:
+                        countA3B3[3] += 1
+                    if a_chshresult[i] == 1 and b_chshresult[i] == 0:
+                        countA3B3[2] += 1
+                    if a_chshresult[i] == 0 and b_chshresult[i] == 1:
+                        countA3B3[1] += 1
+                    if a_chshresult[i] == 0 and b_chshresult[i] == 0:
+                        countA3B3[0] += 1
+                      
+                        
+        # number of the results obtained from the measurements in a particular basis
+        total11 = sum(countA1B1)
+        total13 = sum(countA1B3)
+        total31 = sum(countA3B1)
+        total33 = sum(countA3B3)      
+        
+        # expectation values of XW, XV, ZW and ZV observables (2)
+        expect11 = (countA1B1[0] - countA1B1[1] - countA1B1[2] + countA1B1[3])/total11 # -1/sqrt(2)
+        expect13 = (countA1B3[0] - countA1B3[1] - countA1B3[2] + countA1B3[3])/total13 # 1/sqrt(2)
+        expect31 = (countA3B1[0] - countA3B1[1] - countA3B1[2] + countA3B1[3])/total31 # -1/sqrt(2)
+        expect33 = (countA3B3[0] - countA3B3[1] - countA3B3[2] + countA3B3[3])/total33 # -1/sqrt(2) 
+        
+        
+        corr = expect11 - expect13 + expect31 + expect33 # calculate the CHSC correlation value (3)
+        
+        
+        # CHSH inequality test
+        print('Valor de la correlación CHSH: ' + str(round(corr, 3)))
+
+
+
+        
+
+        alice_bits_seleccionados = np.array([alice_bits[i] for i in selected_indices])
+        print (alice_bits_seleccionados)
+
+        if np.array_equal(alice_bits_seleccionados, bob_bits_comprobacion):
+            print("Intercambio de claves exitoso")
+            print("\nThe key exchange was successful!")
+            print("Alice's subkey:", alice_bits_seleccionados)
+            print("Bob's subkey: ", bob_bits_comprobacion)
+            print ("Los bits coincidentes son: ", bits_coincidentes)
+            #quiitar a bits_coincidentes los bits de comprobación
+           
+            key = [x for i, x in enumerate(bits_coincidentes) if i not in indices_coincidentes-1]
+            print("The complete key is:", key)
+           
+            aes_key = derive_aes_key(bytes(key))
+
+            def send_message():
+                message = message_entry.get()
+                message = message.encode()
+                if message == b"exit":
+                    conn2.close()
+                    root.quit()
+                else:
+                    encrypted_message = encrypt_message(message, aes_key)
+                    array_aeskey_and_message = [aes_key, encrypted_message]
+                    conn2.sendall(pickle.dumps(array_aeskey_and_message))
+                    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    display_message(f"Yo - {timestamp}: {message.decode('utf-8')}")
+                    print(f"Mensaje enviado: {message}")
+
+            def receive_messages():
+                while True:
+                    try:
+                        data = conn2.recv(1024)
+                        if not data:
+                            break
+                        array_aeskey_and_message = pickle.loads(data)
+                        aes_key_received, encrypted_message_received = array_aeskey_and_message
+                        ciphertext, tag, nonce = encrypted_message_received
+                        decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+                        print(f"\033[1;32mMensaje recibido: {decrypted_message}\033[0m")
+                        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                        display_message(f"Bob - {timestamp}: {decrypted_message}")
+                    except Exception as e:
+                        print(f"Error al recibir mensaje: {e}")
+                        break
+
+            def display_message(message):
+                message_display.config(state=tk.NORMAL)
+                message_display.insert(tk.END, message + "\n")
+                message_display.config(state=tk.DISABLED)
+                message_display.see(tk.END)
+            receive_thread = threading.Thread(target=receive_messages)
+            receive_thread.start()
+
+            root = tk.Tk()
+            root.title("Alice - Enviar Mensaje")
+
+            
+
+            
+
+            send_button = tk.Button(root, text="Enviar", command=send_message)
+            send_button.pack(pady=20)
+
+            message_display = tk.Text(root, state=tk.DISABLED, width=50, height=15)
+            message_display.pack(pady=10)
+
+            message_label = tk.Label(root, text="Escribe tu mensaje:")
+            message_label.pack(pady=10)
+
+            message_entry = tk.Entry(root, width=50)
+            message_entry.pack(pady=10)
+
+            def quit_and_close():
+                conn2.close()
+                server_socket1.close()
+                server_socket2.close()
+                server_socket3.close()
+                root.destroy()
+                os._exit(0)
+
+            exit_button = tk.Button(root, text="Salir", command=quit_and_close)
+            exit_button.pack(pady=5)
+            root.mainloop()
+
+            receive_thread.join()
+        else:
+            print("\nThe keys do not match. Potential interception detected.")
+            print("Alice's subkey: ", alice_bits_seleccionados)
+            print("Bob's subkey:   ", bob_bits_comprobacion)
+
+        if conn:
+            conn.close()
+        if conn1:
+            conn1.close()
+        if conn2:
+            conn2.close()
+
+        server_socket1.close()
+        server_socket2.close()
+        server_socket3.close()
+        server_socket4.close()
+
+
+    except KeyboardInterrupt:
+        print("Servidor interrumpido por el usuario")
+        if conn:
+            conn.close()
+        if conn1:
+            conn1.close()
+        if conn2:
+            conn2.close()
+        server_socket1.close()
+        server_socket2.close()
+        server_socket3.close()
+        server_socket4.close()
+
+
+    finally:
+        if conn2:
+            conn2.close()
+        if conn:
+            conn.close()
+        if conn1:
+            conn1.close()
+        server_socket1.close()
+        server_socket2.close()
+        server_socket3.close()
+        server_socket4.close()
+
+        print("Socket cerrado")
+
+start_sender()

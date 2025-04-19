@@ -72,7 +72,7 @@ def start_sender():
     bobMeasurements = [measureB1, measureB2, measureB3]
 
     # Define the number of singlets N
-    numberOfSinglets = 5000
+    numberOfSinglets = 1000
     aliceMeasurementChoices = [random.randint(1, 3) for _ in range(numberOfSinglets)]
     bobMeasurementChoices = [random.randint(1, 3) for _ in range(numberOfSinglets)]
 
@@ -220,12 +220,27 @@ def start_sender():
         total13 = sum(countA1B3)
         total31 = sum(countA3B1)
         total33 = sum(countA3B3)      
-                        
+        print("total11", total11)
+        print("total13", total13)
+        print("total31", total31)
+        print("total33", total33)
+        print( "countA1B1[0]", countA1B1[0])
+        print( "countA1B1[0]", countA1B1[1])
+        print( "countA1B1[0]", countA1B1[2])
+        print( "countA1B1[0]", countA1B1[3])
+
+
+
+        
         # expectation values of XW, XV, ZW and ZV observables (2)
         expect11 = (countA1B1[0] - countA1B1[1] - countA1B1[2] + countA1B1[3])/total11 # -1/sqrt(2)
         expect13 = (countA1B3[0] - countA1B3[1] - countA1B3[2] + countA1B3[3])/total13 # 1/sqrt(2)
         expect31 = (countA3B1[0] - countA3B1[1] - countA3B1[2] + countA3B1[3])/total31 # -1/sqrt(2)
         expect33 = (countA3B3[0] - countA3B3[1] - countA3B3[2] + countA3B3[3])/total33 # -1/sqrt(2) 
+        print("expect11", expect11)
+        print("expect13", expect13)
+        print("expect31", expect31)
+        print("expect33", expect33)
         
         corr = expect11 - expect13 + expect31 + expect33 # calculate the CHSC correlation value (3)
         
