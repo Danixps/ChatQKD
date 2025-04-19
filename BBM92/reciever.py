@@ -63,19 +63,30 @@ def start_receiver():
         # if not data_length:
         #     print("No se recibió la longitud de los datos de Eva")
         #     return
+       
+# Primero recibe 4 bytes para saber cuánto viene
+        raw_size = b""
+        while len(raw_size) < 4:
+            packet = client_socket.recv(4 - len(raw_size))
+            if not packet:
+                raise ConnectionError("Conexión cerrada antes de recibir el tamaño.")
+            raw_size += packet
 
-        data = client_socket.recv(4096)
-        seeds_bytes = data.split(b'|')
-        
+        (data_length,) = struct.unpack('!I', raw_size)  # Desempaqueta el tamaño (un entero)
 
-        # Unir todos los bytes primero
-        unidos = b''.join(seeds_bytes)
+        # Ahora recibe exactamente data_length bytes
+        data = b""
+        while len(data) < data_length:
+            packet = client_socket.recv(data_length - len(data))
+            if not packet:
+                raise ConnectionError("Conexión cerrada antes de recibir todos los datos.")
+            data += packet
 
-        # Luego convertir cada byte a entero
-        seeds = list(unidos)
+        # Finalmente convierte los bytes en una lista de enteros
+        seeds = list(data)
 
         print(seeds)
-        data_length = len(seeds)
+        print("Número de semillas recibidas:", len(seeds))
         time.sleep(1)
         # Recibir los circuitos de Eva
         data = b""
@@ -93,15 +104,19 @@ def start_receiver():
         #     count = count +1
 
         
-     
+     # Primero recibe el tamaño (4 bytes)
+        data_len_bytes = client_socket.recv(4)
+        data_length = struct.unpack('!I', data_len_bytes)[0]
+
+        # Ahora recibe exactamente data_length bytes
+        data = b''
         while len(data) < data_length:
-            packet = client_socket.recv(9999999999)
-            if not packet: break
+            packet = client_socket.recv(data_length - len(data))
+            if not packet:
+                break
             data += packet
+
         received_circuits = pickle.loads(data)
-       
-
-
         
 
         # Deserializar los circuitos
@@ -115,7 +130,7 @@ def start_receiver():
         
         # Generar bases aleatorias del mismo tamaño que los qubits recibidos
 
-        num_qubits = data_length
+        num_qubits = len(seeds)
         bob_bases = np.random.choice(['X', 'Z'], size=num_qubits)
   
         circuits = received_circuits
@@ -148,7 +163,7 @@ def start_receiver():
             bob_result.append(measured_bit)
 
         print("Resultados de Bob:", bob_result)
-        print("Resultado de medición de Bob (qubit 1):", measured_bit)
+       
 
 
         time.sleep(0.01)
@@ -172,14 +187,26 @@ def start_receiver():
         #     if not packet:
         #         break
         #     data.append(packet)
-        
-        data = client_socket1.recv(4096)
-        bases_part, indices_part = data.split(b'|')
+        time.sleep(1)
+      
+        data = b""
+        while b"|" not in data:
+            packet = client_socket1.recv(999999)
+            if not packet:
+                break
+            data += packet
+
+        bases_part, indices_part = data.split(b'|', 1)
+
         print (bases_part)
         print(indices_part)
         alice_bases_str = bases_part.decode()
      
-        indices_comprobacion_enteros = list(indices_part)
+        indices_comprobacion_enteros = []
+        for i in range(0, len(indices_part), 2):
+            numero = int.from_bytes(indices_part[i:i+2], byteorder='big')
+            indices_comprobacion_enteros.append(numero)
+
         print(alice_bases_str)
         print(indices_comprobacion_enteros)
 
@@ -323,7 +350,10 @@ def start_receiver():
         root.mainloop()
 
         receive_thread.join()
-
+    except (EOFError, pickle.UnpicklingError):
+        print("¡Protocolo Abortado! Se ha detectado la presencia de un tercer agente que intenta interceptar la clave.")
+        client_socket.close()
+        exit()
     except Exception as e:
         print(f"Error: {e}")
 

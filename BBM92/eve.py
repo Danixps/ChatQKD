@@ -3,6 +3,8 @@ import socket
 import struct
 import socket
 import numpy as np
+import time
+import random
 import pickle
 from qiskit import QuantumCircuit, transpile
 from qiskit_aer import Aer
@@ -15,48 +17,108 @@ def start_reciever():
     conn = None
     try:
 
-        # Recibir los datos serializados
-        data_length = client_socket.recv(4)
-        if not data_length:
-            print("No se recibió la longitud de los datos de Alice")
-            return
-        data_length = struct.unpack('!I', data_length)[0]
+       
+# Primero recibe 4 bytes para saber cuánto viene
+        raw_size = b""
+        while len(raw_size) < 4:
+            packet = client_socket.recv(4 - len(raw_size))
+            if not packet:
+                raise ConnectionError("Conexión cerrada antes de recibir el tamaño.")
+            raw_size += packet
 
-    # Recibir los circuitos de Alice
+        (data_length,) = struct.unpack('!I', raw_size)  # Desempaqueta el tamaño (un entero)
+
+        # Ahora recibe exactamente data_length bytes
         data = b""
         while len(data) < data_length:
-            packet = client_socket.recv(4096)
+            packet = client_socket.recv(data_length - len(data))
+            if not packet:
+                raise ConnectionError("Conexión cerrada antes de recibir todos los datos.")
+            data += packet
+
+        # Finalmente convierte los bytes en una lista de enteros
+        seeds = list(data)
+
+        print(seeds)
+        print("Número de semillas recibidas:", len(seeds))
+        time.sleep(1)
+        # Recibir los circuitos de Eva
+        data = b""
+        # while len(data) < data_length:
+        #     packet = client_socket.recv(40960000000)
+        #     if not packet:
+        #         break
+        #     data += packet
+        # data = b""
+        count = 0
+        # while len(data) < data_length:
+        #     packet = client_socket.recv(9999999999)
+        #     if not packet: break
+        #     data += packet
+        #     count = count +1
+
+        
+     # Primero recibe el tamaño (4 bytes)
+        data_len_bytes = client_socket.recv(4)
+        data_length = struct.unpack('!I', data_len_bytes)[0]
+
+        # Ahora recibe exactamente data_length bytes
+        data = b''
+        while len(data) < data_length:
+            packet = client_socket.recv(data_length - len(data))
             if not packet:
                 break
             data += packet
 
-        # Deserializar los circuitos
         received_circuits = pickle.loads(data)
-        eva_bits = []
+        
+
+        # Deserializar los circuitos
+
+        
+
+        eva_bits =[]
+        # received_circuits = pickle.loads(data)
+        # Diagnóstico: Imprimir el tipo y contenido de received_circuits
+        
+        
         # Generar bases aleatorias del mismo tamaño que los qubits recibidos
-        num_qubits = len(received_circuits)
+
+        num_qubits = len(seeds)
         eva_bases = np.random.choice(['X', 'Z'], size=num_qubits)
-        print("Bases de Eva:", eva_bases)
-        seeds= [817234, 56298, 993201, 122345, 388822, 47291, 851024, 110099, 65287, 709350]
+  
         circuits = received_circuits
-        backend = Aer.get_backend('qasm_simulator')
+        
+
+        print("Bases de Eva:", eva_bases)
+
+        
         for i in range(num_qubits):
-        # Crear una copia del circuito de Alice y medir en la base de Eva
+        
             qc = circuits[i].copy()
             if eva_bases[i] == 'X':
-                qc.h(0)  # Cambiar a la base X para medir si Eva usa la base X
+                qc.h(0)  # Cambiar a la base X para medir si Bob usa la base X
 
             qc.measure(0, 0)  # Medir el qubit
-
-            # Transpilar y ejecutar en el backend
+            # Configurar el simulador con statevector
+            backend = Aer.get_backend('qasm_simulator')
             compiled_circuit = transpile(qc, backend)
-            job = backend.run(compiled_circuit, shots=1000, seed_simulator=seeds[i]) # devuelve los resultados de la ejecución del circuito.
-
+            job = backend.run(compiled_circuit, shots=1000, seed_simulator=seeds[i])  # <- semilla aquí
             result = job.result()
-            measured_bit = int(list(result.get_counts().keys())[0])  # Obtener el bit medido
+            counts = result.get_counts()
+
+                        # Si solo estás midiendo el qubit 1 (como parece en tu código)
+            most_common_bitstring = max(counts, key=counts.get)
+            
+            measured_bit = int(most_common_bitstring[-1])  # <- o [0] dependiendo del qubit
+
+
+
             eva_bits.append(measured_bit)
 
-        print("Eva's bits results:", eva_bits)
+        print("Resultados de Bob:", eva_bits)
+       
+
         
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # Permite reutilizar el socket
@@ -64,44 +126,33 @@ def start_reciever():
         server_socket.listen(1)
         conn, addr = server_socket.accept()
         # enviar los resultados de bob a alice
-        serialized_results = pickle.dumps(eva_bits)
-        serialized_bases_bob = pickle.dumps(eva_bases)
-  
-        # Bob mide los qubits que recibe de Alice
-        backend = Aer.get_backend('qasm_simulator')
-
-        # Asegurarse de que eva_bits esté vacío al inicio
     
-        circuits_eva = []  # Lista para almacenar los circuitos cuánticos que representa cada qubit enviado
-        for i in range(num_qubits):
-            qc = QuantumCircuit(1, 1)
-
-            # Preparar el estado basado en el bit y la base de Alice
-            if eva_bits[i] == 1:
-                qc.x(0)  # Aplicar puerta X si el bit de Alice es 1
-
-
-            if eva_bases[i] == 'X':
-                qc.h(0)  # Cambiar a la base X si la base de Alice es 1 (estados superposicion si es un 1 lo convierte en un | - > y si es un 0 en un | + >)
-
-            circuits_eva.append(qc)
-            circuits = circuits_eva
-    
-         # Enviar los resultados de Eva a Bob
+        # Enviar los resultados de Eva a Bob
         serialized_results = pickle.dumps(circuits)
-        serialized_bases_eva = pickle.dumps(eva_bases)
+      
         
         # Enviar la longitud de los datos primero
-        data_length = struct.pack('!I', len(serialized_results))
-        conn.sendall(data_length)
+        data_length = len(seeds)
+       
         # Enviar los resultados de Eva a Bob
-        conn.sendall(serialized_results)
+        seeds = [random.randint(0, 255) for _ in range(data_length)]
+
+
+
+        seeds_bytes = [bytes([x]) for x in seeds]
+
+        conn.sendall(struct.pack('!I', len(seeds)))  # Envía primero el tamaño (4 bytes, formato network byte order)
+        conn.sendall(b"".join(seeds_bytes))
+        
+        
+        time.sleep(0.1)
+        data_length = len(serialized_results)
+        conn.sendall(struct.pack('!I', data_length))  # Envía primero el tamaño (4 bytes, formato network byte order)
+        conn.sendall(serialized_results)    
+ 
         print("Resultados de Eva enviados a Bob")
 
-        # Enviar las bases de Eva a Bob
-        data_length = struct.pack('!I', len(serialized_bases_eva))
-        conn.sendall(data_length)
-        conn.sendall(serialized_bases_eva)
+      
         print("Bases de Eva enviadas a Bob")
 
         

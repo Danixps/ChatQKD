@@ -122,17 +122,19 @@ def start_sender():
 
 
 
-        serialized_circuits = pickle.dumps(circuits_bob)
         
    
         seeds_bytes = [bytes([x]) for x in seeds]
      
-
+        conn.sendall(struct.pack('!I', SIZE))  # Envía primero el tamaño (4 bytes, formato network byte order)
         conn.sendall(b"".join(seeds_bytes))
         import time 
         time.sleep(0.1)
-
-        conn.sendall(serialized_circuits)
+        serialized_circuits = pickle.dumps(circuits_bob)
+        data_length = len(serialized_circuits)
+        conn.sendall(struct.pack('!I', data_length))  # Envía primero el tamaño (4 bytes, formato network byte order)
+        conn.sendall(serialized_circuits)         
+     
         print("Qubits enviados exitosamente.")
 
         for i in range(SIZE):
@@ -192,6 +194,9 @@ def start_sender():
 
        
         print("Alice's bases: ", alice_bases)
+
+        print(len(alice_bases), len(bob_bases))
+
         matching_bases = alice_bases == bob_bases
         print("Coincidencia en las bases:", matching_bases)
 
@@ -202,6 +207,7 @@ def start_sender():
 
         # Ahora, puedes usar estos índices para extraer los bits correspondientes de alice_bits
         bits_coincidentes = [alice_bits[i] for i in indices_coincidentes]
+        
 
         print("Índices para comprobación:", indices_coincidentes)
         print("bits_coincidentes:", bits_coincidentes)
@@ -218,10 +224,14 @@ def start_sender():
 
         #conn1.sendall(b"".join(selected_indices))
         
-        selected_indices_bytes = [str(i).encode() for i in selected_indices]
-        selected_indices_bytes = [bytes([i]) for i in selected_indices]
+        # selected_indices_bytes = [str(i).encode() for i in selected_indices]
+        # selected_indices_bytes = [bytes([i]) for i in selected_indices]
 
-        conn1.sendall(send_alice_bases + b'|' + b"".join(selected_indices_bytes))
+        selected_indices_bytes = b''.join(int(i).to_bytes(2, byteorder='big') for i in selected_indices)
+
+
+        conn1.sendall(send_alice_bases + b'|' + selected_indices_bytes)
+
 
 
         
@@ -353,7 +363,7 @@ def start_sender():
             receive_thread.join()
         else:
             print("\nThe keys do not match. Potential interception detected.")
-            print("Alice's subkey: ", selected_indices)
+            print("Alice's subkey: ", alice_bits_seleccionados)
             print("Bob's subkey:   ", bob_bits_comprobacion)
 
         if conn:
