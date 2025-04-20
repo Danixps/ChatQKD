@@ -8,13 +8,15 @@ import sys
 base_dir = os.path.dirname(os.path.abspath(__file__))
 # Diccionario que asocia el nombre del protocolo a la ruta del script a ejecutar
 
-ruta_bb84 = os.path.join(base_dir, "BB84", "BB84-AEB", "eve.py")
-ruta_bbm92 =  os.path.join(base_dir, "BBM92", "eve.py")
-print(ruta_bb84)
+ruta_bb84 = os.path.join(base_dir, "BB84", "BB84-AEB", "eavesdropper.py")
+ruta_bbm92 =  os.path.join(base_dir, "BBM92", "eavesdropper.py")
+ruta_E91 =  os.path.join(base_dir, "E91", "eavesdropper.py")
+
+
 protocol_files = {
     "BB84": ruta_bb84,
     "BBM92": ruta_bbm92,
-    "E91": "/ruta/a/otro_archivo.py",  # Reemplaza esta ruta con la del otro protocolo
+    "E91": ruta_E91,  # Reemplaza esta ruta con la del otro protocolo
     "SARG04": "/ruta/a/otro_archivo.py"  # Reemplaza esta ruta con la del otro protocolo
 }
 

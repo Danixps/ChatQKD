@@ -44,18 +44,6 @@ def start_reciever():
         time.sleep(1)
         # Recibir los circuitos de Eva
         data = b""
-        # while len(data) < data_length:
-        #     packet = client_socket.recv(40960000000)
-        #     if not packet:
-        #         break
-        #     data += packet
-        # data = b""
-        count = 0
-        # while len(data) < data_length:
-        #     packet = client_socket.recv(9999999999)
-        #     if not packet: break
-        #     data += packet
-        #     count = count +1
 
         
      # Primero recibe el tamaño (4 bytes)
@@ -116,7 +104,7 @@ def start_reciever():
 
             eva_bits.append(measured_bit)
 
-        print("Resultados de Bob:", eva_bits)
+        print("Resultados de Eva:", eva_bits)
        
 
         

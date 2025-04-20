@@ -101,7 +101,14 @@ def start_sender():
         thread2.join()
 
         conn = conn_list[0]
+
+        eva_flag = False
+
         print(f"Conexión establecida exitosamente con: {conn.getpeername()}")
+
+        if conn.getsockname()[1] == 65458 :
+            eva_flag = True
+        
 
        
 
@@ -301,10 +308,7 @@ def start_sender():
         bits_coincidentes = [alice_bits[i] for i in indices_coincidentes]
         
 
-        print("Índices para comprobación:", indices_coincidentes)
-        print("bits_coincidentes:", bits_coincidentes)
 
-        half_size = len(indices_coincidentes) // 2  # Tamaño de la mitad de los índices
 
         # Convierte indices_coincidentes en una lista y selecciona aleatoriamente
         indices_coincidentes_lista = indices_coincidentes.tolist()
@@ -381,44 +385,11 @@ def start_sender():
         ]
 
         
-       
-        # # Recorremos las bases y los resultados de Alice y Bob
-        # for i in range(len(alice_bases)):
-        #     # Solo consideramos las coincidencias entre las bases de Alice y Bob
-        #     if alice_bases[i] == bob_bases[i]:
-        #         correlation = 1 if alice_bits[i] == bob_results[i] else -1
-
-        #         # Según la base elegida, asignamos el valor de la correlación
-        #         if alice_bases[i] == 'Z' and bob_bases[i] == 'Z':
-        #             E_11 += correlation
-        #         elif alice_bases[i] == 'Z' and bob_bases[i] == 'W':
-        #             E_12 += correlation
-        #         elif alice_bases[i] == 'W' and bob_bases[i] == 'Z':
-        #             E_21 += correlation
-        #         elif alice_bases[i] == 'W' and bob_bases[i] == 'W':
-        #             E_22 += correlation
-
-        # # Promediamos las correlaciones para obtener los valores E(θA, θB)
-        # E_11 /= np.count_nonzero(np.array(alice_bases) == 'Z')
-        # E_12 /= np.count_nonzero(np.array(alice_bases) == 'Z')
-        # E_21 /= np.count_nonzero(np.array(alice_bases) == 'W')
-        # E_22 /= np.count_nonzero(np.array(alice_bases) == 'W')
-
-        # # Calcular el valor de S
-        # S = abs(E_11 + E_12 + E_21 - E_22)
-        # print(f"CHSH value: {S}")
-
-        # # Verificar si se viola la desigualdad CHSH
-        # if S > 2:
-        #     print("Violación cuántica de la desigualdad CHSH detectada!")
-        # else:
-        #     print("No hay violación cuántica detectada.")
-
-        
-     
+        if eva_flag == True:
+            b_chshresult = bob_results
         for i in range(SIZE):
 
-
+            
             # if the spins of the qubits of the i-th singlet were projected onto the a_1/b_1 directions
             if (alice_bases[i] == 'X' and bob_bases[i] == 'W'):
                     if a_chshresult[i] == 1 and b_chshresult[i] == 1:
@@ -578,9 +549,8 @@ def start_sender():
 
             receive_thread.join()
         else:
-            print("\nThe keys do not match. Potential interception detected.")
-            print("Alice's subkey: ", alice_bits_seleccionados)
-            print("Bob's subkey:   ", bob_bits_comprobacion)
+            print("\nLa correlación CHSH es demasiado débil. Posible interceptación detectada.")
+
 
         if conn:
             conn.close()

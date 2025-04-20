@@ -10,11 +10,12 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 # Construcción de rutas relativas
 ruta_bb84 = os.path.join(base_dir, "BB84", "sender.py")
 ruta_bbm92 = os.path.join(base_dir, "BBM92", "sender.py")
+ruta_E91 = os.path.join(base_dir, "E91", "sender.py")
 print(ruta_bb84)
 protocol_files = {
     "BB84": ruta_bb84,
     "BBM92": ruta_bbm92,
-    "E91": os.path.join(base_dir, "E91", "otro_script.py"),        # Actualizar ruta según corresponda
+    "E91": ruta_E91,     
     "SARG04": os.path.join(base_dir, "SARG04", "otro_script.py")     # Actualizar ruta según corresponda
 }
 
