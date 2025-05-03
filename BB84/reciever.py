@@ -138,13 +138,23 @@ def start_receiver():
             if not packet:
                 break
             data.append(packet)
-        alice_bases_str = b"".join(data).decode()
+        alice_bases_str = b"".join(data)
+        
+        
         alice_bases = np.array(list(alice_bases_str))
         alice_bases = alice_bases[alice_bases != '']
         
         indices = alice_bases[-(num_qubits // 3):]  # Usamos `//` para división entera
         alice_bases = alice_bases[:num_qubits]
-        
+        # PASAR A TEXTO CADA
+                # Convierte el array a texto binario (representación de 0s y 1s)
+
+        print("Bases de Alice (texto binario):", alice_bases)
+        alice_bases = np.array([chr(num) for num in alice_bases if num != 0])
+
+
+
+
         
         print("Bases de Alice:", alice_bases)
 
@@ -161,7 +171,7 @@ def start_receiver():
         # Aquí Bob recibe los índices de comprobación
         # Recibir los índices de comprobación   
 
-        indices_comprobacion_enteros = [ord(x) for x in indices]
+        indices_comprobacion_enteros = [x for x in indices]
         # Resta 1 para obtener los índices originales
     
         print("Índices para comprobación:",  indices_comprobacion_enteros)

@@ -138,8 +138,16 @@ def start_sender():
         bob_bases = bob_bases[bob_bases != '']
         print("Bases de Bob:", bob_bases)
         
+       
         send_alice_bases = b"".join(alice_bases)
-        conn1.sendall(send_alice_bases )
+        send_alice_bases = send_alice_bases.replace(b'\x00', b'')  # Elimina todos los bytes nulos
+       
+        print("Bases de AlicERFGERSDe:", send_alice_bases)
+        # conn1.sendall(b"".join(selected_indices))
+        # conn1.sendall(send_alice_bases )
+        # Asegúrate de que ambas variables sean bytes
+        
+
         data = b""
 
 
@@ -170,12 +178,14 @@ def start_sender():
         
         print(alice_key_bits_result)
 
-
-
+        send_alice_indices = b"".join(selected_indices)
+        send_alice_indices = send_alice_indices.replace(b'\x00', b'')  # Elimina todos los bytes nulos
+        data_to_send = send_alice_bases + send_alice_indices 
+        conn1.sendall(data_to_send)
 
         
         
-        conn1.sendall(b"".join(selected_indices))
+        
        
         data = []
         
