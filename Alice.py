@@ -1,4 +1,15 @@
 #!/usr/bin/env python3
+"""
+@file Alice.py
+@brief Breve descripción del propósito del archivo.
+@author TuNombre
+@date Fecha (por ejemplo, Mayo 2025)
+@version 1.0
+@details Descripción detallada del contenido del archivo, incluyendo su rol en el proyecto (por ejemplo, implementación de un protocolo QKD).
+
+Este archivo contiene las funciones y clases necesarias para [descripción específica, por ejemplo, implementar el protocolo E91 de distribución cuántica de claves]. Se integra con otros módulos del proyecto para [explicar cómo encaja en el sistema].
+"""
+# Resto del
 import tkinter as tk
 from tkinter import ttk, messagebox
 import subprocess
