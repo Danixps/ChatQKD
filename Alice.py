@@ -21,9 +21,7 @@ ruta_bb84 = os.path.join(base_dir, "BB84", "sender.py")
 ruta_bbm92 = os.path.join(base_dir, "BBM92", "sender.py")
 ruta_E91 = os.path.join(base_dir, "E91", "sender.py")
 
-#Documentar en doxygen'''
-
-
+# Definición de un diccionario que mapea los nombres de los protocolos a sus rutas de archivos correspondientes
 protocol_files = {
     "BB84": ruta_bb84,
     "BBM92": ruta_bbm92,
