@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 """
 @file Alice.py
-@brief Breve descripción del propósito del archivo.
-@author TuNombre
-@date Fecha (por ejemplo, Mayo 2025)
+@brief Interfaz gráfica para seleccionar y ejecutar protocolos de distribución cuántica de claves (QKD).
+@author Daniel Bensa Exposito Paz
+@date 2025-05-03
 @version 1.0
-@details Descripción detallada del contenido del archivo, incluyendo su rol en el proyecto (por ejemplo, implementación de un protocolo QKD).
-
-Este archivo contiene las funciones y clases necesarias para [descripción específica, por ejemplo, implementar el protocolo E91 de distribución cuántica de claves]. Se integra con otros módulos del proyecto para [explicar cómo encaja en el sistema].
+@details Esta aplicación permite al usuario seleccionar entre varios protocolos de QKD (BB84, BBM92, E91 y SARG04) y ejecutar el protocolo seleccionado con un número específico de qubits a enviar. La interfaz gráfica está construida utilizando Tkinter.
+Este script es parte de un proyecto más grande que incluye varios protocolos de QKD, cada uno implementado en su propio archivo Python.
 """
-# Resto del
 import tkinter as tk
 from tkinter import ttk, messagebox
 import subprocess
@@ -22,7 +20,10 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 ruta_bb84 = os.path.join(base_dir, "BB84", "sender.py")
 ruta_bbm92 = os.path.join(base_dir, "BBM92", "sender.py")
 ruta_E91 = os.path.join(base_dir, "E91", "sender.py")
-print(ruta_bb84)
+
+#Documentar en doxygen'''
+
+
 protocol_files = {
     "BB84": ruta_bb84,
     "BBM92": ruta_bbm92,
@@ -31,6 +32,12 @@ protocol_files = {
 }
 
 def ejecutar_protocolo():
+    """
+    @brief Función para ejecutar el protocolo seleccionado.
+    @details Esta función se activa al presionar el botón "Ejecutar". Verifica que el protocolo seleccionado y el número de qubits sean válidos, y luego ejecuta el protocolo correspondiente.
+    @param None
+    @return None
+    """
     protocolo = combo.get()
     if protocolo not in protocol_files:
         messagebox.showerror("Error", "Protocolo no válido.")
