@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Main Page</title>
+<title>My Project: ChatQKD 🔒💬</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,11 +60,69 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">My Project Documentation</div>  </div>
+<div class="title">ChatQKD 🔒💬 </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> <b>ChatQKD</b> es un simulador de protocolos de <em>Distribución Cuántica de Claves</em> (<b>QKD</b>) que modela los roles de <b><a class="el" href="namespaceAlice.html">Alice</a></b>, <b><a class="el" href="namespaceBob.html">Bob</a></b> y un posible atacante <b>Eve</b>, utilizando protocolos cuánticos clásicos:</p>
+<ul>
+<li><b>BB84</b></li>
+<li><b>BBM92</b></li>
+<li><b>E91</b></li>
+<li><b>SARG04</b></li>
+</ul>
+<p>Con <b>ChatQKD</b> puedes experimentar cómo se genera una clave secreta segura incluso en presencia de un atacante.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md2"></a>
+📂 Estructura del proyecto</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Archivo / Carpeta   </th><th class="markdownTableHeadLeft">Descripción    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code><a class="el" href="Alice_8py.html">Alice.py</a></code>   </td><td class="markdownTableBodyLeft">Implementación de <a class="el" href="namespaceAlice.html">Alice</a> (emisor)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="Bob_8py.html">Bob.py</a></code>   </td><td class="markdownTableBodyLeft">Implementación de <a class="el" href="namespaceBob.html">Bob</a> (receptor)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>Eve.py</code>   </td><td class="markdownTableBodyLeft">Implementación de Eve (atacante/interceptor)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>BB84/</code>, <code>BBM92/</code>, <code>E91/</code>, <code>SARG04/</code>   </td><td class="markdownTableBodyLeft">Implementaciones específicas de cada protocolo    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>Recursos/src_final/</code>   </td><td class="markdownTableBodyLeft">Recursos y utilidades adicionales    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>install.sh</code>   </td><td class="markdownTableBodyLeft">Script de instalación automática de dependencias    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>requirements.txt</code>   </td><td class="markdownTableBodyLeft">Lista de librerías necesarias    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code><a class="el" href="README_8md.html">README.md</a></code>   </td><td class="markdownTableBodyLeft">Documentación del proyecto   </td></tr>
+</table>
+<hr  />
+<h1><a class="anchor" id="autotoc_md4"></a>
+⚙️ Instalación</h1>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Clonar el repositorio</h2>
+<div class="fragment"><div class="line">git clone https://github.com/Danixps/KDChat.git</div>
+<div class="line">cd KDChat</div>
+</div><!-- fragment --><div class="fragment"><div class="line">chmod +x install.sh</div>
+<div class="line">./install.sh</div>
+</div><!-- fragment --><p> Instalar dependencias automáticamente </p><div class="fragment"><div class="line">chmod +x install.sh</div>
+<div class="line">./install.sh</div>
+</div><!-- fragment --><p> O instalar manualmente </p><div class="fragment"><div class="line">pip install -r requirements.txt</div>
+</div><!-- fragment --><p> 🚀 Ejecución</p>
+<p>Cada agente tiene su propio script.</p>
+<p>Ejemplo:</p>
+<div class="fragment"><div class="line"># Ejecutar Alice</div>
+<div class="line">python3 Alice.py</div>
+<div class="line"> </div>
+<div class="line"># Para simular un ataque con Eve:</div>
+<div class="line">python3 BBM92/Eve.py</div>
+<div class="line"> </div>
+<div class="line"># Ejecutar Bob</div>
+<div class="line">python3 BBM92/Bob.py</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md6"></a>
+Documentación</h1>
+<p><a href="https://danixps.github.io/ChatQKD/">Ver Documentación</a> </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
