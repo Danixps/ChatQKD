@@ -1,0 +1,176 @@
+\hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder}{}\doxysection{pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder Class Reference}
+\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder}\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a80b72ae77b9a4691d2e8005db608d384}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a9b3f8038afd5558680e180ea2a31a738}{module}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_ade1a0233dd16b8aed8b630ca99480993}{get\+\_\+cache\+\_\+info}} (self, resource)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a7c8f54e1f192d86745bf8ea4148d9203}{find}} (self, resource\+\_\+name)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a6e2db103910e8ed6f94508f3a966a8be}{get\+\_\+stream}} (self, resource)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a7b5055fc687c78fdaac750955ebdf5c3}{get\+\_\+bytes}} (self, resource)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_abf7d3803b1222d1b205f5076f31286d8}{get\+\_\+size}} (self, resource)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a0affa545f475e4883d5c2a87e98e39fb}{get\+\_\+resources}} (self, resource)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a9139d97cf587ad566708374aa5da811f}{is\+\_\+container}} (self, resource)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_ab0f86812727cc97d40911589de5511bc}{iterator}} (self, resource\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a9b3f8038afd5558680e180ea2a31a738}{module}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a00ca5ff465ef63dbeeec3e7ece3b7b7a}{loader}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a97b9bb11a64700be3945ddd66222499f}{base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a9295ec52a27181929d6c69ead7af6fab}{skipped\+\_\+extensions}} = (\textquotesingle{}.pyc\textquotesingle{}, \textquotesingle{}.pyo\textquotesingle{}, \textquotesingle{}.class\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Resource finder for file system resources.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a80b72ae77b9a4691d2e8005db608d384}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a80b72ae77b9a4691d2e8005db608d384}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{module }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ZipResourceFinder_a5e087e02066ee0bd9278e4d3990e9567}{pip.\+\_\+vendor.\+distlib.\+resources.\+Zip\+Resource\+Finder}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a7c8f54e1f192d86745bf8ea4148d9203}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a7c8f54e1f192d86745bf8ea4148d9203}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!find@{find}}
+\index{find@{find}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+find (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resource\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a7b5055fc687c78fdaac750955ebdf5c3}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a7b5055fc687c78fdaac750955ebdf5c3}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!get\_bytes@{get\_bytes}}
+\index{get\_bytes@{get\_bytes}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{get\_bytes()}{get\_bytes()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+get\+\_\+bytes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resource }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ZipResourceFinder_ad1cdc0084592fab904992c40fe8ff125}{pip.\+\_\+vendor.\+distlib.\+resources.\+Zip\+Resource\+Finder}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_ade1a0233dd16b8aed8b630ca99480993}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_ade1a0233dd16b8aed8b630ca99480993}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!get\_cache\_info@{get\_cache\_info}}
+\index{get\_cache\_info@{get\_cache\_info}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{get\_cache\_info()}{get\_cache\_info()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+get\+\_\+cache\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resource }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ZipResourceFinder_a40e6cd7f45e45738dfbbcf6b817a44d9}{pip.\+\_\+vendor.\+distlib.\+resources.\+Zip\+Resource\+Finder}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a0affa545f475e4883d5c2a87e98e39fb}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a0affa545f475e4883d5c2a87e98e39fb}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!get\_resources@{get\_resources}}
+\index{get\_resources@{get\_resources}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{get\_resources()}{get\_resources()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+get\+\_\+resources (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resource }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ZipResourceFinder_a9835ac6eab9256ba1cadb4c7161db6f2}{pip.\+\_\+vendor.\+distlib.\+resources.\+Zip\+Resource\+Finder}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_abf7d3803b1222d1b205f5076f31286d8}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_abf7d3803b1222d1b205f5076f31286d8}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+get\+\_\+size (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resource }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ZipResourceFinder_a10e52d916b658f52c089cd04936a97b9}{pip.\+\_\+vendor.\+distlib.\+resources.\+Zip\+Resource\+Finder}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a6e2db103910e8ed6f94508f3a966a8be}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a6e2db103910e8ed6f94508f3a966a8be}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!get\_stream@{get\_stream}}
+\index{get\_stream@{get\_stream}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{get\_stream()}{get\_stream()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+get\+\_\+stream (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resource }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ZipResourceFinder_a6fda3e2c0568f125d77eeda0aa02e89d}{pip.\+\_\+vendor.\+distlib.\+resources.\+Zip\+Resource\+Finder}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a9139d97cf587ad566708374aa5da811f}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a9139d97cf587ad566708374aa5da811f}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!is\_container@{is\_container}}
+\index{is\_container@{is\_container}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{is\_container()}{is\_container()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+is\+\_\+container (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resource }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_ab0f86812727cc97d40911589de5511bc}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_ab0f86812727cc97d40911589de5511bc}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!iterator@{iterator}}
+\index{iterator@{iterator}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{iterator()}{iterator()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+iterator (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resource\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a97b9bb11a64700be3945ddd66222499f}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a97b9bb11a64700be3945ddd66222499f}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!base@{base}}
+\index{base@{base}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+base}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a00ca5ff465ef63dbeeec3e7ece3b7b7a}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a00ca5ff465ef63dbeeec3e7ece3b7b7a}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!loader@{loader}}
+\index{loader@{loader}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{loader}{loader}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+loader}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a9b3f8038afd5558680e180ea2a31a738}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a9b3f8038afd5558680e180ea2a31a738}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!module@{module}}
+\index{module@{module}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{module}{module}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+module}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a9295ec52a27181929d6c69ead7af6fab}\label{classpip_1_1__vendor_1_1distlib_1_1resources_1_1ResourceFinder_a9295ec52a27181929d6c69ead7af6fab}} 
+\index{pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}!skipped\_extensions@{skipped\_extensions}}
+\index{skipped\_extensions@{skipped\_extensions}!pip.\_vendor.distlib.resources.ResourceFinder@{pip.\_vendor.distlib.resources.ResourceFinder}}
+\doxysubsubsection{\texorpdfstring{skipped\_extensions}{skipped\_extensions}}
+{\footnotesize\ttfamily tuple pip.\+\_\+vendor.\+distlib.\+resources.\+Resource\+Finder.\+skipped\+\_\+extensions = (\textquotesingle{}.pyc\textquotesingle{}, \textquotesingle{}.pyo\textquotesingle{}, \textquotesingle{}.class\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/distlib/\mbox{\hyperlink{resources_8py}{resources.\+py}}\end{DoxyCompactItemize}

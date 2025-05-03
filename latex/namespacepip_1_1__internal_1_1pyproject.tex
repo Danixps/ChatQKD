@@ -1,0 +1,66 @@
+\hypertarget{namespacepip_1_1__internal_1_1pyproject}{}\doxysection{pip.\+\_\+internal.\+pyproject Namespace Reference}
+\label{namespacepip_1_1__internal_1_1pyproject}\index{pip.\_internal.pyproject@{pip.\_internal.pyproject}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacepip_1_1__internal_1_1pyproject_a3962d668578ed5e702fca3757c67c974}{make\+\_\+pyproject\+\_\+path}} (str unpacked\+\_\+source\+\_\+directory)
+\item 
+Optional\mbox{[}\mbox{\hyperlink{namespacepip_1_1__internal_1_1pyproject_a274d06001ee00ebc1024f50fe1cc1d05}{Build\+System\+Details}}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__internal_1_1pyproject_a9d7e5ff214ec04fd9ac912b146e53516}{load\+\_\+pyproject\+\_\+toml}} (Optional\mbox{[}bool\mbox{]} use\+\_\+pep517, str pyproject\+\_\+toml, str setup\+\_\+py, str req\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1pyproject_a274d06001ee00ebc1024f50fe1cc1d05}{Build\+System\+Details}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1pyproject_a9d7e5ff214ec04fd9ac912b146e53516}\label{namespacepip_1_1__internal_1_1pyproject_a9d7e5ff214ec04fd9ac912b146e53516}} 
+\index{pip.\_internal.pyproject@{pip.\_internal.pyproject}!load\_pyproject\_toml@{load\_pyproject\_toml}}
+\index{load\_pyproject\_toml@{load\_pyproject\_toml}!pip.\_internal.pyproject@{pip.\_internal.pyproject}}
+\doxysubsubsection{\texorpdfstring{load\_pyproject\_toml()}{load\_pyproject\_toml()}}
+{\footnotesize\ttfamily  Optional\mbox{[}\mbox{\hyperlink{namespacepip_1_1__internal_1_1pyproject_a274d06001ee00ebc1024f50fe1cc1d05}{Build\+System\+Details}}\mbox{]} pip.\+\_\+internal.\+pyproject.\+load\+\_\+pyproject\+\_\+toml (\begin{DoxyParamCaption}\item[{Optional\mbox{[}bool\mbox{]}}]{use\+\_\+pep517,  }\item[{str}]{pyproject\+\_\+toml,  }\item[{str}]{setup\+\_\+py,  }\item[{str }]{req\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load the pyproject.toml file.
+
+Parameters:
+    use_pep517 - Has the user requested PEP 517 processing? None
+                 means the user hasn't explicitly specified.
+    pyproject_toml - Location of the project's pyproject.toml file
+    setup_py - Location of the project's setup.py file
+    req_name - The name of the requirement we're processing (for
+               error reporting)
+
+Returns:
+    None if we should use the legacy code path, otherwise a tuple
+    (
+        requirements from pyproject.toml,
+        name of PEP 517 backend,
+        requirements we should check are installed after setting
+            up the build environment
+        directory paths to import the backend from (backend-path),
+            relative to the project root.
+    )
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1pyproject_a3962d668578ed5e702fca3757c67c974}\label{namespacepip_1_1__internal_1_1pyproject_a3962d668578ed5e702fca3757c67c974}} 
+\index{pip.\_internal.pyproject@{pip.\_internal.pyproject}!make\_pyproject\_path@{make\_pyproject\_path}}
+\index{make\_pyproject\_path@{make\_pyproject\_path}!pip.\_internal.pyproject@{pip.\_internal.pyproject}}
+\doxysubsubsection{\texorpdfstring{make\_pyproject\_path()}{make\_pyproject\_path()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+pyproject.\+make\+\_\+pyproject\+\_\+path (\begin{DoxyParamCaption}\item[{str}]{unpacked\+\_\+source\+\_\+directory }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1pyproject_a274d06001ee00ebc1024f50fe1cc1d05}\label{namespacepip_1_1__internal_1_1pyproject_a274d06001ee00ebc1024f50fe1cc1d05}} 
+\index{pip.\_internal.pyproject@{pip.\_internal.pyproject}!BuildSystemDetails@{BuildSystemDetails}}
+\index{BuildSystemDetails@{BuildSystemDetails}!pip.\_internal.pyproject@{pip.\_internal.pyproject}}
+\doxysubsubsection{\texorpdfstring{BuildSystemDetails}{BuildSystemDetails}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+pyproject.\+Build\+System\+Details}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  namedtuple(}
+\DoxyCodeLine{2     \textcolor{stringliteral}{"{}BuildSystemDetails"{}}, [\textcolor{stringliteral}{"{}requires"{}}, \textcolor{stringliteral}{"{}backend"{}}, \textcolor{stringliteral}{"{}check"{}}, \textcolor{stringliteral}{"{}backend\_path"{}}]}
+\DoxyCodeLine{3 )}
+
+\end{DoxyCode}

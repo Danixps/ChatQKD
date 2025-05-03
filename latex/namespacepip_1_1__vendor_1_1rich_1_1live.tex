@@ -1,0 +1,121 @@
+\hypertarget{namespacepip_1_1__vendor_1_1rich_1_1live}{}\doxysection{pip.\+\_\+vendor.\+rich.\+live Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1rich_1_1live}\index{pip.\_vendor.rich.live@{pip.\_vendor.rich.live}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1live_1_1__RefreshThread}{\+\_\+\+Refresh\+Thread}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1live_1_1Live}{Live}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_a6c3f9bc0a66e0c419a9732ee8860d845}{console}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}()
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_a8666632001cab7207cd2751c96c770ac}{syntax}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_a3c150170ab119cd3430b232b06c62c6e}{table}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1table_1_1Table}{Table}}(\char`\"{}foo\char`\"{}, \char`\"{}bar\char`\"{}, \char`\"{}baz\char`\"{})
+\item 
+list \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_ac7d3b3fd0fdeac622da5d38d9e901310}{progress\+\_\+renderables}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_a01891a19b0911d56f37360f023569f4f}{examples}} = cycle(\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_ac7d3b3fd0fdeac622da5d38d9e901310}{progress\+\_\+renderables}})
+\item 
+list \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_a69e955042c6b3d41c8d3fe841fa43a9e}{exchanges}}
+\item 
+list \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_a2363c4a0a9a84d933b8ce35c9ff7d9f7}{select\+\_\+exchange}} = \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_a69e955042c6b3d41c8d3fe841fa43a9e}{exchanges}}\mbox{[}index \% len(\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_a69e955042c6b3d41c8d3fe841fa43a9e}{exchanges}})\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1live_a6c3f9bc0a66e0c419a9732ee8860d845}\label{namespacepip_1_1__vendor_1_1rich_1_1live_a6c3f9bc0a66e0c419a9732ee8860d845}} 
+\index{pip.\_vendor.rich.live@{pip.\_vendor.rich.live}!console@{console}}
+\index{console@{console}!pip.\_vendor.rich.live@{pip.\_vendor.rich.live}}
+\doxysubsubsection{\texorpdfstring{console}{console}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+live.\+console = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}()}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1live_a01891a19b0911d56f37360f023569f4f}\label{namespacepip_1_1__vendor_1_1rich_1_1live_a01891a19b0911d56f37360f023569f4f}} 
+\index{pip.\_vendor.rich.live@{pip.\_vendor.rich.live}!examples@{examples}}
+\index{examples@{examples}!pip.\_vendor.rich.live@{pip.\_vendor.rich.live}}
+\doxysubsubsection{\texorpdfstring{examples}{examples}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+live.\+examples = cycle(\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_ac7d3b3fd0fdeac622da5d38d9e901310}{progress\+\_\+renderables}})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1live_a69e955042c6b3d41c8d3fe841fa43a9e}\label{namespacepip_1_1__vendor_1_1rich_1_1live_a69e955042c6b3d41c8d3fe841fa43a9e}} 
+\index{pip.\_vendor.rich.live@{pip.\_vendor.rich.live}!exchanges@{exchanges}}
+\index{exchanges@{exchanges}!pip.\_vendor.rich.live@{pip.\_vendor.rich.live}}
+\doxysubsubsection{\texorpdfstring{exchanges}{exchanges}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+rich.\+live.\+exchanges}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [}
+\DoxyCodeLine{2         \textcolor{stringliteral}{"{}SGD"{}},}
+\DoxyCodeLine{3         \textcolor{stringliteral}{"{}MYR"{}},}
+\DoxyCodeLine{4         \textcolor{stringliteral}{"{}EUR"{}},}
+\DoxyCodeLine{5         \textcolor{stringliteral}{"{}USD"{}},}
+\DoxyCodeLine{6         \textcolor{stringliteral}{"{}AUD"{}},}
+\DoxyCodeLine{7         \textcolor{stringliteral}{"{}JPY"{}},}
+\DoxyCodeLine{8         \textcolor{stringliteral}{"{}CNH"{}},}
+\DoxyCodeLine{9         \textcolor{stringliteral}{"{}HKD"{}},}
+\DoxyCodeLine{10         \textcolor{stringliteral}{"{}CAD"{}},}
+\DoxyCodeLine{11         \textcolor{stringliteral}{"{}INR"{}},}
+\DoxyCodeLine{12         \textcolor{stringliteral}{"{}DKK"{}},}
+\DoxyCodeLine{13         \textcolor{stringliteral}{"{}GBP"{}},}
+\DoxyCodeLine{14         \textcolor{stringliteral}{"{}RUB"{}},}
+\DoxyCodeLine{15         \textcolor{stringliteral}{"{}NZD"{}},}
+\DoxyCodeLine{16         \textcolor{stringliteral}{"{}MXN"{}},}
+\DoxyCodeLine{17         \textcolor{stringliteral}{"{}IDR"{}},}
+\DoxyCodeLine{18         \textcolor{stringliteral}{"{}TWD"{}},}
+\DoxyCodeLine{19         \textcolor{stringliteral}{"{}THB"{}},}
+\DoxyCodeLine{20         \textcolor{stringliteral}{"{}VND"{}},}
+\DoxyCodeLine{21     ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1live_ac7d3b3fd0fdeac622da5d38d9e901310}\label{namespacepip_1_1__vendor_1_1rich_1_1live_ac7d3b3fd0fdeac622da5d38d9e901310}} 
+\index{pip.\_vendor.rich.live@{pip.\_vendor.rich.live}!progress\_renderables@{progress\_renderables}}
+\index{progress\_renderables@{progress\_renderables}!pip.\_vendor.rich.live@{pip.\_vendor.rich.live}}
+\doxysubsubsection{\texorpdfstring{progress\_renderables}{progress\_renderables}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+rich.\+live.\+progress\+\_\+renderables}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [}
+\DoxyCodeLine{2         \textcolor{stringliteral}{"{}You can make the terminal shorter and taller to see the live table hide"{}}}
+\DoxyCodeLine{3         \textcolor{stringliteral}{"{}Text may be printed while the progress bars are rendering."{}},}
+\DoxyCodeLine{4         Panel(\textcolor{stringliteral}{"{}In fact, [i]any[/i] renderable will work"{}}),}
+\DoxyCodeLine{5         \textcolor{stringliteral}{"{}Such as [magenta]tables[/]..."{}},}
+\DoxyCodeLine{6         table,}
+\DoxyCodeLine{7         \textcolor{stringliteral}{"{}Pretty printed structures..."{}},}
+\DoxyCodeLine{8         \{\textcolor{stringliteral}{"{}type"{}}: \textcolor{stringliteral}{"{}example"{}}, \textcolor{stringliteral}{"{}text"{}}: \textcolor{stringliteral}{"{}Pretty printed"{}}\},}
+\DoxyCodeLine{9         \textcolor{stringliteral}{"{}Syntax..."{}},}
+\DoxyCodeLine{10         syntax,}
+\DoxyCodeLine{11         Rule(\textcolor{stringliteral}{"{}Give it a try!"{}}),}
+\DoxyCodeLine{12     ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1live_a2363c4a0a9a84d933b8ce35c9ff7d9f7}\label{namespacepip_1_1__vendor_1_1rich_1_1live_a2363c4a0a9a84d933b8ce35c9ff7d9f7}} 
+\index{pip.\_vendor.rich.live@{pip.\_vendor.rich.live}!select\_exchange@{select\_exchange}}
+\index{select\_exchange@{select\_exchange}!pip.\_vendor.rich.live@{pip.\_vendor.rich.live}}
+\doxysubsubsection{\texorpdfstring{select\_exchange}{select\_exchange}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+rich.\+live.\+select\+\_\+exchange = \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_a69e955042c6b3d41c8d3fe841fa43a9e}{exchanges}}\mbox{[}index \% len(\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1live_a69e955042c6b3d41c8d3fe841fa43a9e}{exchanges}})\mbox{]}}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1live_a8666632001cab7207cd2751c96c770ac}\label{namespacepip_1_1__vendor_1_1rich_1_1live_a8666632001cab7207cd2751c96c770ac}} 
+\index{pip.\_vendor.rich.live@{pip.\_vendor.rich.live}!syntax@{syntax}}
+\index{syntax@{syntax}!pip.\_vendor.rich.live@{pip.\_vendor.rich.live}}
+\doxysubsubsection{\texorpdfstring{syntax}{syntax}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+live.\+syntax}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  Syntax(}
+\DoxyCodeLine{2         ,}
+\DoxyCodeLine{3         \textcolor{stringliteral}{"{}python"{}},}
+\DoxyCodeLine{4         line\_numbers=\textcolor{keyword}{True},}
+\DoxyCodeLine{5     )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1live_a3c150170ab119cd3430b232b06c62c6e}\label{namespacepip_1_1__vendor_1_1rich_1_1live_a3c150170ab119cd3430b232b06c62c6e}} 
+\index{pip.\_vendor.rich.live@{pip.\_vendor.rich.live}!table@{table}}
+\index{table@{table}!pip.\_vendor.rich.live@{pip.\_vendor.rich.live}}
+\doxysubsubsection{\texorpdfstring{table}{table}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+live.\+table = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1table_1_1Table}{Table}}(\char`\"{}foo\char`\"{}, \char`\"{}bar\char`\"{}, \char`\"{}baz\char`\"{})}
+

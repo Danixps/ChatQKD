@@ -1,0 +1,123 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+core.\+Line\+Start Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart}\index{pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+Line\+Start\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+Line\+Start\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a3a11bf8cf3afaa69b679eab9ade8f656}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+int \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a4842aabc215e597d34a37132bd2164c3}{pre\+Parse}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}} instring, int loc)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a43e4bf26b0203c9b74243b92d82e2df4}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_ab8b8a25f6c22b6497a3e9c74f925f3ca}{orig\+\_\+white\+Chars}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_afacee901011235e7ff242ffe96779c99}{skipper}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a8a4b00aaea669ae114fd7316d8beeeaa}{errmsg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Matches if current position is at the beginning of a line within
+the parse string
+
+Example::
+
+    test = '''\
+    AAA this line
+    AAA and this line
+      AAA but not this one
+    B AAA and definitely not this one
+    '''
+
+    for t in (LineStart() + 'AAA' + rest_of_line).search_string(test):
+        print(t)
+
+prints::
+
+    ['AAA', ' this line']
+    ['AAA', ' and this line']\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a3a11bf8cf3afaa69b679eab9ade8f656}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a3a11bf8cf3afaa69b679eab9ade8f656}} 
+\index{pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+Line\+Start.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PositionToken_ae1c5989ce94df6378d58a645701995a1}{pip.\+\_\+vendor.\+pyparsing.\+core.\+Position\+Token}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a43e4bf26b0203c9b74243b92d82e2df4}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a43e4bf26b0203c9b74243b92d82e2df4}} 
+\index{pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+Line\+Start.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_aabdfb5cd074dbd652478bfd8c75ec04e}{pip.\+\_\+vendor.\+pyparsing.\+core.\+Parser\+Element}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a4842aabc215e597d34a37132bd2164c3}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a4842aabc215e597d34a37132bd2164c3}} 
+\index{pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}!preParse@{preParse}}
+\index{preParse@{preParse}!pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}}
+\doxysubsubsection{\texorpdfstring{preParse()}{preParse()}}
+{\footnotesize\ttfamily  int pip.\+\_\+vendor.\+pyparsing.\+core.\+Line\+Start.\+pre\+Parse (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}}}]{instring,  }\item[{int}]{loc }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_ab5e2fcbb7e83e0b5608eb5cbc31c17f0}{pip.\+\_\+vendor.\+pyparsing.\+core.\+Parser\+Element}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a8a4b00aaea669ae114fd7316d8beeeaa}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_a8a4b00aaea669ae114fd7316d8beeeaa}} 
+\index{pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}!errmsg@{errmsg}}
+\index{errmsg@{errmsg}!pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}}
+\doxysubsubsection{\texorpdfstring{errmsg}{errmsg}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Line\+Start.\+errmsg}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_ab8b8a25f6c22b6497a3e9c74f925f3ca}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_ab8b8a25f6c22b6497a3e9c74f925f3ca}} 
+\index{pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}!orig\_whiteChars@{orig\_whiteChars}}
+\index{orig\_whiteChars@{orig\_whiteChars}!pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}}
+\doxysubsubsection{\texorpdfstring{orig\_whiteChars}{orig\_whiteChars}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Line\+Start.\+orig\+\_\+white\+Chars}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_afacee901011235e7ff242ffe96779c99}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1LineStart_afacee901011235e7ff242ffe96779c99}} 
+\index{pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}!skipper@{skipper}}
+\index{skipper@{skipper}!pip.\_vendor.pyparsing.core.LineStart@{pip.\_vendor.pyparsing.core.LineStart}}
+\doxysubsubsection{\texorpdfstring{skipper}{skipper}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Line\+Start.\+skipper}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pyparsing/\mbox{\hyperlink{pyparsing_2core_8py}{core.\+py}}\end{DoxyCompactItemize}

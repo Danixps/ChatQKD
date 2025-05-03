@@ -1,0 +1,95 @@
+\hypertarget{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol}{}\doxysection{pip.\+\_\+vendor.\+typing\+\_\+extensions.\+Protocol Class Reference}
+\label{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol}\index{pip.\_vendor.typing\_extensions.Protocol@{pip.\_vendor.typing\_extensions.Protocol}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+typing\+\_\+extensions.\+Protocol\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+typing\+\_\+extensions.\+Protocol\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_a8fa064829bf8567e7e6a6833fa67beb2}{\+\_\+\+\_\+init\+\_\+subclass\+\_\+\+\_\+}} (cls, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_ab27e505f0b50df0293c55ae4a9ab5781}{\+\_\+\+\_\+new\+\_\+\+\_\+}} (cls, $\ast$args, $\ast$$\ast$kwds)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_ac0edcaf925b44f2e779a066c9312058b}{\+\_\+\+\_\+class\+\_\+getitem\+\_\+\+\_\+}} (cls, params)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_a8fa064829bf8567e7e6a6833fa67beb2}{\+\_\+\+\_\+init\+\_\+subclass\+\_\+\+\_\+}} (cls, $\ast$args, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base class for protocol classes. Protocol classes are defined as::
+
+    class Proto(Protocol):
+        def meth(self) -> int:
+            ...
+
+Such classes are primarily used with static type checkers that recognize
+structural subtyping (static duck-typing), for example::
+
+    class C:
+        def meth(self) -> int:
+            return 0
+
+    def func(x: Proto) -> int:
+        return x.meth()
+
+    func(C())  # Passes static type check
+
+See PEP 544 for details. Protocol classes decorated with
+@typing_extensions.runtime_checkable act
+as simple-minded runtime-checkable protocols that check
+only the presence of given attributes, ignoring their type signatures.
+
+Protocol classes can be generic, they are defined as::
+
+    class GenProto(Protocol[T]):
+        def meth(self) -> T:
+            ...
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_ac0edcaf925b44f2e779a066c9312058b}\label{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_ac0edcaf925b44f2e779a066c9312058b}} 
+\index{pip.\_vendor.typing\_extensions.Protocol@{pip.\_vendor.typing\_extensions.Protocol}!\_\_class\_getitem\_\_@{\_\_class\_getitem\_\_}}
+\index{\_\_class\_getitem\_\_@{\_\_class\_getitem\_\_}!pip.\_vendor.typing\_extensions.Protocol@{pip.\_vendor.typing\_extensions.Protocol}}
+\doxysubsubsection{\texorpdfstring{\_\_class\_getitem\_\_()}{\_\_class\_getitem\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+typing\+\_\+extensions.\+Protocol.\+\_\+\+\_\+class\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_a8fa064829bf8567e7e6a6833fa67beb2}\label{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_a8fa064829bf8567e7e6a6833fa67beb2}} 
+\index{pip.\_vendor.typing\_extensions.Protocol@{pip.\_vendor.typing\_extensions.Protocol}!\_\_init\_subclass\_\_@{\_\_init\_subclass\_\_}}
+\index{\_\_init\_subclass\_\_@{\_\_init\_subclass\_\_}!pip.\_vendor.typing\_extensions.Protocol@{pip.\_vendor.typing\_extensions.Protocol}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_subclass\_\_()}{\_\_init\_subclass\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+typing\+\_\+extensions.\+Protocol.\+\_\+\+\_\+init\+\_\+subclass\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_a8fa064829bf8567e7e6a6833fa67beb2}\label{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_a8fa064829bf8567e7e6a6833fa67beb2}} 
+\index{pip.\_vendor.typing\_extensions.Protocol@{pip.\_vendor.typing\_extensions.Protocol}!\_\_init\_subclass\_\_@{\_\_init\_subclass\_\_}}
+\index{\_\_init\_subclass\_\_@{\_\_init\_subclass\_\_}!pip.\_vendor.typing\_extensions.Protocol@{pip.\_vendor.typing\_extensions.Protocol}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_subclass\_\_()}{\_\_init\_subclass\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+typing\+\_\+extensions.\+Protocol.\+\_\+\+\_\+init\+\_\+subclass\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_ab27e505f0b50df0293c55ae4a9ab5781}\label{classpip_1_1__vendor_1_1typing__extensions_1_1Protocol_ab27e505f0b50df0293c55ae4a9ab5781}} 
+\index{pip.\_vendor.typing\_extensions.Protocol@{pip.\_vendor.typing\_extensions.Protocol}!\_\_new\_\_@{\_\_new\_\_}}
+\index{\_\_new\_\_@{\_\_new\_\_}!pip.\_vendor.typing\_extensions.Protocol@{pip.\_vendor.typing\_extensions.Protocol}}
+\doxysubsubsection{\texorpdfstring{\_\_new\_\_()}{\_\_new\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+typing\+\_\+extensions.\+Protocol.\+\_\+\+\_\+new\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwds }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/\mbox{\hyperlink{typing__extensions_8py}{typing\+\_\+extensions.\+py}}\end{DoxyCompactItemize}

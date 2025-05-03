@@ -1,0 +1,91 @@
+\hypertarget{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin}{}\doxysection{pip.\+\_\+vendor.\+requests.\+sessions.\+Session\+Redirect\+Mixin Class Reference}
+\label{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin}\index{pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+requests.\+sessions.\+Session\+Redirect\+Mixin\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_ad72f751ba39c68618a6ce59c954396ab}{get\+\_\+redirect\+\_\+target}} (self, resp)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_af96b42ec7e6b8c835c10691462048866}{should\+\_\+strip\+\_\+auth}} (self, old\+\_\+url, new\+\_\+url)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_af9bcf31587685a33dbbb517f8e1b71b3}{resolve\+\_\+redirects}} (self, resp, req, stream=False, timeout=None, verify=True, cert=None, proxies=None, yield\+\_\+requests=False, $\ast$$\ast$adapter\+\_\+kwargs)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_a7ca2c1256548ecea54e4179c575f5497}{rebuild\+\_\+auth}} (self, prepared\+\_\+request, response)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_a2a67ad5a8d6f5df4156952713771c761}{rebuild\+\_\+proxies}} (self, prepared\+\_\+request, proxies)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_a1ec2403f239b1996358ad437afd18101}{rebuild\+\_\+method}} (self, prepared\+\_\+request, response)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_ad72f751ba39c68618a6ce59c954396ab}\label{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_ad72f751ba39c68618a6ce59c954396ab}} 
+\index{pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}!get\_redirect\_target@{get\_redirect\_target}}
+\index{get\_redirect\_target@{get\_redirect\_target}!pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}}
+\doxysubsubsection{\texorpdfstring{get\_redirect\_target()}{get\_redirect\_target()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+sessions.\+Session\+Redirect\+Mixin.\+get\+\_\+redirect\+\_\+target (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resp }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Receives a Response. Returns a redirect URI or ``None``\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_a7ca2c1256548ecea54e4179c575f5497}\label{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_a7ca2c1256548ecea54e4179c575f5497}} 
+\index{pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}!rebuild\_auth@{rebuild\_auth}}
+\index{rebuild\_auth@{rebuild\_auth}!pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}}
+\doxysubsubsection{\texorpdfstring{rebuild\_auth()}{rebuild\_auth()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+sessions.\+Session\+Redirect\+Mixin.\+rebuild\+\_\+auth (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{prepared\+\_\+request,  }\item[{}]{response }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}When being redirected we may want to strip authentication from the
+request to avoid leaking credentials. This method intelligently removes
+and reapplies authentication where possible to avoid credential loss.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_a1ec2403f239b1996358ad437afd18101}\label{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_a1ec2403f239b1996358ad437afd18101}} 
+\index{pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}!rebuild\_method@{rebuild\_method}}
+\index{rebuild\_method@{rebuild\_method}!pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}}
+\doxysubsubsection{\texorpdfstring{rebuild\_method()}{rebuild\_method()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+sessions.\+Session\+Redirect\+Mixin.\+rebuild\+\_\+method (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{prepared\+\_\+request,  }\item[{}]{response }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}When being redirected we may want to change the method of the request
+based on certain specs or browser behavior.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_a2a67ad5a8d6f5df4156952713771c761}\label{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_a2a67ad5a8d6f5df4156952713771c761}} 
+\index{pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}!rebuild\_proxies@{rebuild\_proxies}}
+\index{rebuild\_proxies@{rebuild\_proxies}!pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}}
+\doxysubsubsection{\texorpdfstring{rebuild\_proxies()}{rebuild\_proxies()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+sessions.\+Session\+Redirect\+Mixin.\+rebuild\+\_\+proxies (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{prepared\+\_\+request,  }\item[{}]{proxies }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method re-evaluates the proxy configuration by considering the
+environment variables. If we are redirected to a URL covered by
+NO_PROXY, we strip the proxy configuration. Otherwise, we set missing
+proxy keys for this URL (in case they were stripped by a previous
+redirect).
+
+This method also replaces the Proxy-Authorization header where
+necessary.
+
+:rtype: dict
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_af9bcf31587685a33dbbb517f8e1b71b3}\label{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_af9bcf31587685a33dbbb517f8e1b71b3}} 
+\index{pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}!resolve\_redirects@{resolve\_redirects}}
+\index{resolve\_redirects@{resolve\_redirects}!pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}}
+\doxysubsubsection{\texorpdfstring{resolve\_redirects()}{resolve\_redirects()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+sessions.\+Session\+Redirect\+Mixin.\+resolve\+\_\+redirects (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{resp,  }\item[{}]{req,  }\item[{}]{stream = {\ttfamily False},  }\item[{}]{timeout = {\ttfamily None},  }\item[{}]{verify = {\ttfamily True},  }\item[{}]{cert = {\ttfamily None},  }\item[{}]{proxies = {\ttfamily None},  }\item[{}]{yield\+\_\+requests = {\ttfamily False},  }\item[{$\ast$$\ast$}]{adapter\+\_\+kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Receives a Response. Returns a generator of Responses or Requests.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_af96b42ec7e6b8c835c10691462048866}\label{classpip_1_1__vendor_1_1requests_1_1sessions_1_1SessionRedirectMixin_af96b42ec7e6b8c835c10691462048866}} 
+\index{pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}!should\_strip\_auth@{should\_strip\_auth}}
+\index{should\_strip\_auth@{should\_strip\_auth}!pip.\_vendor.requests.sessions.SessionRedirectMixin@{pip.\_vendor.requests.sessions.SessionRedirectMixin}}
+\doxysubsubsection{\texorpdfstring{should\_strip\_auth()}{should\_strip\_auth()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+sessions.\+Session\+Redirect\+Mixin.\+should\+\_\+strip\+\_\+auth (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{old\+\_\+url,  }\item[{}]{new\+\_\+url }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Decide whether Authorization header should be removed when redirecting\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/requests/\mbox{\hyperlink{sessions_8py}{sessions.\+py}}\end{DoxyCompactItemize}

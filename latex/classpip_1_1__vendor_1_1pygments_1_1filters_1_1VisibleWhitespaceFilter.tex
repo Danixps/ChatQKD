@@ -1,0 +1,103 @@
+\hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter}{}\doxysection{pip.\+\_\+vendor.\+pygments.\+filters.\+Visible\+Whitespace\+Filter Class Reference}
+\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter}\index{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter@{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pygments.\+filters.\+Visible\+Whitespace\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pygments.\+filters.\+Visible\+Whitespace\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter_af9b0ac61b4a71b6e176ecb8591a9d037}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a03e1be4af2e18f9d33c21efb2190784b}{options}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter_a7e5d7bad9c1f2e676b91459352f5018b}{filter}} (self, lexer, stream)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter_a639b7475efb14d2a90bd014b87d62b52}{wstt}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Convert tabs, newlines and/or spaces to visible characters.
+
+Options accepted:
+
+`spaces` : string or bool
+  If this is a one-character string, spaces will be replaces by this string.
+  If it is another true value, spaces will be replaced by ``·`` (unicode
+  MIDDLE DOT).  If it is a false value, spaces will not be replaced.  The
+  default is ``False``.
+`tabs` : string or bool
+  The same as for `spaces`, but the default replacement character is ``»``
+  (unicode RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK).  The default value
+  is ``False``.  Note: this will not work if the `tabsize` option for the
+  lexer is nonzero, as tabs will already have been expanded then.
+`tabsize` : int
+  If tabs are to be replaced by this filter (see the `tabs` option), this
+  is the total number of characters that a tab should be expanded to.
+  The default is ``8``.
+`newlines` : string or bool
+  The same as for `spaces`, but the default replacement character is ``¶``
+  (unicode PILCROW SIGN).  The default value is ``False``.
+`wstokentype` : bool
+  If true, give whitespace the special `Whitespace` token type.  This allows
+  styling the visible whitespace differently (e.g. greyed out), but it can
+  disrupt background colors.  The default is ``True``.
+
+.. versionadded:: 0.8
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter_af9b0ac61b4a71b6e176ecb8591a9d037}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter_af9b0ac61b4a71b6e176ecb8591a9d037}} 
+\index{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter@{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pygments.filters.VisibleWhitespaceFilter@{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+filters.\+Visible\+Whitespace\+Filter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a271e8db1f91ca7e179cf41a5f1a7df12}{pip.\+\_\+vendor.\+pygments.\+filter.\+Filter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter_a7e5d7bad9c1f2e676b91459352f5018b}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter_a7e5d7bad9c1f2e676b91459352f5018b}} 
+\index{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter@{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter}!filter@{filter}}
+\index{filter@{filter}!pip.\_vendor.pygments.filters.VisibleWhitespaceFilter@{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+filters.\+Visible\+Whitespace\+Filter.\+filter (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lexer,  }\item[{}]{stream }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a11062d7fa15df23e907b69e6843c1714}{pip.\+\_\+vendor.\+pygments.\+filter.\+Filter}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter_a639b7475efb14d2a90bd014b87d62b52}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1VisibleWhitespaceFilter_a639b7475efb14d2a90bd014b87d62b52}} 
+\index{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter@{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter}!wstt@{wstt}}
+\index{wstt@{wstt}!pip.\_vendor.pygments.filters.VisibleWhitespaceFilter@{pip.\_vendor.pygments.filters.VisibleWhitespaceFilter}}
+\doxysubsubsection{\texorpdfstring{wstt}{wstt}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+filters.\+Visible\+Whitespace\+Filter.\+wstt}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pygments/filters/\mbox{\hyperlink{__vendor_2pygments_2filters_2____init_____8py}{\+\_\+\+\_\+init\+\_\+\+\_\+.\+py}}\end{DoxyCompactItemize}

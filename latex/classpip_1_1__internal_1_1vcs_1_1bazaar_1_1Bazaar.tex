@@ -1,0 +1,217 @@
+\hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar}{}\doxysection{pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar Class Reference}
+\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar}\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_acafcbf2930a1cfdf60c30f760d6e07bb}{fetch\+\_\+new}} (self, str dest, \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1HiddenText}{Hidden\+Text}} url, \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1RevOptions}{Rev\+Options}} rev\+\_\+options, int verbosity)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_ac13aebed9aad0d0cb0ce46d3ba02f3b6}{switch}} (self, str dest, \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1HiddenText}{Hidden\+Text}} url, \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1RevOptions}{Rev\+Options}} rev\+\_\+options)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_ab72f9605304d0f45c9cee1b01475db15}{update}} (self, str dest, \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1HiddenText}{Hidden\+Text}} url, \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1RevOptions}{Rev\+Options}} rev\+\_\+options)
+\item 
+Tuple\mbox{[}str, Optional\mbox{[}str\mbox{]}, Auth\+Info\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a60e621b24ac3f6ed379226e68f79f563}{get\+\_\+url\+\_\+rev\+\_\+and\+\_\+auth}} (cls, str url)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a7ca2695eb981353537146db34d8adc6c}{get\+\_\+remote\+\_\+url}} (cls, str location)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a1c1d94fd7c494b376d82874c99857903}{get\+\_\+revision}} (cls, str location)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_aaef0444c8ad24303a35bd8bb56abd229}{is\+\_\+commit\+\_\+id\+\_\+equal}} (cls, str dest, Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a9a1ed870e1d94c5599031599f87edca4}{name}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a95388bfa0f1a39f970a493afce6327d7}{get\+\_\+base\+\_\+rev\+\_\+args}} (str rev)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a9a1ed870e1d94c5599031599f87edca4}{name}} = \char`\"{}bzr\char`\"{}
+\item 
+string \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a31b85e4fc7bf401cb41183eb2785dab9}{dirname}} = \char`\"{}.bzr\char`\"{}
+\item 
+string \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a133c517e80f0203d5c1a558b4d5a2a0c}{repo\+\_\+name}} = \char`\"{}branch\char`\"{}
+\item 
+tuple \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a95f1a936fef8c01b47bc80a87eb98d00}{schemes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_acafcbf2930a1cfdf60c30f760d6e07bb}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_acafcbf2930a1cfdf60c30f760d6e07bb}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!fetch\_new@{fetch\_new}}
+\index{fetch\_new@{fetch\_new}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{fetch\_new()}{fetch\_new()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+fetch\+\_\+new (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{dest,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1HiddenText}{Hidden\+Text}}}]{url,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1RevOptions}{Rev\+Options}}}]{rev\+\_\+options,  }\item[{int     }]{verbosity }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fetch a revision from a repository, in the case that this is the
+first fetch from the repository.
+
+Args:
+  dest: the directory to fetch the repository to.
+  rev_options: a RevOptions object.
+  verbosity: verbosity level.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1VersionControl_ab78371da4657e5a7b652fb600c1459aa}{pip.\+\_\+internal.\+vcs.\+versioncontrol.\+Version\+Control}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a95388bfa0f1a39f970a493afce6327d7}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a95388bfa0f1a39f970a493afce6327d7}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!get\_base\_rev\_args@{get\_base\_rev\_args}}
+\index{get\_base\_rev\_args@{get\_base\_rev\_args}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{get\_base\_rev\_args()}{get\_base\_rev\_args()}}
+{\footnotesize\ttfamily  List\mbox{[}str\mbox{]} pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+get\+\_\+base\+\_\+rev\+\_\+args (\begin{DoxyParamCaption}\item[{str}]{rev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Return the base revision arguments for a vcs command.
+
+Args:
+  rev: the name of a revision to install.  Cannot be None.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1VersionControl_ae109728454d253c3c3f6518506823a1a}{pip.\+\_\+internal.\+vcs.\+versioncontrol.\+Version\+Control}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a7ca2695eb981353537146db34d8adc6c}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a7ca2695eb981353537146db34d8adc6c}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!get\_remote\_url@{get\_remote\_url}}
+\index{get\_remote\_url@{get\_remote\_url}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{get\_remote\_url()}{get\_remote\_url()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+get\+\_\+remote\+\_\+url (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{str}]{location }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the url used at location
+
+Raises RemoteNotFoundError if the repository does not have a remote
+url configured.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1VersionControl_ae07b1cc6ff4b9d1a5afaa7d28cbcd4ab}{pip.\+\_\+internal.\+vcs.\+versioncontrol.\+Version\+Control}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a1c1d94fd7c494b376d82874c99857903}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a1c1d94fd7c494b376d82874c99857903}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!get\_revision@{get\_revision}}
+\index{get\_revision@{get\_revision}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{get\_revision()}{get\_revision()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+get\+\_\+revision (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{str}]{location }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the current commit id of the files at the given location.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1VersionControl_a86efe4cde4c29f73bf01c10b2634963c}{pip.\+\_\+internal.\+vcs.\+versioncontrol.\+Version\+Control}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a60e621b24ac3f6ed379226e68f79f563}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a60e621b24ac3f6ed379226e68f79f563}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!get\_url\_rev\_and\_auth@{get\_url\_rev\_and\_auth}}
+\index{get\_url\_rev\_and\_auth@{get\_url\_rev\_and\_auth}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{get\_url\_rev\_and\_auth()}{get\_url\_rev\_and\_auth()}}
+{\footnotesize\ttfamily  Tuple\mbox{[}str, Optional\mbox{[}str\mbox{]}, Auth\+Info\mbox{]} pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+get\+\_\+url\+\_\+rev\+\_\+and\+\_\+auth (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{str}]{url }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse the repository URL to use, and return the URL, revision,
+and auth info to use.
+
+Returns: (url, rev, (username, password)).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1VersionControl_ad153ac32efb9f0330bf7cd952d820c13}{pip.\+\_\+internal.\+vcs.\+versioncontrol.\+Version\+Control}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_aaef0444c8ad24303a35bd8bb56abd229}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_aaef0444c8ad24303a35bd8bb56abd229}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!is\_commit\_id\_equal@{is\_commit\_id\_equal}}
+\index{is\_commit\_id\_equal@{is\_commit\_id\_equal}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{is\_commit\_id\_equal()}{is\_commit\_id\_equal()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+is\+\_\+commit\+\_\+id\+\_\+equal (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{str}]{dest,  }\item[{Optional\mbox{[}str\mbox{]}}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Always assume the versions don't match\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1VersionControl_abaf3d8ccccddb966bafd5255d8190166}{pip.\+\_\+internal.\+vcs.\+versioncontrol.\+Version\+Control}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_ac13aebed9aad0d0cb0ce46d3ba02f3b6}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_ac13aebed9aad0d0cb0ce46d3ba02f3b6}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!switch@{switch}}
+\index{switch@{switch}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{switch()}{switch()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+switch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{dest,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1HiddenText}{Hidden\+Text}}}]{url,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1RevOptions}{Rev\+Options}}}]{rev\+\_\+options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Switch the repo at ``dest`` to point to ``URL``.
+
+Args:
+  rev_options: a RevOptions object.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1VersionControl_a8cd854143fbea7fa39353e0b12e76998}{pip.\+\_\+internal.\+vcs.\+versioncontrol.\+Version\+Control}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_ab72f9605304d0f45c9cee1b01475db15}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_ab72f9605304d0f45c9cee1b01475db15}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!update@{update}}
+\index{update@{update}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{dest,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1HiddenText}{Hidden\+Text}}}]{url,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1RevOptions}{Rev\+Options}}}]{rev\+\_\+options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Update an already-existing repo to the given ``rev_options``.
+
+Args:
+  rev_options: a RevOptions object.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1VersionControl_aee2260d56ba67019ca524562f739a617}{pip.\+\_\+internal.\+vcs.\+versioncontrol.\+Version\+Control}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a31b85e4fc7bf401cb41183eb2785dab9}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a31b85e4fc7bf401cb41183eb2785dab9}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!dirname@{dirname}}
+\index{dirname@{dirname}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{dirname}{dirname}}
+{\footnotesize\ttfamily string pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+dirname = \char`\"{}.bzr\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a9a1ed870e1d94c5599031599f87edca4}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a9a1ed870e1d94c5599031599f87edca4}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!name@{name}}
+\index{name@{name}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+name = \char`\"{}bzr\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a133c517e80f0203d5c1a558b4d5a2a0c}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a133c517e80f0203d5c1a558b4d5a2a0c}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!repo\_name@{repo\_name}}
+\index{repo\_name@{repo\_name}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{repo\_name}{repo\_name}}
+{\footnotesize\ttfamily string pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+repo\+\_\+name = \char`\"{}branch\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a95f1a936fef8c01b47bc80a87eb98d00}\label{classpip_1_1__internal_1_1vcs_1_1bazaar_1_1Bazaar_a95f1a936fef8c01b47bc80a87eb98d00}} 
+\index{pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}!schemes@{schemes}}
+\index{schemes@{schemes}!pip.\_internal.vcs.bazaar.Bazaar@{pip.\_internal.vcs.bazaar.Bazaar}}
+\doxysubsubsection{\texorpdfstring{schemes}{schemes}}
+{\footnotesize\ttfamily tuple pip.\+\_\+internal.\+vcs.\+bazaar.\+Bazaar.\+schemes\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}bzr+http"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}bzr+https"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}bzr+ssh"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}bzr+sftp"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}bzr+ftp"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}bzr+lp"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}bzr+file"{}},}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/vcs/\mbox{\hyperlink{bazaar_8py}{bazaar.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,132 @@
+\hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError}{}\doxysection{pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error Class Reference}
+\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError}\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_aa319454e56d16f22eaa0214e85877a20}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$\textquotesingle{}Literal\mbox{[}\char`\"{}error\char`\"{}, \char`\"{}warning\char`\"{}\mbox{]}\textquotesingle{} kind=\char`\"{}error\char`\"{}, Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_aa290c918ade8d2efa7e0a4378e2207b8}{reference}}=None, Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a783a6842d59285c2e9cbbad9536d3cc2}{message}}, Optional\mbox{[}Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}}\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ad31a6a3fa19da331edb8efeeb023c0f0}{context}}, Optional\mbox{[}Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}}\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a6cd1917721c83c23571889e5cb6a17f1}{hint\+\_\+stmt}}, Optional\mbox{[}Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}}\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_afce48dbaa52a4427954794113e8aedba}{note\+\_\+stmt}}=None, Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ab6684160ee80ef88a01784138abf9274}{link}}=None)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a06473545b7922a57b1d55f454bf726ad}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+Render\+Result \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ae53a5c1fbcdadc8c58ac65565862d7a7}{\+\_\+\+\_\+rich\+\_\+console\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}} console, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1ConsoleOptions}{Console\+Options}} options)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a3c461facb60c96704da975f80dd726d8}{kind}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_aa290c918ade8d2efa7e0a4378e2207b8}{reference}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a783a6842d59285c2e9cbbad9536d3cc2}{message}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ad31a6a3fa19da331edb8efeeb023c0f0}{context}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_afce48dbaa52a4427954794113e8aedba}{note\+\_\+stmt}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a6cd1917721c83c23571889e5cb6a17f1}{hint\+\_\+stmt}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ab6684160ee80ef88a01784138abf9274}{link}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}An error, that presents diagnostic information to the user.
+
+This contains a bunch of logic, to enable pretty presentation of our error
+messages. Each error gets a unique reference. Each error can also include
+additional context, a hint and/or a note -- which are presented with the
+main error message in a consistent style.
+
+This is adapted from the error output styling in `sphinx-theme-builder`.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_aa319454e56d16f22eaa0214e85877a20}\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_aa319454e56d16f22eaa0214e85877a20}} 
+\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$\textquotesingle{}Literal\mbox{[}\char`\"{}error\char`\"{}, \char`\"{}warning\char`\"{}\mbox{]}\textquotesingle{} }]{kind = {\ttfamily \char`\"{}error\char`\"{}},  }\item[{Optional\mbox{[}str\mbox{]} }]{reference = {\ttfamily None},  }\item[{Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}}\mbox{]}}]{message,  }\item[{Optional\mbox{[}Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}}\mbox{]}\mbox{]}}]{context,  }\item[{Optional\mbox{[}Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}}\mbox{]}\mbox{]}}]{hint\+\_\+stmt,  }\item[{Optional\mbox{[}Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}}\mbox{]}\mbox{]} }]{note\+\_\+stmt = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{link = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a06473545b7922a57b1d55f454bf726ad}\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a06473545b7922a57b1d55f454bf726ad}} 
+\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ae53a5c1fbcdadc8c58ac65565862d7a7}\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ae53a5c1fbcdadc8c58ac65565862d7a7}} 
+\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}!\_\_rich\_console\_\_@{\_\_rich\_console\_\_}}
+\index{\_\_rich\_console\_\_@{\_\_rich\_console\_\_}!pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+\doxysubsubsection{\texorpdfstring{\_\_rich\_console\_\_()}{\_\_rich\_console\_\_()}}
+{\footnotesize\ttfamily  Render\+Result pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error.\+\_\+\+\_\+rich\+\_\+console\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}}]{console,  }\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1ConsoleOptions}{Console\+Options}}}]{options }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ad31a6a3fa19da331edb8efeeb023c0f0}\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ad31a6a3fa19da331edb8efeeb023c0f0}} 
+\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}!context@{context}}
+\index{context@{context}!pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error.\+context}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a6cd1917721c83c23571889e5cb6a17f1}\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a6cd1917721c83c23571889e5cb6a17f1}} 
+\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}!hint\_stmt@{hint\_stmt}}
+\index{hint\_stmt@{hint\_stmt}!pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+\doxysubsubsection{\texorpdfstring{hint\_stmt}{hint\_stmt}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error.\+hint\+\_\+stmt}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a3c461facb60c96704da975f80dd726d8}\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a3c461facb60c96704da975f80dd726d8}} 
+\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}!kind@{kind}}
+\index{kind@{kind}!pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+\doxysubsubsection{\texorpdfstring{kind}{kind}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error.\+kind}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ab6684160ee80ef88a01784138abf9274}\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_ab6684160ee80ef88a01784138abf9274}} 
+\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}!link@{link}}
+\index{link@{link}!pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+\doxysubsubsection{\texorpdfstring{link}{link}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error.\+link}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a783a6842d59285c2e9cbbad9536d3cc2}\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_a783a6842d59285c2e9cbbad9536d3cc2}} 
+\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}!message@{message}}
+\index{message@{message}!pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error.\+message}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_afce48dbaa52a4427954794113e8aedba}\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_afce48dbaa52a4427954794113e8aedba}} 
+\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}!note\_stmt@{note\_stmt}}
+\index{note\_stmt@{note\_stmt}!pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+\doxysubsubsection{\texorpdfstring{note\_stmt}{note\_stmt}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error.\+note\+\_\+stmt}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_aa290c918ade8d2efa7e0a4378e2207b8}\label{classpip_1_1__internal_1_1exceptions_1_1DiagnosticPipError_aa290c918ade8d2efa7e0a4378e2207b8}} 
+\index{pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}!reference@{reference}}
+\index{reference@{reference}!pip.\_internal.exceptions.DiagnosticPipError@{pip.\_internal.exceptions.DiagnosticPipError}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+Diagnostic\+Pip\+Error.\+reference}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/\mbox{\hyperlink{__internal_2exceptions_8py}{exceptions.\+py}}\end{DoxyCompactItemize}

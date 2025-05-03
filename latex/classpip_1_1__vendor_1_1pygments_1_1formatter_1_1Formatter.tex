@@ -1,0 +1,202 @@
+\hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter}{}\doxysection{pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter Class Reference}
+\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter}\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a4d4129ec27422a1f72011427e29ffcec}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a9750fa342ff1b56d411e46463b5cace2}{options}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a1e074e655980de0dcb04e68924a85c24}{get\+\_\+style\+\_\+defs}} (self, arg=\textquotesingle{}\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a002b47716ea44b414c7f70582120edea}{format}} (self, tokensource, outfile)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a92bba48fd972304e77ad54467ffb6c72}{style}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_ad853d9b4e31f4a2affdae94b1f54fc7d}{full}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a0b23643c304bb922c4aea467cf2e3b98}{title}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a17f27d9eb827309e9071b96f581d20e6}{encoding}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a9750fa342ff1b56d411e46463b5cace2}{options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_aa649b4485430a3d040a3b40df002b649}{name}} = None
+\item 
+list \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a40c05f3d52c4eb48d507b43f221d3275}{aliases}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a945b58983cf188fd696b846ce8d843e0}{filenames}} = \mbox{[}$\,$\mbox{]}
+\item 
+bool \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a84e2b53e6b0925eaff4476850de24b64}{unicodeoutput}} = True
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Converts a token stream to text.
+
+Formatters should have attributes to help selecting them. These
+are similar to the corresponding :class:`~pygments.lexer.Lexer`
+attributes.
+
+.. autoattribute:: name
+   :no-value:
+
+.. autoattribute:: aliases
+   :no-value:
+
+.. autoattribute:: filenames
+   :no-value:
+
+You can pass options as keyword arguments to the constructor.
+All formatters accept these basic options:
+
+``style``
+    The style to use, can be a string or a Style subclass
+    (default: "default"). Not used by e.g. the
+    TerminalFormatter.
+``full``
+    Tells the formatter to output a "full" document, i.e.
+    a complete self-contained document. This doesn't have
+    any effect for some formatters (default: false).
+``title``
+    If ``full`` is true, the title that should be used to
+    caption the document (default: '').
+``encoding``
+    If given, must be an encoding name. This will be used to
+    convert the Unicode token strings to byte strings in the
+    output. If it is "" or None, Unicode strings will be written
+    to the output file, which most file-like objects do not
+    support (default: None).
+``outencoding``
+    Overrides ``encoding`` if given.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a4d4129ec27422a1f72011427e29ffcec}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a4d4129ec27422a1f72011427e29ffcec}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}As with lexers, this constructor takes arbitrary optional arguments,
+and if you override it, you should first process your own options, then
+call the base class implementation.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1terminal256_1_1Terminal256Formatter_a7626e34fdc9c14731002f4cc21ab44c6}{pip.\+\_\+vendor.\+pygments.\+formatters.\+terminal256.\+Terminal256\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1terminal_1_1TerminalFormatter_a5b0898622fdc28e4216c22d6dcf6aa98}{pip.\+\_\+vendor.\+pygments.\+formatters.\+terminal.\+Terminal\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ae64dbeb7fb5ff70529132b91326c6ffd}{pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_ac76332d892d5386443322c1dcb6c5931}{pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1pangomarkup_1_1PangoMarkupFormatter_ae78498b8d44ff9082b16ae2eab490cac}{pip.\+\_\+vendor.\+pygments.\+formatters.\+pangomarkup.\+Pango\+Markup\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1other_1_1TestcaseFormatter_a94763c93ff2f670ce4dec9d046a55e2c}{pip.\+\_\+vendor.\+pygments.\+formatters.\+other.\+Testcase\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1other_1_1RawTokenFormatter_a8d75f9c913b8b5558863e4a23490c807}{pip.\+\_\+vendor.\+pygments.\+formatters.\+other.\+Raw\+Token\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1latex_1_1LatexFormatter_ac677bc5622fa36615a921ca8d258c1d5}{pip.\+\_\+vendor.\+pygments.\+formatters.\+latex.\+Latex\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1irc_1_1IRCFormatter_af5e048d980bd41f2eb7729314a788de4}{pip.\+\_\+vendor.\+pygments.\+formatters.\+irc.\+IRCFormatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1img_1_1ImageFormatter_a77b7ffc7fa3343936f9bf973f4f68258}{pip.\+\_\+vendor.\+pygments.\+formatters.\+img.\+Image\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1html_1_1HtmlFormatter_a2c63f69abb3f2d75ca5781d2d6ab4a24}{pip.\+\_\+vendor.\+pygments.\+formatters.\+html.\+Html\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1groff_1_1GroffFormatter_adfddb85b7220581a2f3e6e1856f9e39d}{pip.\+\_\+vendor.\+pygments.\+formatters.\+groff.\+Groff\+Formatter}}, and \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1bbcode_1_1BBCodeFormatter_abbdff308c6287882c83592525b7d04c9}{pip.\+\_\+vendor.\+pygments.\+formatters.\+bbcode.\+BBCode\+Formatter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a002b47716ea44b414c7f70582120edea}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a002b47716ea44b414c7f70582120edea}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!format@{format}}
+\index{format@{format}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+format (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tokensource,  }\item[{}]{outfile }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method must format the tokens from the `tokensource` iterable and
+write the formatted version to the file object `outfile`.
+
+Formatter options can control how exactly the tokens are converted.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1terminal256_1_1Terminal256Formatter_adbc486fdd4dd74d84624f0b48799ec33}{pip.\+\_\+vendor.\+pygments.\+formatters.\+terminal256.\+Terminal256\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1terminal_1_1TerminalFormatter_afe5d0d87e0e342ddc098bf7e186a85a2}{pip.\+\_\+vendor.\+pygments.\+formatters.\+terminal.\+Terminal\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1other_1_1TestcaseFormatter_aac4113ddab80c78ee80173ba85d3435d}{pip.\+\_\+vendor.\+pygments.\+formatters.\+other.\+Testcase\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1other_1_1RawTokenFormatter_aea81b7c4a8d9969198e614d80bddd795}{pip.\+\_\+vendor.\+pygments.\+formatters.\+other.\+Raw\+Token\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1other_1_1NullFormatter_a91d884bdabc273767f5dc4a67640516b}{pip.\+\_\+vendor.\+pygments.\+formatters.\+other.\+Null\+Formatter}}, and \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1img_1_1ImageFormatter_af41e1da0236d772002249971779a590a}{pip.\+\_\+vendor.\+pygments.\+formatters.\+img.\+Image\+Formatter}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a1e074e655980de0dcb04e68924a85c24}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a1e074e655980de0dcb04e68924a85c24}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!get\_style\_defs@{get\_style\_defs}}
+\index{get\_style\_defs@{get\_style\_defs}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{get\_style\_defs()}{get\_style\_defs()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+get\+\_\+style\+\_\+defs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{arg = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method must return statements or declarations suitable to define
+the current style for subsequent highlighted text (e.g. CSS classes
+in the `HTMLFormatter`).
+
+The optional argument `arg` can be used to modify the generation and
+is formatter dependent (it is standardized because it can be given on
+the command line).
+
+This method is called by the ``-S`` :doc:`command-line option <cmdline>`,
+the `arg` is then given by the ``-a`` option.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1html_1_1HtmlFormatter_a70730241f4ba73231f336657875e90a0}{pip.\+\_\+vendor.\+pygments.\+formatters.\+html.\+Html\+Formatter}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1latex_1_1LatexFormatter_a817721ac13d19b1d2c4ee4674846392b}{pip.\+\_\+vendor.\+pygments.\+formatters.\+latex.\+Latex\+Formatter}}, and \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1img_1_1ImageFormatter_a6bad93f46378d361029d5e68fe0bbab2}{pip.\+\_\+vendor.\+pygments.\+formatters.\+img.\+Image\+Formatter}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a40c05f3d52c4eb48d507b43f221d3275}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a40c05f3d52c4eb48d507b43f221d3275}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!aliases@{aliases}}
+\index{aliases@{aliases}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{aliases}{aliases}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+aliases = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a17f27d9eb827309e9071b96f581d20e6}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a17f27d9eb827309e9071b96f581d20e6}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!encoding@{encoding}}
+\index{encoding@{encoding}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{encoding}{encoding}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+encoding}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a945b58983cf188fd696b846ce8d843e0}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a945b58983cf188fd696b846ce8d843e0}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!filenames@{filenames}}
+\index{filenames@{filenames}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{filenames}{filenames}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+filenames = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_ad853d9b4e31f4a2affdae94b1f54fc7d}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_ad853d9b4e31f4a2affdae94b1f54fc7d}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!full@{full}}
+\index{full@{full}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{full}{full}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+full}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_aa649b4485430a3d040a3b40df002b649}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_aa649b4485430a3d040a3b40df002b649}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!name@{name}}
+\index{name@{name}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+name = None\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a9750fa342ff1b56d411e46463b5cace2}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a9750fa342ff1b56d411e46463b5cace2}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!options@{options}}
+\index{options@{options}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+options}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a92bba48fd972304e77ad54467ffb6c72}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a92bba48fd972304e77ad54467ffb6c72}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!style@{style}}
+\index{style@{style}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{style}{style}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+style}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a0b23643c304bb922c4aea467cf2e3b98}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a0b23643c304bb922c4aea467cf2e3b98}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!title@{title}}
+\index{title@{title}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+title}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a84e2b53e6b0925eaff4476850de24b64}\label{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a84e2b53e6b0925eaff4476850de24b64}} 
+\index{pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}!unicodeoutput@{unicodeoutput}}
+\index{unicodeoutput@{unicodeoutput}!pip.\_vendor.pygments.formatter.Formatter@{pip.\_vendor.pygments.formatter.Formatter}}
+\doxysubsubsection{\texorpdfstring{unicodeoutput}{unicodeoutput}}
+{\footnotesize\ttfamily bool pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter.\+unicodeoutput = True\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pygments/\mbox{\hyperlink{formatter_8py}{formatter.\+py}}\end{DoxyCompactItemize}

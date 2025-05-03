@@ -1,0 +1,126 @@
+\hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory}{}\doxysection{pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory Class Reference}
+\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory}\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_ac3bb75053f9b30a15514e0b4c2295207}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_afe6b2d95c070c6570957de5696ff3a6e}{path}}=None, Union\mbox{[}bool, None, \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1__Default}{\+\_\+\+Default}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_a951c8f73bc5a1641a0114be38296e19a}{delete}}=\+\_\+default, str \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_afd9502a9ce40c538fd406e7f80562fde}{kind}}=\char`\"{}temp\char`\"{}, bool globally\+\_\+managed=False, bool \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_af01fe68db13edebaf70f5768f6571b9e}{ignore\+\_\+cleanup\+\_\+errors}}=True)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_afe6b2d95c070c6570957de5696ff3a6e}{path}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_ab6001217e79bc1b1c569b4383fbd1251}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+\+\_\+T \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_a91223c0aea87dee142597a53fd6fe4b2}{\+\_\+\+\_\+enter\+\_\+\+\_\+}} (\+\_\+T self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_af1593580ba369230e933483740e167b6}{\+\_\+\+\_\+exit\+\_\+\+\_\+}} (self, Any exc, Any value, Any tb)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_a0b5c2f5d00e1a02d89e9231960bb1598}{cleanup}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_a951c8f73bc5a1641a0114be38296e19a}{delete}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_afd9502a9ce40c538fd406e7f80562fde}{kind}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_af01fe68db13edebaf70f5768f6571b9e}{ignore\+\_\+cleanup\+\_\+errors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Helper class that owns and cleans up a temporary directory.
+
+This class can be used as a context manager or as an OO representation of a
+temporary directory.
+
+Attributes:
+    path
+        Location to the created temporary directory
+    delete
+        Whether the directory should be deleted when exiting
+        (when used as a contextmanager)
+
+Methods:
+    cleanup()
+        Deletes the temporary directory
+
+When used as a context manager, if the delete attribute is True, on
+exiting the context the temporary directory is deleted.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_ac3bb75053f9b30a15514e0b4c2295207}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_ac3bb75053f9b30a15514e0b4c2295207}} 
+\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}str\mbox{]} }]{path = {\ttfamily None},  }\item[{Union\mbox{[}bool, None, \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1__Default}{\+\_\+\+Default}}\mbox{]} }]{delete = {\ttfamily \+\_\+default},  }\item[{str }]{kind = {\ttfamily \char`\"{}temp\char`\"{}},  }\item[{bool }]{globally\+\_\+managed = {\ttfamily False},  }\item[{bool }]{ignore\+\_\+cleanup\+\_\+errors = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_a91223c0aea87dee142597a53fd6fe4b2}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_a91223c0aea87dee142597a53fd6fe4b2}} 
+\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}!\_\_enter\_\_@{\_\_enter\_\_}}
+\index{\_\_enter\_\_@{\_\_enter\_\_}!pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+\doxysubsubsection{\texorpdfstring{\_\_enter\_\_()}{\_\_enter\_\_()}}
+{\footnotesize\ttfamily  \+\_\+T pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory.\+\_\+\+\_\+enter\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{\+\_\+T}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_af1593580ba369230e933483740e167b6}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_af1593580ba369230e933483740e167b6}} 
+\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}!\_\_exit\_\_@{\_\_exit\_\_}}
+\index{\_\_exit\_\_@{\_\_exit\_\_}!pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+\doxysubsubsection{\texorpdfstring{\_\_exit\_\_()}{\_\_exit\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory.\+\_\+\+\_\+exit\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Any}]{exc,  }\item[{Any}]{value,  }\item[{Any}]{tb }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_ab6001217e79bc1b1c569b4383fbd1251}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_ab6001217e79bc1b1c569b4383fbd1251}} 
+\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_a0b5c2f5d00e1a02d89e9231960bb1598}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_a0b5c2f5d00e1a02d89e9231960bb1598}} 
+\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory.\+cleanup (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove the temporary directory created and reset state\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_afe6b2d95c070c6570957de5696ff3a6e}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_afe6b2d95c070c6570957de5696ff3a6e}} 
+\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}!path@{path}}
+\index{path@{path}!pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory.\+path (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_a951c8f73bc5a1641a0114be38296e19a}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_a951c8f73bc5a1641a0114be38296e19a}} 
+\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}!delete@{delete}}
+\index{delete@{delete}!pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+\doxysubsubsection{\texorpdfstring{delete}{delete}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory.\+delete}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_af01fe68db13edebaf70f5768f6571b9e}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_af01fe68db13edebaf70f5768f6571b9e}} 
+\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}!ignore\_cleanup\_errors@{ignore\_cleanup\_errors}}
+\index{ignore\_cleanup\_errors@{ignore\_cleanup\_errors}!pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+\doxysubsubsection{\texorpdfstring{ignore\_cleanup\_errors}{ignore\_cleanup\_errors}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory.\+ignore\+\_\+cleanup\+\_\+errors}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_afd9502a9ce40c538fd406e7f80562fde}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1TempDirectory_afd9502a9ce40c538fd406e7f80562fde}} 
+\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}!kind@{kind}}
+\index{kind@{kind}!pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+\doxysubsubsection{\texorpdfstring{kind}{kind}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory.\+kind}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/utils/\mbox{\hyperlink{temp__dir_8py}{temp\+\_\+dir.\+py}}\end{DoxyCompactItemize}

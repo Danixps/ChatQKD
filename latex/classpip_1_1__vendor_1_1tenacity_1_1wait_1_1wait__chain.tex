@@ -1,0 +1,85 @@
+\hypertarget{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain}{}\doxysection{pip.\+\_\+vendor.\+tenacity.\+wait.\+wait\+\_\+chain Class Reference}
+\label{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain}\index{pip.\_vendor.tenacity.wait.wait\_chain@{pip.\_vendor.tenacity.wait.wait\_chain}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+tenacity.\+wait.\+wait\+\_\+chain\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+tenacity.\+wait.\+wait\+\_\+chain\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain_a5313860b05e9ef34458fe1e0aea4f429}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__base}{wait\+\_\+base}} \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain_a1d703803145b90258e78803f6fec89f2}{strategies}})
+\item 
+float \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain_abdb002d2e97e152fb2576358c04fc38d}{\+\_\+\+\_\+call\+\_\+\+\_\+}} (self, \char`\"{}Retry\+Call\+State\char`\"{} retry\+\_\+state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain_a1d703803145b90258e78803f6fec89f2}{strategies}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Chain two or more waiting strategies.
+
+If all strategies are exhausted, the very last strategy is used
+thereafter.
+
+For example::
+
+    @retry(wait=wait_chain(*[wait_fixed(1) for i in range(3)] +
+                           [wait_fixed(2) for j in range(5)] +
+                           [wait_fixed(5) for k in range(4)))
+    def wait_chained():
+        print("Wait 1s for 3 attempts, 2s for 5 attempts and 5s
+               thereafter.")
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain_a5313860b05e9ef34458fe1e0aea4f429}\label{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain_a5313860b05e9ef34458fe1e0aea4f429}} 
+\index{pip.\_vendor.tenacity.wait.wait\_chain@{pip.\_vendor.tenacity.wait.wait\_chain}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.tenacity.wait.wait\_chain@{pip.\_vendor.tenacity.wait.wait\_chain}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+tenacity.\+wait.\+wait\+\_\+chain.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__base}{wait\+\_\+base}}}]{strategies }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain_abdb002d2e97e152fb2576358c04fc38d}\label{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain_abdb002d2e97e152fb2576358c04fc38d}} 
+\index{pip.\_vendor.tenacity.wait.wait\_chain@{pip.\_vendor.tenacity.wait.wait\_chain}!\_\_call\_\_@{\_\_call\_\_}}
+\index{\_\_call\_\_@{\_\_call\_\_}!pip.\_vendor.tenacity.wait.wait\_chain@{pip.\_vendor.tenacity.wait.wait\_chain}}
+\doxysubsubsection{\texorpdfstring{\_\_call\_\_()}{\_\_call\_\_()}}
+{\footnotesize\ttfamily  float pip.\+\_\+vendor.\+tenacity.\+wait.\+wait\+\_\+chain.\+\_\+\+\_\+call\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Retry\+Call\+State\char`\"{}}]{retry\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__base_a9cbdfdd35e84486ae86bbd567f34acbe}{pip.\+\_\+vendor.\+tenacity.\+wait.\+wait\+\_\+base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain_a1d703803145b90258e78803f6fec89f2}\label{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__chain_a1d703803145b90258e78803f6fec89f2}} 
+\index{pip.\_vendor.tenacity.wait.wait\_chain@{pip.\_vendor.tenacity.wait.wait\_chain}!strategies@{strategies}}
+\index{strategies@{strategies}!pip.\_vendor.tenacity.wait.wait\_chain@{pip.\_vendor.tenacity.wait.wait\_chain}}
+\doxysubsubsection{\texorpdfstring{strategies}{strategies}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+tenacity.\+wait.\+wait\+\_\+chain.\+strategies}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/tenacity/\mbox{\hyperlink{tenacity_2wait_8py}{wait.\+py}}\end{DoxyCompactItemize}

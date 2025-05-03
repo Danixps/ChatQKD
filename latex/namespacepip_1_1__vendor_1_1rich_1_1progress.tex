@@ -1,0 +1,283 @@
+\hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress}{}\doxysection{pip.\+\_\+vendor.\+rich.\+progress Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1rich_1_1progress}\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1__TrackThread}{\+\_\+\+Track\+Thread}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1__Reader}{\+\_\+\+Reader}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1__ReadContext}{\+\_\+\+Read\+Context}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1ProgressColumn}{Progress\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1RenderableColumn}{Renderable\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1SpinnerColumn}{Spinner\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TextColumn}{Text\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1BarColumn}{Bar\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TimeElapsedColumn}{Time\+Elapsed\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn}{Task\+Progress\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TimeRemainingColumn}{Time\+Remaining\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1FileSizeColumn}{File\+Size\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TotalFileSizeColumn}{Total\+File\+Size\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1MofNCompleteColumn}{Mof\+NComplete\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1DownloadColumn}{Download\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TransferSpeedColumn}{Transfer\+Speed\+Column}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1ProgressSample}{Progress\+Sample}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1Task}{Task}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1Progress}{Progress}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Iterable\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a3c15e0afca52fba304b31379ed8f0c18}{Progress\+Type}}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a685964282f038d4f3820a9eb047f4f96}{track}} (Union\mbox{[}Sequence\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a3c15e0afca52fba304b31379ed8f0c18}{Progress\+Type}}\mbox{]}, Iterable\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a3c15e0afca52fba304b31379ed8f0c18}{Progress\+Type}}\mbox{]}\mbox{]} sequence, str description=\char`\"{}Working...\char`\"{}, Optional\mbox{[}float\mbox{]} total=None, bool auto\+\_\+refresh=True, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_adf87c96f8a5be2161ec4aebc0f6249f2}{console}}=None, bool \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a100dc0418d8a95df34700df862f4d11a}{transient}}=False, Optional\mbox{[}Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}\mbox{]} get\+\_\+time=None, float refresh\+\_\+per\+\_\+second=10, Style\+Type style=\char`\"{}bar.\+back\char`\"{}, Style\+Type complete\+\_\+style=\char`\"{}bar.\+complete\char`\"{}, Style\+Type finished\+\_\+style=\char`\"{}bar.\+finished\char`\"{}, Style\+Type pulse\+\_\+style=\char`\"{}bar.\+pulse\char`\"{}, float update\+\_\+period=0.\+1, bool disable=False, bool show\+\_\+speed=True)
+\item 
+Context\+Manager\mbox{[}Binary\+IO\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_ac2a645f97e2063080f549ab4ed24e510}{wrap\+\_\+file}} (Binary\+IO file, int total, $\ast$str description=\char`\"{}Reading...\char`\"{}, bool auto\+\_\+refresh=True, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_adf87c96f8a5be2161ec4aebc0f6249f2}{console}}=None, bool \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a100dc0418d8a95df34700df862f4d11a}{transient}}=False, Optional\mbox{[}Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}\mbox{]} get\+\_\+time=None, float refresh\+\_\+per\+\_\+second=10, Style\+Type style=\char`\"{}bar.\+back\char`\"{}, Style\+Type complete\+\_\+style=\char`\"{}bar.\+complete\char`\"{}, Style\+Type finished\+\_\+style=\char`\"{}bar.\+finished\char`\"{}, Style\+Type pulse\+\_\+style=\char`\"{}bar.\+pulse\char`\"{}, bool disable=False)
+\item 
+Context\+Manager\mbox{[}Text\+IO\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_ac89915f1185e85629818cd7a4ffb54da}{open}} (Union\mbox{[}str, \char`\"{}Path\+Like\mbox{[}str\mbox{]}\char`\"{}, bytes\mbox{]} file, Union\mbox{[}Literal\mbox{[}\char`\"{}rt\char`\"{}\mbox{]}, Literal\mbox{[}\char`\"{}r\char`\"{}\mbox{]}\mbox{]} mode, int buffering=-\/1, Optional\mbox{[}str\mbox{]} encoding=None, Optional\mbox{[}str\mbox{]} errors=None, Optional\mbox{[}str\mbox{]} newline=None, $\ast$Optional\mbox{[}int\mbox{]} total=None, str description=\char`\"{}Reading...\char`\"{}, bool auto\+\_\+refresh=True, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_adf87c96f8a5be2161ec4aebc0f6249f2}{console}}=None, bool \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a100dc0418d8a95df34700df862f4d11a}{transient}}=False, Optional\mbox{[}Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}\mbox{]} get\+\_\+time=None, float refresh\+\_\+per\+\_\+second=10, Style\+Type style=\char`\"{}bar.\+back\char`\"{}, Style\+Type complete\+\_\+style=\char`\"{}bar.\+complete\char`\"{}, Style\+Type finished\+\_\+style=\char`\"{}bar.\+finished\char`\"{}, Style\+Type pulse\+\_\+style=\char`\"{}bar.\+pulse\char`\"{}, bool disable=False)
+\item 
+Context\+Manager\mbox{[}Binary\+IO\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a46b784d92311265a810270d3d52e303c}{open}} (Union\mbox{[}str, \char`\"{}Path\+Like\mbox{[}str\mbox{]}\char`\"{}, bytes\mbox{]} file, Literal\mbox{[}\char`\"{}rb\char`\"{}\mbox{]} mode, int buffering=-\/1, Optional\mbox{[}str\mbox{]} encoding=None, Optional\mbox{[}str\mbox{]} errors=None, Optional\mbox{[}str\mbox{]} newline=None, $\ast$Optional\mbox{[}int\mbox{]} total=None, str description=\char`\"{}Reading...\char`\"{}, bool auto\+\_\+refresh=True, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_adf87c96f8a5be2161ec4aebc0f6249f2}{console}}=None, bool \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a100dc0418d8a95df34700df862f4d11a}{transient}}=False, Optional\mbox{[}Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}\mbox{]} get\+\_\+time=None, float refresh\+\_\+per\+\_\+second=10, Style\+Type style=\char`\"{}bar.\+back\char`\"{}, Style\+Type complete\+\_\+style=\char`\"{}bar.\+complete\char`\"{}, Style\+Type finished\+\_\+style=\char`\"{}bar.\+finished\char`\"{}, Style\+Type pulse\+\_\+style=\char`\"{}bar.\+pulse\char`\"{}, bool disable=False)
+\item 
+Union\mbox{[}Context\+Manager\mbox{[}Binary\+IO\mbox{]}, Context\+Manager\mbox{[}Text\+IO\mbox{]}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_ae63d31c455b4eae69e4e15bc33b75782}{open}} (Union\mbox{[}str, \char`\"{}Path\+Like\mbox{[}str\mbox{]}\char`\"{}, bytes\mbox{]} file, Union\mbox{[}Literal\mbox{[}\char`\"{}rb\char`\"{}\mbox{]}, Literal\mbox{[}\char`\"{}rt\char`\"{}\mbox{]}, Literal\mbox{[}\char`\"{}r\char`\"{}\mbox{]}\mbox{]} mode=\char`\"{}r\char`\"{}, int buffering=-\/1, Optional\mbox{[}str\mbox{]} encoding=None, Optional\mbox{[}str\mbox{]} errors=None, Optional\mbox{[}str\mbox{]} newline=None, $\ast$Optional\mbox{[}int\mbox{]} total=None, str description=\char`\"{}Reading...\char`\"{}, bool auto\+\_\+refresh=True, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_adf87c96f8a5be2161ec4aebc0f6249f2}{console}}=None, bool \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a100dc0418d8a95df34700df862f4d11a}{transient}}=False, Optional\mbox{[}Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}\mbox{]} get\+\_\+time=None, float refresh\+\_\+per\+\_\+second=10, Style\+Type style=\char`\"{}bar.\+back\char`\"{}, Style\+Type complete\+\_\+style=\char`\"{}bar.\+complete\char`\"{}, Style\+Type finished\+\_\+style=\char`\"{}bar.\+finished\char`\"{}, Style\+Type pulse\+\_\+style=\char`\"{}bar.\+pulse\char`\"{}, bool disable=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a61267743070291b72c1f3260551c340e}{Task\+ID}} = New\+Type(\char`\"{}Task\+ID\char`\"{}, int)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a3c15e0afca52fba304b31379ed8f0c18}{Progress\+Type}} = Type\+Var(\char`\"{}Progress\+Type\char`\"{})
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_ae6c746033f603175d0db137799c2f7e7}{Get\+Time\+Callable}} = Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a108aa6c7904a8f33123d587a332a83e4}{syntax}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_af737dbeb357fff8930de32413de57f52}{table}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1table_1_1Table}{Table}}(\char`\"{}foo\char`\"{}, \char`\"{}bar\char`\"{}, \char`\"{}baz\char`\"{})
+\item 
+list \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_ac04261964d5fc085c8b4832d7dd2d8de}{progress\+\_\+renderables}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a8b4366bce9103c0c7cd967358c275f6a}{examples}} = cycle(\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_ac04261964d5fc085c8b4832d7dd2d8de}{progress\+\_\+renderables}})
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_adf87c96f8a5be2161ec4aebc0f6249f2}{console}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}(record=True)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a100dc0418d8a95df34700df862f4d11a}{transient}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a1b77877912176b7fee5da5bb03dc7fa5}{task1}} = progress.\+add\+\_\+task(\char`\"{}\mbox{[}red\mbox{]}Downloading\char`\"{}, total=1000)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_aa595b215d3fa0eec5f751524c96473b0}{task2}} = progress.\+add\+\_\+task(\char`\"{}\mbox{[}green\mbox{]}Processing\char`\"{}, total=1000)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_ae36550cfc303427b8d538ab5e890c4f4}{task3}} = progress.\+add\+\_\+task(\char`\"{}\mbox{[}yellow\mbox{]}Thinking\char`\"{}, total=None)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a60d849dcb2560afd0dc6a2375af843be}{advance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_a46b784d92311265a810270d3d52e303c}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_a46b784d92311265a810270d3d52e303c}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!open@{open}}
+\index{open@{open}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily  Context\+Manager\mbox{[}Binary\+IO\mbox{]} pip.\+\_\+vendor.\+rich.\+progress.\+open (\begin{DoxyParamCaption}\item[{Union\mbox{[}str, \char`\"{}Path\+Like\mbox{[}str\mbox{]}\char`\"{}, bytes\mbox{]}}]{file,  }\item[{Literal\mbox{[}\char`\"{}rb\char`\"{}\mbox{]}}]{mode,  }\item[{int }]{buffering = {\ttfamily -\/1},  }\item[{Optional\mbox{[}str\mbox{]} }]{encoding = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{errors = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{newline = {\ttfamily None},  }\item[{$\ast$Optional\mbox{[}int\mbox{]} }]{total = {\ttfamily None},  }\item[{str }]{description = {\ttfamily \char`\"{}Reading...\char`\"{}},  }\item[{bool }]{auto\+\_\+refresh = {\ttfamily True},  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}\mbox{]} }]{console = {\ttfamily None},  }\item[{bool }]{transient = {\ttfamily False},  }\item[{Optional\mbox{[}Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}\mbox{]} }]{get\+\_\+time = {\ttfamily None},  }\item[{float }]{refresh\+\_\+per\+\_\+second = {\ttfamily 10},  }\item[{Style\+Type }]{style = {\ttfamily \char`\"{}bar.back\char`\"{}},  }\item[{Style\+Type }]{complete\+\_\+style = {\ttfamily \char`\"{}bar.complete\char`\"{}},  }\item[{Style\+Type }]{finished\+\_\+style = {\ttfamily \char`\"{}bar.finished\char`\"{}},  }\item[{Style\+Type }]{pulse\+\_\+style = {\ttfamily \char`\"{}bar.pulse\char`\"{}},  }\item[{bool }]{disable = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_ae63d31c455b4eae69e4e15bc33b75782}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_ae63d31c455b4eae69e4e15bc33b75782}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!open@{open}}
+\index{open@{open}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily  Union\mbox{[}Context\+Manager\mbox{[}Binary\+IO\mbox{]}, Context\+Manager\mbox{[}Text\+IO\mbox{]}\mbox{]} pip.\+\_\+vendor.\+rich.\+progress.\+open (\begin{DoxyParamCaption}\item[{Union\mbox{[}str, \char`\"{}Path\+Like\mbox{[}str\mbox{]}\char`\"{}, bytes\mbox{]}}]{file,  }\item[{Union\mbox{[}Literal\mbox{[}\char`\"{}rb\char`\"{}\mbox{]}, Literal\mbox{[}\char`\"{}rt\char`\"{}\mbox{]}, Literal\mbox{[}\char`\"{}r\char`\"{}\mbox{]}\mbox{]} }]{mode = {\ttfamily \char`\"{}r\char`\"{}},  }\item[{int }]{buffering = {\ttfamily -\/1},  }\item[{Optional\mbox{[}str\mbox{]} }]{encoding = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{errors = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{newline = {\ttfamily None},  }\item[{$\ast$Optional\mbox{[}int\mbox{]} }]{total = {\ttfamily None},  }\item[{str }]{description = {\ttfamily \char`\"{}Reading...\char`\"{}},  }\item[{bool }]{auto\+\_\+refresh = {\ttfamily True},  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}\mbox{]} }]{console = {\ttfamily None},  }\item[{bool }]{transient = {\ttfamily False},  }\item[{Optional\mbox{[}Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}\mbox{]} }]{get\+\_\+time = {\ttfamily None},  }\item[{float }]{refresh\+\_\+per\+\_\+second = {\ttfamily 10},  }\item[{Style\+Type }]{style = {\ttfamily \char`\"{}bar.back\char`\"{}},  }\item[{Style\+Type }]{complete\+\_\+style = {\ttfamily \char`\"{}bar.complete\char`\"{}},  }\item[{Style\+Type }]{finished\+\_\+style = {\ttfamily \char`\"{}bar.finished\char`\"{}},  }\item[{Style\+Type }]{pulse\+\_\+style = {\ttfamily \char`\"{}bar.pulse\char`\"{}},  }\item[{bool }]{disable = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read bytes from a file while tracking progress.
+
+Args:
+    path (Union[str, PathLike[str], BinaryIO]): The path to the file to read, or a file-like object in binary mode.
+    mode (str): The mode to use to open the file. Only supports "r", "rb" or "rt".
+    buffering (int): The buffering strategy to use, see :func:`io.open`.
+    encoding (str, optional): The encoding to use when reading in text mode, see :func:`io.open`.
+    errors (str, optional): The error handling strategy for decoding errors, see :func:`io.open`.
+    newline (str, optional): The strategy for handling newlines in text mode, see :func:`io.open`
+    total: (int, optional): Total number of bytes to read. Must be provided if reading from a file handle. Default for a path is os.stat(file).st_size.
+    description (str, optional): Description of task show next to progress bar. Defaults to "Reading".
+    auto_refresh (bool, optional): Automatic refresh, disable to force a refresh after each iteration. Default is True.
+    transient: (bool, optional): Clear the progress on exit. Defaults to False.
+    console (Console, optional): Console to write to. Default creates internal Console instance.
+    refresh_per_second (float): Number of times per second to refresh the progress information. Defaults to 10.
+    style (StyleType, optional): Style for the bar background. Defaults to "bar.back".
+    complete_style (StyleType, optional): Style for the completed bar. Defaults to "bar.complete".
+    finished_style (StyleType, optional): Style for a finished bar. Defaults to "bar.finished".
+    pulse_style (StyleType, optional): Style for pulsing bars. Defaults to "bar.pulse".
+    disable (bool, optional): Disable display of progress.
+    encoding (str, optional): The encoding to use when reading in text mode.
+
+Returns:
+    ContextManager[BinaryIO]: A context manager yielding a progress reader.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_ac89915f1185e85629818cd7a4ffb54da}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_ac89915f1185e85629818cd7a4ffb54da}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!open@{open}}
+\index{open@{open}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily  Context\+Manager\mbox{[}Text\+IO\mbox{]} pip.\+\_\+vendor.\+rich.\+progress.\+open (\begin{DoxyParamCaption}\item[{Union\mbox{[}str, \char`\"{}Path\+Like\mbox{[}str\mbox{]}\char`\"{}, bytes\mbox{]}}]{file,  }\item[{Union\mbox{[}Literal\mbox{[}\char`\"{}rt\char`\"{}\mbox{]}, Literal\mbox{[}\char`\"{}r\char`\"{}\mbox{]}\mbox{]}}]{mode,  }\item[{int }]{buffering = {\ttfamily -\/1},  }\item[{Optional\mbox{[}str\mbox{]} }]{encoding = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{errors = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{newline = {\ttfamily None},  }\item[{$\ast$Optional\mbox{[}int\mbox{]} }]{total = {\ttfamily None},  }\item[{str }]{description = {\ttfamily \char`\"{}Reading...\char`\"{}},  }\item[{bool }]{auto\+\_\+refresh = {\ttfamily True},  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}\mbox{]} }]{console = {\ttfamily None},  }\item[{bool }]{transient = {\ttfamily False},  }\item[{Optional\mbox{[}Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}\mbox{]} }]{get\+\_\+time = {\ttfamily None},  }\item[{float }]{refresh\+\_\+per\+\_\+second = {\ttfamily 10},  }\item[{Style\+Type }]{style = {\ttfamily \char`\"{}bar.back\char`\"{}},  }\item[{Style\+Type }]{complete\+\_\+style = {\ttfamily \char`\"{}bar.complete\char`\"{}},  }\item[{Style\+Type }]{finished\+\_\+style = {\ttfamily \char`\"{}bar.finished\char`\"{}},  }\item[{Style\+Type }]{pulse\+\_\+style = {\ttfamily \char`\"{}bar.pulse\char`\"{}},  }\item[{bool }]{disable = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_a685964282f038d4f3820a9eb047f4f96}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_a685964282f038d4f3820a9eb047f4f96}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!track@{track}}
+\index{track@{track}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{track()}{track()}}
+{\footnotesize\ttfamily  Iterable\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a3c15e0afca52fba304b31379ed8f0c18}{Progress\+Type}}\mbox{]} pip.\+\_\+vendor.\+rich.\+progress.\+track (\begin{DoxyParamCaption}\item[{Union\mbox{[}Sequence\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a3c15e0afca52fba304b31379ed8f0c18}{Progress\+Type}}\mbox{]}, Iterable\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_a3c15e0afca52fba304b31379ed8f0c18}{Progress\+Type}}\mbox{]}\mbox{]}}]{sequence,  }\item[{str }]{description = {\ttfamily \char`\"{}Working...\char`\"{}},  }\item[{Optional\mbox{[}float\mbox{]} }]{total = {\ttfamily None},  }\item[{bool }]{auto\+\_\+refresh = {\ttfamily True},  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}\mbox{]} }]{console = {\ttfamily None},  }\item[{bool }]{transient = {\ttfamily False},  }\item[{Optional\mbox{[}Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}\mbox{]} }]{get\+\_\+time = {\ttfamily None},  }\item[{float }]{refresh\+\_\+per\+\_\+second = {\ttfamily 10},  }\item[{Style\+Type }]{style = {\ttfamily \char`\"{}bar.back\char`\"{}},  }\item[{Style\+Type }]{complete\+\_\+style = {\ttfamily \char`\"{}bar.complete\char`\"{}},  }\item[{Style\+Type }]{finished\+\_\+style = {\ttfamily \char`\"{}bar.finished\char`\"{}},  }\item[{Style\+Type }]{pulse\+\_\+style = {\ttfamily \char`\"{}bar.pulse\char`\"{}},  }\item[{float }]{update\+\_\+period = {\ttfamily 0.1},  }\item[{bool }]{disable = {\ttfamily False},  }\item[{bool }]{show\+\_\+speed = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Track progress by iterating over a sequence.
+
+Args:
+    sequence (Iterable[ProgressType]): A sequence (must support "len") you wish to iterate over.
+    description (str, optional): Description of task show next to progress bar. Defaults to "Working".
+    total: (float, optional): Total number of steps. Default is len(sequence).
+    auto_refresh (bool, optional): Automatic refresh, disable to force a refresh after each iteration. Default is True.
+    transient: (bool, optional): Clear the progress on exit. Defaults to False.
+    console (Console, optional): Console to write to. Default creates internal Console instance.
+    refresh_per_second (float): Number of times per second to refresh the progress information. Defaults to 10.
+    style (StyleType, optional): Style for the bar background. Defaults to "bar.back".
+    complete_style (StyleType, optional): Style for the completed bar. Defaults to "bar.complete".
+    finished_style (StyleType, optional): Style for a finished bar. Defaults to "bar.finished".
+    pulse_style (StyleType, optional): Style for pulsing bars. Defaults to "bar.pulse".
+    update_period (float, optional): Minimum time (in seconds) between calls to update(). Defaults to 0.1.
+    disable (bool, optional): Disable display of progress.
+    show_speed (bool, optional): Show speed if total isn't known. Defaults to True.
+Returns:
+    Iterable[ProgressType]: An iterable of the values in the sequence.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_ac2a645f97e2063080f549ab4ed24e510}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_ac2a645f97e2063080f549ab4ed24e510}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!wrap\_file@{wrap\_file}}
+\index{wrap\_file@{wrap\_file}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{wrap\_file()}{wrap\_file()}}
+{\footnotesize\ttfamily  Context\+Manager\mbox{[}Binary\+IO\mbox{]} pip.\+\_\+vendor.\+rich.\+progress.\+wrap\+\_\+file (\begin{DoxyParamCaption}\item[{Binary\+IO}]{file,  }\item[{int}]{total,  }\item[{$\ast$str }]{description = {\ttfamily \char`\"{}Reading...\char`\"{}},  }\item[{bool }]{auto\+\_\+refresh = {\ttfamily True},  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}\mbox{]} }]{console = {\ttfamily None},  }\item[{bool }]{transient = {\ttfamily False},  }\item[{Optional\mbox{[}Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}\mbox{]} }]{get\+\_\+time = {\ttfamily None},  }\item[{float }]{refresh\+\_\+per\+\_\+second = {\ttfamily 10},  }\item[{Style\+Type }]{style = {\ttfamily \char`\"{}bar.back\char`\"{}},  }\item[{Style\+Type }]{complete\+\_\+style = {\ttfamily \char`\"{}bar.complete\char`\"{}},  }\item[{Style\+Type }]{finished\+\_\+style = {\ttfamily \char`\"{}bar.finished\char`\"{}},  }\item[{Style\+Type }]{pulse\+\_\+style = {\ttfamily \char`\"{}bar.pulse\char`\"{}},  }\item[{bool }]{disable = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read bytes from a file while tracking progress.
+
+Args:
+    file (Union[str, PathLike[str], BinaryIO]): The path to the file to read, or a file-like object in binary mode.
+    total (int): Total number of bytes to read.
+    description (str, optional): Description of task show next to progress bar. Defaults to "Reading".
+    auto_refresh (bool, optional): Automatic refresh, disable to force a refresh after each iteration. Default is True.
+    transient: (bool, optional): Clear the progress on exit. Defaults to False.
+    console (Console, optional): Console to write to. Default creates internal Console instance.
+    refresh_per_second (float): Number of times per second to refresh the progress information. Defaults to 10.
+    style (StyleType, optional): Style for the bar background. Defaults to "bar.back".
+    complete_style (StyleType, optional): Style for the completed bar. Defaults to "bar.complete".
+    finished_style (StyleType, optional): Style for a finished bar. Defaults to "bar.finished".
+    pulse_style (StyleType, optional): Style for pulsing bars. Defaults to "bar.pulse".
+    disable (bool, optional): Disable display of progress.
+Returns:
+    ContextManager[BinaryIO]: A context manager yielding a progress reader.\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_a60d849dcb2560afd0dc6a2375af843be}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_a60d849dcb2560afd0dc6a2375af843be}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!advance@{advance}}
+\index{advance@{advance}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{advance}{advance}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+advance}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_adf87c96f8a5be2161ec4aebc0f6249f2}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_adf87c96f8a5be2161ec4aebc0f6249f2}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!console@{console}}
+\index{console@{console}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{console}{console}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+console = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}(record=True)}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_a8b4366bce9103c0c7cd967358c275f6a}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_a8b4366bce9103c0c7cd967358c275f6a}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!examples@{examples}}
+\index{examples@{examples}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{examples}{examples}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+examples = cycle(\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1progress_ac04261964d5fc085c8b4832d7dd2d8de}{progress\+\_\+renderables}})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_ae6c746033f603175d0db137799c2f7e7}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_ae6c746033f603175d0db137799c2f7e7}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!GetTimeCallable@{GetTimeCallable}}
+\index{GetTimeCallable@{GetTimeCallable}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{GetTimeCallable}{GetTimeCallable}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+Get\+Time\+Callable = Callable\mbox{[}\mbox{[}$\,$\mbox{]}, float\mbox{]}}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_ac04261964d5fc085c8b4832d7dd2d8de}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_ac04261964d5fc085c8b4832d7dd2d8de}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!progress\_renderables@{progress\_renderables}}
+\index{progress\_renderables@{progress\_renderables}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{progress\_renderables}{progress\_renderables}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+rich.\+progress.\+progress\+\_\+renderables}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [}
+\DoxyCodeLine{2         \textcolor{stringliteral}{"{}Text may be printed while the progress bars are rendering."{}},}
+\DoxyCodeLine{3         Panel(\textcolor{stringliteral}{"{}In fact, [i]any[/i] renderable will work"{}}),}
+\DoxyCodeLine{4         \textcolor{stringliteral}{"{}Such as [magenta]tables[/]..."{}},}
+\DoxyCodeLine{5         table,}
+\DoxyCodeLine{6         \textcolor{stringliteral}{"{}Pretty printed structures..."{}},}
+\DoxyCodeLine{7         \{\textcolor{stringliteral}{"{}type"{}}: \textcolor{stringliteral}{"{}example"{}}, \textcolor{stringliteral}{"{}text"{}}: \textcolor{stringliteral}{"{}Pretty printed"{}}\},}
+\DoxyCodeLine{8         \textcolor{stringliteral}{"{}Syntax..."{}},}
+\DoxyCodeLine{9         syntax,}
+\DoxyCodeLine{10         Rule(\textcolor{stringliteral}{"{}Give it a try!"{}}),}
+\DoxyCodeLine{11     ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_a3c15e0afca52fba304b31379ed8f0c18}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_a3c15e0afca52fba304b31379ed8f0c18}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!ProgressType@{ProgressType}}
+\index{ProgressType@{ProgressType}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{ProgressType}{ProgressType}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+Progress\+Type = Type\+Var(\char`\"{}Progress\+Type\char`\"{})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_a108aa6c7904a8f33123d587a332a83e4}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_a108aa6c7904a8f33123d587a332a83e4}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!syntax@{syntax}}
+\index{syntax@{syntax}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{syntax}{syntax}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+syntax}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  Syntax(}
+\DoxyCodeLine{2         ,}
+\DoxyCodeLine{3         \textcolor{stringliteral}{"{}python"{}},}
+\DoxyCodeLine{4         line\_numbers=\textcolor{keyword}{True},}
+\DoxyCodeLine{5     )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_af737dbeb357fff8930de32413de57f52}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_af737dbeb357fff8930de32413de57f52}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!table@{table}}
+\index{table@{table}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{table}{table}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+table = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1table_1_1Table}{Table}}(\char`\"{}foo\char`\"{}, \char`\"{}bar\char`\"{}, \char`\"{}baz\char`\"{})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_a1b77877912176b7fee5da5bb03dc7fa5}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_a1b77877912176b7fee5da5bb03dc7fa5}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!task1@{task1}}
+\index{task1@{task1}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{task1}{task1}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+task1 = progress.\+add\+\_\+task(\char`\"{}\mbox{[}red\mbox{]}Downloading\char`\"{}, total=1000)}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_aa595b215d3fa0eec5f751524c96473b0}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_aa595b215d3fa0eec5f751524c96473b0}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!task2@{task2}}
+\index{task2@{task2}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{task2}{task2}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+task2 = progress.\+add\+\_\+task(\char`\"{}\mbox{[}green\mbox{]}Processing\char`\"{}, total=1000)}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_ae36550cfc303427b8d538ab5e890c4f4}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_ae36550cfc303427b8d538ab5e890c4f4}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!task3@{task3}}
+\index{task3@{task3}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{task3}{task3}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+task3 = progress.\+add\+\_\+task(\char`\"{}\mbox{[}yellow\mbox{]}Thinking\char`\"{}, total=None)}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_a61267743070291b72c1f3260551c340e}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_a61267743070291b72c1f3260551c340e}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!TaskID@{TaskID}}
+\index{TaskID@{TaskID}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{TaskID}{TaskID}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+Task\+ID = New\+Type(\char`\"{}Task\+ID\char`\"{}, int)}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1progress_a100dc0418d8a95df34700df862f4d11a}\label{namespacepip_1_1__vendor_1_1rich_1_1progress_a100dc0418d8a95df34700df862f4d11a}} 
+\index{pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}!transient@{transient}}
+\index{transient@{transient}!pip.\_vendor.rich.progress@{pip.\_vendor.rich.progress}}
+\doxysubsubsection{\texorpdfstring{transient}{transient}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+transient}
+

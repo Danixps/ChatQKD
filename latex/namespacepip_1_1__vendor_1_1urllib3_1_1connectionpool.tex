@@ -1,0 +1,73 @@
+\hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool}{}\doxysection{pip.\+\_\+vendor.\+urllib3.\+connectionpool Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool}\index{pip.\_vendor.urllib3.connectionpool@{pip.\_vendor.urllib3.connectionpool}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool}{Connection\+Pool}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1HTTPConnectionPool}{HTTPConnection\+Pool}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1HTTPSConnectionPool}{HTTPSConnection\+Pool}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_a6eb866a684aa0a552e785e12531038e3}{connection\+\_\+from\+\_\+url}} (url, $\ast$$\ast$kw)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_ad0fecd197c6d3e0981a3c4a136420a54}{weakref\+\_\+finalize}} = weakref.\+finalize
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_af4fe29676fd273dfca039e3b53b7c92d}{xrange}} = six.\+moves.\+xrange
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_a1bff2928ed0d70d7b462c2014699e21a}{log}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_a6eb866a684aa0a552e785e12531038e3}\label{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_a6eb866a684aa0a552e785e12531038e3}} 
+\index{pip.\_vendor.urllib3.connectionpool@{pip.\_vendor.urllib3.connectionpool}!connection\_from\_url@{connection\_from\_url}}
+\index{connection\_from\_url@{connection\_from\_url}!pip.\_vendor.urllib3.connectionpool@{pip.\_vendor.urllib3.connectionpool}}
+\doxysubsubsection{\texorpdfstring{connection\_from\_url()}{connection\_from\_url()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+connection\+\_\+from\+\_\+url (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{$\ast$$\ast$}]{kw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a url, return an :class:`.ConnectionPool` instance of its host.
+
+This is a shortcut for not having to parse out the scheme, host, and port
+of the url before creating an :class:`.ConnectionPool` instance.
+
+:param url:
+    Absolute URL string that must include the scheme. Port is optional.
+
+:param \\**kw:
+    Passes additional parameters to the constructor of the appropriate
+    :class:`.ConnectionPool`. Useful for specifying things like
+    timeout, maxsize, headers, etc.
+
+Example::
+
+    >>> conn = connection_from_url('http://google.com/')
+    >>> r = conn.request('GET', '/')
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_a1bff2928ed0d70d7b462c2014699e21a}\label{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_a1bff2928ed0d70d7b462c2014699e21a}} 
+\index{pip.\_vendor.urllib3.connectionpool@{pip.\_vendor.urllib3.connectionpool}!log@{log}}
+\index{log@{log}!pip.\_vendor.urllib3.connectionpool@{pip.\_vendor.urllib3.connectionpool}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+log = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_ad0fecd197c6d3e0981a3c4a136420a54}\label{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_ad0fecd197c6d3e0981a3c4a136420a54}} 
+\index{pip.\_vendor.urllib3.connectionpool@{pip.\_vendor.urllib3.connectionpool}!weakref\_finalize@{weakref\_finalize}}
+\index{weakref\_finalize@{weakref\_finalize}!pip.\_vendor.urllib3.connectionpool@{pip.\_vendor.urllib3.connectionpool}}
+\doxysubsubsection{\texorpdfstring{weakref\_finalize}{weakref\_finalize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1packages_1_1backports_1_1weakref__finalize_1_1weakref__finalize}{pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+weakref\+\_\+finalize}} = weakref.\+finalize}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_af4fe29676fd273dfca039e3b53b7c92d}\label{namespacepip_1_1__vendor_1_1urllib3_1_1connectionpool_af4fe29676fd273dfca039e3b53b7c92d}} 
+\index{pip.\_vendor.urllib3.connectionpool@{pip.\_vendor.urllib3.connectionpool}!xrange@{xrange}}
+\index{xrange@{xrange}!pip.\_vendor.urllib3.connectionpool@{pip.\_vendor.urllib3.connectionpool}}
+\doxysubsubsection{\texorpdfstring{xrange}{xrange}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+xrange = six.\+moves.\+xrange}
+

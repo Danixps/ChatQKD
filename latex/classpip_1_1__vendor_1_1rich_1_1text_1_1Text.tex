@@ -1,0 +1,793 @@
+\hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{}\doxysection{pip.\+\_\+vendor.\+rich.\+text.\+Text Class Reference}
+\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+rich.\+text.\+Text\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classpip_1_1__vendor_1_1rich_1_1text_1_1Text__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+rich.\+text.\+Text\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classpip_1_1__vendor_1_1rich_1_1text_1_1Text__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ae57cafe7b6bd6c720a8766af1469f9e5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1text_a22eb6ff0228912c8c1c8478d09efe595}{text}}=\char`\"{}\char`\"{}, Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}=\char`\"{}\char`\"{}, $\ast$Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} justify=None, Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} overflow=None, Optional\mbox{[}bool\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a8eea770f2de6b2d0c9a026efdbcbc18a}{no\+\_\+wrap}}=None, str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}{end}}=\char`\"{}\textbackslash{}n\char`\"{}, Optional\mbox{[}int\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a378278bed9fde65135d1b6c91173cc47}{tab\+\_\+size}}=8, Optional\mbox{[}List\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Span}{Span}}\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a597632d14ccc9134b125308fd526d218}{spans}}=None)
+\item 
+int \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a29fba8e2272260c9408d8b215ada9fbb}{\+\_\+\+\_\+len\+\_\+\+\_\+}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a525d8135b479c4137a484b87db1df495}{\+\_\+\+\_\+bool\+\_\+\+\_\+}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0b3d7c54400e7e80e71c60f4250cfe6d}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad2d1ee9230a3f75a684cf7534ebcb886}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a53ddbcca645bcd523cc7875ede6a2691}{\+\_\+\+\_\+add\+\_\+\+\_\+}} (self, Any other)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a9f3c2774c219b65d034f5acb49a6010e}{\+\_\+\+\_\+eq\+\_\+\+\_\+}} (self, object other)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ab1ef4d1ed3b140a75be589e213978878}{\+\_\+\+\_\+contains\+\_\+\+\_\+}} (self, object other)
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_afc0ae579703f05ff5c40c4a7aa3dcc4b}{\+\_\+\+\_\+getitem\+\_\+\+\_\+}} (self, Union\mbox{[}int, slice\mbox{]} slice)
+\item 
+int \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a61e804d92082554744af94322f5c730d}{cell\+\_\+len}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a09b0f0a151cbe4c0509d5c78baf2eadd}{markup}} (self)
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a664016614e1834c1ea5a765568d68e2c}{from\+\_\+markup}} (cls, str \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1text_a22eb6ff0228912c8c1c8478d09efe595}{text}}, $\ast$Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}=\char`\"{}\char`\"{}, bool emoji=True, Optional\mbox{[}Emoji\+Variant\mbox{]} emoji\+\_\+variant=None, Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} justify=None, Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} overflow=None, str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}{end}}=\char`\"{}\textbackslash{}n\char`\"{})
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a82b6705efeab3349f1483e53e48adca6}{from\+\_\+ansi}} (cls, str \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1text_a22eb6ff0228912c8c1c8478d09efe595}{text}}, $\ast$Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}=\char`\"{}\char`\"{}, Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} justify=None, Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} overflow=None, Optional\mbox{[}bool\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a8eea770f2de6b2d0c9a026efdbcbc18a}{no\+\_\+wrap}}=None, str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}{end}}=\char`\"{}\textbackslash{}n\char`\"{}, Optional\mbox{[}int\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a378278bed9fde65135d1b6c91173cc47}{tab\+\_\+size}}=8)
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a28cbefe6298628f1617faee92b1ce873}{styled}} (cls, str \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1text_a22eb6ff0228912c8c1c8478d09efe595}{text}}, Style\+Type \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}=\char`\"{}\char`\"{}, $\ast$Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} justify=None, Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} overflow=None)
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac823ab3af39e2b279b6fce0548126559}{assemble}} (cls, $\ast$Union\mbox{[}str, \char`\"{}Text\char`\"{}, Tuple\mbox{[}str, Style\+Type\mbox{]}\mbox{]} parts, Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}=\char`\"{}\char`\"{}, Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} justify=None, Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} overflow=None, Optional\mbox{[}bool\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a8eea770f2de6b2d0c9a026efdbcbc18a}{no\+\_\+wrap}}=None, str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}{end}}=\char`\"{}\textbackslash{}n\char`\"{}, int \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a378278bed9fde65135d1b6c91173cc47}{tab\+\_\+size}}=8, Optional\mbox{[}Dict\mbox{[}str, Any\mbox{]}\mbox{]} meta=None)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad410f80c68f0b9e33ebf60eac0be54b9}{plain}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_aa2d6327e4b4b125185de0e1e98d89d07}{plain}} (self, str new\+\_\+text)
+\item 
+List\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Span}{Span}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a597632d14ccc9134b125308fd526d218}{spans}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ab84f95e5e8ef945831394c71bd96474b}{spans}} (self, List\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Span}{Span}}\mbox{]} spans)
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_acba05c0772c231850c04049123a1fd8a}{blank\+\_\+copy}} (self, str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac5bdb7a46d3d8569aa56f28418a7397d}{plain}}=\char`\"{}\char`\"{})
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a93b228d0aa89aa63e6dfbaa40cb7619a}{copy}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a95f1ed10238e184faf7f0ba0af92d3a3}{stylize}} (self, Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}, int start=0, Optional\mbox{[}int\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}{end}}=None)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0add655eb16df2f48449aa04a8dc5b79}{stylize\+\_\+before}} (self, Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}, int start=0, Optional\mbox{[}int\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}{end}}=None)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a3f259ada743e32524b1a8e5026312a99}{apply\+\_\+meta}} (self, Dict\mbox{[}str, Any\mbox{]} meta, int start=0, Optional\mbox{[}int\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}{end}}=None)
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a3092fbf7b1fc825a6b4049b1e64f5d3a}{on}} (self, Optional\mbox{[}Dict\mbox{[}str, Any\mbox{]}\mbox{]} meta=None, $\ast$$\ast$Any handlers)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a6471f076ed2cb61e9808a6fee2039aaa}{remove\+\_\+suffix}} (self, str suffix)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a7ba4cff623cfbbef43aff3fbe2c8ae5e}{get\+\_\+style\+\_\+at\+\_\+offset}} (self, \char`\"{}Console\char`\"{} console, int offset)
+\item 
+int \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac344fac4852db9478835b78dcb3e3d94}{highlight\+\_\+regex}} (self, str re\+\_\+highlight, Optional\mbox{[}Union\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1text_a9dc94b944c8b41290f4d43393af50311}{Get\+Style\+Callable}}, Style\+Type\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}=None, $\ast$str style\+\_\+prefix=\char`\"{}\char`\"{})
+\item 
+int \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ae9c009b7ca5c6b88443386f499cb2066}{highlight\+\_\+words}} (self, Iterable\mbox{[}str\mbox{]} words, Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}, $\ast$bool case\+\_\+sensitive=True)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_aa527830132c0ad696221dbdf44bf2854}{rstrip}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a4f35b3ae0e8624ffe7f9709bbb900600}{rstrip\+\_\+end}} (self, int size)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a929fc2e8591380477d5d1827ceca456f}{set\+\_\+length}} (self, int new\+\_\+length)
+\item 
+Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1segment_1_1Segment}{Segment}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_abf1ba85df0af2025a4778a2915a09b37}{\+\_\+\+\_\+rich\+\_\+console\+\_\+\+\_\+}} (self, \char`\"{}Console\char`\"{} console, \char`\"{}Console\+Options\char`\"{} options)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement}{Measurement}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac3ad31e1ccc87f681cec77d408a9c906}{\+\_\+\+\_\+rich\+\_\+measure\+\_\+\+\_\+}} (self, \char`\"{}Console\char`\"{} console, \char`\"{}Console\+Options\char`\"{} options)
+\item 
+Iterable\mbox{[}\char`\"{}Segment\char`\"{}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a2d317bc35d66566cf86cf8aad80c6ce2}{render}} (self, \char`\"{}Console\char`\"{} console, str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}{end}}=\char`\"{}\char`\"{})
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a13db0a07a8a0fc184cf4f86e6f8981c7}{join}} (self, Iterable\mbox{[}\char`\"{}Text\char`\"{}\mbox{]} lines)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad9f65ecb5a2b9b55648d525a0a58c947}{expand\+\_\+tabs}} (self, Optional\mbox{[}int\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a378278bed9fde65135d1b6c91173cc47}{tab\+\_\+size}}=None)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_afd4c6e9953160bfc702ef8d655cb9565}{truncate}} (self, int max\+\_\+width, $\ast$Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} overflow=None, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a6d1565afbaaa880acf42376173bd7d16}{pad}}=False)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a6d1565afbaaa880acf42376173bd7d16}{pad}} (self, int count, str character=\char`\"{} \char`\"{})
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad6cce2e6aec12704ba4991e392da5723}{pad\+\_\+left}} (self, int count, str character=\char`\"{} \char`\"{})
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ab14e37f26665eeacae7a25bc2c7a105d}{pad\+\_\+right}} (self, int count, str character=\char`\"{} \char`\"{})
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a31c2242d00566e1e35a9e8d9ba475e73}{align}} (self, Align\+Method align, int width, str character=\char`\"{} \char`\"{})
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac50e796231ea0bcbefd7fdda378ae2d0}{append}} (self, Union\mbox{[}\char`\"{}Text\char`\"{}, str\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1text_a22eb6ff0228912c8c1c8478d09efe595}{text}}, Optional\mbox{[}Union\mbox{[}str, \char`\"{}Style\char`\"{}\mbox{]}\mbox{]} style=None)
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad68230b6bb7c3a19256befa63aa54df8}{append\+\_\+text}} (self, \char`\"{}Text\char`\"{} text)
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a40dfb2c02ac256cd83437e19e8ecea39}{append\+\_\+tokens}} (self, Iterable\mbox{[}Tuple\mbox{[}str, Optional\mbox{[}Style\+Type\mbox{]}\mbox{]}\mbox{]} tokens)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a6de10893cdcbd51d04cdb2526e48aad5}{copy\+\_\+styles}} (self, \char`\"{}Text\char`\"{} text)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1containers_1_1Lines}{Lines}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a45ed112ec5620958240ab94940e3b4ec}{split}} (self, str separator=\char`\"{}\textbackslash{}n\char`\"{}, $\ast$bool include\+\_\+separator=False, bool allow\+\_\+blank=False)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1containers_1_1Lines}{Lines}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a07dc70deb29ea374cfff03489995bcac}{divide}} (self, Iterable\mbox{[}int\mbox{]} offsets)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a8bcf4e2edd125080f88d9104e8400f1e}{right\+\_\+crop}} (self, int amount=1)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1containers_1_1Lines}{Lines}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ae9271b2a29adea8be74f9a2a5b1f8b9e}{wrap}} (self, \char`\"{}Console\char`\"{} console, int width, $\ast$Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} justify=None, Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} overflow=None, int \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a378278bed9fde65135d1b6c91173cc47}{tab\+\_\+size}}=8, Optional\mbox{[}bool\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a8eea770f2de6b2d0c9a026efdbcbc18a}{no\+\_\+wrap}}=None)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1containers_1_1Lines}{Lines}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a1adda7f6546fb3592d473f95d0ca17b2}{fit}} (self, int width)
+\item 
+int \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_af4af48cd0b99c5abf3337382ccd98917}{detect\+\_\+indentation}} (self)
+\item 
+\char`\"{}Text\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a62e5cf27326eb74e4fa0566898f1850a}{with\+\_\+indent\+\_\+guides}} (self, Optional\mbox{[}int\mbox{]} indent\+\_\+size=None, $\ast$str character=\char`\"{}│\char`\"{}, Style\+Type \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}=\char`\"{}dim green\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}{style}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a8eea770f2de6b2d0c9a026efdbcbc18a}{no\+\_\+wrap}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}{end}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a378278bed9fde65135d1b6c91173cc47}{tab\+\_\+size}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac5bdb7a46d3d8569aa56f28418a7397d}{plain}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Text with color / style.
+
+Args:
+    text (str, optional): Default unstyled text. Defaults to "".
+    style (Union[str, Style], optional): Base style for text. Defaults to "".
+    justify (str, optional): Justify method: "left", "center", "full", "right". Defaults to None.
+    overflow (str, optional): Overflow method: "crop", "fold", "ellipsis". Defaults to None.
+    no_wrap (bool, optional): Disable text wrapping, or None for default. Defaults to None.
+    end (str, optional): Character to end text with. Defaults to "\\\\n".
+    tab_size (int): Number of spaces per tab, or ``None`` to use ``console.tab_size``. Defaults to 8.
+    spans (List[Span], optional). A list of predefined style spans. Defaults to None.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ae57cafe7b6bd6c720a8766af1469f9e5}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ae57cafe7b6bd6c720a8766af1469f9e5}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str }]{text = {\ttfamily \char`\"{}\char`\"{}},  }\item[{Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} }]{style = {\ttfamily \char`\"{}\char`\"{}},  }\item[{$\ast$Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} }]{justify = {\ttfamily None},  }\item[{Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} }]{overflow = {\ttfamily None},  }\item[{Optional\mbox{[}bool\mbox{]} }]{no\+\_\+wrap = {\ttfamily None},  }\item[{str }]{end = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}},  }\item[{Optional\mbox{[}int\mbox{]} }]{tab\+\_\+size = {\ttfamily 8},  }\item[{Optional\mbox{[}List\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Span}{Span}}\mbox{]}\mbox{]} }]{spans = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a53ddbcca645bcd523cc7875ede6a2691}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a53ddbcca645bcd523cc7875ede6a2691}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_add\_\_@{\_\_add\_\_}}
+\index{\_\_add\_\_@{\_\_add\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_add\_\_()}{\_\_add\_\_()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+add\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Any}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a525d8135b479c4137a484b87db1df495}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a525d8135b479c4137a484b87db1df495}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_bool\_\_@{\_\_bool\_\_}}
+\index{\_\_bool\_\_@{\_\_bool\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_bool\_\_()}{\_\_bool\_\_()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+bool\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ab1ef4d1ed3b140a75be589e213978878}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ab1ef4d1ed3b140a75be589e213978878}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_contains\_\_@{\_\_contains\_\_}}
+\index{\_\_contains\_\_@{\_\_contains\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_contains\_\_()}{\_\_contains\_\_()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+contains\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{object}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a9f3c2774c219b65d034f5acb49a6010e}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a9f3c2774c219b65d034f5acb49a6010e}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_eq\_\_@{\_\_eq\_\_}}
+\index{\_\_eq\_\_@{\_\_eq\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_eq\_\_()}{\_\_eq\_\_()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+eq\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{object}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_afc0ae579703f05ff5c40c4a7aa3dcc4b}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_afc0ae579703f05ff5c40c4a7aa3dcc4b}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_getitem\_\_@{\_\_getitem\_\_}}
+\index{\_\_getitem\_\_@{\_\_getitem\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_getitem\_\_()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Union\mbox{[}int, slice\mbox{]}}]{slice }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a29fba8e2272260c9408d8b215ada9fbb}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a29fba8e2272260c9408d8b215ada9fbb}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_len\_\_@{\_\_len\_\_}}
+\index{\_\_len\_\_@{\_\_len\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_len\_\_()}{\_\_len\_\_()}}
+{\footnotesize\ttfamily  int pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+len\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad2d1ee9230a3f75a684cf7534ebcb886}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad2d1ee9230a3f75a684cf7534ebcb886}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_abf1ba85df0af2025a4778a2915a09b37}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_abf1ba85df0af2025a4778a2915a09b37}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_rich\_console\_\_@{\_\_rich\_console\_\_}}
+\index{\_\_rich\_console\_\_@{\_\_rich\_console\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_rich\_console\_\_()}{\_\_rich\_console\_\_()}}
+{\footnotesize\ttfamily  Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1segment_1_1Segment}{Segment}}\mbox{]} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+rich\+\_\+console\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Console\char`\"{}}]{console,  }\item[{\char`\"{}Console\+Options\char`\"{}     }]{options }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac3ad31e1ccc87f681cec77d408a9c906}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac3ad31e1ccc87f681cec77d408a9c906}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_rich\_measure\_\_@{\_\_rich\_measure\_\_}}
+\index{\_\_rich\_measure\_\_@{\_\_rich\_measure\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_rich\_measure\_\_()}{\_\_rich\_measure\_\_()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement}{Measurement}} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+rich\+\_\+measure\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Console\char`\"{}}]{console,  }\item[{\char`\"{}Console\+Options\char`\"{}     }]{options }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0b3d7c54400e7e80e71c60f4250cfe6d}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0b3d7c54400e7e80e71c60f4250cfe6d}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+rich.\+text.\+Text.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a31c2242d00566e1e35a9e8d9ba475e73}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a31c2242d00566e1e35a9e8d9ba475e73}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!align@{align}}
+\index{align@{align}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{align()}{align()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+align (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Align\+Method}]{align,  }\item[{int}]{width,  }\item[{str }]{character = {\ttfamily \char`\"{}~\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Align text to a given width.
+
+Args:
+    align (AlignMethod): One of "left", "center", or "right".
+    width (int): Desired width.
+    character (str, optional): Character to pad with. Defaults to " ".
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac50e796231ea0bcbefd7fdda378ae2d0}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac50e796231ea0bcbefd7fdda378ae2d0}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!append@{append}}
+\index{append@{append}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+append (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Union\mbox{[}\char`\"{}Text\char`\"{}, str\mbox{]}}]{text,  }\item[{Optional\mbox{[}Union\mbox{[}str, \char`\"{}Style\char`\"{}\mbox{]}\mbox{]} }]{style = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add text with an optional style.
+
+Args:
+    text (Union[Text, str]): A str or Text to append.
+    style (str, optional): A style name. Defaults to None.
+
+Returns:
+    Text: Returns self for chaining.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad68230b6bb7c3a19256befa63aa54df8}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad68230b6bb7c3a19256befa63aa54df8}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!append\_text@{append\_text}}
+\index{append\_text@{append\_text}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{append\_text()}{append\_text()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+append\+\_\+text (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Text\char`\"{}}]{text }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Append another Text instance. This method is more performant that Text.append, but
+only works for Text.
+
+Returns:
+    Text: Returns self for chaining.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a40dfb2c02ac256cd83437e19e8ecea39}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a40dfb2c02ac256cd83437e19e8ecea39}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!append\_tokens@{append\_tokens}}
+\index{append\_tokens@{append\_tokens}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{append\_tokens()}{append\_tokens()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+append\+\_\+tokens (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Iterable\mbox{[}Tuple\mbox{[}str, Optional\mbox{[}Style\+Type\mbox{]}\mbox{]}\mbox{]}     }]{tokens }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Append iterable of str and style. Style may be a Style instance or a str style definition.
+
+Args:
+    pairs (Iterable[Tuple[str, Optional[StyleType]]]): An iterable of tuples containing str content and style.
+
+Returns:
+    Text: Returns self for chaining.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a3f259ada743e32524b1a8e5026312a99}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a3f259ada743e32524b1a8e5026312a99}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!apply\_meta@{apply\_meta}}
+\index{apply\_meta@{apply\_meta}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{apply\_meta()}{apply\_meta()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+apply\+\_\+meta (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Dict\mbox{[}str, Any\mbox{]}}]{meta,  }\item[{int }]{start = {\ttfamily 0},  }\item[{Optional\mbox{[}int\mbox{]} }]{end = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Apply meta data to the text, or a portion of the text.
+
+Args:
+    meta (Dict[str, Any]): A dict of meta information.
+    start (int): Start offset (negative indexing is supported). Defaults to 0.
+    end (Optional[int], optional): End offset (negative indexing is supported), or None for end of text. Defaults to None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac823ab3af39e2b279b6fce0548126559}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac823ab3af39e2b279b6fce0548126559}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!assemble@{assemble}}
+\index{assemble@{assemble}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{assemble()}{assemble()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+assemble (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{$\ast$Union\mbox{[}str, \char`\"{}Text\char`\"{}, Tuple\mbox{[}str, Style\+Type\mbox{]}\mbox{]}}]{parts,  }\item[{Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} }]{style = {\ttfamily \char`\"{}\char`\"{}},  }\item[{Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} }]{justify = {\ttfamily None},  }\item[{Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} }]{overflow = {\ttfamily None},  }\item[{Optional\mbox{[}bool\mbox{]} }]{no\+\_\+wrap = {\ttfamily None},  }\item[{str }]{end = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}},  }\item[{int }]{tab\+\_\+size = {\ttfamily 8},  }\item[{Optional\mbox{[}Dict\mbox{[}str, Any\mbox{]}\mbox{]} }]{meta = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a text instance by combining a sequence of strings with optional styles.
+The positional arguments should be either strings, or a tuple of string + style.
+
+Args:
+    style (Union[str, Style], optional): Base style for text. Defaults to "".
+    justify (str, optional): Justify method: "left", "center", "full", "right". Defaults to None.
+    overflow (str, optional): Overflow method: "crop", "fold", "ellipsis". Defaults to None.
+    end (str, optional): Character to end text with. Defaults to "\\\\n".
+    tab_size (int): Number of spaces per tab, or ``None`` to use ``console.tab_size``. Defaults to 8.
+    meta (Dict[str, Any], optional). Meta data to apply to text, or None for no meta data. Default to None
+
+Returns:
+    Text: A new text instance.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_acba05c0772c231850c04049123a1fd8a}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_acba05c0772c231850c04049123a1fd8a}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!blank\_copy@{blank\_copy}}
+\index{blank\_copy@{blank\_copy}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{blank\_copy()}{blank\_copy()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+blank\+\_\+copy (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str }]{plain = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a new Text instance with copied meta data (but not the string or spans).\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a61e804d92082554744af94322f5c730d}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a61e804d92082554744af94322f5c730d}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!cell\_len@{cell\_len}}
+\index{cell\_len@{cell\_len}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{cell\_len()}{cell\_len()}}
+{\footnotesize\ttfamily  int pip.\+\_\+vendor.\+rich.\+text.\+Text.\+cell\+\_\+len (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the number of cells required to render this text.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a93b228d0aa89aa63e6dfbaa40cb7619a}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a93b228d0aa89aa63e6dfbaa40cb7619a}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!copy@{copy}}
+\index{copy@{copy}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+copy (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a copy of this instance.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a6de10893cdcbd51d04cdb2526e48aad5}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a6de10893cdcbd51d04cdb2526e48aad5}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!copy\_styles@{copy\_styles}}
+\index{copy\_styles@{copy\_styles}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{copy\_styles()}{copy\_styles()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+copy\+\_\+styles (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Text\char`\"{}}]{text }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Copy styles from another Text instance.
+
+Args:
+    text (Text): A Text instance to copy styles from, must be the same length.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_af4af48cd0b99c5abf3337382ccd98917}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_af4af48cd0b99c5abf3337382ccd98917}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!detect\_indentation@{detect\_indentation}}
+\index{detect\_indentation@{detect\_indentation}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{detect\_indentation()}{detect\_indentation()}}
+{\footnotesize\ttfamily  int pip.\+\_\+vendor.\+rich.\+text.\+Text.\+detect\+\_\+indentation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Auto-detect indentation of code.
+
+Returns:
+    int: Number of spaces used to indent code.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a07dc70deb29ea374cfff03489995bcac}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a07dc70deb29ea374cfff03489995bcac}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!divide@{divide}}
+\index{divide@{divide}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{divide()}{divide()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1containers_1_1Lines}{Lines}} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+divide (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Iterable\mbox{[}int\mbox{]}}]{offsets }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Divide text in to a number of lines at given offsets.
+
+Args:
+    offsets (Iterable[int]): Offsets used to divide text.
+
+Returns:
+    Lines: New RichText instances between offsets.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad9f65ecb5a2b9b55648d525a0a58c947}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad9f65ecb5a2b9b55648d525a0a58c947}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!expand\_tabs@{expand\_tabs}}
+\index{expand\_tabs@{expand\_tabs}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{expand\_tabs()}{expand\_tabs()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+expand\+\_\+tabs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}int\mbox{]} }]{tab\+\_\+size = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Converts tabs to spaces.
+
+Args:
+    tab_size (int, optional): Size of tabs. Defaults to 8.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a1adda7f6546fb3592d473f95d0ca17b2}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a1adda7f6546fb3592d473f95d0ca17b2}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!fit@{fit}}
+\index{fit@{fit}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{fit()}{fit()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1containers_1_1Lines}{Lines}} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+fit (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{width }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fit the text in to given width by chopping in to lines.
+
+Args:
+    width (int): Maximum characters in a line.
+
+Returns:
+    Lines: Lines container.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a82b6705efeab3349f1483e53e48adca6}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a82b6705efeab3349f1483e53e48adca6}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!from\_ansi@{from\_ansi}}
+\index{from\_ansi@{from\_ansi}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{from\_ansi()}{from\_ansi()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+from\+\_\+ansi (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{str}]{text,  }\item[{$\ast$Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} }]{style = {\ttfamily \char`\"{}\char`\"{}},  }\item[{Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} }]{justify = {\ttfamily None},  }\item[{Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} }]{overflow = {\ttfamily None},  }\item[{Optional\mbox{[}bool\mbox{]} }]{no\+\_\+wrap = {\ttfamily None},  }\item[{str }]{end = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}},  }\item[{Optional\mbox{[}int\mbox{]} }]{tab\+\_\+size = {\ttfamily 8} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a Text object from a string containing ANSI escape codes.
+
+Args:
+    text (str): A string containing escape codes.
+    style (Union[str, Style], optional): Base style for text. Defaults to "".
+    justify (str, optional): Justify method: "left", "center", "full", "right". Defaults to None.
+    overflow (str, optional): Overflow method: "crop", "fold", "ellipsis". Defaults to None.
+    no_wrap (bool, optional): Disable text wrapping, or None for default. Defaults to None.
+    end (str, optional): Character to end text with. Defaults to "\\\\n".
+    tab_size (int): Number of spaces per tab, or ``None`` to use ``console.tab_size``. Defaults to 8.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a664016614e1834c1ea5a765568d68e2c}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a664016614e1834c1ea5a765568d68e2c}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!from\_markup@{from\_markup}}
+\index{from\_markup@{from\_markup}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{from\_markup()}{from\_markup()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+from\+\_\+markup (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{str}]{text,  }\item[{$\ast$Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} }]{style = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool }]{emoji = {\ttfamily True},  }\item[{Optional\mbox{[}Emoji\+Variant\mbox{]} }]{emoji\+\_\+variant = {\ttfamily None},  }\item[{Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} }]{justify = {\ttfamily None},  }\item[{Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} }]{overflow = {\ttfamily None},  }\item[{str }]{end = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create Text instance from markup.
+
+Args:
+    text (str): A string containing console markup.
+    emoji (bool, optional): Also render emoji code. Defaults to True.
+    justify (str, optional): Justify method: "left", "center", "full", "right". Defaults to None.
+    overflow (str, optional): Overflow method: "crop", "fold", "ellipsis". Defaults to None.
+    end (str, optional): Character to end text with. Defaults to "\\\\n".
+
+Returns:
+    Text: A Text instance with markup rendered.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a7ba4cff623cfbbef43aff3fbe2c8ae5e}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a7ba4cff623cfbbef43aff3fbe2c8ae5e}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!get\_style\_at\_offset@{get\_style\_at\_offset}}
+\index{get\_style\_at\_offset@{get\_style\_at\_offset}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{get\_style\_at\_offset()}{get\_style\_at\_offset()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+get\+\_\+style\+\_\+at\+\_\+offset (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Console\char`\"{}}]{console,  }\item[{int}]{offset }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the style of a character at give offset.
+
+Args:
+    console (~Console): Console where text will be rendered.
+    offset (int): Offset in to text (negative indexing supported)
+
+Returns:
+    Style: A Style instance.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac344fac4852db9478835b78dcb3e3d94}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac344fac4852db9478835b78dcb3e3d94}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!highlight\_regex@{highlight\_regex}}
+\index{highlight\_regex@{highlight\_regex}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{highlight\_regex()}{highlight\_regex()}}
+{\footnotesize\ttfamily  int pip.\+\_\+vendor.\+rich.\+text.\+Text.\+highlight\+\_\+regex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{re\+\_\+highlight,  }\item[{Optional\mbox{[}Union\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1text_a9dc94b944c8b41290f4d43393af50311}{Get\+Style\+Callable}}, Style\+Type\mbox{]}\mbox{]} }]{style = {\ttfamily None},  }\item[{$\ast$str }]{style\+\_\+prefix = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Highlight text with a regular expression, where group names are
+translated to styles.
+
+Args:
+    re_highlight (str): A regular expression.
+    style (Union[GetStyleCallable, StyleType]): Optional style to apply to whole match, or a callable
+        which accepts the matched text and returns a style. Defaults to None.
+    style_prefix (str, optional): Optional prefix to add to style group names.
+
+Returns:
+    int: Number of regex matches
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ae9c009b7ca5c6b88443386f499cb2066}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ae9c009b7ca5c6b88443386f499cb2066}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!highlight\_words@{highlight\_words}}
+\index{highlight\_words@{highlight\_words}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{highlight\_words()}{highlight\_words()}}
+{\footnotesize\ttfamily  int pip.\+\_\+vendor.\+rich.\+text.\+Text.\+highlight\+\_\+words (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Iterable\mbox{[}str\mbox{]}}]{words,  }\item[{Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]}}]{style,  }\item[{$\ast$bool }]{case\+\_\+sensitive = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Highlight words with a style.
+
+Args:
+    words (Iterable[str]): Worlds to highlight.
+    style (Union[str, Style]): Style to apply.
+    case_sensitive (bool, optional): Enable case sensitive matchings. Defaults to True.
+
+Returns:
+    int: Number of words highlighted.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a13db0a07a8a0fc184cf4f86e6f8981c7}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a13db0a07a8a0fc184cf4f86e6f8981c7}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!join@{join}}
+\index{join@{join}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+join (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Iterable\mbox{[}\char`\"{}Text\char`\"{}\mbox{]}}]{lines }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Join text together with this instance as the separator.
+
+Args:
+    lines (Iterable[Text]): An iterable of Text instances to join.
+
+Returns:
+    Text: A new text instance containing join text.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a09b0f0a151cbe4c0509d5c78baf2eadd}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a09b0f0a151cbe4c0509d5c78baf2eadd}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!markup@{markup}}
+\index{markup@{markup}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{markup()}{markup()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+rich.\+text.\+Text.\+markup (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get console markup to render this Text.
+
+Returns:
+    str: A string potentially creating markup tags.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a3092fbf7b1fc825a6b4049b1e64f5d3a}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a3092fbf7b1fc825a6b4049b1e64f5d3a}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!on@{on}}
+\index{on@{on}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{on()}{on()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+on (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}Dict\mbox{[}str, Any\mbox{]}\mbox{]} }]{meta = {\ttfamily None},  }\item[{$\ast$$\ast$Any}]{handlers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Apply event handlers (used by Textual project).
+
+Example:
+    >>> from rich.text import Text
+    >>> text = Text("hello world")
+    >>> text.on(click="view.toggle('world')")
+
+Args:
+    meta (Dict[str, Any]): Mapping of meta information.
+    **handlers: Keyword args are prefixed with "@" to defined handlers.
+
+Returns:
+    Text: Self is returned to method may be chained.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a6d1565afbaaa880acf42376173bd7d16}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a6d1565afbaaa880acf42376173bd7d16}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!pad@{pad}}
+\index{pad@{pad}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{pad()}{pad()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+pad (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{count,  }\item[{str }]{character = {\ttfamily \char`\"{}~\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Pad left and right with a given number of characters.
+
+Args:
+    count (int): Width of padding.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad6cce2e6aec12704ba4991e392da5723}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad6cce2e6aec12704ba4991e392da5723}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!pad\_left@{pad\_left}}
+\index{pad\_left@{pad\_left}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{pad\_left()}{pad\_left()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+pad\+\_\+left (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{count,  }\item[{str }]{character = {\ttfamily \char`\"{}~\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Pad the left with a given character.
+
+Args:
+    count (int): Number of characters to pad.
+    character (str, optional): Character to pad with. Defaults to " ".
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ab14e37f26665eeacae7a25bc2c7a105d}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ab14e37f26665eeacae7a25bc2c7a105d}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!pad\_right@{pad\_right}}
+\index{pad\_right@{pad\_right}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{pad\_right()}{pad\_right()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+pad\+\_\+right (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{count,  }\item[{str }]{character = {\ttfamily \char`\"{}~\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Pad the right with a given character.
+
+Args:
+    count (int): Number of characters to pad.
+    character (str, optional): Character to pad with. Defaults to " ".
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad410f80c68f0b9e33ebf60eac0be54b9}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ad410f80c68f0b9e33ebf60eac0be54b9}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!plain@{plain}}
+\index{plain@{plain}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{plain()}{plain()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+rich.\+text.\+Text.\+plain (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the text as a single string.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_aa2d6327e4b4b125185de0e1e98d89d07}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_aa2d6327e4b4b125185de0e1e98d89d07}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!plain@{plain}}
+\index{plain@{plain}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{plain()}{plain()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+plain (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{new\+\_\+text }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the text to a new value.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a6471f076ed2cb61e9808a6fee2039aaa}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a6471f076ed2cb61e9808a6fee2039aaa}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!remove\_suffix@{remove\_suffix}}
+\index{remove\_suffix@{remove\_suffix}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{remove\_suffix()}{remove\_suffix()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+remove\+\_\+suffix (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{suffix }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove a suffix if it exists.
+
+Args:
+    suffix (str): Suffix to remove.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a2d317bc35d66566cf86cf8aad80c6ce2}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a2d317bc35d66566cf86cf8aad80c6ce2}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!render@{render}}
+\index{render@{render}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily  Iterable\mbox{[}\char`\"{}Segment\char`\"{}\mbox{]} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+render (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Console\char`\"{}}]{console,  }\item[{str }]{end = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Render the text as Segments.
+
+Args:
+    console (Console): Console instance.
+    end (Optional[str], optional): Optional end character.
+
+Returns:
+    Iterable[Segment]: Result of render that may be written to the console.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a8bcf4e2edd125080f88d9104e8400f1e}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a8bcf4e2edd125080f88d9104e8400f1e}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!right\_crop@{right\_crop}}
+\index{right\_crop@{right\_crop}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{right\_crop()}{right\_crop()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+right\+\_\+crop (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int }]{amount = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove a number of characters from the end of the text.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_aa527830132c0ad696221dbdf44bf2854}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_aa527830132c0ad696221dbdf44bf2854}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!rstrip@{rstrip}}
+\index{rstrip@{rstrip}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{rstrip()}{rstrip()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+rstrip (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Strip whitespace from end of text.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a4f35b3ae0e8624ffe7f9709bbb900600}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a4f35b3ae0e8624ffe7f9709bbb900600}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!rstrip\_end@{rstrip\_end}}
+\index{rstrip\_end@{rstrip\_end}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{rstrip\_end()}{rstrip\_end()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+rstrip\+\_\+end (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove whitespace beyond a certain width at the end of the text.
+
+Args:
+    size (int): The desired size of the text.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a929fc2e8591380477d5d1827ceca456f}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a929fc2e8591380477d5d1827ceca456f}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!set\_length@{set\_length}}
+\index{set\_length@{set\_length}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{set\_length()}{set\_length()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+set\+\_\+length (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{new\+\_\+length }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set new length of the text, clipping or padding is required.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a597632d14ccc9134b125308fd526d218}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a597632d14ccc9134b125308fd526d218}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!spans@{spans}}
+\index{spans@{spans}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{spans()}{spans()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily  List\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Span}{Span}}\mbox{]} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+spans (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get a reference to the internal list of spans.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ab84f95e5e8ef945831394c71bd96474b}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ab84f95e5e8ef945831394c71bd96474b}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!spans@{spans}}
+\index{spans@{spans}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{spans()}{spans()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+spans (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{List\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Span}{Span}}\mbox{]}}]{spans }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set spans.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a45ed112ec5620958240ab94940e3b4ec}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a45ed112ec5620958240ab94940e3b4ec}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!split@{split}}
+\index{split@{split}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1containers_1_1Lines}{Lines}} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+split (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str }]{separator = {\ttfamily \char`\"{}\textbackslash{}n\char`\"{}},  }\item[{$\ast$bool }]{include\+\_\+separator = {\ttfamily False},  }\item[{bool }]{allow\+\_\+blank = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Split rich text in to lines, preserving styles.
+
+Args:
+    separator (str, optional): String to split on. Defaults to "\\\\n".
+    include_separator (bool, optional): Include the separator in the lines. Defaults to False.
+    allow_blank (bool, optional): Return a blank line if the text ends with a separator. Defaults to False.
+
+Returns:
+    List[RichText]: A list of rich text, one per line of the original.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a28cbefe6298628f1617faee92b1ce873}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a28cbefe6298628f1617faee92b1ce873}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!styled@{styled}}
+\index{styled@{styled}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{styled()}{styled()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+styled (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{str}]{text,  }\item[{Style\+Type }]{style = {\ttfamily \char`\"{}\char`\"{}},  }\item[{$\ast$Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} }]{justify = {\ttfamily None},  }\item[{Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} }]{overflow = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a Text instance with a pre-applied styled. A style applied in this way won't be used
+to pad the text when it is justified.
+
+Args:
+    text (str): A string containing console markup.
+    style (Union[str, Style]): Style to apply to the text. Defaults to "".
+    justify (str, optional): Justify method: "left", "center", "full", "right". Defaults to None.
+    overflow (str, optional): Overflow method: "crop", "fold", "ellipsis". Defaults to None.
+
+Returns:
+    Text: A text instance with a style applied to the entire string.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a95f1ed10238e184faf7f0ba0af92d3a3}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a95f1ed10238e184faf7f0ba0af92d3a3}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!stylize@{stylize}}
+\index{stylize@{stylize}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{stylize()}{stylize()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+stylize (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]}}]{style,  }\item[{int }]{start = {\ttfamily 0},  }\item[{Optional\mbox{[}int\mbox{]} }]{end = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Apply a style to the text, or a portion of the text.
+
+Args:
+    style (Union[str, Style]): Style instance or style definition to apply.
+    start (int): Start offset (negative indexing is supported). Defaults to 0.
+    end (Optional[int], optional): End offset (negative indexing is supported), or None for end of text. Defaults to None.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0add655eb16df2f48449aa04a8dc5b79}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0add655eb16df2f48449aa04a8dc5b79}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!stylize\_before@{stylize\_before}}
+\index{stylize\_before@{stylize\_before}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{stylize\_before()}{stylize\_before()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+stylize\+\_\+before (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]}}]{style,  }\item[{int }]{start = {\ttfamily 0},  }\item[{Optional\mbox{[}int\mbox{]} }]{end = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Apply a style to the text, or a portion of the text. Styles will be applied before other styles already present.
+
+Args:
+    style (Union[str, Style]): Style instance or style definition to apply.
+    start (int): Start offset (negative indexing is supported). Defaults to 0.
+    end (Optional[int], optional): End offset (negative indexing is supported), or None for end of text. Defaults to None.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_afd4c6e9953160bfc702ef8d655cb9565}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_afd4c6e9953160bfc702ef8d655cb9565}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!truncate@{truncate}}
+\index{truncate@{truncate}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{truncate()}{truncate()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+text.\+Text.\+truncate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{max\+\_\+width,  }\item[{$\ast$Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} }]{overflow = {\ttfamily None},  }\item[{bool }]{pad = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Truncate text if it is longer that a given width.
+
+Args:
+    max_width (int): Maximum number of characters in text.
+    overflow (str, optional): Overflow method: "crop", "fold", or "ellipsis". Defaults to None, to use self.overflow.
+    pad (bool, optional): Pad with spaces if the length is less than max_width. Defaults to False.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a62e5cf27326eb74e4fa0566898f1850a}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a62e5cf27326eb74e4fa0566898f1850a}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!with\_indent\_guides@{with\_indent\_guides}}
+\index{with\_indent\_guides@{with\_indent\_guides}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{with\_indent\_guides()}{with\_indent\_guides()}}
+{\footnotesize\ttfamily  \char`\"{}Text\char`\"{} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+with\+\_\+indent\+\_\+guides (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}int\mbox{]} }]{indent\+\_\+size = {\ttfamily None},  }\item[{$\ast$str }]{character = {\ttfamily \char`\"{}│\char`\"{}},  }\item[{Style\+Type }]{style = {\ttfamily \char`\"{}dim~green\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds indent guide lines to text.
+
+Args:
+    indent_size (Optional[int]): Size of indentation, or None to auto detect. Defaults to None.
+    character (str, optional): Character to use for indentation. Defaults to "│".
+    style (Union[Style, str], optional): Style of indent guides.
+
+Returns:
+    Text: New text with indentation guides.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ae9271b2a29adea8be74f9a2a5b1f8b9e}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ae9271b2a29adea8be74f9a2a5b1f8b9e}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!wrap@{wrap}}
+\index{wrap@{wrap}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{wrap()}{wrap()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1containers_1_1Lines}{Lines}} pip.\+\_\+vendor.\+rich.\+text.\+Text.\+wrap (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Console\char`\"{}}]{console,  }\item[{int}]{width,  }\item[{$\ast$Optional\mbox{[}\char`\"{}Justify\+Method\char`\"{}\mbox{]} }]{justify = {\ttfamily None},  }\item[{Optional\mbox{[}\char`\"{}Overflow\+Method\char`\"{}\mbox{]} }]{overflow = {\ttfamily None},  }\item[{int }]{tab\+\_\+size = {\ttfamily 8},  }\item[{Optional\mbox{[}bool\mbox{]} }]{no\+\_\+wrap = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Word wrap the text.
+
+Args:
+    console (Console): Console instance.
+    width (int): Number of characters per line.
+    emoji (bool, optional): Also render emoji code. Defaults to True.
+    justify (str, optional): Justify method: "default", "left", "center", "full", "right". Defaults to "default".
+    overflow (str, optional): Overflow method: "crop", "fold", or "ellipsis". Defaults to None.
+    tab_size (int, optional): Default tab size. Defaults to 8.
+    no_wrap (bool, optional): Disable wrapping, Defaults to False.
+
+Returns:
+    Lines: Number of lines.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a219f5ff18ba24c5e50adb3764915f492}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!end@{end}}
+\index{end@{end}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+text.\+Text.\+end}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a8eea770f2de6b2d0c9a026efdbcbc18a}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a8eea770f2de6b2d0c9a026efdbcbc18a}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!no\_wrap@{no\_wrap}}
+\index{no\_wrap@{no\_wrap}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{no\_wrap}{no\_wrap}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+text.\+Text.\+no\+\_\+wrap}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac5bdb7a46d3d8569aa56f28418a7397d}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_ac5bdb7a46d3d8569aa56f28418a7397d}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!plain@{plain}}
+\index{plain@{plain}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{plain}{plain}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+text.\+Text.\+plain}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a0cc121218253d215b3d720ad6de1a75c}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!style@{style}}
+\index{style@{style}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{style}{style}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+text.\+Text.\+style}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a378278bed9fde65135d1b6c91173cc47}\label{classpip_1_1__vendor_1_1rich_1_1text_1_1Text_a378278bed9fde65135d1b6c91173cc47}} 
+\index{pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}!tab\_size@{tab\_size}}
+\index{tab\_size@{tab\_size}!pip.\_vendor.rich.text.Text@{pip.\_vendor.rich.text.Text}}
+\doxysubsubsection{\texorpdfstring{tab\_size}{tab\_size}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+text.\+Text.\+tab\+\_\+size}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/rich/\mbox{\hyperlink{text_8py}{text.\+py}}\end{DoxyCompactItemize}

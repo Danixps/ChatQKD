@@ -1,0 +1,50 @@
+\hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1__SSLContextAdapterMixin}{}\doxysection{pip.\+\_\+internal.\+network.\+session.\+\_\+\+SSLContext\+Adapter\+Mixin Class Reference}
+\label{classpip_1_1__internal_1_1network_1_1session_1_1__SSLContextAdapterMixin}\index{pip.\_internal.network.session.\_SSLContextAdapterMixin@{pip.\_internal.network.session.\_SSLContextAdapterMixin}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+network.\+session.\+\_\+\+SSLContext\+Adapter\+Mixin\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpip_1_1__internal_1_1network_1_1session_1_1__SSLContextAdapterMixin__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1session_1_1__SSLContextAdapterMixin_a59aab9acd4ab81554c0668508c869ea1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$Optional\mbox{[}\char`\"{}SSLContext\char`\"{}\mbox{]} ssl\+\_\+context=None, $\ast$$\ast$Any kwargs)
+\item 
+\char`\"{}Pool\+Manager\char`\"{} \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1session_1_1__SSLContextAdapterMixin_ac8886a150f034d03f2e621c8c51c7851}{init\+\_\+poolmanager}} (self, int connections, int maxsize, bool block=DEFAULT\+\_\+\+POOLBLOCK, $\ast$$\ast$Any pool\+\_\+kwargs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Mixin to add the ``ssl_context`` constructor argument to HTTP adapters.
+
+The additional argument is forwarded directly to the pool manager. This allows us
+to dynamically decide what SSL store to use at runtime, which is used to implement
+the optional ``truststore`` backend.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1__SSLContextAdapterMixin_a59aab9acd4ab81554c0668508c869ea1}\label{classpip_1_1__internal_1_1network_1_1session_1_1__SSLContextAdapterMixin_a59aab9acd4ab81554c0668508c869ea1}} 
+\index{pip.\_internal.network.session.\_SSLContextAdapterMixin@{pip.\_internal.network.session.\_SSLContextAdapterMixin}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.network.session.\_SSLContextAdapterMixin@{pip.\_internal.network.session.\_SSLContextAdapterMixin}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+network.\+session.\+\_\+\+SSLContext\+Adapter\+Mixin.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$Optional\mbox{[}\char`\"{}SSLContext\char`\"{}\mbox{]} }]{ssl\+\_\+context = {\ttfamily None},  }\item[{$\ast$$\ast$Any}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1__SSLContextAdapterMixin_ac8886a150f034d03f2e621c8c51c7851}\label{classpip_1_1__internal_1_1network_1_1session_1_1__SSLContextAdapterMixin_ac8886a150f034d03f2e621c8c51c7851}} 
+\index{pip.\_internal.network.session.\_SSLContextAdapterMixin@{pip.\_internal.network.session.\_SSLContextAdapterMixin}!init\_poolmanager@{init\_poolmanager}}
+\index{init\_poolmanager@{init\_poolmanager}!pip.\_internal.network.session.\_SSLContextAdapterMixin@{pip.\_internal.network.session.\_SSLContextAdapterMixin}}
+\doxysubsubsection{\texorpdfstring{init\_poolmanager()}{init\_poolmanager()}}
+{\footnotesize\ttfamily  \char`\"{}Pool\+Manager\char`\"{} pip.\+\_\+internal.\+network.\+session.\+\_\+\+SSLContext\+Adapter\+Mixin.\+init\+\_\+poolmanager (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{connections,  }\item[{int}]{maxsize,  }\item[{bool }]{block = {\ttfamily DEFAULT\+\_\+POOLBLOCK},  }\item[{$\ast$$\ast$Any}]{pool\+\_\+kwargs }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/network/\mbox{\hyperlink{session_8py}{session.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\hypertarget{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement}{}\doxysection{pip.\+\_\+vendor.\+rich.\+measure.\+Measurement Class Reference}
+\label{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement}\index{pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+rich.\+measure.\+Measurement\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+rich.\+measure.\+Measurement\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a95cc3160c3dfc9ad894ee0ec373ef339}{span}} (self)
+\item 
+\char`\"{}Measurement\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_ae5a38c7d83d3513e1df66728926b6acb}{normalize}} (self)
+\item 
+\char`\"{}Measurement\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_abfd457c5364b8122a4d57619425728f4}{with\+\_\+maximum}} (self, int width)
+\item 
+\char`\"{}Measurement\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a9fa4f0715729df08a94857d5e7526cae}{with\+\_\+minimum}} (self, int width)
+\item 
+\char`\"{}Measurement\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a74282e3f05885ddd0ddf103491e92837}{clamp}} (self, Optional\mbox{[}int\mbox{]} min\+\_\+width=None, Optional\mbox{[}int\mbox{]} max\+\_\+width=None)
+\item 
+\char`\"{}Measurement\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a1e5a03f707830a7e31d437d6a85eb7d6}{get}} (cls, \char`\"{}Console\char`\"{} console, \char`\"{}Console\+Options\char`\"{} options, \char`\"{}Renderable\+Type\char`\"{} renderable)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Stores the minimum and maximum widths (in characters) required to render an object.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a74282e3f05885ddd0ddf103491e92837}\label{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a74282e3f05885ddd0ddf103491e92837}} 
+\index{pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}!clamp@{clamp}}
+\index{clamp@{clamp}!pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}}
+\doxysubsubsection{\texorpdfstring{clamp()}{clamp()}}
+{\footnotesize\ttfamily  \char`\"{}Measurement\char`\"{} pip.\+\_\+vendor.\+rich.\+measure.\+Measurement.\+clamp (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}int\mbox{]} }]{min\+\_\+width = {\ttfamily None},  }\item[{Optional\mbox{[}int\mbox{]} }]{max\+\_\+width = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Clamp a measurement within the specified range.
+
+Args:
+    min_width (int): Minimum desired width, or ``None`` for no minimum. Defaults to None.
+    max_width (int): Maximum desired width, or ``None`` for no maximum. Defaults to None.
+
+Returns:
+    Measurement: New Measurement object.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a1e5a03f707830a7e31d437d6a85eb7d6}\label{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a1e5a03f707830a7e31d437d6a85eb7d6}} 
+\index{pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}!get@{get}}
+\index{get@{get}!pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily  \char`\"{}Measurement\char`\"{} pip.\+\_\+vendor.\+rich.\+measure.\+Measurement.\+get (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{\char`\"{}Console\char`\"{}}]{console,  }\item[{\char`\"{}Console\+Options\char`\"{}}]{options,  }\item[{\char`\"{}Renderable\+Type\char`\"{}     }]{renderable }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get a measurement for a renderable.
+
+Args:
+    console (~rich.console.Console): Console instance.
+    options (~rich.console.ConsoleOptions): Console options.
+    renderable (RenderableType): An object that may be rendered with Rich.
+
+Raises:
+    errors.NotRenderableError: If the object is not renderable.
+
+Returns:
+    Measurement: Measurement object containing range of character widths required to render the object.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_ae5a38c7d83d3513e1df66728926b6acb}\label{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_ae5a38c7d83d3513e1df66728926b6acb}} 
+\index{pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}!normalize@{normalize}}
+\index{normalize@{normalize}!pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily  \char`\"{}Measurement\char`\"{} pip.\+\_\+vendor.\+rich.\+measure.\+Measurement.\+normalize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get measurement that ensures that minimum <= maximum and minimum >= 0
+
+Returns:
+    Measurement: A normalized measurement.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a95cc3160c3dfc9ad894ee0ec373ef339}\label{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a95cc3160c3dfc9ad894ee0ec373ef339}} 
+\index{pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}!span@{span}}
+\index{span@{span}!pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}}
+\doxysubsubsection{\texorpdfstring{span()}{span()}}
+{\footnotesize\ttfamily  int pip.\+\_\+vendor.\+rich.\+measure.\+Measurement.\+span (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get difference between maximum and minimum.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_abfd457c5364b8122a4d57619425728f4}\label{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_abfd457c5364b8122a4d57619425728f4}} 
+\index{pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}!with\_maximum@{with\_maximum}}
+\index{with\_maximum@{with\_maximum}!pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}}
+\doxysubsubsection{\texorpdfstring{with\_maximum()}{with\_maximum()}}
+{\footnotesize\ttfamily  \char`\"{}Measurement\char`\"{} pip.\+\_\+vendor.\+rich.\+measure.\+Measurement.\+with\+\_\+maximum (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{width }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get a RenderableWith where the widths are <= width.
+
+Args:
+    width (int): Maximum desired width.
+
+Returns:
+    Measurement: New Measurement object.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a9fa4f0715729df08a94857d5e7526cae}\label{classpip_1_1__vendor_1_1rich_1_1measure_1_1Measurement_a9fa4f0715729df08a94857d5e7526cae}} 
+\index{pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}!with\_minimum@{with\_minimum}}
+\index{with\_minimum@{with\_minimum}!pip.\_vendor.rich.measure.Measurement@{pip.\_vendor.rich.measure.Measurement}}
+\doxysubsubsection{\texorpdfstring{with\_minimum()}{with\_minimum()}}
+{\footnotesize\ttfamily  \char`\"{}Measurement\char`\"{} pip.\+\_\+vendor.\+rich.\+measure.\+Measurement.\+with\+\_\+minimum (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{width }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get a RenderableWith where the widths are >= width.
+
+Args:
+    width (int): Minimum desired width.
+
+Returns:
+    Measurement: New Measurement object.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/rich/\mbox{\hyperlink{measure_8py}{measure.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter}{}\doxysection{pip.\+\_\+vendor.\+pygments.\+filters.\+Name\+Highlight\+Filter Class Reference}
+\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter}\index{pip.\_vendor.pygments.filters.NameHighlightFilter@{pip.\_vendor.pygments.filters.NameHighlightFilter}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pygments.\+filters.\+Name\+Highlight\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pygments.\+filters.\+Name\+Highlight\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a1b18674470bff8203f31074f8ee0ec37}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a03e1be4af2e18f9d33c21efb2190784b}{options}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a2413b5d359f9e611a87a777822c67d2e}{filter}} (self, lexer, stream)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a4083a4bfaf8abbd8118dae56a6172dd3}{names}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a6386dc2156f6b0bf040714879a071d2f}{tokentype}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Highlight a normal Name (and Name.*) token with a different token type.
+
+Example::
+
+    filter = NameHighlightFilter(
+        names=['foo', 'bar', 'baz'],
+        tokentype=Name.Function,
+    )
+
+This would highlight the names "foo", "bar" and "baz"
+as functions. `Name.Function` is the default token type.
+
+Options accepted:
+
+`names` : list of strings
+  A list of names that should be given the different token type.
+  There is no default.
+`tokentype` : TokenType or string
+  A token type or a string containing a token type name that is
+  used for highlighting the strings in `names`.  The default is
+  `Name.Function`.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a1b18674470bff8203f31074f8ee0ec37}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a1b18674470bff8203f31074f8ee0ec37}} 
+\index{pip.\_vendor.pygments.filters.NameHighlightFilter@{pip.\_vendor.pygments.filters.NameHighlightFilter}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pygments.filters.NameHighlightFilter@{pip.\_vendor.pygments.filters.NameHighlightFilter}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+filters.\+Name\+Highlight\+Filter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a271e8db1f91ca7e179cf41a5f1a7df12}{pip.\+\_\+vendor.\+pygments.\+filter.\+Filter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a2413b5d359f9e611a87a777822c67d2e}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a2413b5d359f9e611a87a777822c67d2e}} 
+\index{pip.\_vendor.pygments.filters.NameHighlightFilter@{pip.\_vendor.pygments.filters.NameHighlightFilter}!filter@{filter}}
+\index{filter@{filter}!pip.\_vendor.pygments.filters.NameHighlightFilter@{pip.\_vendor.pygments.filters.NameHighlightFilter}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+filters.\+Name\+Highlight\+Filter.\+filter (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lexer,  }\item[{}]{stream }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a11062d7fa15df23e907b69e6843c1714}{pip.\+\_\+vendor.\+pygments.\+filter.\+Filter}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a4083a4bfaf8abbd8118dae56a6172dd3}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a4083a4bfaf8abbd8118dae56a6172dd3}} 
+\index{pip.\_vendor.pygments.filters.NameHighlightFilter@{pip.\_vendor.pygments.filters.NameHighlightFilter}!names@{names}}
+\index{names@{names}!pip.\_vendor.pygments.filters.NameHighlightFilter@{pip.\_vendor.pygments.filters.NameHighlightFilter}}
+\doxysubsubsection{\texorpdfstring{names}{names}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+filters.\+Name\+Highlight\+Filter.\+names}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a6386dc2156f6b0bf040714879a071d2f}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1NameHighlightFilter_a6386dc2156f6b0bf040714879a071d2f}} 
+\index{pip.\_vendor.pygments.filters.NameHighlightFilter@{pip.\_vendor.pygments.filters.NameHighlightFilter}!tokentype@{tokentype}}
+\index{tokentype@{tokentype}!pip.\_vendor.pygments.filters.NameHighlightFilter@{pip.\_vendor.pygments.filters.NameHighlightFilter}}
+\doxysubsubsection{\texorpdfstring{tokentype}{tokentype}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+filters.\+Name\+Highlight\+Filter.\+tokentype}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pygments/filters/\mbox{\hyperlink{__vendor_2pygments_2filters_2____init_____8py}{\+\_\+\+\_\+init\+\_\+\+\_\+.\+py}}\end{DoxyCompactItemize}

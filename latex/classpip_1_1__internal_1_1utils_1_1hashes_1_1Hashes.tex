@@ -1,0 +1,131 @@
+\hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes}{}\doxysection{pip.\+\_\+internal.\+utils.\+hashes.\+Hashes Class Reference}
+\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes}\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+utils.\+hashes.\+Hashes\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a902f23305543abfa01115b6a5054866a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Optional\mbox{[}Dict\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]} hashes=None)
+\item 
+\char`\"{}Hashes\char`\"{} \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a1e8290cad32ba86c8fd5a12fada0761b}{\+\_\+\+\_\+and\+\_\+\+\_\+}} (self, \char`\"{}Hashes\char`\"{} other)
+\item 
+int \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a92177ee9197070bcd831fcd48164773d}{digest\+\_\+count}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_aeb1e323a1ef905fe500eb02d365671ce}{is\+\_\+hash\+\_\+allowed}} (self, str hash\+\_\+name, str hex\+\_\+digest)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_adc76c345d59946a481ddfb33e8b4f180}{check\+\_\+against\+\_\+chunks}} (self, Iterable\mbox{[}bytes\mbox{]} chunks)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a9e4d60028d52c7ec8a597f0bcdb1ebdf}{check\+\_\+against\+\_\+file}} (self, Binary\+IO file)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a0890c4ed61af87c9ba152426def455c8}{check\+\_\+against\+\_\+path}} (self, str path)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a5b58cb494534172fecfb25ad686a95cf}{has\+\_\+one\+\_\+of}} (self, Dict\mbox{[}str, str\mbox{]} hashes)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a98f5f22fae178b17473e750bb4bf9882}{\+\_\+\+\_\+bool\+\_\+\+\_\+}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a7a7e738560ac8afff5c8636a23898064}{\+\_\+\+\_\+eq\+\_\+\+\_\+}} (self, object other)
+\item 
+int \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_adaa4970391e71a723f6b9cef57e85e79}{\+\_\+\+\_\+hash\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A wrapper that builds multiple hashes at once and checks them against
+known-good values\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a902f23305543abfa01115b6a5054866a}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a902f23305543abfa01115b6a5054866a}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}Dict\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]} }]{hashes = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param hashes: A dict of algorithm names pointing to lists of allowed
+    hex digests
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a1e8290cad32ba86c8fd5a12fada0761b}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a1e8290cad32ba86c8fd5a12fada0761b}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!\_\_and\_\_@{\_\_and\_\_}}
+\index{\_\_and\_\_@{\_\_and\_\_}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{\_\_and\_\_()}{\_\_and\_\_()}}
+{\footnotesize\ttfamily  \char`\"{}Hashes\char`\"{} pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+\_\+\+\_\+and\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Hashes\char`\"{}}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a98f5f22fae178b17473e750bb4bf9882}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a98f5f22fae178b17473e750bb4bf9882}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!\_\_bool\_\_@{\_\_bool\_\_}}
+\index{\_\_bool\_\_@{\_\_bool\_\_}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{\_\_bool\_\_()}{\_\_bool\_\_()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+\_\+\+\_\+bool\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return whether I know any known-good hashes.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a7a7e738560ac8afff5c8636a23898064}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a7a7e738560ac8afff5c8636a23898064}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!\_\_eq\_\_@{\_\_eq\_\_}}
+\index{\_\_eq\_\_@{\_\_eq\_\_}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{\_\_eq\_\_()}{\_\_eq\_\_()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+\_\+\+\_\+eq\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{object}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_adaa4970391e71a723f6b9cef57e85e79}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_adaa4970391e71a723f6b9cef57e85e79}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!\_\_hash\_\_@{\_\_hash\_\_}}
+\index{\_\_hash\_\_@{\_\_hash\_\_}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{\_\_hash\_\_()}{\_\_hash\_\_()}}
+{\footnotesize\ttfamily  int pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+\_\+\+\_\+hash\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_adc76c345d59946a481ddfb33e8b4f180}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_adc76c345d59946a481ddfb33e8b4f180}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!check\_against\_chunks@{check\_against\_chunks}}
+\index{check\_against\_chunks@{check\_against\_chunks}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{check\_against\_chunks()}{check\_against\_chunks()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+check\+\_\+against\+\_\+chunks (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Iterable\mbox{[}bytes\mbox{]}}]{chunks }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check good hashes against ones built from iterable of chunks of
+data.
+
+Raise HashMismatch if none match.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a9e4d60028d52c7ec8a597f0bcdb1ebdf}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a9e4d60028d52c7ec8a597f0bcdb1ebdf}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!check\_against\_file@{check\_against\_file}}
+\index{check\_against\_file@{check\_against\_file}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{check\_against\_file()}{check\_against\_file()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+check\+\_\+against\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Binary\+IO}]{file }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check good hashes against a file-like object
+
+Raise HashMismatch if none match.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a0890c4ed61af87c9ba152426def455c8}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a0890c4ed61af87c9ba152426def455c8}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!check\_against\_path@{check\_against\_path}}
+\index{check\_against\_path@{check\_against\_path}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{check\_against\_path()}{check\_against\_path()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+check\+\_\+against\+\_\+path (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a92177ee9197070bcd831fcd48164773d}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a92177ee9197070bcd831fcd48164773d}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!digest\_count@{digest\_count}}
+\index{digest\_count@{digest\_count}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{digest\_count()}{digest\_count()}}
+{\footnotesize\ttfamily  int pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+digest\+\_\+count (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a5b58cb494534172fecfb25ad686a95cf}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_a5b58cb494534172fecfb25ad686a95cf}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!has\_one\_of@{has\_one\_of}}
+\index{has\_one\_of@{has\_one\_of}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{has\_one\_of()}{has\_one\_of()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+has\+\_\+one\+\_\+of (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Dict\mbox{[}str, str\mbox{]}}]{hashes }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return whether any of the given hashes are allowed.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_aeb1e323a1ef905fe500eb02d365671ce}\label{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes_aeb1e323a1ef905fe500eb02d365671ce}} 
+\index{pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}!is\_hash\_allowed@{is\_hash\_allowed}}
+\index{is\_hash\_allowed@{is\_hash\_allowed}!pip.\_internal.utils.hashes.Hashes@{pip.\_internal.utils.hashes.Hashes}}
+\doxysubsubsection{\texorpdfstring{is\_hash\_allowed()}{is\_hash\_allowed()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+utils.\+hashes.\+Hashes.\+is\+\_\+hash\+\_\+allowed (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{hash\+\_\+name,  }\item[{str}]{hex\+\_\+digest }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return whether the given hex digest is allowed.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/utils/\mbox{\hyperlink{hashes_8py}{hashes.\+py}}\end{DoxyCompactItemize}

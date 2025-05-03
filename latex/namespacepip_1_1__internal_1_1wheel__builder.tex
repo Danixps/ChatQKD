@@ -1,0 +1,64 @@
+\hypertarget{namespacepip_1_1__internal_1_1wheel__builder}{}\doxysection{pip.\+\_\+internal.\+wheel\+\_\+builder Namespace Reference}
+\label{namespacepip_1_1__internal_1_1wheel__builder}\index{pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacepip_1_1__internal_1_1wheel__builder_a5c9a3c0c4284f4c9239be20a98cd90a3}{should\+\_\+build\+\_\+for\+\_\+wheel\+\_\+command}} (\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}} req)
+\item 
+bool \mbox{\hyperlink{namespacepip_1_1__internal_1_1wheel__builder_a8cfccc256f676f666f143723dcbc28a5}{should\+\_\+build\+\_\+for\+\_\+install\+\_\+command}} (\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}} req)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1wheel__builder_ad8206fa8e5856a00e6283c148f53bfa6}{Build\+Result}} \mbox{\hyperlink{namespacepip_1_1__internal_1_1wheel__builder_a4463ec86fc47d1a51a9a543304e9613b}{build}} (Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}\mbox{]} requirements, \mbox{\hyperlink{classpip_1_1__internal_1_1cache_1_1WheelCache}{Wheel\+Cache}} wheel\+\_\+cache, bool verify, List\mbox{[}str\mbox{]} build\+\_\+options, List\mbox{[}str\mbox{]} global\+\_\+options)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1wheel__builder_a84898e3516b9c46fa75845a249fc5200}{logger}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1wheel__builder_ad8206fa8e5856a00e6283c148f53bfa6}{Build\+Result}} = Tuple\mbox{[}List\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}\mbox{]}, List\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}\mbox{]}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Orchestrator for building wheels from InstallRequirements.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1wheel__builder_a4463ec86fc47d1a51a9a543304e9613b}\label{namespacepip_1_1__internal_1_1wheel__builder_a4463ec86fc47d1a51a9a543304e9613b}} 
+\index{pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}!build@{build}}
+\index{build@{build}!pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{namespacepip_1_1__internal_1_1wheel__builder_ad8206fa8e5856a00e6283c148f53bfa6}{Build\+Result}} pip.\+\_\+internal.\+wheel\+\_\+builder.\+build (\begin{DoxyParamCaption}\item[{Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}\mbox{]}}]{requirements,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1cache_1_1WheelCache}{Wheel\+Cache}}}]{wheel\+\_\+cache,  }\item[{bool}]{verify,  }\item[{List\mbox{[}str\mbox{]}}]{build\+\_\+options,  }\item[{List\mbox{[}str\mbox{]}}]{global\+\_\+options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Build wheels.
+
+:return: The list of InstallRequirement that succeeded to build and
+    the list of InstallRequirement that failed to build.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1wheel__builder_a8cfccc256f676f666f143723dcbc28a5}\label{namespacepip_1_1__internal_1_1wheel__builder_a8cfccc256f676f666f143723dcbc28a5}} 
+\index{pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}!should\_build\_for\_install\_command@{should\_build\_for\_install\_command}}
+\index{should\_build\_for\_install\_command@{should\_build\_for\_install\_command}!pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}}
+\doxysubsubsection{\texorpdfstring{should\_build\_for\_install\_command()}{should\_build\_for\_install\_command()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+wheel\+\_\+builder.\+should\+\_\+build\+\_\+for\+\_\+install\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}}]{req }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1wheel__builder_a5c9a3c0c4284f4c9239be20a98cd90a3}\label{namespacepip_1_1__internal_1_1wheel__builder_a5c9a3c0c4284f4c9239be20a98cd90a3}} 
+\index{pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}!should\_build\_for\_wheel\_command@{should\_build\_for\_wheel\_command}}
+\index{should\_build\_for\_wheel\_command@{should\_build\_for\_wheel\_command}!pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}}
+\doxysubsubsection{\texorpdfstring{should\_build\_for\_wheel\_command()}{should\_build\_for\_wheel\_command()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+wheel\+\_\+builder.\+should\+\_\+build\+\_\+for\+\_\+wheel\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}}]{req }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1wheel__builder_ad8206fa8e5856a00e6283c148f53bfa6}\label{namespacepip_1_1__internal_1_1wheel__builder_ad8206fa8e5856a00e6283c148f53bfa6}} 
+\index{pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}!BuildResult@{BuildResult}}
+\index{BuildResult@{BuildResult}!pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}}
+\doxysubsubsection{\texorpdfstring{BuildResult}{BuildResult}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+wheel\+\_\+builder.\+Build\+Result = Tuple\mbox{[}List\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}\mbox{]}, List\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}\mbox{]}\mbox{]}}
+
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1wheel__builder_a84898e3516b9c46fa75845a249fc5200}\label{namespacepip_1_1__internal_1_1wheel__builder_a84898e3516b9c46fa75845a249fc5200}} 
+\index{pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}!logger@{logger}}
+\index{logger@{logger}!pip.\_internal.wheel\_builder@{pip.\_internal.wheel\_builder}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+wheel\+\_\+builder.\+logger = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+

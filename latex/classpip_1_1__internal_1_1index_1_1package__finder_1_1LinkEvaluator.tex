@@ -1,0 +1,75 @@
+\hypertarget{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator}{}\doxysection{pip.\+\_\+internal.\+index.\+package\+\_\+finder.\+Link\+Evaluator Class Reference}
+\label{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator}\index{pip.\_internal.index.package\_finder.LinkEvaluator@{pip.\_internal.index.package\_finder.LinkEvaluator}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator_aa459c9f48584409f2b482f85977d6b59}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator_a863c5807bac2d54e03b1269df84ef341}{project\+\_\+name}}, str canonical\+\_\+name, Frozen\+Set\mbox{[}str\mbox{]} formats, \mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1target__python_1_1TargetPython}{Target\+Python}} target\+\_\+python, bool allow\+\_\+yanked, Optional\mbox{[}bool\mbox{]} ignore\+\_\+requires\+\_\+python=None)
+\item 
+Tuple\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkType}{Link\+Type}}, str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator_a341c18a52a9cb7cde51bd6f64a6e7843}{evaluate\+\_\+link}} (self, \mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1link_1_1Link}{Link}} link)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator_a863c5807bac2d54e03b1269df84ef341}{project\+\_\+name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Responsible for evaluating links for a particular project.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator_aa459c9f48584409f2b482f85977d6b59}\label{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator_aa459c9f48584409f2b482f85977d6b59}} 
+\index{pip.\_internal.index.package\_finder.LinkEvaluator@{pip.\_internal.index.package\_finder.LinkEvaluator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.index.package\_finder.LinkEvaluator@{pip.\_internal.index.package\_finder.LinkEvaluator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+index.\+package\+\_\+finder.\+Link\+Evaluator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{project\+\_\+name,  }\item[{str}]{canonical\+\_\+name,  }\item[{Frozen\+Set\mbox{[}str\mbox{]}}]{formats,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1target__python_1_1TargetPython}{Target\+Python}}}]{target\+\_\+python,  }\item[{bool}]{allow\+\_\+yanked,  }\item[{Optional\mbox{[}bool\mbox{]} }]{ignore\+\_\+requires\+\_\+python = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param project_name: The user supplied package name.
+:param canonical_name: The canonical package name.
+:param formats: The formats allowed for this package. Should be a set
+    with 'binary' or 'source' or both in it.
+:param target_python: The target Python interpreter to use when
+    evaluating link compatibility. This is used, for example, to
+    check wheel compatibility, as well as when checking the Python
+    version, e.g. the Python version embedded in a link filename
+    (or egg fragment) and against an HTML link's optional PEP 503
+    "data-requires-python" attribute.
+:param allow_yanked: Whether files marked as yanked (in the sense
+    of PEP 592) are permitted to be candidates for install.
+:param ignore_requires_python: Whether to ignore incompatible
+    PEP 503 "data-requires-python" values in HTML links. Defaults
+    to False.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator_a341c18a52a9cb7cde51bd6f64a6e7843}\label{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator_a341c18a52a9cb7cde51bd6f64a6e7843}} 
+\index{pip.\_internal.index.package\_finder.LinkEvaluator@{pip.\_internal.index.package\_finder.LinkEvaluator}!evaluate\_link@{evaluate\_link}}
+\index{evaluate\_link@{evaluate\_link}!pip.\_internal.index.package\_finder.LinkEvaluator@{pip.\_internal.index.package\_finder.LinkEvaluator}}
+\doxysubsubsection{\texorpdfstring{evaluate\_link()}{evaluate\_link()}}
+{\footnotesize\ttfamily  Tuple\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkType}{Link\+Type}}, str\mbox{]} pip.\+\_\+internal.\+index.\+package\+\_\+finder.\+Link\+Evaluator.\+evaluate\+\_\+link (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1link_1_1Link}{Link}}}]{link }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Determine whether a link is a candidate for installation.
+
+:return: A tuple (result, detail), where *result* is an enum
+    representing whether the evaluation found a candidate, or the reason
+    why one is not found. If a candidate is found, *detail* will be the
+    candidate's version string; if one is not found, it contains the
+    reason the link fails to qualify.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator_a863c5807bac2d54e03b1269df84ef341}\label{classpip_1_1__internal_1_1index_1_1package__finder_1_1LinkEvaluator_a863c5807bac2d54e03b1269df84ef341}} 
+\index{pip.\_internal.index.package\_finder.LinkEvaluator@{pip.\_internal.index.package\_finder.LinkEvaluator}!project\_name@{project\_name}}
+\index{project\_name@{project\_name}!pip.\_internal.index.package\_finder.LinkEvaluator@{pip.\_internal.index.package\_finder.LinkEvaluator}}
+\doxysubsubsection{\texorpdfstring{project\_name}{project\_name}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+index.\+package\+\_\+finder.\+Link\+Evaluator.\+project\+\_\+name}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/index/\mbox{\hyperlink{package__finder_8py}{package\+\_\+finder.\+py}}\end{DoxyCompactItemize}

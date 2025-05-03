@@ -1,0 +1,85 @@
+\hypertarget{namespacepip_1_1__vendor_1_1rich_1_1ansi}{}\doxysection{pip.\+\_\+vendor.\+rich.\+ansi Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1rich_1_1ansi}\index{pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1ansi_1_1__AnsiToken}{\+\_\+\+Ansi\+Token}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1ansi_1_1AnsiDecoder}{Ansi\+Decoder}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bytes \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1ansi_a1c571ea10dbae6a6d2af87b23507516d}{read}} (int fd)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1ansi_a6ee91dc0044fb3e5f2fb2c1d6eb6e133}{re\+\_\+ansi}}
+\item 
+dictionary \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1ansi_a2fed4597411c9cf67b3c9f512ae027d6}{SGR\+\_\+\+STYLE\+\_\+\+MAP}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1ansi_afc619be5ed22cc17ef67ac9bc164dc88}{decoder}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1ansi_1_1AnsiDecoder}{Ansi\+Decoder}}()
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1ansi_a6844030cb9fa1040b5736bef8a402544}{stdout}} = io.\+Bytes\+IO()
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1ansi_a6cc505031697fda0bb4d519da78bcc4b}{console}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}(record=True)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1ansi_a04f77fffde97c18a08f5c66efd472e24}{stdout\+\_\+result}} = stdout.\+getvalue().decode(\char`\"{}utf-\/8\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1ansi_a1c571ea10dbae6a6d2af87b23507516d}\label{namespacepip_1_1__vendor_1_1rich_1_1ansi_a1c571ea10dbae6a6d2af87b23507516d}} 
+\index{pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}!read@{read}}
+\index{read@{read}!pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily  bytes pip.\+\_\+vendor.\+rich.\+ansi.\+read (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1ansi_a6cc505031697fda0bb4d519da78bcc4b}\label{namespacepip_1_1__vendor_1_1rich_1_1ansi_a6cc505031697fda0bb4d519da78bcc4b}} 
+\index{pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}!console@{console}}
+\index{console@{console}!pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}}
+\doxysubsubsection{\texorpdfstring{console}{console}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+ansi.\+console = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1console_1_1Console}{Console}}(record=True)}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1ansi_afc619be5ed22cc17ef67ac9bc164dc88}\label{namespacepip_1_1__vendor_1_1rich_1_1ansi_afc619be5ed22cc17ef67ac9bc164dc88}} 
+\index{pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}!decoder@{decoder}}
+\index{decoder@{decoder}!pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}}
+\doxysubsubsection{\texorpdfstring{decoder}{decoder}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+ansi.\+decoder = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1ansi_1_1AnsiDecoder}{Ansi\+Decoder}}()}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1ansi_a6ee91dc0044fb3e5f2fb2c1d6eb6e133}\label{namespacepip_1_1__vendor_1_1rich_1_1ansi_a6ee91dc0044fb3e5f2fb2c1d6eb6e133}} 
+\index{pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}!re\_ansi@{re\_ansi}}
+\index{re\_ansi@{re\_ansi}!pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}}
+\doxysubsubsection{\texorpdfstring{re\_ansi}{re\_ansi}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+ansi.\+re\+\_\+ansi}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  re.compile(}
+\DoxyCodeLine{2     ,}
+\DoxyCodeLine{3     re.VERBOSE,}
+\DoxyCodeLine{4 )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1ansi_a2fed4597411c9cf67b3c9f512ae027d6}\label{namespacepip_1_1__vendor_1_1rich_1_1ansi_a2fed4597411c9cf67b3c9f512ae027d6}} 
+\index{pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}!SGR\_STYLE\_MAP@{SGR\_STYLE\_MAP}}
+\index{SGR\_STYLE\_MAP@{SGR\_STYLE\_MAP}!pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}}
+\doxysubsubsection{\texorpdfstring{SGR\_STYLE\_MAP}{SGR\_STYLE\_MAP}}
+{\footnotesize\ttfamily dictionary pip.\+\_\+vendor.\+rich.\+ansi.\+SGR\+\_\+\+STYLE\+\_\+\+MAP}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1ansi_a6844030cb9fa1040b5736bef8a402544}\label{namespacepip_1_1__vendor_1_1rich_1_1ansi_a6844030cb9fa1040b5736bef8a402544}} 
+\index{pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}!stdout@{stdout}}
+\index{stdout@{stdout}!pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}}
+\doxysubsubsection{\texorpdfstring{stdout}{stdout}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+ansi.\+stdout = io.\+Bytes\+IO()}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1ansi_a04f77fffde97c18a08f5c66efd472e24}\label{namespacepip_1_1__vendor_1_1rich_1_1ansi_a04f77fffde97c18a08f5c66efd472e24}} 
+\index{pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}!stdout\_result@{stdout\_result}}
+\index{stdout\_result@{stdout\_result}!pip.\_vendor.rich.ansi@{pip.\_vendor.rich.ansi}}
+\doxysubsubsection{\texorpdfstring{stdout\_result}{stdout\_result}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+ansi.\+stdout\+\_\+result = stdout.\+getvalue().decode(\char`\"{}utf-\/8\char`\"{})}
+

@@ -1,0 +1,125 @@
+\hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider}{}\doxysection{pip.\+\_\+internal.\+resolution.\+resolvelib.\+provider.\+Pip\+Provider Class Reference}
+\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider}\index{pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+resolution.\+resolvelib.\+provider.\+Pip\+Provider\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+internal.\+resolution.\+resolvelib.\+provider.\+Pip\+Provider\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a9b11763fb0b76d9ab942ff44aedba360}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1factory_1_1Factory}{Factory}} factory, Dict\mbox{[}str, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Constraint}{Constraint}}\mbox{]} constraints, bool ignore\+\_\+dependencies, str upgrade\+\_\+strategy, Dict\mbox{[}str, int\mbox{]} user\+\_\+requested)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_abda82b3da30cac1db723309d4bae276e}{identify}} (self, Union\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Requirement}{Requirement}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}\mbox{]} requirement\+\_\+or\+\_\+candidate)
+\item 
+\char`\"{}Preference\char`\"{} \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a1a88d317394b1621d95be275cf8d9bd3}{get\+\_\+preference}} (self, str identifier, Mapping\mbox{[}str, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}\mbox{]} resolutions, Mapping\mbox{[}str, Iterator\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}\mbox{]}\mbox{]} candidates, Mapping\mbox{[}str, Iterable\mbox{[}\char`\"{}Preference\+Information\char`\"{}\mbox{]}\mbox{]} information, Sequence\mbox{[}\char`\"{}Preference\+Information\char`\"{}\mbox{]} backtrack\+\_\+causes)
+\item 
+Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a81ff891c3a391bf1716e1bd6738c1283}{find\+\_\+matches}} (self, str identifier, Mapping\mbox{[}str, Iterator\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Requirement}{Requirement}}\mbox{]}\mbox{]} requirements, Mapping\mbox{[}str, Iterator\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}\mbox{]}\mbox{]} incompatibilities)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a89cc19d954e0a8a0ff8583c7bc943338}{is\+\_\+satisfied\+\_\+by}} (self, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Requirement}{Requirement}} requirement, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}} candidate)
+\item 
+Sequence\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Requirement}{Requirement}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_afb568dcfd3894012ef3e3e5b3eb49b49}{get\+\_\+dependencies}} (self, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}} candidate)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a49c60b5aa0ccb12f7cfc035c16a2aabd}{is\+\_\+backtrack\+\_\+cause}} (str identifier, Sequence\mbox{[}\char`\"{}Preference\+Information\char`\"{}\mbox{]} backtrack\+\_\+causes)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Pip's provider implementation for resolvelib.
+
+:params constraints: A mapping of constraints specified by the user. Keys
+    are canonicalized project names.
+:params ignore_dependencies: Whether the user specified ``--no-deps``.
+:params upgrade_strategy: The user-specified upgrade strategy.
+:params user_requested: A set of canonicalized package names that the user
+    supplied for pip to install/upgrade.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a9b11763fb0b76d9ab942ff44aedba360}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a9b11763fb0b76d9ab942ff44aedba360}} 
+\index{pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+resolution.\+resolvelib.\+provider.\+Pip\+Provider.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1factory_1_1Factory}{Factory}}}]{factory,  }\item[{Dict\mbox{[}str, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Constraint}{Constraint}}\mbox{]}}]{constraints,  }\item[{bool}]{ignore\+\_\+dependencies,  }\item[{str}]{upgrade\+\_\+strategy,  }\item[{Dict\mbox{[}str, int\mbox{]}}]{user\+\_\+requested }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a81ff891c3a391bf1716e1bd6738c1283}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a81ff891c3a391bf1716e1bd6738c1283}} 
+\index{pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}!find\_matches@{find\_matches}}
+\index{find\_matches@{find\_matches}!pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}}
+\doxysubsubsection{\texorpdfstring{find\_matches()}{find\_matches()}}
+{\footnotesize\ttfamily  Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}\mbox{]} pip.\+\_\+internal.\+resolution.\+resolvelib.\+provider.\+Pip\+Provider.\+find\+\_\+matches (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{identifier,  }\item[{Mapping\mbox{[}str, Iterator\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Requirement}{Requirement}}\mbox{]}\mbox{]}}]{requirements,  }\item[{Mapping\mbox{[}str, Iterator\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}\mbox{]}\mbox{]}}]{incompatibilities }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_afb568dcfd3894012ef3e3e5b3eb49b49}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_afb568dcfd3894012ef3e3e5b3eb49b49}} 
+\index{pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}!get\_dependencies@{get\_dependencies}}
+\index{get\_dependencies@{get\_dependencies}!pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}}
+\doxysubsubsection{\texorpdfstring{get\_dependencies()}{get\_dependencies()}}
+{\footnotesize\ttfamily  Sequence\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Requirement}{Requirement}}\mbox{]} pip.\+\_\+internal.\+resolution.\+resolvelib.\+provider.\+Pip\+Provider.\+get\+\_\+dependencies (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}}]{candidate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a1a88d317394b1621d95be275cf8d9bd3}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a1a88d317394b1621d95be275cf8d9bd3}} 
+\index{pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}!get\_preference@{get\_preference}}
+\index{get\_preference@{get\_preference}!pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}}
+\doxysubsubsection{\texorpdfstring{get\_preference()}{get\_preference()}}
+{\footnotesize\ttfamily  \char`\"{}Preference\char`\"{} pip.\+\_\+internal.\+resolution.\+resolvelib.\+provider.\+Pip\+Provider.\+get\+\_\+preference (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{identifier,  }\item[{Mapping\mbox{[}str, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}\mbox{]}}]{resolutions,  }\item[{Mapping\mbox{[}str, Iterator\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}\mbox{]}\mbox{]}}]{candidates,  }\item[{Mapping\mbox{[}str, Iterable\mbox{[}\char`\"{}Preference\+Information\char`\"{}\mbox{]}\mbox{]}}]{information,  }\item[{Sequence\mbox{[}\char`\"{}Preference\+Information\char`\"{}\mbox{]}}]{backtrack\+\_\+causes }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Produce a sort key for given requirement based on preference.
+
+The lower the return value is, the more preferred this group of
+arguments is.
+
+Currently pip considers the following in order:
+
+* Prefer if any of the known requirements is "direct", e.g. points to an
+  explicit URL.
+* If equal, prefer if any requirement is "pinned", i.e. contains
+  operator ``===`` or ``==``.
+* If equal, calculate an approximate "depth" and resolve requirements
+  closer to the user-specified requirements first. If the depth cannot
+  by determined (eg: due to no matching parents), it is considered
+  infinite.
+* Order user-specified requirements by the order they are specified.
+* If equal, prefers "non-free" requirements, i.e. contains at least one
+  operator, such as ``>=`` or ``<``.
+* If equal, order alphabetically for consistency (helps debuggability).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_abda82b3da30cac1db723309d4bae276e}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_abda82b3da30cac1db723309d4bae276e}} 
+\index{pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}!identify@{identify}}
+\index{identify@{identify}!pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}}
+\doxysubsubsection{\texorpdfstring{identify()}{identify()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+resolution.\+resolvelib.\+provider.\+Pip\+Provider.\+identify (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Union\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Requirement}{Requirement}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}\mbox{]}}]{requirement\+\_\+or\+\_\+candidate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a49c60b5aa0ccb12f7cfc035c16a2aabd}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a49c60b5aa0ccb12f7cfc035c16a2aabd}} 
+\index{pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}!is\_backtrack\_cause@{is\_backtrack\_cause}}
+\index{is\_backtrack\_cause@{is\_backtrack\_cause}!pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}}
+\doxysubsubsection{\texorpdfstring{is\_backtrack\_cause()}{is\_backtrack\_cause()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+resolution.\+resolvelib.\+provider.\+Pip\+Provider.\+is\+\_\+backtrack\+\_\+cause (\begin{DoxyParamCaption}\item[{str}]{identifier,  }\item[{Sequence\mbox{[}\char`\"{}Preference\+Information\char`\"{}\mbox{]}     }]{backtrack\+\_\+causes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a89cc19d954e0a8a0ff8583c7bc943338}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1provider_1_1PipProvider_a89cc19d954e0a8a0ff8583c7bc943338}} 
+\index{pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}!is\_satisfied\_by@{is\_satisfied\_by}}
+\index{is\_satisfied\_by@{is\_satisfied\_by}!pip.\_internal.resolution.resolvelib.provider.PipProvider@{pip.\_internal.resolution.resolvelib.provider.PipProvider}}
+\doxysubsubsection{\texorpdfstring{is\_satisfied\_by()}{is\_satisfied\_by()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+resolution.\+resolvelib.\+provider.\+Pip\+Provider.\+is\+\_\+satisfied\+\_\+by (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Requirement}{Requirement}}}]{requirement,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{Candidate}}}]{candidate }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/resolution/resolvelib/\mbox{\hyperlink{provider_8py}{provider.\+py}}\end{DoxyCompactItemize}

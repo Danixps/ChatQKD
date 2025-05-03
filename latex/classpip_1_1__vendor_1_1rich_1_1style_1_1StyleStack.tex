@@ -1,0 +1,71 @@
+\hypertarget{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack}{}\doxysection{pip.\+\_\+vendor.\+rich.\+style.\+Style\+Stack Class Reference}
+\label{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack}\index{pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_a03f2b43f8f0835c4ad6ff8c45ce6b254}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \char`\"{}Style\char`\"{} default\+\_\+style)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_a595b24b960b64eefd20d8af42d530018}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_aa4beeae4892068a1b439287e927525af}{current}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_afc0b8cb154d9f89402462959098dec1c}{push}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}} style)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_a788f74fcc1a3ffc298069ac13e43574a}{pop}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A stack of styles.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_a03f2b43f8f0835c4ad6ff8c45ce6b254}\label{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_a03f2b43f8f0835c4ad6ff8c45ce6b254}} 
+\index{pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+style.\+Style\+Stack.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Style\char`\"{}}]{default\+\_\+style }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_a595b24b960b64eefd20d8af42d530018}\label{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_a595b24b960b64eefd20d8af42d530018}} 
+\index{pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+rich.\+style.\+Style\+Stack.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_aa4beeae4892068a1b439287e927525af}\label{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_aa4beeae4892068a1b439287e927525af}} 
+\index{pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}!current@{current}}
+\index{current@{current}!pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}}
+\doxysubsubsection{\texorpdfstring{current()}{current()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}} pip.\+\_\+vendor.\+rich.\+style.\+Style\+Stack.\+current (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the Style at the top of the stack.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_a788f74fcc1a3ffc298069ac13e43574a}\label{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_a788f74fcc1a3ffc298069ac13e43574a}} 
+\index{pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}!pop@{pop}}
+\index{pop@{pop}!pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}} pip.\+\_\+vendor.\+rich.\+style.\+Style\+Stack.\+pop (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Pop last style and discard.
+
+Returns:
+    Style: New current style (also available as stack.current)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_afc0b8cb154d9f89402462959098dec1c}\label{classpip_1_1__vendor_1_1rich_1_1style_1_1StyleStack_afc0b8cb154d9f89402462959098dec1c}} 
+\index{pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}!push@{push}}
+\index{push@{push}!pip.\_vendor.rich.style.StyleStack@{pip.\_vendor.rich.style.StyleStack}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+style.\+Style\+Stack.\+push (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}}]{style }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Push a new style on to the stack.
+
+Args:
+    style (Style): New style to combine with current style.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/rich/\mbox{\hyperlink{rich_2style_8py}{style.\+py}}\end{DoxyCompactItemize}

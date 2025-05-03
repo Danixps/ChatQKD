@@ -1,0 +1,43 @@
+\hypertarget{namespacepip_1_1__internal_1_1utils_1_1egg__link}{}\doxysection{pip.\+\_\+internal.\+utils.\+egg\+\_\+link Namespace Reference}
+\label{namespacepip_1_1__internal_1_1utils_1_1egg__link}\index{pip.\_internal.utils.egg\_link@{pip.\_internal.utils.egg\_link}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1egg__link_a6e588525971cb01353e2f629b99d7e4f}{egg\+\_\+link\+\_\+path\+\_\+from\+\_\+sys\+\_\+path}} (str raw\+\_\+name)
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1egg__link_a2de794c240520f7e26d4b76a0c57ee95}{egg\+\_\+link\+\_\+path\+\_\+from\+\_\+location}} (str raw\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1egg__link_a2de794c240520f7e26d4b76a0c57ee95}\label{namespacepip_1_1__internal_1_1utils_1_1egg__link_a2de794c240520f7e26d4b76a0c57ee95}} 
+\index{pip.\_internal.utils.egg\_link@{pip.\_internal.utils.egg\_link}!egg\_link\_path\_from\_location@{egg\_link\_path\_from\_location}}
+\index{egg\_link\_path\_from\_location@{egg\_link\_path\_from\_location}!pip.\_internal.utils.egg\_link@{pip.\_internal.utils.egg\_link}}
+\doxysubsubsection{\texorpdfstring{egg\_link\_path\_from\_location()}{egg\_link\_path\_from\_location()}}
+{\footnotesize\ttfamily  Optional\mbox{[}str\mbox{]} pip.\+\_\+internal.\+utils.\+egg\+\_\+link.\+egg\+\_\+link\+\_\+path\+\_\+from\+\_\+location (\begin{DoxyParamCaption}\item[{str}]{raw\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the path for the .egg-link file if it exists, otherwise, None.
+
+There's 3 scenarios:
+1) not in a virtualenv
+   try to find in site.USER_SITE, then site_packages
+2) in a no-global virtualenv
+   try to find in site_packages
+3) in a yes-global virtualenv
+   try to find in site_packages, then site.USER_SITE
+   (don't look in global location)
+
+For #1 and #3, there could be odd cases, where there's an egg-link in 2
+locations.
+
+This method will just return the first one found.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1egg__link_a6e588525971cb01353e2f629b99d7e4f}\label{namespacepip_1_1__internal_1_1utils_1_1egg__link_a6e588525971cb01353e2f629b99d7e4f}} 
+\index{pip.\_internal.utils.egg\_link@{pip.\_internal.utils.egg\_link}!egg\_link\_path\_from\_sys\_path@{egg\_link\_path\_from\_sys\_path}}
+\index{egg\_link\_path\_from\_sys\_path@{egg\_link\_path\_from\_sys\_path}!pip.\_internal.utils.egg\_link@{pip.\_internal.utils.egg\_link}}
+\doxysubsubsection{\texorpdfstring{egg\_link\_path\_from\_sys\_path()}{egg\_link\_path\_from\_sys\_path()}}
+{\footnotesize\ttfamily  Optional\mbox{[}str\mbox{]} pip.\+\_\+internal.\+utils.\+egg\+\_\+link.\+egg\+\_\+link\+\_\+path\+\_\+from\+\_\+sys\+\_\+path (\begin{DoxyParamCaption}\item[{str}]{raw\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Look for a .egg-link file for project name, by walking sys.path.
+\end{DoxyVerb}
+ 

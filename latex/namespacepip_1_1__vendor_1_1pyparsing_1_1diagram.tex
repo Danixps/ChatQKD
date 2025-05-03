@@ -1,0 +1,107 @@
+\hypertarget{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+diagram Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram}\index{pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1diagram_1_1EachItem}{Each\+Item}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1diagram_1_1AnnotatedItem}{Annotated\+Item}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1diagram_1_1EditablePartial}{Editable\+Partial}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1diagram_1_1ElementState}{Element\+State}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1diagram_1_1ConverterState}{Converter\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_ada5a017738184ba5e3ac76b40b6888a6}{railroad\+\_\+to\+\_\+html}} (List\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a7f87941057c606cc3732ca8930446506}{Named\+Diagram}}\mbox{]} diagrams, embed=False, $\ast$$\ast$kwargs)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a47455bb74fc16dfa5819fb365f6d5846}{T}} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_ae1f36862514099d1cb5c6a62c720cb40}{resolve\+\_\+partial}} (\char`\"{}Editable\+Partial\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a47455bb74fc16dfa5819fb365f6d5846}{T}}\mbox{]}\char`\"{} partial)
+\item 
+List\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a7f87941057c606cc3732ca8930446506}{Named\+Diagram}}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a9235c4afd6901dc232dfc6d8f8e672de}{to\+\_\+railroad}} (\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement}{pyparsing.\+Parser\+Element}} element, typing.\+Optional\mbox{[}dict\mbox{]} diagram\+\_\+kwargs=None, int vertical=3, bool show\+\_\+results\+\_\+names=False, bool show\+\_\+groups=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a77cbf2f86fe1962ca35219b1e937f3c7}{jinja2\+\_\+template\+\_\+source}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_ae45d57f5f9f4f76d5717b75300366b41}{template}} = Template(\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a77cbf2f86fe1962ca35219b1e937f3c7}{jinja2\+\_\+template\+\_\+source}})
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a7f87941057c606cc3732ca8930446506}{Named\+Diagram}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a47455bb74fc16dfa5819fb365f6d5846}{T}} = Type\+Var(\char`\"{}T\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_ada5a017738184ba5e3ac76b40b6888a6}\label{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_ada5a017738184ba5e3ac76b40b6888a6}} 
+\index{pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}!railroad\_to\_html@{railroad\_to\_html}}
+\index{railroad\_to\_html@{railroad\_to\_html}!pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}}
+\doxysubsubsection{\texorpdfstring{railroad\_to\_html()}{railroad\_to\_html()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+pyparsing.\+diagram.\+railroad\+\_\+to\+\_\+html (\begin{DoxyParamCaption}\item[{List\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a7f87941057c606cc3732ca8930446506}{Named\+Diagram}}\mbox{]}}]{diagrams,  }\item[{}]{embed = {\ttfamily False},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a list of NamedDiagram, produce a single HTML string that visualises those diagrams
+:params kwargs: kwargs to be passed in to the template
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_ae1f36862514099d1cb5c6a62c720cb40}\label{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_ae1f36862514099d1cb5c6a62c720cb40}} 
+\index{pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}!resolve\_partial@{resolve\_partial}}
+\index{resolve\_partial@{resolve\_partial}!pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}}
+\doxysubsubsection{\texorpdfstring{resolve\_partial()}{resolve\_partial()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a47455bb74fc16dfa5819fb365f6d5846}{T}} pip.\+\_\+vendor.\+pyparsing.\+diagram.\+resolve\+\_\+partial (\begin{DoxyParamCaption}\item[{\char`\"{}Editable\+Partial\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a47455bb74fc16dfa5819fb365f6d5846}{T}}\mbox{]}\char`\"{}}]{partial }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Recursively resolves a collection of Partials into whatever type they are
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a9235c4afd6901dc232dfc6d8f8e672de}\label{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a9235c4afd6901dc232dfc6d8f8e672de}} 
+\index{pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}!to\_railroad@{to\_railroad}}
+\index{to\_railroad@{to\_railroad}!pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}}
+\doxysubsubsection{\texorpdfstring{to\_railroad()}{to\_railroad()}}
+{\footnotesize\ttfamily  List\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a7f87941057c606cc3732ca8930446506}{Named\+Diagram}}\mbox{]} pip.\+\_\+vendor.\+pyparsing.\+diagram.\+to\+\_\+railroad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement}{pyparsing.\+Parser\+Element}}}]{element,  }\item[{typing.\+Optional\mbox{[}dict\mbox{]} }]{diagram\+\_\+kwargs = {\ttfamily None},  }\item[{int }]{vertical = {\ttfamily 3},  }\item[{bool }]{show\+\_\+results\+\_\+names = {\ttfamily False},  }\item[{bool }]{show\+\_\+groups = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert a pyparsing element tree into a list of diagrams. This is the recommended entrypoint to diagram
+creation if you want to access the Railroad tree before it is converted to HTML
+:param element: base element of the parser being diagrammed
+:param diagram_kwargs: kwargs to pass to the Diagram() constructor
+:param vertical: (optional) - int - limit at which number of alternatives should be
+   shown vertically instead of horizontally
+:param show_results_names - bool to indicate whether results name annotations should be
+   included in the diagram
+:param show_groups - bool to indicate whether groups should be highlighted with an unlabeled
+   surrounding box
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a77cbf2f86fe1962ca35219b1e937f3c7}\label{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a77cbf2f86fe1962ca35219b1e937f3c7}} 
+\index{pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}!jinja2\_template\_source@{jinja2\_template\_source}}
+\index{jinja2\_template\_source@{jinja2\_template\_source}!pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}}
+\doxysubsubsection{\texorpdfstring{jinja2\_template\_source}{jinja2\_template\_source}}
+{\footnotesize\ttfamily string pip.\+\_\+vendor.\+pyparsing.\+diagram.\+jinja2\+\_\+template\+\_\+source}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a7f87941057c606cc3732ca8930446506}\label{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a7f87941057c606cc3732ca8930446506}} 
+\index{pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}!NamedDiagram@{NamedDiagram}}
+\index{NamedDiagram@{NamedDiagram}!pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}}
+\doxysubsubsection{\texorpdfstring{NamedDiagram}{NamedDiagram}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+diagram.\+Named\+Diagram}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \mbox{\hyperlink{namespacepip_1_1__vendor_1_1typing__extensions_a9703be7e47f4961ade7603d32134e923}{NamedTuple}}(}
+\DoxyCodeLine{2     \textcolor{stringliteral}{"{}NamedDiagram"{}},}
+\DoxyCodeLine{3     [(\textcolor{stringliteral}{"{}name"{}}, str), (\textcolor{stringliteral}{"{}diagram"{}}, typing.Optional[railroad.DiagramItem]), (\textcolor{stringliteral}{"{}index"{}}, int)],}
+\DoxyCodeLine{4 )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a47455bb74fc16dfa5819fb365f6d5846}\label{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a47455bb74fc16dfa5819fb365f6d5846}} 
+\index{pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}!T@{T}}
+\index{T@{T}!pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+diagram.\+T = Type\+Var(\char`\"{}T\char`\"{})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_ae45d57f5f9f4f76d5717b75300366b41}\label{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_ae45d57f5f9f4f76d5717b75300366b41}} 
+\index{pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}!template@{template}}
+\index{template@{template}!pip.\_vendor.pyparsing.diagram@{pip.\_vendor.pyparsing.diagram}}
+\doxysubsubsection{\texorpdfstring{template}{template}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+diagram.\+template = Template(\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1diagram_a77cbf2f86fe1962ca35219b1e937f3c7}{jinja2\+\_\+template\+\_\+source}})}
+

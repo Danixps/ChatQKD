@@ -1,0 +1,182 @@
+\hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator}{}\doxysection{pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator Class Reference}
+\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator}\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a7a4c50e47ae95046ff9f9da7aeb8a391}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, url, \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a4d515374c6b8f51e803eef2375a6f2f0}{timeout}}=None, \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a36b92458b635ce89cbee73f0f3551156}{num\+\_\+workers}}=10, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_aba4b0806b56eebef291b3f33623f28b7}{get\+\_\+page}} (self, url)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_af143a81384c2795cedaa872936bfa8a5}{get\+\_\+distribution\+\_\+names}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_ab15ddbc7ce13679c25ff8949a654d1b8}{base\+\_\+url}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a4d515374c6b8f51e803eef2375a6f2f0}{timeout}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a573c917721a75fb2b613a88de23f245f}{skip\+\_\+externals}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a36b92458b635ce89cbee73f0f3551156}{num\+\_\+workers}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a66e7fb39dbad424ac98724d1d919bc3e}{platform\+\_\+check}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a404af46095eacf38efdf97cff5855b38}{result}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_aad70587390d19cbd6df0df4e53d51889}{project\+\_\+name}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a68b70f220e2a72eb062968f44d4b70c3}{decoders}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_ab40f62c6258707e0329e710d7700c086}{platform\+\_\+dependent}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A locator which scrapes HTML pages to locate downloads for a distribution.
+This runs multiple threads to do the I/O; performance is at least as good
+as pip's PackageFinder, which works in an analogous fashion.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a7a4c50e47ae95046ff9f9da7aeb8a391}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a7a4c50e47ae95046ff9f9da7aeb8a391}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{url,  }\item[{}]{timeout = {\ttfamily None},  }\item[{}]{num\+\_\+workers = {\ttfamily 10},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialise an instance.
+:param url: The root URL to use for scraping.
+:param timeout: The timeout, in seconds, to be applied to requests.
+                This defaults to ``None`` (no timeout specified).
+:param num_workers: The number of worker threads you want to do I/O,
+                    This defaults to 10.
+:param kwargs: Passed to the superclass.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_af143a81384c2795cedaa872936bfa8a5}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_af143a81384c2795cedaa872936bfa8a5}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!get\_distribution\_names@{get\_distribution\_names}}
+\index{get\_distribution\_names@{get\_distribution\_names}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{get\_distribution\_names()}{get\_distribution\_names()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+get\+\_\+distribution\+\_\+names (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return all the distribution names known to this locator.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1Locator_a6942e1ef6deacef66d49eafe3e38b6d6}{pip.\+\_\+vendor.\+distlib.\+locators.\+Locator}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_aba4b0806b56eebef291b3f33623f28b7}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_aba4b0806b56eebef291b3f33623f28b7}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!get\_page@{get\_page}}
+\index{get\_page@{get\_page}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{get\_page()}{get\_page()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+get\+\_\+page (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{url }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the HTML for an URL, possibly from an in-memory cache.
+
+XXX TODO Note: this cache is never actually cleared. It's assumed that
+the data won't get stale over the lifetime of a locator instance (not
+necessarily true for the default_locator).
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_ab15ddbc7ce13679c25ff8949a654d1b8}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_ab15ddbc7ce13679c25ff8949a654d1b8}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!base\_url@{base\_url}}
+\index{base\_url@{base\_url}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{base\_url}{base\_url}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+base\+\_\+url}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a68b70f220e2a72eb062968f44d4b70c3}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a68b70f220e2a72eb062968f44d4b70c3}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!decoders@{decoders}}
+\index{decoders@{decoders}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{decoders}{decoders}}
+{\footnotesize\ttfamily dictionary pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+decoders\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'deflate'}: zlib.decompress,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'gzip'}: \textcolor{keyword}{lambda} b: gzip.GzipFile(fileobj=\mbox{\hyperlink{namespacepip_1_1__vendor_1_1six_a4e24ba4a552e2244b052f10ad4975620}{BytesIO}}(b)).\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1ansi_a1c571ea10dbae6a6d2af87b23507516d}{read}}(),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'none'}: \textcolor{keyword}{lambda} b: b,}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a36b92458b635ce89cbee73f0f3551156}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a36b92458b635ce89cbee73f0f3551156}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!num\_workers@{num\_workers}}
+\index{num\_workers@{num\_workers}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{num\_workers}{num\_workers}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+num\+\_\+workers}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a66e7fb39dbad424ac98724d1d919bc3e}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a66e7fb39dbad424ac98724d1d919bc3e}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!platform\_check@{platform\_check}}
+\index{platform\_check@{platform\_check}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{platform\_check}{platform\_check}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+platform\+\_\+check}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_ab40f62c6258707e0329e710d7700c086}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_ab40f62c6258707e0329e710d7700c086}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!platform\_dependent@{platform\_dependent}}
+\index{platform\_dependent@{platform\_dependent}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{platform\_dependent}{platform\_dependent}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+platform\+\_\+dependent\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  re.compile(\textcolor{stringliteral}{r'\(\backslash\)b(linux\_(i\(\backslash\)d86|x86\_64|arm\(\backslash\)w+)|'}}
+\DoxyCodeLine{                                    \textcolor{stringliteral}{r'win(32|\_amd64)|macosx\_?\(\backslash\)d+)\(\backslash\)b'}, re.I)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_aad70587390d19cbd6df0df4e53d51889}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_aad70587390d19cbd6df0df4e53d51889}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!project\_name@{project\_name}}
+\index{project\_name@{project\_name}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{project\_name}{project\_name}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+project\+\_\+name}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a404af46095eacf38efdf97cff5855b38}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a404af46095eacf38efdf97cff5855b38}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!result@{result}}
+\index{result@{result}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+result}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a573c917721a75fb2b613a88de23f245f}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a573c917721a75fb2b613a88de23f245f}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!skip\_externals@{skip\_externals}}
+\index{skip\_externals@{skip\_externals}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{skip\_externals}{skip\_externals}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+skip\+\_\+externals}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a4d515374c6b8f51e803eef2375a6f2f0}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1SimpleScrapingLocator_a4d515374c6b8f51e803eef2375a6f2f0}} 
+\index{pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}!timeout@{timeout}}
+\index{timeout@{timeout}!pip.\_vendor.distlib.locators.SimpleScrapingLocator@{pip.\_vendor.distlib.locators.SimpleScrapingLocator}}
+\doxysubsubsection{\texorpdfstring{timeout}{timeout}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+locators.\+Simple\+Scraping\+Locator.\+timeout}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/distlib/\mbox{\hyperlink{locators_8py}{locators.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator}{}\doxysection{pip.\+\_\+vendor.\+distlib.\+locators.\+Directory\+Locator Class Reference}
+\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator}\index{pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+distlib.\+locators.\+Directory\+Locator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+distlib.\+locators.\+Directory\+Locator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a950cfb5a338394d695770af8bb140e36}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, path, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a638b519b3314ed7fb3e36adcf5f37d37}{should\+\_\+include}} (self, filename, parent)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a9ec177430802b7a92b2f458cb66c4d12}{get\+\_\+distribution\+\_\+names}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a25c9cd43dfbe637734612d1adf822926}{recursive}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a3c8ba409680d20b5157fe1e4aa9e3ad3}{base\+\_\+dir}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This class locates distributions in a directory tree.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a950cfb5a338394d695770af8bb140e36}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a950cfb5a338394d695770af8bb140e36}} 
+\index{pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+locators.\+Directory\+Locator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialise an instance.
+:param path: The root of the directory tree to search.
+:param kwargs: Passed to the superclass constructor,
+               except for:
+               * recursive - if True (the default), subdirectories are
+                 recursed into. If False, only the top-level directory
+                 is searched,
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a9ec177430802b7a92b2f458cb66c4d12}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a9ec177430802b7a92b2f458cb66c4d12}} 
+\index{pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}!get\_distribution\_names@{get\_distribution\_names}}
+\index{get\_distribution\_names@{get\_distribution\_names}!pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}}
+\doxysubsubsection{\texorpdfstring{get\_distribution\_names()}{get\_distribution\_names()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+locators.\+Directory\+Locator.\+get\+\_\+distribution\+\_\+names (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return all the distribution names known to this locator.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1locators_1_1Locator_a6942e1ef6deacef66d49eafe3e38b6d6}{pip.\+\_\+vendor.\+distlib.\+locators.\+Locator}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a638b519b3314ed7fb3e36adcf5f37d37}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a638b519b3314ed7fb3e36adcf5f37d37}} 
+\index{pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}!should\_include@{should\_include}}
+\index{should\_include@{should\_include}!pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}}
+\doxysubsubsection{\texorpdfstring{should\_include()}{should\_include()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+locators.\+Directory\+Locator.\+should\+\_\+include (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename,  }\item[{}]{parent }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Should a filename be considered as a candidate for a distribution
+archive? As well as the filename, the directory which contains it
+is provided, though not used by the current implementation.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a3c8ba409680d20b5157fe1e4aa9e3ad3}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a3c8ba409680d20b5157fe1e4aa9e3ad3}} 
+\index{pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}!base\_dir@{base\_dir}}
+\index{base\_dir@{base\_dir}!pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}}
+\doxysubsubsection{\texorpdfstring{base\_dir}{base\_dir}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+locators.\+Directory\+Locator.\+base\+\_\+dir}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a25c9cd43dfbe637734612d1adf822926}\label{classpip_1_1__vendor_1_1distlib_1_1locators_1_1DirectoryLocator_a25c9cd43dfbe637734612d1adf822926}} 
+\index{pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}!recursive@{recursive}}
+\index{recursive@{recursive}!pip.\_vendor.distlib.locators.DirectoryLocator@{pip.\_vendor.distlib.locators.DirectoryLocator}}
+\doxysubsubsection{\texorpdfstring{recursive}{recursive}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+locators.\+Directory\+Locator.\+recursive}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/distlib/\mbox{\hyperlink{locators_8py}{locators.\+py}}\end{DoxyCompactItemize}

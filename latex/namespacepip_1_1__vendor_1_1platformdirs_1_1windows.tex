@@ -1,0 +1,71 @@
+\hypertarget{namespacepip_1_1__vendor_1_1platformdirs_1_1windows}{}\doxysection{pip.\+\_\+vendor.\+platformdirs.\+windows Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1platformdirs_1_1windows}\index{pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1platformdirs_1_1windows_1_1Windows}{Windows}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_acb79d3ad90a0de74f964b3a7f13a52cd}{get\+\_\+win\+\_\+folder\+\_\+from\+\_\+env\+\_\+vars}} (str csidl\+\_\+name)
+\item 
+str$\vert$None \mbox{\hyperlink{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_a0927a9169815a70177cd05f0afeb8d53}{get\+\_\+win\+\_\+folder\+\_\+if\+\_\+csidl\+\_\+name\+\_\+not\+\_\+env\+\_\+var}} (str csidl\+\_\+name)
+\item 
+str \mbox{\hyperlink{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_a302fdd51fa9934598d5bfac4ca1d9337}{get\+\_\+win\+\_\+folder\+\_\+from\+\_\+registry}} (str csidl\+\_\+name)
+\item 
+str \mbox{\hyperlink{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_a0bf056bcb5329e4e3954a0b8d98d5aa7}{get\+\_\+win\+\_\+folder\+\_\+via\+\_\+ctypes}} (str csidl\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_adefaccf880b63765f67613622bbfae2f}{get\+\_\+win\+\_\+folder}} = lru\+\_\+cache(maxsize=None)(\+\_\+pick\+\_\+get\+\_\+win\+\_\+folder())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Windows.\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_acb79d3ad90a0de74f964b3a7f13a52cd}\label{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_acb79d3ad90a0de74f964b3a7f13a52cd}} 
+\index{pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}!get\_win\_folder\_from\_env\_vars@{get\_win\_folder\_from\_env\_vars}}
+\index{get\_win\_folder\_from\_env\_vars@{get\_win\_folder\_from\_env\_vars}!pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}}
+\doxysubsubsection{\texorpdfstring{get\_win\_folder\_from\_env\_vars()}{get\_win\_folder\_from\_env\_vars()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+platformdirs.\+windows.\+get\+\_\+win\+\_\+folder\+\_\+from\+\_\+env\+\_\+vars (\begin{DoxyParamCaption}\item[{str}]{csidl\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get folder from environment variables.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_a302fdd51fa9934598d5bfac4ca1d9337}\label{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_a302fdd51fa9934598d5bfac4ca1d9337}} 
+\index{pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}!get\_win\_folder\_from\_registry@{get\_win\_folder\_from\_registry}}
+\index{get\_win\_folder\_from\_registry@{get\_win\_folder\_from\_registry}!pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}}
+\doxysubsubsection{\texorpdfstring{get\_win\_folder\_from\_registry()}{get\_win\_folder\_from\_registry()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+platformdirs.\+windows.\+get\+\_\+win\+\_\+folder\+\_\+from\+\_\+registry (\begin{DoxyParamCaption}\item[{str}]{csidl\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get folder from the registry.
+
+This is a fallback technique at best. I'm not sure if using the registry for these guarantees us the correct answer
+for all CSIDL_* names.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_a0927a9169815a70177cd05f0afeb8d53}\label{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_a0927a9169815a70177cd05f0afeb8d53}} 
+\index{pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}!get\_win\_folder\_if\_csidl\_name\_not\_env\_var@{get\_win\_folder\_if\_csidl\_name\_not\_env\_var}}
+\index{get\_win\_folder\_if\_csidl\_name\_not\_env\_var@{get\_win\_folder\_if\_csidl\_name\_not\_env\_var}!pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}}
+\doxysubsubsection{\texorpdfstring{get\_win\_folder\_if\_csidl\_name\_not\_env\_var()}{get\_win\_folder\_if\_csidl\_name\_not\_env\_var()}}
+{\footnotesize\ttfamily  str $\vert$ None pip.\+\_\+vendor.\+platformdirs.\+windows.\+get\+\_\+win\+\_\+folder\+\_\+if\+\_\+csidl\+\_\+name\+\_\+not\+\_\+env\+\_\+var (\begin{DoxyParamCaption}\item[{str}]{csidl\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get folder for a CSIDL name that does not exist as an environment variable.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_a0bf056bcb5329e4e3954a0b8d98d5aa7}\label{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_a0bf056bcb5329e4e3954a0b8d98d5aa7}} 
+\index{pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}!get\_win\_folder\_via\_ctypes@{get\_win\_folder\_via\_ctypes}}
+\index{get\_win\_folder\_via\_ctypes@{get\_win\_folder\_via\_ctypes}!pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}}
+\doxysubsubsection{\texorpdfstring{get\_win\_folder\_via\_ctypes()}{get\_win\_folder\_via\_ctypes()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+platformdirs.\+windows.\+get\+\_\+win\+\_\+folder\+\_\+via\+\_\+ctypes (\begin{DoxyParamCaption}\item[{str}]{csidl\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get folder with ctypes.\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_adefaccf880b63765f67613622bbfae2f}\label{namespacepip_1_1__vendor_1_1platformdirs_1_1windows_adefaccf880b63765f67613622bbfae2f}} 
+\index{pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}!get\_win\_folder@{get\_win\_folder}}
+\index{get\_win\_folder@{get\_win\_folder}!pip.\_vendor.platformdirs.windows@{pip.\_vendor.platformdirs.windows}}
+\doxysubsubsection{\texorpdfstring{get\_win\_folder}{get\_win\_folder}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+platformdirs.\+windows.\+get\+\_\+win\+\_\+folder = lru\+\_\+cache(maxsize=None)(\+\_\+pick\+\_\+get\+\_\+win\+\_\+folder())}
+

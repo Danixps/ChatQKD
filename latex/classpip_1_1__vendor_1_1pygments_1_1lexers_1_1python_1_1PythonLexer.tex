@@ -1,0 +1,183 @@
+\hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer}{}\doxysection{pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer Class Reference}
+\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer}\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_ae3c3c8e331905aafd9bc6adf3544e577}{innerstring\+\_\+rules}} (ttype)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a672adcc3b17d01672825226bf5550a8a}{fstring\+\_\+rules}} (ttype)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a3d524bc81e8f5e3f807fb20b1dd9401b}{analyse\+\_\+text}} (text)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_ac2ef5ec52a78467146261a4f1089865f}{name}} = \textquotesingle{}Python\textquotesingle{}
+\item 
+string \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a96a287aaa5b3c56309612e09fd71d83a}{url}} = \textquotesingle{}http\+://www.\+python.\+org\textquotesingle{}
+\item 
+list \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a2b9e15a493c07edad8ab7e2d4fefc430}{aliases}} = \mbox{[}\textquotesingle{}python\textquotesingle{}, \textquotesingle{}py\textquotesingle{}, \textquotesingle{}sage\textquotesingle{}, \textquotesingle{}python3\textquotesingle{}, \textquotesingle{}py3\textquotesingle{}\mbox{]}
+\item 
+list \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a6907cfefa27ed51a97031a3ce20d97e7}{filenames}}
+\item 
+list \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a3ae6ca3a4ffacb1e10373b501bcd7b23}{mimetypes}}
+\item 
+string \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a49c23bb4d07b7442725f72bcdc9d577a}{uni\+\_\+name}} = \char`\"{}\mbox{[}\%s\mbox{]}\mbox{[}\%s\mbox{]}$\ast$\char`\"{} \% (uni.\+xid\+\_\+start, uni.\+xid\+\_\+continue)
+\item 
+dictionary \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a07a0f1bbb963ed1e0b57d52cf90ecb79}{tokens}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}For Python source code (version 3.x).
+
+.. versionadded:: 0.10
+
+.. versionchanged:: 2.5
+   This is now the default ``PythonLexer``.  It is still available as the
+   alias ``Python3Lexer``.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a3d524bc81e8f5e3f807fb20b1dd9401b}\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a3d524bc81e8f5e3f807fb20b1dd9401b}} 
+\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}!analyse\_text@{analyse\_text}}
+\index{analyse\_text@{analyse\_text}!pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+\doxysubsubsection{\texorpdfstring{analyse\_text()}{analyse\_text()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer.\+analyse\+\_\+text (\begin{DoxyParamCaption}\item[{}]{text }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A static method which is called for lexer guessing.
+
+It should analyse the text and return a float in the range
+from ``0.0`` to ``1.0``.  If it returns ``0.0``, the lexer
+will not be selected as the most probable one, if it returns
+``1.0``, it will be selected immediately.  This is used by
+`guess_lexer`.
+
+The `LexerMeta` metaclass automatically wraps this function so
+that it works like a static method (no ``self`` or ``cls``
+parameter) and the return value is automatically converted to
+`float`. If the return value is an object that is boolean `False`
+it's the same as if the return values was ``0.0``.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexer_1_1Lexer_af4119b52df532cb3113f37e5442f02c0}{pip.\+\_\+vendor.\+pygments.\+lexer.\+Lexer}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1NumPyLexer_a57e20dba8d4f0b035dec127d0ef1739d}{pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Num\+Py\+Lexer}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a672adcc3b17d01672825226bf5550a8a}\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a672adcc3b17d01672825226bf5550a8a}} 
+\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}!fstring\_rules@{fstring\_rules}}
+\index{fstring\_rules@{fstring\_rules}!pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+\doxysubsubsection{\texorpdfstring{fstring\_rules()}{fstring\_rules()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer.\+fstring\+\_\+rules (\begin{DoxyParamCaption}\item[{}]{ttype }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_ae3c3c8e331905aafd9bc6adf3544e577}\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_ae3c3c8e331905aafd9bc6adf3544e577}} 
+\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}!innerstring\_rules@{innerstring\_rules}}
+\index{innerstring\_rules@{innerstring\_rules}!pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+\doxysubsubsection{\texorpdfstring{innerstring\_rules()}{innerstring\_rules()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer.\+innerstring\+\_\+rules (\begin{DoxyParamCaption}\item[{}]{ttype }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a2b9e15a493c07edad8ab7e2d4fefc430}\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a2b9e15a493c07edad8ab7e2d4fefc430}} 
+\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}!aliases@{aliases}}
+\index{aliases@{aliases}!pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+\doxysubsubsection{\texorpdfstring{aliases}{aliases}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer.\+aliases = \mbox{[}\textquotesingle{}python\textquotesingle{}, \textquotesingle{}py\textquotesingle{}, \textquotesingle{}sage\textquotesingle{}, \textquotesingle{}python3\textquotesingle{}, \textquotesingle{}py3\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a6907cfefa27ed51a97031a3ce20d97e7}\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a6907cfefa27ed51a97031a3ce20d97e7}} 
+\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}!filenames@{filenames}}
+\index{filenames@{filenames}!pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+\doxysubsubsection{\texorpdfstring{filenames}{filenames}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer.\+filenames\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'*.py'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'*.pyw'},}
+\DoxyCodeLine{        \textcolor{comment}{\# Type stubs}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'*.pyi'},}
+\DoxyCodeLine{        \textcolor{comment}{\# Jython}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'*.jy'},}
+\DoxyCodeLine{        \textcolor{comment}{\# Sage}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'*.sage'},}
+\DoxyCodeLine{        \textcolor{comment}{\# SCons}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'*.sc'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SConstruct'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SConscript'},}
+\DoxyCodeLine{        \textcolor{comment}{\# Skylark/Starlark (used by Bazel, Buck, and Pants)}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'*.bzl'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BUCK'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BUILD'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BUILD.bazel'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'WORKSPACE'},}
+\DoxyCodeLine{        \textcolor{comment}{\# Twisted Application infrastructure}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'*.tac'},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a3ae6ca3a4ffacb1e10373b501bcd7b23}\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a3ae6ca3a4ffacb1e10373b501bcd7b23}} 
+\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}!mimetypes@{mimetypes}}
+\index{mimetypes@{mimetypes}!pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+\doxysubsubsection{\texorpdfstring{mimetypes}{mimetypes}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer.\+mimetypes\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [\textcolor{stringliteral}{'text/x-\/python'}, \textcolor{stringliteral}{'application/x-\/python'},}
+\DoxyCodeLine{                 \textcolor{stringliteral}{'text/x-\/python3'}, \textcolor{stringliteral}{'application/x-\/python3'}]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_ac2ef5ec52a78467146261a4f1089865f}\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_ac2ef5ec52a78467146261a4f1089865f}} 
+\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}!name@{name}}
+\index{name@{name}!pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer.\+name = \textquotesingle{}Python\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a07a0f1bbb963ed1e0b57d52cf90ecb79}\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a07a0f1bbb963ed1e0b57d52cf90ecb79}} 
+\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}!tokens@{tokens}}
+\index{tokens@{tokens}!pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+\doxysubsubsection{\texorpdfstring{tokens}{tokens}}
+{\footnotesize\ttfamily dictionary pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer.\+tokens\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a49c23bb4d07b7442725f72bcdc9d577a}\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a49c23bb4d07b7442725f72bcdc9d577a}} 
+\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}!uni\_name@{uni\_name}}
+\index{uni\_name@{uni\_name}!pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+\doxysubsubsection{\texorpdfstring{uni\_name}{uni\_name}}
+{\footnotesize\ttfamily string pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer.\+uni\+\_\+name = \char`\"{}\mbox{[}\%s\mbox{]}\mbox{[}\%s\mbox{]}$\ast$\char`\"{} \% (uni.\+xid\+\_\+start, uni.\+xid\+\_\+continue)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a96a287aaa5b3c56309612e09fd71d83a}\label{classpip_1_1__vendor_1_1pygments_1_1lexers_1_1python_1_1PythonLexer_a96a287aaa5b3c56309612e09fd71d83a}} 
+\index{pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}!url@{url}}
+\index{url@{url}!pip.\_vendor.pygments.lexers.python.PythonLexer@{pip.\_vendor.pygments.lexers.python.PythonLexer}}
+\doxysubsubsection{\texorpdfstring{url}{url}}
+{\footnotesize\ttfamily string pip.\+\_\+vendor.\+pygments.\+lexers.\+python.\+Python\+Lexer.\+url = \textquotesingle{}http\+://www.\+python.\+org\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pygments/lexers/\mbox{\hyperlink{python_8py}{python.\+py}}\end{DoxyCompactItemize}

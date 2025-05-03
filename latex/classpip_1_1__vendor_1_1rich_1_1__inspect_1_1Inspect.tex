@@ -1,0 +1,153 @@
+\hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect}{}\doxysection{pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect Class Reference}
+\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect}\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_ac19f1c610b0ca4c9effe609b793f046c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Any \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a8eef23638f00009e930526e3492af284}{obj}}, $\ast$Optional\mbox{[}Text\+Type\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a359f885c9d46bc3dfd9aba8089d94cc2}{title}}=None, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_acf1971b245dbdeb4e3a6297002198752}{help}}=False, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a9775ec14d93cadb25b9e95200b6779b7}{methods}}=False, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a980d349ee749b381e0041c0cc4c738d6}{docs}}=True, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a3886c15add234172f621fcf34171fb53}{private}}=False, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a79968ffaaaada982b536476735ec3ea9}{dunder}}=False, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_aef05875b221aee3b9591b4e199bd55ae}{sort}}=True, bool all=True, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a780872f3b8063d21bb6b8bcac89905a3}{value}}=True)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1panel_1_1Panel}{Panel}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a0b0d4a251462e02e3a981dab1b534825}{\+\_\+\+\_\+rich\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_ad558550c492b05be4cc55d3563091ba8}{highlighter}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a8eef23638f00009e930526e3492af284}{obj}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a359f885c9d46bc3dfd9aba8089d94cc2}{title}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_acf1971b245dbdeb4e3a6297002198752}{help}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a9775ec14d93cadb25b9e95200b6779b7}{methods}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a980d349ee749b381e0041c0cc4c738d6}{docs}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a3886c15add234172f621fcf34171fb53}{private}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a79968ffaaaada982b536476735ec3ea9}{dunder}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_aef05875b221aee3b9591b4e199bd55ae}{sort}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a780872f3b8063d21bb6b8bcac89905a3}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A renderable to inspect any Python Object.
+
+Args:
+    obj (Any): An object to inspect.
+    title (str, optional): Title to display over inspect result, or None use type. Defaults to None.
+    help (bool, optional): Show full help text rather than just first paragraph. Defaults to False.
+    methods (bool, optional): Enable inspection of callables. Defaults to False.
+    docs (bool, optional): Also render doc strings. Defaults to True.
+    private (bool, optional): Show private attributes (beginning with underscore). Defaults to False.
+    dunder (bool, optional): Show attributes starting with double underscore. Defaults to False.
+    sort (bool, optional): Sort attributes alphabetically. Defaults to True.
+    all (bool, optional): Show all attributes. Defaults to False.
+    value (bool, optional): Pretty print value of object. Defaults to True.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_ac19f1c610b0ca4c9effe609b793f046c}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_ac19f1c610b0ca4c9effe609b793f046c}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Any}]{obj,  }\item[{$\ast$Optional\mbox{[}Text\+Type\mbox{]} }]{title = {\ttfamily None},  }\item[{bool }]{help = {\ttfamily False},  }\item[{bool }]{methods = {\ttfamily False},  }\item[{bool }]{docs = {\ttfamily True},  }\item[{bool }]{private = {\ttfamily False},  }\item[{bool }]{dunder = {\ttfamily False},  }\item[{bool }]{sort = {\ttfamily True},  }\item[{bool }]{all = {\ttfamily True},  }\item[{bool }]{value = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a0b0d4a251462e02e3a981dab1b534825}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a0b0d4a251462e02e3a981dab1b534825}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!\_\_rich\_\_@{\_\_rich\_\_}}
+\index{\_\_rich\_\_@{\_\_rich\_\_}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{\_\_rich\_\_()}{\_\_rich\_\_()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1panel_1_1Panel}{Panel}} pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+\_\+\+\_\+rich\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a980d349ee749b381e0041c0cc4c738d6}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a980d349ee749b381e0041c0cc4c738d6}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!docs@{docs}}
+\index{docs@{docs}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{docs}{docs}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+docs}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a79968ffaaaada982b536476735ec3ea9}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a79968ffaaaada982b536476735ec3ea9}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!dunder@{dunder}}
+\index{dunder@{dunder}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{dunder}{dunder}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+dunder}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_acf1971b245dbdeb4e3a6297002198752}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_acf1971b245dbdeb4e3a6297002198752}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!help@{help}}
+\index{help@{help}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+help}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_ad558550c492b05be4cc55d3563091ba8}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_ad558550c492b05be4cc55d3563091ba8}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!highlighter@{highlighter}}
+\index{highlighter@{highlighter}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{highlighter}{highlighter}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+highlighter}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a9775ec14d93cadb25b9e95200b6779b7}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a9775ec14d93cadb25b9e95200b6779b7}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!methods@{methods}}
+\index{methods@{methods}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{methods}{methods}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+methods}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a8eef23638f00009e930526e3492af284}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a8eef23638f00009e930526e3492af284}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!obj@{obj}}
+\index{obj@{obj}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{obj}{obj}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+obj}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a3886c15add234172f621fcf34171fb53}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a3886c15add234172f621fcf34171fb53}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!private@{private}}
+\index{private@{private}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{private}{private}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+private}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_aef05875b221aee3b9591b4e199bd55ae}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_aef05875b221aee3b9591b4e199bd55ae}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!sort@{sort}}
+\index{sort@{sort}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{sort}{sort}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+sort}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a359f885c9d46bc3dfd9aba8089d94cc2}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a359f885c9d46bc3dfd9aba8089d94cc2}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!title@{title}}
+\index{title@{title}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+title}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a780872f3b8063d21bb6b8bcac89905a3}\label{classpip_1_1__vendor_1_1rich_1_1__inspect_1_1Inspect_a780872f3b8063d21bb6b8bcac89905a3}} 
+\index{pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}!value@{value}}
+\index{value@{value}!pip.\_vendor.rich.\_inspect.Inspect@{pip.\_vendor.rich.\_inspect.Inspect}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+\_\+inspect.\+Inspect.\+value}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/rich/\mbox{\hyperlink{__inspect_8py}{\+\_\+inspect.\+py}}\end{DoxyCompactItemize}

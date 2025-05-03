@@ -1,0 +1,125 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+core.\+Opt Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt}\index{pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+Opt\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+Opt\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_aa4f290df9f53d3120e61d7caf25c9be5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Union\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement}{Parser\+Element}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParseElementEnhance_a447bd5fdb8e511e4939647f4d3df3433}{expr}}, Any default=\+\_\+\+\_\+optional\+Not\+Matched)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_abf9d52c348b6c1b389029ec16dff9693}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_a2e8d28e85acc13a69185ac20f3e3166e}{save\+As\+List}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_a79ea422f56bd601ded564a1fc4393a4f}{default\+Value}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_a02382a12b1377a37b894aeab79e70e33}{may\+Return\+Empty}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Optional matching of the given expression.
+
+Parameters:
+
+- ``expr`` - expression that must match zero or more times
+- ``default`` (optional) - value to be returned if the optional expression is not found.
+
+Example::
+
+    # US postal code can be a 5-digit zip, plus optional 4-digit qualifier
+    zip = Combine(Word(nums, exact=5) + Opt('-' + Word(nums, exact=4)))
+    zip.run_tests('''
+        # traditional ZIP code
+        12345
+
+        # ZIP+4 form
+        12101-0001
+
+        # invalid ZIP
+        98765-
+        ''')
+
+prints::
+
+    # traditional ZIP code
+    12345
+    ['12345']
+
+    # ZIP+4 form
+    12101-0001
+    ['12101-0001']
+
+    # invalid ZIP
+    98765-
+         ^
+    FAIL: Expected end of text (at char 5), (line:1, col:6)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_aa4f290df9f53d3120e61d7caf25c9be5}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_aa4f290df9f53d3120e61d7caf25c9be5}} 
+\index{pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+Opt.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Union\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement}{Parser\+Element}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}}\mbox{]}}]{expr,  }\item[{Any }]{default = {\ttfamily \+\_\+\+\_\+optionalNotMatched} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_abf9d52c348b6c1b389029ec16dff9693}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_abf9d52c348b6c1b389029ec16dff9693}} 
+\index{pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+Opt.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParseElementEnhance_a349ba4fb88c86f595b50f03eafbf47a6}{pip.\+\_\+vendor.\+pyparsing.\+core.\+Parse\+Element\+Enhance}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_a79ea422f56bd601ded564a1fc4393a4f}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_a79ea422f56bd601ded564a1fc4393a4f}} 
+\index{pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}!defaultValue@{defaultValue}}
+\index{defaultValue@{defaultValue}!pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}}
+\doxysubsubsection{\texorpdfstring{defaultValue}{defaultValue}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Opt.\+default\+Value}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_a02382a12b1377a37b894aeab79e70e33}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_a02382a12b1377a37b894aeab79e70e33}} 
+\index{pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}!mayReturnEmpty@{mayReturnEmpty}}
+\index{mayReturnEmpty@{mayReturnEmpty}!pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}}
+\doxysubsubsection{\texorpdfstring{mayReturnEmpty}{mayReturnEmpty}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Opt.\+may\+Return\+Empty}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_a2e8d28e85acc13a69185ac20f3e3166e}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Opt_a2e8d28e85acc13a69185ac20f3e3166e}} 
+\index{pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}!saveAsList@{saveAsList}}
+\index{saveAsList@{saveAsList}!pip.\_vendor.pyparsing.core.Opt@{pip.\_vendor.pyparsing.core.Opt}}
+\doxysubsubsection{\texorpdfstring{saveAsList}{saveAsList}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Opt.\+save\+As\+List}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pyparsing/\mbox{\hyperlink{pyparsing_2core_8py}{core.\+py}}\end{DoxyCompactItemize}

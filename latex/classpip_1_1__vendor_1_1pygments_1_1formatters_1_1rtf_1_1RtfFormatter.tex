@@ -1,0 +1,140 @@
+\hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter}{}\doxysection{pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter Class Reference}
+\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter}\index{pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_ac76332d892d5386443322c1dcb6c5931}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a9750fa342ff1b56d411e46463b5cace2}{options}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_ab39233b629bb6ab43d12c8448b23d7a0}{format\+\_\+unencoded}} (self, tokensource, outfile)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_a0f87167cfe7b6442c9c1a70d1e4df52e}{fontface}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_a269fdeaa4e44b52d71a9eaa6c2c09622}{fontsize}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_af0a0f8ea9ac7d74452afe7850415c812}{name}} = \textquotesingle{}RTF\textquotesingle{}
+\item 
+list \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_abf15eaf7ef6b47ecc15dee99b242731d}{aliases}} = \mbox{[}\textquotesingle{}rtf\textquotesingle{}\mbox{]}
+\item 
+list \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_ae39121e814b4c0e17e7b48213bf2e2b1}{filenames}} = \mbox{[}\textquotesingle{}$\ast$.rtf\textquotesingle{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Format tokens as RTF markup. This formatter automatically outputs full RTF
+documents with color information and other useful stuff. Perfect for Copy and
+Paste into Microsoft(R) Word(R) documents.
+
+Please note that ``encoding`` and ``outencoding`` options are ignored.
+The RTF format is ASCII natively, but handles unicode characters correctly
+thanks to escape sequences.
+
+.. versionadded:: 0.6
+
+Additional options accepted:
+
+`style`
+    The style to use, can be a string or a Style subclass (default:
+    ``'default'``).
+
+`fontface`
+    The used font family, for example ``Bitstream Vera Sans``. Defaults to
+    some generic font which is supposed to have fixed width.
+
+`fontsize`
+    Size of the font used. Size is specified in half points. The
+    default is 24 half-points, giving a size 12 font.
+
+    .. versionadded:: 2.0
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_ac76332d892d5386443322c1dcb6c5931}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_ac76332d892d5386443322c1dcb6c5931}} 
+\index{pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Additional options accepted:
+
+``fontface``
+    Name of the font used. Could for example be ``'Courier New'``
+    to further specify the default which is ``'\fmodern'``. The RTF
+    specification claims that ``\fmodern`` are "Fixed-pitch serif
+    and sans serif fonts". Hope every RTF implementation thinks
+    the same about modern...\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a4d4129ec27422a1f72011427e29ffcec}{pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_ab39233b629bb6ab43d12c8448b23d7a0}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_ab39233b629bb6ab43d12c8448b23d7a0}} 
+\index{pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}!format\_unencoded@{format\_unencoded}}
+\index{format\_unencoded@{format\_unencoded}!pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}}
+\doxysubsubsection{\texorpdfstring{format\_unencoded()}{format\_unencoded()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter.\+format\+\_\+unencoded (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tokensource,  }\item[{}]{outfile }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_abf15eaf7ef6b47ecc15dee99b242731d}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_abf15eaf7ef6b47ecc15dee99b242731d}} 
+\index{pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}!aliases@{aliases}}
+\index{aliases@{aliases}!pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}}
+\doxysubsubsection{\texorpdfstring{aliases}{aliases}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter.\+aliases = \mbox{[}\textquotesingle{}rtf\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_ae39121e814b4c0e17e7b48213bf2e2b1}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_ae39121e814b4c0e17e7b48213bf2e2b1}} 
+\index{pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}!filenames@{filenames}}
+\index{filenames@{filenames}!pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}}
+\doxysubsubsection{\texorpdfstring{filenames}{filenames}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter.\+filenames = \mbox{[}\textquotesingle{}$\ast$.rtf\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_a0f87167cfe7b6442c9c1a70d1e4df52e}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_a0f87167cfe7b6442c9c1a70d1e4df52e}} 
+\index{pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}!fontface@{fontface}}
+\index{fontface@{fontface}!pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}}
+\doxysubsubsection{\texorpdfstring{fontface}{fontface}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter.\+fontface}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_a269fdeaa4e44b52d71a9eaa6c2c09622}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_a269fdeaa4e44b52d71a9eaa6c2c09622}} 
+\index{pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}!fontsize@{fontsize}}
+\index{fontsize@{fontsize}!pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}}
+\doxysubsubsection{\texorpdfstring{fontsize}{fontsize}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter.\+fontsize}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_af0a0f8ea9ac7d74452afe7850415c812}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1rtf_1_1RtfFormatter_af0a0f8ea9ac7d74452afe7850415c812}} 
+\index{pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}!name@{name}}
+\index{name@{name}!pip.\_vendor.pygments.formatters.rtf.RtfFormatter@{pip.\_vendor.pygments.formatters.rtf.RtfFormatter}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string pip.\+\_\+vendor.\+pygments.\+formatters.\+rtf.\+Rtf\+Formatter.\+name = \textquotesingle{}RTF\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pygments/formatters/\mbox{\hyperlink{rtf_8py}{rtf.\+py}}\end{DoxyCompactItemize}

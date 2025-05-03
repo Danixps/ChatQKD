@@ -1,0 +1,38 @@
+\hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1__securetransport_1_1low__level}{}\doxysection{pip.\+\_\+vendor.\+urllib3.\+contrib.\+\_\+securetransport.\+low\+\_\+level Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1__securetransport_1_1low__level}\index{pip.\_vendor.urllib3.contrib.\_securetransport.low\_level@{pip.\_vendor.urllib3.contrib.\_securetransport.low\_level}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1__securetransport_1_1low__level_af4d7a6546da23151cbc7b46776d0a85b}{TLS\+\_\+\+PROTOCOL\+\_\+\+VERSIONS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Low-level helpers for the SecureTransport bindings.
+
+These are Python functions that are not directly related to the high-level APIs
+but are necessary to get them to work. They include a whole bunch of low-level
+CoreFoundation messing about and memory management. The concerns in this module
+are almost entirely about trying to avoid memory leaks and providing
+appropriate and useful assistance to the higher-level code.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1__securetransport_1_1low__level_af4d7a6546da23151cbc7b46776d0a85b}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1__securetransport_1_1low__level_af4d7a6546da23151cbc7b46776d0a85b}} 
+\index{pip.\_vendor.urllib3.contrib.\_securetransport.low\_level@{pip.\_vendor.urllib3.contrib.\_securetransport.low\_level}!TLS\_PROTOCOL\_VERSIONS@{TLS\_PROTOCOL\_VERSIONS}}
+\index{TLS\_PROTOCOL\_VERSIONS@{TLS\_PROTOCOL\_VERSIONS}!pip.\_vendor.urllib3.contrib.\_securetransport.low\_level@{pip.\_vendor.urllib3.contrib.\_securetransport.low\_level}}
+\doxysubsubsection{\texorpdfstring{TLS\_PROTOCOL\_VERSIONS}{TLS\_PROTOCOL\_VERSIONS}}
+{\footnotesize\ttfamily dictionary pip.\+\_\+vendor.\+urllib3.\+contrib.\+\_\+securetransport.\+low\+\_\+level.\+TLS\+\_\+\+PROTOCOL\+\_\+\+VERSIONS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{"{}SSLv2"{}}: (0, 2),}
+\DoxyCodeLine{3     \textcolor{stringliteral}{"{}SSLv3"{}}: (3, 0),}
+\DoxyCodeLine{4     \textcolor{stringliteral}{"{}TLSv1"{}}: (3, 1),}
+\DoxyCodeLine{5     \textcolor{stringliteral}{"{}TLSv1.1"{}}: (3, 2),}
+\DoxyCodeLine{6     \textcolor{stringliteral}{"{}TLSv1.2"{}}: (3, 3),}
+\DoxyCodeLine{7 \}}
+
+\end{DoxyCode}

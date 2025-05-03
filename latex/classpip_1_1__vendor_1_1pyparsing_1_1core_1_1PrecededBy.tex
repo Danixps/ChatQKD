@@ -1,0 +1,146 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy}\index{pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_aa17a63e1adf2ac1829b9c6b8ed4c8c92}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Union\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement}{Parser\+Element}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_ad77efd2da30ffc38a07c32315367198c}{expr}}, typing.\+Optional\mbox{[}int\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a23f64a88c637e4d0ca5d6e064af8f7e4}{retreat}}=None)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a602443b2df6e8de1739913bc28fb3ddd}{parse\+Impl}} (self, instring, loc=0, do\+Actions=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_ad77efd2da30ffc38a07c32315367198c}{expr}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_af2a49bbb85ec4bee88d7bc6ecd602937}{may\+Return\+Empty}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a2ca2a229a4a5e73438e25d53373bbfc3}{may\+Index\+Error}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a96bb927aa052688673652e7e8b16a0ec}{exact}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a23f64a88c637e4d0ca5d6e064af8f7e4}{retreat}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_ab386fa4cf34d0af9ab4120a759ec9fb3}{errmsg}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a8282200652f557f6625e45231105394f}{skip\+Whitespace}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Lookbehind matching of the given parse expression.
+``PrecededBy`` does not advance the parsing position within the
+input string, it only verifies that the specified parse expression
+matches prior to the current position.  ``PrecededBy`` always
+returns a null token list, but if a results name is defined on the
+given expression, it is returned.
+
+Parameters:
+
+- ``expr`` - expression that must match prior to the current parse
+  location
+- ``retreat`` - (default= ``None``) - (int) maximum number of characters
+  to lookbehind prior to the current parse location
+
+If the lookbehind expression is a string, :class:`Literal`,
+:class:`Keyword`, or a :class:`Word` or :class:`CharsNotIn`
+with a specified exact or maximum length, then the retreat
+parameter is not required. Otherwise, retreat must be specified to
+give a maximum number of characters to look back from
+the current parse position for a lookbehind match.
+
+Example::
+
+    # VB-style variable names with type prefixes
+    int_var = PrecededBy("#") + pyparsing_common.identifier
+    str_var = PrecededBy("$") + pyparsing_common.identifier\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_aa17a63e1adf2ac1829b9c6b8ed4c8c92}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_aa17a63e1adf2ac1829b9c6b8ed4c8c92}} 
+\index{pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Union\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement}{Parser\+Element}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}}\mbox{]}}]{expr,  }\item[{typing.\+Optional\mbox{[}int\mbox{]} }]{retreat = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a602443b2df6e8de1739913bc28fb3ddd}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a602443b2df6e8de1739913bc28fb3ddd}} 
+\index{pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc = {\ttfamily 0},  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParseElementEnhance_a349ba4fb88c86f595b50f03eafbf47a6}{pip.\+\_\+vendor.\+pyparsing.\+core.\+Parse\+Element\+Enhance}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_ab386fa4cf34d0af9ab4120a759ec9fb3}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_ab386fa4cf34d0af9ab4120a759ec9fb3}} 
+\index{pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}!errmsg@{errmsg}}
+\index{errmsg@{errmsg}!pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}}
+\doxysubsubsection{\texorpdfstring{errmsg}{errmsg}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By.\+errmsg}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a96bb927aa052688673652e7e8b16a0ec}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a96bb927aa052688673652e7e8b16a0ec}} 
+\index{pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}!exact@{exact}}
+\index{exact@{exact}!pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}}
+\doxysubsubsection{\texorpdfstring{exact}{exact}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By.\+exact}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_ad77efd2da30ffc38a07c32315367198c}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_ad77efd2da30ffc38a07c32315367198c}} 
+\index{pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}!expr@{expr}}
+\index{expr@{expr}!pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}}
+\doxysubsubsection{\texorpdfstring{expr}{expr}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By.\+expr}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a2ca2a229a4a5e73438e25d53373bbfc3}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a2ca2a229a4a5e73438e25d53373bbfc3}} 
+\index{pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}!mayIndexError@{mayIndexError}}
+\index{mayIndexError@{mayIndexError}!pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}}
+\doxysubsubsection{\texorpdfstring{mayIndexError}{mayIndexError}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By.\+may\+Index\+Error}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_af2a49bbb85ec4bee88d7bc6ecd602937}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_af2a49bbb85ec4bee88d7bc6ecd602937}} 
+\index{pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}!mayReturnEmpty@{mayReturnEmpty}}
+\index{mayReturnEmpty@{mayReturnEmpty}!pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}}
+\doxysubsubsection{\texorpdfstring{mayReturnEmpty}{mayReturnEmpty}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By.\+may\+Return\+Empty}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a23f64a88c637e4d0ca5d6e064af8f7e4}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a23f64a88c637e4d0ca5d6e064af8f7e4}} 
+\index{pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}!retreat@{retreat}}
+\index{retreat@{retreat}!pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}}
+\doxysubsubsection{\texorpdfstring{retreat}{retreat}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By.\+retreat}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a8282200652f557f6625e45231105394f}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1PrecededBy_a8282200652f557f6625e45231105394f}} 
+\index{pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}!skipWhitespace@{skipWhitespace}}
+\index{skipWhitespace@{skipWhitespace}!pip.\_vendor.pyparsing.core.PrecededBy@{pip.\_vendor.pyparsing.core.PrecededBy}}
+\doxysubsubsection{\texorpdfstring{skipWhitespace}{skipWhitespace}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Preceded\+By.\+skip\+Whitespace}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pyparsing/\mbox{\hyperlink{pyparsing_2core_8py}{core.\+py}}\end{DoxyCompactItemize}

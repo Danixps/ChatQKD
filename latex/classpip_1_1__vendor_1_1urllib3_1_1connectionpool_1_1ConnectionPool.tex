@@ -1,0 +1,132 @@
+\hypertarget{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool}{}\doxysection{pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool Class Reference}
+\label{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool}\index{pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_afccdc920fdf3e2af53f8c1c1316a0d51}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a96f7b726b786cd4dcb95148eaf744173}{host}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a94af8217ab998da72b40c21c21a80b5a}{port}}=None)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a901bfc7593462939683bc1e798d9d1f7}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a2cce35cb6693cc4ada970cbc83212b58}{\+\_\+\+\_\+enter\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a68ff9060a12413aebcb49d08091a75ca}{\+\_\+\+\_\+exit\+\_\+\+\_\+}} (self, exc\+\_\+type, exc\+\_\+val, exc\+\_\+tb)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a6c68625e3f94a48581a7685ca3677e47}{close}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a96f7b726b786cd4dcb95148eaf744173}{host}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a94af8217ab998da72b40c21c21a80b5a}{port}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_ab899324f3848aae48a8e381b1be109ec}{scheme}} = None
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a2eb44c91311bb599dcecc513c1080cc3}{Queue\+Cls}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1util_1_1queue_1_1LifoQueue}{Lifo\+Queue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base class for all connection pools, such as
+:class:`.HTTPConnectionPool` and :class:`.HTTPSConnectionPool`.
+
+.. note::
+   ConnectionPool.urlopen() does not normalize or percent-encode target URIs
+   which is useful if your target server doesn't support percent-encoded
+   target URIs.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_afccdc920fdf3e2af53f8c1c1316a0d51}\label{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_afccdc920fdf3e2af53f8c1c1316a0d51}} 
+\index{pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{host,  }\item[{}]{port = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a2cce35cb6693cc4ada970cbc83212b58}\label{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a2cce35cb6693cc4ada970cbc83212b58}} 
+\index{pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}!\_\_enter\_\_@{\_\_enter\_\_}}
+\index{\_\_enter\_\_@{\_\_enter\_\_}!pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}}
+\doxysubsubsection{\texorpdfstring{\_\_enter\_\_()}{\_\_enter\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool.\+\_\+\+\_\+enter\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a68ff9060a12413aebcb49d08091a75ca}\label{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a68ff9060a12413aebcb49d08091a75ca}} 
+\index{pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}!\_\_exit\_\_@{\_\_exit\_\_}}
+\index{\_\_exit\_\_@{\_\_exit\_\_}!pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}}
+\doxysubsubsection{\texorpdfstring{\_\_exit\_\_()}{\_\_exit\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool.\+\_\+\+\_\+exit\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exc\+\_\+type,  }\item[{}]{exc\+\_\+val,  }\item[{}]{exc\+\_\+tb }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a901bfc7593462939683bc1e798d9d1f7}\label{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a901bfc7593462939683bc1e798d9d1f7}} 
+\index{pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a6c68625e3f94a48581a7685ca3677e47}\label{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a6c68625e3f94a48581a7685ca3677e47}} 
+\index{pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}!close@{close}}
+\index{close@{close}!pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Close all pooled connections and disable the pool.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1HTTPConnectionPool_ae83ff576cb9efe1b85fc56bad31a9344}{pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+HTTPConnection\+Pool}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a96f7b726b786cd4dcb95148eaf744173}\label{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a96f7b726b786cd4dcb95148eaf744173}} 
+\index{pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}!host@{host}}
+\index{host@{host}!pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool.\+host}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a94af8217ab998da72b40c21c21a80b5a}\label{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a94af8217ab998da72b40c21c21a80b5a}} 
+\index{pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}!port@{port}}
+\index{port@{port}!pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool.\+port}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a2eb44c91311bb599dcecc513c1080cc3}\label{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_a2eb44c91311bb599dcecc513c1080cc3}} 
+\index{pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}!QueueCls@{QueueCls}}
+\index{QueueCls@{QueueCls}!pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}}
+\doxysubsubsection{\texorpdfstring{QueueCls}{QueueCls}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool.\+Queue\+Cls = \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1util_1_1queue_1_1LifoQueue}{Lifo\+Queue}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_ab899324f3848aae48a8e381b1be109ec}\label{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1ConnectionPool_ab899324f3848aae48a8e381b1be109ec}} 
+\index{pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}!scheme@{scheme}}
+\index{scheme@{scheme}!pip.\_vendor.urllib3.connectionpool.ConnectionPool@{pip.\_vendor.urllib3.connectionpool.ConnectionPool}}
+\doxysubsubsection{\texorpdfstring{scheme}{scheme}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+urllib3.\+connectionpool.\+Connection\+Pool.\+scheme = None\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/urllib3/\mbox{\hyperlink{connectionpool_8py}{connectionpool.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+core.\+Word\+Start Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart}\index{pip.\_vendor.pyparsing.core.WordStart@{pip.\_vendor.pyparsing.core.WordStart}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+Word\+Start\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+Word\+Start\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_a4281152e38d14171c542e9c2e50aa140}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}} word\+\_\+chars=\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1core_a3478fa14485e9e8af4596ddf80f345bd}{printables}}, $\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}} \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_a1ff00dc2be8362f3188874ae91a8c5c5}{word\+Chars}}=\mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1core_a3478fa14485e9e8af4596ddf80f345bd}{printables}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_ac928e7e442919d6d0395b9593a510e92}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_a1ff00dc2be8362f3188874ae91a8c5c5}{word\+Chars}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_a38f60d57238fb51c11a9a38156309ab5}{errmsg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Matches if the current position is at the beginning of a
+:class:`Word`, and is not preceded by any character in a given
+set of ``word_chars`` (default= ``printables``). To emulate the
+``\b`` behavior of regular expressions, use
+``WordStart(alphanums)``. ``WordStart`` will also match at
+the beginning of the string being parsed, or at the beginning of
+a line.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_a4281152e38d14171c542e9c2e50aa140}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_a4281152e38d14171c542e9c2e50aa140}} 
+\index{pip.\_vendor.pyparsing.core.WordStart@{pip.\_vendor.pyparsing.core.WordStart}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pyparsing.core.WordStart@{pip.\_vendor.pyparsing.core.WordStart}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+Word\+Start.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}} }]{word\+\_\+chars = {\ttfamily \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1core_a3478fa14485e9e8af4596ddf80f345bd}{printables}}},  }\item[{$\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}} }]{word\+Chars = {\ttfamily \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pyparsing_1_1core_a3478fa14485e9e8af4596ddf80f345bd}{printables}}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_ac928e7e442919d6d0395b9593a510e92}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_ac928e7e442919d6d0395b9593a510e92}} 
+\index{pip.\_vendor.pyparsing.core.WordStart@{pip.\_vendor.pyparsing.core.WordStart}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pip.\_vendor.pyparsing.core.WordStart@{pip.\_vendor.pyparsing.core.WordStart}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+Word\+Start.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_aabdfb5cd074dbd652478bfd8c75ec04e}{pip.\+\_\+vendor.\+pyparsing.\+core.\+Parser\+Element}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_a38f60d57238fb51c11a9a38156309ab5}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_a38f60d57238fb51c11a9a38156309ab5}} 
+\index{pip.\_vendor.pyparsing.core.WordStart@{pip.\_vendor.pyparsing.core.WordStart}!errmsg@{errmsg}}
+\index{errmsg@{errmsg}!pip.\_vendor.pyparsing.core.WordStart@{pip.\_vendor.pyparsing.core.WordStart}}
+\doxysubsubsection{\texorpdfstring{errmsg}{errmsg}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Word\+Start.\+errmsg}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_a1ff00dc2be8362f3188874ae91a8c5c5}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1WordStart_a1ff00dc2be8362f3188874ae91a8c5c5}} 
+\index{pip.\_vendor.pyparsing.core.WordStart@{pip.\_vendor.pyparsing.core.WordStart}!wordChars@{wordChars}}
+\index{wordChars@{wordChars}!pip.\_vendor.pyparsing.core.WordStart@{pip.\_vendor.pyparsing.core.WordStart}}
+\doxysubsubsection{\texorpdfstring{wordChars}{wordChars}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Word\+Start.\+word\+Chars}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pyparsing/\mbox{\hyperlink{pyparsing_2core_8py}{core.\+py}}\end{DoxyCompactItemize}

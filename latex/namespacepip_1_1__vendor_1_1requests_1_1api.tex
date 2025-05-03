@@ -1,0 +1,185 @@
+\hypertarget{namespacepip_1_1__vendor_1_1requests_1_1api}{}\doxysection{pip.\+\_\+vendor.\+requests.\+api Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1requests_1_1api}\index{pip.\_vendor.requests.api@{pip.\_vendor.requests.api}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1requests_1_1api_a9fdead74de86ac05699e5f4d40aa8d1d}{request}} (method, url, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1requests_1_1api_af14e54be255a4489da5fa7e07a48cc63}{get}} (url, params=None, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1requests_1_1api_a00e9bf92eb5112e90a3226c05e1d486b}{options}} (url, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1requests_1_1api_aa8e9cb56ef9871f0bad037b9e75c8bf1}{head}} (url, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1requests_1_1api_a52e973232ed0f75eaf31b02189f42485}{post}} (url, data=None, json=None, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1requests_1_1api_a070404d5b5af08697a3937149c17a0fd}{put}} (url, data=None, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1requests_1_1api_a4a906c429057b194b73ed7b95df8eb7f}{patch}} (url, data=None, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1requests_1_1api_a6773c33c0062058ea5764395649d4ae5}{delete}} (url, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}requests.api
+~~~~~~~~~~~~
+
+This module implements the Requests API.
+
+:copyright: (c) 2012 by Kenneth Reitz.
+:license: Apache2, see LICENSE for more details.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1requests_1_1api_a6773c33c0062058ea5764395649d4ae5}\label{namespacepip_1_1__vendor_1_1requests_1_1api_a6773c33c0062058ea5764395649d4ae5}} 
+\index{pip.\_vendor.requests.api@{pip.\_vendor.requests.api}!delete@{delete}}
+\index{delete@{delete}!pip.\_vendor.requests.api@{pip.\_vendor.requests.api}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+api.\+delete (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends a DELETE request.
+
+:param url: URL for the new :class:`Request` object.
+:param \*\*kwargs: Optional arguments that ``request`` takes.
+:return: :class:`Response <Response>` object
+:rtype: requests.Response
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1requests_1_1api_af14e54be255a4489da5fa7e07a48cc63}\label{namespacepip_1_1__vendor_1_1requests_1_1api_af14e54be255a4489da5fa7e07a48cc63}} 
+\index{pip.\_vendor.requests.api@{pip.\_vendor.requests.api}!get@{get}}
+\index{get@{get}!pip.\_vendor.requests.api@{pip.\_vendor.requests.api}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+api.\+get (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{}]{params = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends a GET request.
+
+:param url: URL for the new :class:`Request` object.
+:param params: (optional) Dictionary, list of tuples or bytes to send
+    in the query string for the :class:`Request`.
+:param \*\*kwargs: Optional arguments that ``request`` takes.
+:return: :class:`Response <Response>` object
+:rtype: requests.Response
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1requests_1_1api_aa8e9cb56ef9871f0bad037b9e75c8bf1}\label{namespacepip_1_1__vendor_1_1requests_1_1api_aa8e9cb56ef9871f0bad037b9e75c8bf1}} 
+\index{pip.\_vendor.requests.api@{pip.\_vendor.requests.api}!head@{head}}
+\index{head@{head}!pip.\_vendor.requests.api@{pip.\_vendor.requests.api}}
+\doxysubsubsection{\texorpdfstring{head()}{head()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+api.\+head (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends a HEAD request.
+
+:param url: URL for the new :class:`Request` object.
+:param \*\*kwargs: Optional arguments that ``request`` takes. If
+    `allow_redirects` is not provided, it will be set to `False` (as
+    opposed to the default :meth:`request` behavior).
+:return: :class:`Response <Response>` object
+:rtype: requests.Response
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1requests_1_1api_a00e9bf92eb5112e90a3226c05e1d486b}\label{namespacepip_1_1__vendor_1_1requests_1_1api_a00e9bf92eb5112e90a3226c05e1d486b}} 
+\index{pip.\_vendor.requests.api@{pip.\_vendor.requests.api}!options@{options}}
+\index{options@{options}!pip.\_vendor.requests.api@{pip.\_vendor.requests.api}}
+\doxysubsubsection{\texorpdfstring{options()}{options()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+api.\+options (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends an OPTIONS request.
+
+:param url: URL for the new :class:`Request` object.
+:param \*\*kwargs: Optional arguments that ``request`` takes.
+:return: :class:`Response <Response>` object
+:rtype: requests.Response
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1requests_1_1api_a4a906c429057b194b73ed7b95df8eb7f}\label{namespacepip_1_1__vendor_1_1requests_1_1api_a4a906c429057b194b73ed7b95df8eb7f}} 
+\index{pip.\_vendor.requests.api@{pip.\_vendor.requests.api}!patch@{patch}}
+\index{patch@{patch}!pip.\_vendor.requests.api@{pip.\_vendor.requests.api}}
+\doxysubsubsection{\texorpdfstring{patch()}{patch()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+api.\+patch (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{}]{data = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends a PATCH request.
+
+:param url: URL for the new :class:`Request` object.
+:param data: (optional) Dictionary, list of tuples, bytes, or file-like
+    object to send in the body of the :class:`Request`.
+:param json: (optional) A JSON serializable Python object to send in the body of the :class:`Request`.
+:param \*\*kwargs: Optional arguments that ``request`` takes.
+:return: :class:`Response <Response>` object
+:rtype: requests.Response
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1requests_1_1api_a52e973232ed0f75eaf31b02189f42485}\label{namespacepip_1_1__vendor_1_1requests_1_1api_a52e973232ed0f75eaf31b02189f42485}} 
+\index{pip.\_vendor.requests.api@{pip.\_vendor.requests.api}!post@{post}}
+\index{post@{post}!pip.\_vendor.requests.api@{pip.\_vendor.requests.api}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+api.\+post (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{}]{data = {\ttfamily None},  }\item[{}]{json = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends a POST request.
+
+:param url: URL for the new :class:`Request` object.
+:param data: (optional) Dictionary, list of tuples, bytes, or file-like
+    object to send in the body of the :class:`Request`.
+:param json: (optional) A JSON serializable Python object to send in the body of the :class:`Request`.
+:param \*\*kwargs: Optional arguments that ``request`` takes.
+:return: :class:`Response <Response>` object
+:rtype: requests.Response
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1requests_1_1api_a070404d5b5af08697a3937149c17a0fd}\label{namespacepip_1_1__vendor_1_1requests_1_1api_a070404d5b5af08697a3937149c17a0fd}} 
+\index{pip.\_vendor.requests.api@{pip.\_vendor.requests.api}!put@{put}}
+\index{put@{put}!pip.\_vendor.requests.api@{pip.\_vendor.requests.api}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+api.\+put (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{}]{data = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends a PUT request.
+
+:param url: URL for the new :class:`Request` object.
+:param data: (optional) Dictionary, list of tuples, bytes, or file-like
+    object to send in the body of the :class:`Request`.
+:param json: (optional) A JSON serializable Python object to send in the body of the :class:`Request`.
+:param \*\*kwargs: Optional arguments that ``request`` takes.
+:return: :class:`Response <Response>` object
+:rtype: requests.Response
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1requests_1_1api_a9fdead74de86ac05699e5f4d40aa8d1d}\label{namespacepip_1_1__vendor_1_1requests_1_1api_a9fdead74de86ac05699e5f4d40aa8d1d}} 
+\index{pip.\_vendor.requests.api@{pip.\_vendor.requests.api}!request@{request}}
+\index{request@{request}!pip.\_vendor.requests.api@{pip.\_vendor.requests.api}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+requests.\+api.\+request (\begin{DoxyParamCaption}\item[{}]{method,  }\item[{}]{url,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructs and sends a :class:`Request <Request>`.
+
+:param method: method for the new :class:`Request` object: ``GET``, ``OPTIONS``, ``HEAD``, ``POST``, ``PUT``, ``PATCH``, or ``DELETE``.
+:param url: URL for the new :class:`Request` object.
+:param params: (optional) Dictionary, list of tuples or bytes to send
+    in the query string for the :class:`Request`.
+:param data: (optional) Dictionary, list of tuples, bytes, or file-like
+    object to send in the body of the :class:`Request`.
+:param json: (optional) A JSON serializable Python object to send in the body of the :class:`Request`.
+:param headers: (optional) Dictionary of HTTP Headers to send with the :class:`Request`.
+:param cookies: (optional) Dict or CookieJar object to send with the :class:`Request`.
+:param files: (optional) Dictionary of ``'name': file-like-objects`` (or ``{'name': file-tuple}``) for multipart encoding upload.
+    ``file-tuple`` can be a 2-tuple ``('filename', fileobj)``, 3-tuple ``('filename', fileobj, 'content_type')``
+    or a 4-tuple ``('filename', fileobj, 'content_type', custom_headers)``, where ``'content-type'`` is a string
+    defining the content type of the given file and ``custom_headers`` a dict-like object containing additional headers
+    to add for the file.
+:param auth: (optional) Auth tuple to enable Basic/Digest/Custom HTTP Auth.
+:param timeout: (optional) How many seconds to wait for the server to send data
+    before giving up, as a float, or a :ref:`(connect timeout, read
+    timeout) <timeouts>` tuple.
+:type timeout: float or tuple
+:param allow_redirects: (optional) Boolean. Enable/disable GET/OPTIONS/POST/PUT/PATCH/DELETE/HEAD redirection. Defaults to ``True``.
+:type allow_redirects: bool
+:param proxies: (optional) Dictionary mapping protocol to the URL of the proxy.
+:param verify: (optional) Either a boolean, in which case it controls whether we verify
+        the server's TLS certificate, or a string, in which case it must be a path
+        to a CA bundle to use. Defaults to ``True``.
+:param stream: (optional) if ``False``, the response content will be immediately downloaded.
+:param cert: (optional) if String, path to ssl client cert file (.pem). If Tuple, ('cert', 'key') pair.
+:return: :class:`Response <Response>` object
+:rtype: requests.Response
+
+Usage::
+
+  >>> import requests
+  >>> req = requests.request('GET', 'https://httpbin.org/get')
+  >>> req
+  <Response [200]>
+\end{DoxyVerb}
+ 

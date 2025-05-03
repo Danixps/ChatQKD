@@ -1,0 +1,106 @@
+\hypertarget{namespacepip_1_1__vendor_1_1rich_1_1markup}{}\doxysection{pip.\+\_\+vendor.\+rich.\+markup Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1rich_1_1markup}\index{pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1markup_1_1Tag}{Tag}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1markup_aa007724d05b5fe830351a5a0259019a7}{escape}} (str markup, \+\_\+\+Escape\+Sub\+Method \+\_\+escape=re.\+compile(r\char`\"{}(\textbackslash{}\textbackslash{}$\ast$)(\textbackslash{}\mbox{[}\mbox{[}a-\/z\#/@\mbox{]}\mbox{[}$^\wedge$\mbox{[}$\,$\mbox{]}$\ast$?\mbox{]})\char`\"{}).sub)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1markup_ad4691a2eec4a12a555d54f8abbcf0229}{render}} (str markup, Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} style=\char`\"{}\char`\"{}, bool emoji=True, Optional\mbox{[}Emoji\+Variant\mbox{]} emoji\+\_\+variant=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1markup_ab2f1c375c29524a6eb34e913aec6a4dd}{RE\+\_\+\+TAGS}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1markup_aefbc2d2d09ee8982fbd0d5989d31b1cf}{RE\+\_\+\+HANDLER}} = re.\+compile(r\char`\"{}$^\wedge$(\mbox{[}\textbackslash{}w.\mbox{]}$\ast$?)(\textbackslash{}(.$\ast$?\textbackslash{}))?\$\char`\"{})
+\item 
+list \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1markup_abb75c22fef28d376b59f2bb623cf673b}{MARKUP}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1markup_a18e895591a36ea758550ce993c532576}{grid}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1table_1_1Table}{Table}}(\char`\"{}Markup\char`\"{}, \char`\"{}Result\char`\"{}, padding=(0, 1))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1markup_aa007724d05b5fe830351a5a0259019a7}\label{namespacepip_1_1__vendor_1_1rich_1_1markup_aa007724d05b5fe830351a5a0259019a7}} 
+\index{pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}!escape@{escape}}
+\index{escape@{escape}!pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}}
+\doxysubsubsection{\texorpdfstring{escape()}{escape()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+rich.\+markup.\+escape (\begin{DoxyParamCaption}\item[{str}]{markup,  }\item[{\+\_\+\+Escape\+Sub\+Method }]{\+\_\+escape = {\ttfamily re.compile(r\char`\"{}(\textbackslash{}\textbackslash{}$\ast$)(\textbackslash{}\mbox{[}\mbox{[}a-\/z\#/@\mbox{]}\mbox{[}$^\wedge$\mbox{[}\mbox{]}$\ast$?\mbox{]})\char`\"{}).sub} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Escapes text so that it won't be interpreted as markup.
+
+Args:
+    markup (str): Content to be inserted in to markup.
+
+Returns:
+    str: Markup with square brackets escaped.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1markup_ad4691a2eec4a12a555d54f8abbcf0229}\label{namespacepip_1_1__vendor_1_1rich_1_1markup_ad4691a2eec4a12a555d54f8abbcf0229}} 
+\index{pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}!render@{render}}
+\index{render@{render}!pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}} pip.\+\_\+vendor.\+rich.\+markup.\+render (\begin{DoxyParamCaption}\item[{str}]{markup,  }\item[{Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} }]{style = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool }]{emoji = {\ttfamily True},  }\item[{Optional\mbox{[}Emoji\+Variant\mbox{]} }]{emoji\+\_\+variant = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Render console markup in to a Text instance.
+
+Args:
+    markup (str): A string containing console markup.
+    emoji (bool, optional): Also render emoji code. Defaults to True.
+
+Raises:
+    MarkupError: If there is a syntax error in the markup.
+
+Returns:
+    Text: A test instance.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1markup_a18e895591a36ea758550ce993c532576}\label{namespacepip_1_1__vendor_1_1rich_1_1markup_a18e895591a36ea758550ce993c532576}} 
+\index{pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}!grid@{grid}}
+\index{grid@{grid}!pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}}
+\doxysubsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+markup.\+grid = \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1table_1_1Table}{Table}}(\char`\"{}Markup\char`\"{}, \char`\"{}Result\char`\"{}, padding=(0, 1))}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1markup_abb75c22fef28d376b59f2bb623cf673b}\label{namespacepip_1_1__vendor_1_1rich_1_1markup_abb75c22fef28d376b59f2bb623cf673b}} 
+\index{pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}!MARKUP@{MARKUP}}
+\index{MARKUP@{MARKUP}!pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}}
+\doxysubsubsection{\texorpdfstring{MARKUP}{MARKUP}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+rich.\+markup.\+MARKUP}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [}
+\DoxyCodeLine{2         \textcolor{stringliteral}{"{}[red]Hello World[/red]"{}},}
+\DoxyCodeLine{3         \textcolor{stringliteral}{"{}[magenta]Hello [b]World[/b]"{}},}
+\DoxyCodeLine{4         \textcolor{stringliteral}{"{}[bold]Bold[italic] bold and italic [/bold]italic[/italic]"{}},}
+\DoxyCodeLine{5         \textcolor{stringliteral}{"{}Click [link=https://www.willmcgugan.com]here[/link] to visit my Blog"{}},}
+\DoxyCodeLine{6         \textcolor{stringliteral}{"{}:warning-\/emoji: [bold red blink] DANGER![/]"{}},}
+\DoxyCodeLine{7     ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1markup_aefbc2d2d09ee8982fbd0d5989d31b1cf}\label{namespacepip_1_1__vendor_1_1rich_1_1markup_aefbc2d2d09ee8982fbd0d5989d31b1cf}} 
+\index{pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}!RE\_HANDLER@{RE\_HANDLER}}
+\index{RE\_HANDLER@{RE\_HANDLER}!pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}}
+\doxysubsubsection{\texorpdfstring{RE\_HANDLER}{RE\_HANDLER}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+markup.\+RE\+\_\+\+HANDLER = re.\+compile(r\char`\"{}$^\wedge$(\mbox{[}\textbackslash{}w.\mbox{]}$\ast$?)(\textbackslash{}(.$\ast$?\textbackslash{}))?\$\char`\"{})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1markup_ab2f1c375c29524a6eb34e913aec6a4dd}\label{namespacepip_1_1__vendor_1_1rich_1_1markup_ab2f1c375c29524a6eb34e913aec6a4dd}} 
+\index{pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}!RE\_TAGS@{RE\_TAGS}}
+\index{RE\_TAGS@{RE\_TAGS}!pip.\_vendor.rich.markup@{pip.\_vendor.rich.markup}}
+\doxysubsubsection{\texorpdfstring{RE\_TAGS}{RE\_TAGS}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+markup.\+RE\+\_\+\+TAGS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  re.compile(}
+\DoxyCodeLine{2     ,}
+\DoxyCodeLine{3     re.VERBOSE,}
+\DoxyCodeLine{4 )}
+
+\end{DoxyCode}

@@ -1,0 +1,58 @@
+\hypertarget{__vendor_2distlib_2wheel_8py}{}\doxysection{Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.12/site-\/packages/pip/\+\_\+vendor/distlib/wheel.py File Reference}
+\label{__vendor_2distlib_2wheel_8py}\index{Recursos/src\_final/mi\_entorno/lib/python3.12/site-\/packages/pip/\_vendor/distlib/wheel.py@{Recursos/src\_final/mi\_entorno/lib/python3.12/site-\/packages/pip/\_vendor/distlib/wheel.py}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1wheel_1_1Mounter}{pip.\+\_\+vendor.\+distlib.\+wheel.\+Mounter}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1wheel_1_1Wheel}{pip.\+\_\+vendor.\+distlib.\+wheel.\+Wheel}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel}{pip.\+\_\+vendor.\+distlib.\+wheel}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a70ee54953b1ad8e03574d7ea87fb46ef}{pip.\+\_\+vendor.\+distlib.\+wheel.\+compatible\+\_\+tags}} ()
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_aaf9347ce75a03786eb3c5f6c35dd8bbb}{pip.\+\_\+vendor.\+distlib.\+wheel.\+is\+\_\+compatible}} (wheel, tags=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a7ad22b151a9cfd5f51f879e788460167}{pip.\+\_\+vendor.\+distlib.\+wheel.\+logger}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a204fa74804a14f7f4345f222e742c966}{pip.\+\_\+vendor.\+distlib.\+wheel.\+cache}} = None
+\item 
+string \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a66e11e720244f15ef4f75d87717333db}{pip.\+\_\+vendor.\+distlib.\+wheel.\+IMP\+\_\+\+PREFIX}} = \textquotesingle{}pp\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a45ddac32dca923ee769c9d33394a4a79}{pip.\+\_\+vendor.\+distlib.\+wheel.\+VER\+\_\+\+SUFFIX}} = sysconfig.\+get\+\_\+config\+\_\+var(\textquotesingle{}py\+\_\+version\+\_\+nodot\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a634ff33e1e4c1fd08154d468a63d3077}{pip.\+\_\+vendor.\+distlib.\+wheel.\+PYVER}} = \textquotesingle{}py\textquotesingle{} + VER\+\_\+\+SUFFIX
+\item 
+string \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a57c044b5bd278872fde5900fd1c672aa}{pip.\+\_\+vendor.\+distlib.\+wheel.\+IMPVER}} = IMP\+\_\+\+PREFIX + VER\+\_\+\+SUFFIX
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_aa7cd2e9574c483b6e672501a5e4bac71}{pip.\+\_\+vendor.\+distlib.\+wheel.\+ARCH}} = get\+\_\+platform().replace(\textquotesingle{}-\/\textquotesingle{}, \textquotesingle{}\+\_\+\textquotesingle{}).replace(\textquotesingle{}.\textquotesingle{}, \textquotesingle{}\+\_\+\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a1587adbf4be3a11d10715fa12f9ee9fa}{pip.\+\_\+vendor.\+distlib.\+wheel.\+ABI}} = sysconfig.\+get\+\_\+config\+\_\+var(\textquotesingle{}SOABI\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a1f9bbff12f1c553d5692450e00779e5c}{pip.\+\_\+vendor.\+distlib.\+wheel.\+FILENAME\+\_\+\+RE}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a4130d157f020fb1d874d2d4fe7f90145}{pip.\+\_\+vendor.\+distlib.\+wheel.\+NAME\+\_\+\+VERSION\+\_\+\+RE}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a3b17a6d59fb8e184a1a9ce9f0cbde4ad}{pip.\+\_\+vendor.\+distlib.\+wheel.\+SHEBANG\+\_\+\+RE}} = re.\+compile(br\textquotesingle{}\textbackslash{}s$\ast$\#!\mbox{[}$^\wedge$\textbackslash{}r\textbackslash{}n\mbox{]}$\ast$\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a395280bb0ac57ef7d81f73c9f038f714}{pip.\+\_\+vendor.\+distlib.\+wheel.\+SHEBANG\+\_\+\+DETAIL\+\_\+\+RE}} = re.\+compile(br\textquotesingle{}$^\wedge$(\textbackslash{}s$\ast$\#!(\char`\"{}\mbox{[}$^\wedge$\char`\"{}\mbox{]}+\char`\"{}$\vert$\textbackslash{}S+))\textbackslash{}s+(.$\ast$)\$\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a5575ecff33068f64e8cafb5f3a9c0ae5}{pip.\+\_\+vendor.\+distlib.\+wheel.\+SHEBANG\+\_\+\+PYTHON}} = b\textquotesingle{}\#!python\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_ababeeb7b924dd75c00fa90486fbed20d}{pip.\+\_\+vendor.\+distlib.\+wheel.\+SHEBANG\+\_\+\+PYTHONW}} = b\textquotesingle{}\#!pythonw\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a23c6d2886005ba4ef8af4ba8b9560c64}{pip.\+\_\+vendor.\+distlib.\+wheel.\+to\+\_\+posix}} = lambda o\+: o
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a9035dd2a8dec60721db098f5a3c015ee}{pip.\+\_\+vendor.\+distlib.\+wheel.\+imp}} = None
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1wheel_a3a3512326cadc23fc2930c6285dc1dde}{pip.\+\_\+vendor.\+distlib.\+wheel.\+COMPATIBLE\+\_\+\+TAGS}} = compatible\+\_\+tags()
+\end{DoxyCompactItemize}

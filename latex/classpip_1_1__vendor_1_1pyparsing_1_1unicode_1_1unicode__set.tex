@@ -1,0 +1,125 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+unicode.\+unicode\+\_\+set Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set}\index{pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+unicode.\+unicode\+\_\+set\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_ae9ce469534ea3dcb1b38c816e1a9383e}{printables}} (cls)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_ad7dd5733a24b3309d8fdffc2f613ff56}{alphas}} (cls)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a5200a6a84ce6f0bce091a4cc8670f356}{nums}} (cls)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a34f45ceb7ebfe08b87c2118fd2602d44}{alphanums}} (cls)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a712f4bdcad4795ece31084989841149f}{identchars}} (cls)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a383e061aa66da4d03011f330b38d97fb}{identbodychars}} (cls)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a12a9d54d8ac172adb4f9561bad93f1ee}{identifier}} (cls)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a6258281012ce0eb7b283fccabc72613b}{Unicode\+Range\+List}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A set of Unicode characters, for language-specific strings for
+``alphas``, ``nums``, ``alphanums``, and ``printables``.
+A unicode_set is defined by a list of ranges in the Unicode character
+set, in a class attribute ``_ranges``. Ranges can be specified using
+2-tuples or a 1-tuple, such as::
+
+    _ranges = [
+        (0x0020, 0x007e),
+        (0x00a0, 0x00ff),
+        (0x0100,),
+        ]
+
+Ranges are left- and right-inclusive. A 1-tuple of (x,) is treated as (x, x).
+
+A unicode set can also be defined using multiple inheritance of other unicode sets::
+
+    class CJK(Chinese, Japanese, Korean):
+        pass
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a34f45ceb7ebfe08b87c2118fd2602d44}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a34f45ceb7ebfe08b87c2118fd2602d44}} 
+\index{pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}!alphanums@{alphanums}}
+\index{alphanums@{alphanums}!pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}}
+\doxysubsubsection{\texorpdfstring{alphanums()}{alphanums()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+unicode.\+unicode\+\_\+set.\+alphanums (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}all alphanumeric characters in this range\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_ad7dd5733a24b3309d8fdffc2f613ff56}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_ad7dd5733a24b3309d8fdffc2f613ff56}} 
+\index{pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}!alphas@{alphas}}
+\index{alphas@{alphas}!pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}}
+\doxysubsubsection{\texorpdfstring{alphas()}{alphas()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+unicode.\+unicode\+\_\+set.\+alphas (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}all alphabetic characters in this range\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a383e061aa66da4d03011f330b38d97fb}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a383e061aa66da4d03011f330b38d97fb}} 
+\index{pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}!identbodychars@{identbodychars}}
+\index{identbodychars@{identbodychars}!pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}}
+\doxysubsubsection{\texorpdfstring{identbodychars()}{identbodychars()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+unicode.\+unicode\+\_\+set.\+identbodychars (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}all characters in this range that are valid identifier body characters,
+plus the digits 0-9, and · (Unicode MIDDLE DOT)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a712f4bdcad4795ece31084989841149f}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a712f4bdcad4795ece31084989841149f}} 
+\index{pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}!identchars@{identchars}}
+\index{identchars@{identchars}!pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}}
+\doxysubsubsection{\texorpdfstring{identchars()}{identchars()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+unicode.\+unicode\+\_\+set.\+identchars (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}all characters in this range that are valid identifier characters, plus underscore '_'\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a12a9d54d8ac172adb4f9561bad93f1ee}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a12a9d54d8ac172adb4f9561bad93f1ee}} 
+\index{pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}!identifier@{identifier}}
+\index{identifier@{identifier}!pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}}
+\doxysubsubsection{\texorpdfstring{identifier()}{identifier()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+unicode.\+unicode\+\_\+set.\+identifier (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}a pyparsing Word expression for an identifier using this range's definitions for
+identchars and identbodychars
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a5200a6a84ce6f0bce091a4cc8670f356}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a5200a6a84ce6f0bce091a4cc8670f356}} 
+\index{pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}!nums@{nums}}
+\index{nums@{nums}!pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}}
+\doxysubsubsection{\texorpdfstring{nums()}{nums()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+unicode.\+unicode\+\_\+set.\+nums (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}all numeric digit characters in this range\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_ae9ce469534ea3dcb1b38c816e1a9383e}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_ae9ce469534ea3dcb1b38c816e1a9383e}} 
+\index{pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}!printables@{printables}}
+\index{printables@{printables}!pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}}
+\doxysubsubsection{\texorpdfstring{printables()}{printables()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+unicode.\+unicode\+\_\+set.\+printables (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}all non-whitespace characters in this range\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a6258281012ce0eb7b283fccabc72613b}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode_1_1unicode__set_a6258281012ce0eb7b283fccabc72613b}} 
+\index{pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}!UnicodeRangeList@{UnicodeRangeList}}
+\index{UnicodeRangeList@{UnicodeRangeList}!pip.\_vendor.pyparsing.unicode.unicode\_set@{pip.\_vendor.pyparsing.unicode.unicode\_set}}
+\doxysubsubsection{\texorpdfstring{UnicodeRangeList}{UnicodeRangeList}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+unicode.\+unicode\+\_\+set.\+Unicode\+Range\+List\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pyparsing/\mbox{\hyperlink{unicode_8py}{unicode.\+py}}\end{DoxyCompactItemize}

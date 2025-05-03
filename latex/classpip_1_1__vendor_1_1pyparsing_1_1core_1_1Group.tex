@@ -1,0 +1,91 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+core.\+Group Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group}\index{pip.\_vendor.pyparsing.core.Group@{pip.\_vendor.pyparsing.core.Group}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+Group\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+Group\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group_ac68476e35be6cf4135896e9c41e60044}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement}{Parser\+Element}} \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParseElementEnhance_a447bd5fdb8e511e4939647f4d3df3433}{expr}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_ab1f11f2730e09cdc1beaad2468d1de21}{bool}} aslist=False)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group_aee8e8a396e71787a0f03ac744af642a1}{post\+Parse}} (self, instring, loc, tokenlist)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group_a1bac880a08858a39152805d64b144ce9}{save\+As\+List}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Converter to return the matched tokens as a list - useful for
+returning tokens of :class:`ZeroOrMore` and :class:`OneOrMore` expressions.
+
+The optional ``aslist`` argument when set to True will return the
+parsed tokens as a Python list instead of a pyparsing ParseResults.
+
+Example::
+
+    ident = Word(alphas)
+    num = Word(nums)
+    term = ident | num
+    func = ident + Opt(DelimitedList(term))
+    print(func.parse_string("fn a, b, 100"))
+    # -> ['fn', 'a', 'b', '100']
+
+    func = ident + Group(Opt(DelimitedList(term)))
+    print(func.parse_string("fn a, b, 100"))
+    # -> ['fn', ['a', 'b', '100']]
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group_ac68476e35be6cf4135896e9c41e60044}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group_ac68476e35be6cf4135896e9c41e60044}} 
+\index{pip.\_vendor.pyparsing.core.Group@{pip.\_vendor.pyparsing.core.Group}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pyparsing.core.Group@{pip.\_vendor.pyparsing.core.Group}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+Group.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement}{Parser\+Element}}}]{expr,  }\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_ab1f11f2730e09cdc1beaad2468d1de21}{bool}} }]{aslist = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group_aee8e8a396e71787a0f03ac744af642a1}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group_aee8e8a396e71787a0f03ac744af642a1}} 
+\index{pip.\_vendor.pyparsing.core.Group@{pip.\_vendor.pyparsing.core.Group}!postParse@{postParse}}
+\index{postParse@{postParse}!pip.\_vendor.pyparsing.core.Group@{pip.\_vendor.pyparsing.core.Group}}
+\doxysubsubsection{\texorpdfstring{postParse()}{postParse()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+Group.\+post\+Parse (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{tokenlist }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_ae278ea89191a1bd67c44928b4c5fd4fb}{pip.\+\_\+vendor.\+pyparsing.\+core.\+Parser\+Element}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group_a1bac880a08858a39152805d64b144ce9}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1Group_a1bac880a08858a39152805d64b144ce9}} 
+\index{pip.\_vendor.pyparsing.core.Group@{pip.\_vendor.pyparsing.core.Group}!saveAsList@{saveAsList}}
+\index{saveAsList@{saveAsList}!pip.\_vendor.pyparsing.core.Group@{pip.\_vendor.pyparsing.core.Group}}
+\doxysubsubsection{\texorpdfstring{saveAsList}{saveAsList}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+Group.\+save\+As\+List}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pyparsing/\mbox{\hyperlink{pyparsing_2core_8py}{core.\+py}}\end{DoxyCompactItemize}

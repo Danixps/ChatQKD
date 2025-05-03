@@ -1,0 +1,147 @@
+\hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database}{}\doxysection{pip.\+\_\+vendor.\+distlib.\+database Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1distlib_1_1database}\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1__Cache}{\+\_\+\+Cache}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath}{Distribution\+Path}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1Distribution}{Distribution}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1BaseInstalledDistribution}{Base\+Installed\+Distribution}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1InstalledDistribution}{Installed\+Distribution}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1EggInfoDistribution}{Egg\+Info\+Distribution}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DependencyGraph}{Dependency\+Graph}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_ad5cd1646c2526fe39bb39eb0c87da7b9}{make\+\_\+graph}} (dists, scheme=\textquotesingle{}default\textquotesingle{})
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_a8f519f4fa277d7754db81c4e7310c96f}{get\+\_\+dependent\+\_\+dists}} (dists, dist)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_a56612672fda608b5d09d6fe736c1270c}{get\+\_\+required\+\_\+dists}} (dists, dist)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_a31f985ce4c21501a44578697c1dd853e}{make\+\_\+dist}} (name, version, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_af347bcfaf4f42a2c197872ae66160fc7}{logger}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+string \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_a666592bfae4e4aa22e5e5fb5dee93c51}{EXPORTS\+\_\+\+FILENAME}} = \textquotesingle{}pydist-\/exports.\+json\textquotesingle{}
+\item 
+string \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_a9f360c9073af2fb3553f4b4b7e496706}{COMMANDS\+\_\+\+FILENAME}} = \textquotesingle{}pydist-\/commands.\+json\textquotesingle{}
+\item 
+tuple \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_a68b2a5df5789cbcd0caa441da43b33cf}{DIST\+\_\+\+FILES}}
+\item 
+string \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_a653be035f8adb0fe8c4e9c85874432b5}{DISTINFO\+\_\+\+EXT}} = \textquotesingle{}.dist-\/info\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_a51e6e974a0aea8f0ab182ac829c83565}{new\+\_\+dist\+\_\+class}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1InstalledDistribution}{Installed\+Distribution}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1database_a19b01881e214d52e16534949d8ee9002}{old\+\_\+dist\+\_\+class}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1EggInfoDistribution}{Egg\+Info\+Distribution}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_a8f519f4fa277d7754db81c4e7310c96f}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_a8f519f4fa277d7754db81c4e7310c96f}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!get\_dependent\_dists@{get\_dependent\_dists}}
+\index{get\_dependent\_dists@{get\_dependent\_dists}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{get\_dependent\_dists()}{get\_dependent\_dists()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+get\+\_\+dependent\+\_\+dists (\begin{DoxyParamCaption}\item[{}]{dists,  }\item[{}]{dist }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Recursively generate a list of distributions from *dists* that are
+dependent on *dist*.
+
+:param dists: a list of distributions
+:param dist: a distribution, member of *dists* for which we are interested
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_a56612672fda608b5d09d6fe736c1270c}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_a56612672fda608b5d09d6fe736c1270c}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!get\_required\_dists@{get\_required\_dists}}
+\index{get\_required\_dists@{get\_required\_dists}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{get\_required\_dists()}{get\_required\_dists()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+get\+\_\+required\+\_\+dists (\begin{DoxyParamCaption}\item[{}]{dists,  }\item[{}]{dist }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Recursively generate a list of distributions from *dists* that are
+required by *dist*.
+
+:param dists: a list of distributions
+:param dist: a distribution, member of *dists* for which we are interested
+             in finding the dependencies.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_a31f985ce4c21501a44578697c1dd853e}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_a31f985ce4c21501a44578697c1dd853e}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!make\_dist@{make\_dist}}
+\index{make\_dist@{make\_dist}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{make\_dist()}{make\_dist()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+make\+\_\+dist (\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{version,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A convenience method for making a dist given just a name and version.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_ad5cd1646c2526fe39bb39eb0c87da7b9}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_ad5cd1646c2526fe39bb39eb0c87da7b9}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!make\_graph@{make\_graph}}
+\index{make\_graph@{make\_graph}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{make\_graph()}{make\_graph()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+make\+\_\+graph (\begin{DoxyParamCaption}\item[{}]{dists,  }\item[{}]{scheme = {\ttfamily \textquotesingle{}default\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Makes a dependency graph from the given distributions.
+
+:parameter dists: a list of distributions
+:type dists: list of :class:`distutils2.database.InstalledDistribution` and
+             :class:`distutils2.database.EggInfoDistribution` instances
+:rtype: a :class:`DependencyGraph` instance
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_a9f360c9073af2fb3553f4b4b7e496706}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_a9f360c9073af2fb3553f4b4b7e496706}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!COMMANDS\_FILENAME@{COMMANDS\_FILENAME}}
+\index{COMMANDS\_FILENAME@{COMMANDS\_FILENAME}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{COMMANDS\_FILENAME}{COMMANDS\_FILENAME}}
+{\footnotesize\ttfamily string pip.\+\_\+vendor.\+distlib.\+database.\+COMMANDS\+\_\+\+FILENAME = \textquotesingle{}pydist-\/commands.\+json\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_a68b2a5df5789cbcd0caa441da43b33cf}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_a68b2a5df5789cbcd0caa441da43b33cf}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!DIST\_FILES@{DIST\_FILES}}
+\index{DIST\_FILES@{DIST\_FILES}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{DIST\_FILES}{DIST\_FILES}}
+{\footnotesize\ttfamily tuple pip.\+\_\+vendor.\+distlib.\+database.\+DIST\+\_\+\+FILES}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  (\textcolor{stringliteral}{'INSTALLER'}, METADATA\_FILENAME, \textcolor{stringliteral}{'RECORD'}, \textcolor{stringliteral}{'REQUESTED'},}
+\DoxyCodeLine{2               \textcolor{stringliteral}{'RESOURCES'}, EXPORTS\_FILENAME, \textcolor{stringliteral}{'SHARED'})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_a653be035f8adb0fe8c4e9c85874432b5}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_a653be035f8adb0fe8c4e9c85874432b5}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!DISTINFO\_EXT@{DISTINFO\_EXT}}
+\index{DISTINFO\_EXT@{DISTINFO\_EXT}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{DISTINFO\_EXT}{DISTINFO\_EXT}}
+{\footnotesize\ttfamily string pip.\+\_\+vendor.\+distlib.\+database.\+DISTINFO\+\_\+\+EXT = \textquotesingle{}.dist-\/info\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_a666592bfae4e4aa22e5e5fb5dee93c51}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_a666592bfae4e4aa22e5e5fb5dee93c51}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!EXPORTS\_FILENAME@{EXPORTS\_FILENAME}}
+\index{EXPORTS\_FILENAME@{EXPORTS\_FILENAME}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{EXPORTS\_FILENAME}{EXPORTS\_FILENAME}}
+{\footnotesize\ttfamily string pip.\+\_\+vendor.\+distlib.\+database.\+EXPORTS\+\_\+\+FILENAME = \textquotesingle{}pydist-\/exports.\+json\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_af347bcfaf4f42a2c197872ae66160fc7}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_af347bcfaf4f42a2c197872ae66160fc7}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!logger@{logger}}
+\index{logger@{logger}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+database.\+logger = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_a51e6e974a0aea8f0ab182ac829c83565}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_a51e6e974a0aea8f0ab182ac829c83565}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!new\_dist\_class@{new\_dist\_class}}
+\index{new\_dist\_class@{new\_dist\_class}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{new\_dist\_class}{new\_dist\_class}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+database.\+new\+\_\+dist\+\_\+class = \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1InstalledDistribution}{Installed\+Distribution}}}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1database_a19b01881e214d52e16534949d8ee9002}\label{namespacepip_1_1__vendor_1_1distlib_1_1database_a19b01881e214d52e16534949d8ee9002}} 
+\index{pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}!old\_dist\_class@{old\_dist\_class}}
+\index{old\_dist\_class@{old\_dist\_class}!pip.\_vendor.distlib.database@{pip.\_vendor.distlib.database}}
+\doxysubsubsection{\texorpdfstring{old\_dist\_class}{old\_dist\_class}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+database.\+old\+\_\+dist\+\_\+class = \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1EggInfoDistribution}{Egg\+Info\+Distribution}}}
+

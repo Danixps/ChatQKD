@@ -1,0 +1,41 @@
+\hypertarget{namespacepip_1_1__internal_1_1utils_1_1compatibility__tags}{}\doxysection{pip.\+\_\+internal.\+utils.\+compatibility\+\_\+tags Namespace Reference}
+\label{namespacepip_1_1__internal_1_1utils_1_1compatibility__tags}\index{pip.\_internal.utils.compatibility\_tags@{pip.\_internal.utils.compatibility\_tags}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1compatibility__tags_aac55cc282d17a5f0d220a92c543e961f}{version\+\_\+info\+\_\+to\+\_\+nodot}} (Tuple\mbox{[}int,...\mbox{]} version\+\_\+info)
+\item 
+List\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1tags_1_1Tag}{Tag}}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1compatibility__tags_ac715a4724d188dedb3dda0ff520a9b22}{get\+\_\+supported}} (Optional\mbox{[}str\mbox{]} version=None, Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} platforms=None, Optional\mbox{[}str\mbox{]} impl=None, Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} abis=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Generate and work with PEP 425 Compatibility Tags.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1compatibility__tags_ac715a4724d188dedb3dda0ff520a9b22}\label{namespacepip_1_1__internal_1_1utils_1_1compatibility__tags_ac715a4724d188dedb3dda0ff520a9b22}} 
+\index{pip.\_internal.utils.compatibility\_tags@{pip.\_internal.utils.compatibility\_tags}!get\_supported@{get\_supported}}
+\index{get\_supported@{get\_supported}!pip.\_internal.utils.compatibility\_tags@{pip.\_internal.utils.compatibility\_tags}}
+\doxysubsubsection{\texorpdfstring{get\_supported()}{get\_supported()}}
+{\footnotesize\ttfamily  List\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1tags_1_1Tag}{Tag}}\mbox{]} pip.\+\_\+internal.\+utils.\+compatibility\+\_\+tags.\+get\+\_\+supported (\begin{DoxyParamCaption}\item[{Optional\mbox{[}str\mbox{]} }]{version = {\ttfamily None},  }\item[{Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} }]{platforms = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{impl = {\ttfamily None},  }\item[{Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} }]{abis = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of supported tags for each version specified in
+`versions`.
+
+:param version: a string version, of the form "33" or "32",
+    or None. The version will be assumed to support our ABI.
+:param platform: specify a list of platforms you want valid
+    tags for, or None. If None, use the local system platform.
+:param impl: specify the exact implementation you want valid
+    tags for, or None. If None, use the local interpreter impl.
+:param abis: specify a list of abis you want valid
+    tags for, or None. If None, use the local interpreter abi.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1compatibility__tags_aac55cc282d17a5f0d220a92c543e961f}\label{namespacepip_1_1__internal_1_1utils_1_1compatibility__tags_aac55cc282d17a5f0d220a92c543e961f}} 
+\index{pip.\_internal.utils.compatibility\_tags@{pip.\_internal.utils.compatibility\_tags}!version\_info\_to\_nodot@{version\_info\_to\_nodot}}
+\index{version\_info\_to\_nodot@{version\_info\_to\_nodot}!pip.\_internal.utils.compatibility\_tags@{pip.\_internal.utils.compatibility\_tags}}
+\doxysubsubsection{\texorpdfstring{version\_info\_to\_nodot()}{version\_info\_to\_nodot()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+utils.\+compatibility\+\_\+tags.\+version\+\_\+info\+\_\+to\+\_\+nodot (\begin{DoxyParamCaption}\item[{Tuple\mbox{[}int, ...\mbox{]}}]{version\+\_\+info }\end{DoxyParamCaption})}
+

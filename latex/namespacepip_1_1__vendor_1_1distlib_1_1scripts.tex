@@ -1,0 +1,63 @@
+\hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1scripts}{}\doxysection{pip.\+\_\+vendor.\+distlib.\+scripts Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1distlib_1_1scripts}\index{pip.\_vendor.distlib.scripts@{pip.\_vendor.distlib.scripts}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1scripts_1_1ScriptMaker}{Script\+Maker}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1scripts_ae651fa77f908bd1843f5654ed6493cd6}{enquote\+\_\+executable}} (executable)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1scripts_af65dedd6d642e54a96515997ae5b0290}{logger}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1scripts_a96eb6da81ea43cebf358284fa66edfc1}{FIRST\+\_\+\+LINE\+\_\+\+RE}} = re.\+compile(b\textquotesingle{}$^\wedge$\#!.$\ast$pythonw?\mbox{[}0-\/9.\mbox{]}$\ast$(\mbox{[} \textbackslash{}t\mbox{]}.$\ast$)?\$\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespacepip_1_1__vendor_1_1distlib_1_1scripts_af604458ec28db0cdf00f4c8dabce6814}{SCRIPT\+\_\+\+TEMPLATE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1scripts_ae651fa77f908bd1843f5654ed6493cd6}\label{namespacepip_1_1__vendor_1_1distlib_1_1scripts_ae651fa77f908bd1843f5654ed6493cd6}} 
+\index{pip.\_vendor.distlib.scripts@{pip.\_vendor.distlib.scripts}!enquote\_executable@{enquote\_executable}}
+\index{enquote\_executable@{enquote\_executable}!pip.\_vendor.distlib.scripts@{pip.\_vendor.distlib.scripts}}
+\doxysubsubsection{\texorpdfstring{enquote\_executable()}{enquote\_executable()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+scripts.\+enquote\+\_\+executable (\begin{DoxyParamCaption}\item[{}]{executable }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1scripts_a96eb6da81ea43cebf358284fa66edfc1}\label{namespacepip_1_1__vendor_1_1distlib_1_1scripts_a96eb6da81ea43cebf358284fa66edfc1}} 
+\index{pip.\_vendor.distlib.scripts@{pip.\_vendor.distlib.scripts}!FIRST\_LINE\_RE@{FIRST\_LINE\_RE}}
+\index{FIRST\_LINE\_RE@{FIRST\_LINE\_RE}!pip.\_vendor.distlib.scripts@{pip.\_vendor.distlib.scripts}}
+\doxysubsubsection{\texorpdfstring{FIRST\_LINE\_RE}{FIRST\_LINE\_RE}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+scripts.\+FIRST\+\_\+\+LINE\+\_\+\+RE = re.\+compile(b\textquotesingle{}$^\wedge$\#!.$\ast$pythonw?\mbox{[}0-\/9.\mbox{]}$\ast$(\mbox{[} \textbackslash{}t\mbox{]}.$\ast$)?\$\textquotesingle{})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1scripts_af65dedd6d642e54a96515997ae5b0290}\label{namespacepip_1_1__vendor_1_1distlib_1_1scripts_af65dedd6d642e54a96515997ae5b0290}} 
+\index{pip.\_vendor.distlib.scripts@{pip.\_vendor.distlib.scripts}!logger@{logger}}
+\index{logger@{logger}!pip.\_vendor.distlib.scripts@{pip.\_vendor.distlib.scripts}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+scripts.\+logger = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1distlib_1_1scripts_af604458ec28db0cdf00f4c8dabce6814}\label{namespacepip_1_1__vendor_1_1distlib_1_1scripts_af604458ec28db0cdf00f4c8dabce6814}} 
+\index{pip.\_vendor.distlib.scripts@{pip.\_vendor.distlib.scripts}!SCRIPT\_TEMPLATE@{SCRIPT\_TEMPLATE}}
+\index{SCRIPT\_TEMPLATE@{SCRIPT\_TEMPLATE}!pip.\_vendor.distlib.scripts@{pip.\_vendor.distlib.scripts}}
+\doxysubsubsection{\texorpdfstring{SCRIPT\_TEMPLATE}{SCRIPT\_TEMPLATE}}
+{\footnotesize\ttfamily string pip.\+\_\+vendor.\+distlib.\+scripts.\+SCRIPT\+\_\+\+TEMPLATE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \textcolor{stringliteral}{r'''\# -\/*-\/ coding: utf-\/8 -\/*-\/}}
+\DoxyCodeLine{2 \textcolor{stringliteral}{import re}}
+\DoxyCodeLine{3 \textcolor{stringliteral}{import sys}}
+\DoxyCodeLine{4 \textcolor{stringliteral}{from \%(module)s import \%(import\_name)s}}
+\DoxyCodeLine{5 \textcolor{stringliteral}{if \_\_name\_\_ == '\_\_main\_\_':}}
+\DoxyCodeLine{6 \textcolor{stringliteral}{    sys.argv[0] = re.sub(r'(-\/script\(\backslash\).pyw|\(\backslash\).exe)?\$', '', sys.argv[0])}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{    sys.exit(\%(func)s())}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{'''}}
+
+\end{DoxyCode}

@@ -1,0 +1,293 @@
+\hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet}{}\doxysection{pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set Class Reference}
+\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet}\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_aee67aa919c47a87f7c44fa8c53513388}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_adf875e5065f4e84a53bb40c44a05fd9b}{entries}}=None)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a10dbfcb72bfdc7c7b16d764c7002a87d}{add\+\_\+entry}} (self, entry)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a90527276e04a3229adef53fafdd40402}{\+\_\+\+\_\+contains\+\_\+\+\_\+}} (self, dist)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a08fa1c61ff31ce49ee1a58cfc02fd315}{find}} (self, req)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a27ffb04e9ea00f4300200e68f68f8d86}{iter\+\_\+entry\+\_\+points}} (self, group, name=None)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a64f8503c4eb0c05db9faf1bc62c1a21f}{run\+\_\+script}} (self, requires, script\+\_\+name)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a947f4a415da2a5e3c79796d252f3c71c}{\+\_\+\+\_\+iter\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a721315d2a4a0a3ead71bf8d1b83261ce}{add}} (self, dist, entry=None, insert=True, replace=False)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a3ec2a2ca189616895b93a5a7820d0e94}{resolve}} (self, requirements, env=None, installer=None, replace\+\_\+conflicting=False, extras=None)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a60d3acb4eda7ccfc93f14003ea0bca90}{find\+\_\+plugins}} (self, plugin\+\_\+env, full\+\_\+env=None, installer=None, fallback=True)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a3e06498f30579d47e25fffe036206a80}{require}} (self, $\ast$requirements)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a1e0b3684618e31c481f4adcb5736c73f}{subscribe}} (self, callback, existing=True)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a02db0d73e2f0953c1ef796c394ef0d06}{\+\_\+\+\_\+getstate\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_adc539a57ffafc26b114b8e75d84459c0}{\+\_\+\+\_\+setstate\+\_\+\+\_\+}} (self, e\+\_\+k\+\_\+b\+\_\+n\+\_\+c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_adf875e5065f4e84a53bb40c44a05fd9b}{entries}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a7efc04fc51d0be5b9c298f804728826b}{entry\+\_\+keys}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a76d4666c9b3e10cacb5dfc4b3d8b4d6d}{by\+\_\+key}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a415aef9cefec2abdec551ef6031d48d0}{normalized\+\_\+to\+\_\+canonical\+\_\+keys}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a209d40caf76c505bfec1f4c1ea1717a3}{callbacks}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A collection of active distributions on sys.path (or a similar list)\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_aee67aa919c47a87f7c44fa8c53513388}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_aee67aa919c47a87f7c44fa8c53513388}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{entries = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A collection of active distributions on sys.path (or a similar list)\end{DoxyVerb}
+
+
+\begin{DoxyVerb}Create working set from list of path entries (default=sys.path)\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a90527276e04a3229adef53fafdd40402}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a90527276e04a3229adef53fafdd40402}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!\_\_contains\_\_@{\_\_contains\_\_}}
+\index{\_\_contains\_\_@{\_\_contains\_\_}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{\_\_contains\_\_()}{\_\_contains\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+\_\+\+\_\+contains\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dist }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}True if `dist` is the active distribution for its project\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a02db0d73e2f0953c1ef796c394ef0d06}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a02db0d73e2f0953c1ef796c394ef0d06}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!\_\_getstate\_\_@{\_\_getstate\_\_}}
+\index{\_\_getstate\_\_@{\_\_getstate\_\_}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{\_\_getstate\_\_()}{\_\_getstate\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+\_\+\+\_\+getstate\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a947f4a415da2a5e3c79796d252f3c71c}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a947f4a415da2a5e3c79796d252f3c71c}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!\_\_iter\_\_@{\_\_iter\_\_}}
+\index{\_\_iter\_\_@{\_\_iter\_\_}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{\_\_iter\_\_()}{\_\_iter\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+\_\+\+\_\+iter\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Yield distributions for non-duplicate projects in the working set
+
+The yield order is the order in which the items' path entries were
+added to the working set.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_adc539a57ffafc26b114b8e75d84459c0}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_adc539a57ffafc26b114b8e75d84459c0}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!\_\_setstate\_\_@{\_\_setstate\_\_}}
+\index{\_\_setstate\_\_@{\_\_setstate\_\_}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{\_\_setstate\_\_()}{\_\_setstate\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+\_\+\+\_\+setstate\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{e\+\_\+k\+\_\+b\+\_\+n\+\_\+c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a721315d2a4a0a3ead71bf8d1b83261ce}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a721315d2a4a0a3ead71bf8d1b83261ce}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!add@{add}}
+\index{add@{add}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+add (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dist,  }\item[{}]{entry = {\ttfamily None},  }\item[{}]{insert = {\ttfamily True},  }\item[{}]{replace = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add `dist` to working set, associated with `entry`
+
+If `entry` is unspecified, it defaults to the ``.location`` of `dist`.
+On exit from this routine, `entry` is added to the end of the working
+set's ``.entries`` (if it wasn't already present).
+
+`dist` is only added to the working set if it's for a project that
+doesn't already have a distribution in the set, unless `replace=True`.
+If it's added, any callbacks registered with the ``subscribe()`` method
+will be called.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a10dbfcb72bfdc7c7b16d764c7002a87d}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a10dbfcb72bfdc7c7b16d764c7002a87d}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!add\_entry@{add\_entry}}
+\index{add\_entry@{add\_entry}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{add\_entry()}{add\_entry()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+add\+\_\+entry (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{entry }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add a path item to ``.entries``, finding any distributions on it
+
+``find_distributions(entry, True)`` is used to find distributions
+corresponding to the path entry, and they are added.  `entry` is
+always appended to ``.entries``, even if it is already present.
+(This is because ``sys.path`` can contain the same value more than
+once, and the ``.entries`` of the ``sys.path`` WorkingSet should always
+equal ``sys.path``.)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a08fa1c61ff31ce49ee1a58cfc02fd315}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a08fa1c61ff31ce49ee1a58cfc02fd315}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!find@{find}}
+\index{find@{find}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+find (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{req }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find a distribution matching requirement `req`
+
+If there is an active distribution for the requested project, this
+returns it as long as it meets the version requirement specified by
+`req`.  But, if there is an active distribution for the project and it
+does *not* meet the `req` requirement, ``VersionConflict`` is raised.
+If there is no active distribution for the requested project, ``None``
+is returned.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a60d3acb4eda7ccfc93f14003ea0bca90}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a60d3acb4eda7ccfc93f14003ea0bca90}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!find\_plugins@{find\_plugins}}
+\index{find\_plugins@{find\_plugins}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{find\_plugins()}{find\_plugins()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+find\+\_\+plugins (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{plugin\+\_\+env,  }\item[{}]{full\+\_\+env = {\ttfamily None},  }\item[{}]{installer = {\ttfamily None},  }\item[{}]{fallback = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find all activatable distributions in `plugin_env`
+
+Example usage::
+
+    distributions, errors = working_set.find_plugins(
+        Environment(plugin_dirlist)
+    )
+    # add plugins+libs to sys.path
+    map(working_set.add, distributions)
+    # display errors
+    print('Could not load', errors)
+
+The `plugin_env` should be an ``Environment`` instance that contains
+only distributions that are in the project's "plugin directory" or
+directories. The `full_env`, if supplied, should be an ``Environment``
+contains all currently-available distributions.  If `full_env` is not
+supplied, one is created automatically from the ``WorkingSet`` this
+method is called on, which will typically mean that every directory on
+``sys.path`` will be scanned for distributions.
+
+`installer` is a standard installer callback as used by the
+``resolve()`` method. The `fallback` flag indicates whether we should
+attempt to resolve older versions of a plugin if the newest version
+cannot be resolved.
+
+This method returns a 2-tuple: (`distributions`, `error_info`), where
+`distributions` is a list of the distributions found in `plugin_env`
+that were loadable, along with any other distributions that are needed
+to resolve their dependencies.  `error_info` is a dictionary mapping
+unloadable plugin distributions to an exception instance describing the
+error that occurred. Usually this will be a ``DistributionNotFound`` or
+``VersionConflict`` instance.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a27ffb04e9ea00f4300200e68f68f8d86}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a27ffb04e9ea00f4300200e68f68f8d86}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!iter\_entry\_points@{iter\_entry\_points}}
+\index{iter\_entry\_points@{iter\_entry\_points}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{iter\_entry\_points()}{iter\_entry\_points()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+iter\+\_\+entry\+\_\+points (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{group,  }\item[{}]{name = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Yield entry point objects from `group` matching `name`
+
+If `name` is None, yields all entry points in `group` from all
+distributions in the working set, otherwise only ones matching
+both `group` and `name` are yielded (in distribution order).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a3e06498f30579d47e25fffe036206a80}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a3e06498f30579d47e25fffe036206a80}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!require@{require}}
+\index{require@{require}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{require()}{require()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+require (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{requirements }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ensure that distributions matching `requirements` are activated
+
+`requirements` must be a string or a (possibly-nested) sequence
+thereof, specifying the distributions and versions required.  The
+return value is a sequence of the distributions that needed to be
+activated to fulfill the requirements; all relevant distributions are
+included, even if they were already activated in this working set.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a3ec2a2ca189616895b93a5a7820d0e94}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a3ec2a2ca189616895b93a5a7820d0e94}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!resolve@{resolve}}
+\index{resolve@{resolve}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+resolve (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{requirements,  }\item[{}]{env = {\ttfamily None},  }\item[{}]{installer = {\ttfamily None},  }\item[{}]{replace\+\_\+conflicting = {\ttfamily False},  }\item[{}]{extras = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}List all distributions needed to (recursively) meet `requirements`
+
+`requirements` must be a sequence of ``Requirement`` objects.  `env`,
+if supplied, should be an ``Environment`` instance.  If
+not supplied, it defaults to all distributions available within any
+entry or distribution in the working set.  `installer`, if supplied,
+will be invoked with each requirement that cannot be met by an
+already-installed distribution; it should return a ``Distribution`` or
+``None``.
+
+Unless `replace_conflicting=True`, raises a VersionConflict exception
+if
+any requirements are found on the path that have the correct name but
+the wrong version.  Otherwise, if an `installer` is supplied it will be
+invoked to obtain the correct version of the requirement and activate
+it.
+
+`extras` is a list of the extras to be used with these requirements.
+This is important because extra requirements may look like `my_req;
+extra = "my_extra"`, which would otherwise be interpreted as a purely
+optional requirement.  Instead, we want to be able to assert that these
+requirements are truly required.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a64f8503c4eb0c05db9faf1bc62c1a21f}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a64f8503c4eb0c05db9faf1bc62c1a21f}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!run\_script@{run\_script}}
+\index{run\_script@{run\_script}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{run\_script()}{run\_script()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+run\+\_\+script (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{requires,  }\item[{}]{script\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Locate distribution for `requires` and run `script_name` script\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a1e0b3684618e31c481f4adcb5736c73f}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a1e0b3684618e31c481f4adcb5736c73f}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!subscribe@{subscribe}}
+\index{subscribe@{subscribe}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+subscribe (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{callback,  }\item[{}]{existing = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Invoke `callback` for all distributions
+
+If `existing=True` (default),
+call on all existing ones, as well.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a76d4666c9b3e10cacb5dfc4b3d8b4d6d}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a76d4666c9b3e10cacb5dfc4b3d8b4d6d}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!by\_key@{by\_key}}
+\index{by\_key@{by\_key}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{by\_key}{by\_key}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+by\+\_\+key}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a209d40caf76c505bfec1f4c1ea1717a3}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a209d40caf76c505bfec1f4c1ea1717a3}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!callbacks@{callbacks}}
+\index{callbacks@{callbacks}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{callbacks}{callbacks}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+callbacks}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_adf875e5065f4e84a53bb40c44a05fd9b}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_adf875e5065f4e84a53bb40c44a05fd9b}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!entries@{entries}}
+\index{entries@{entries}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{entries}{entries}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+entries}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a7efc04fc51d0be5b9c298f804728826b}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a7efc04fc51d0be5b9c298f804728826b}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!entry\_keys@{entry\_keys}}
+\index{entry\_keys@{entry\_keys}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{entry\_keys}{entry\_keys}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+entry\+\_\+keys}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a415aef9cefec2abdec551ef6031d48d0}\label{classpip_1_1__vendor_1_1pkg__resources_1_1WorkingSet_a415aef9cefec2abdec551ef6031d48d0}} 
+\index{pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}!normalized\_to\_canonical\_keys@{normalized\_to\_canonical\_keys}}
+\index{normalized\_to\_canonical\_keys@{normalized\_to\_canonical\_keys}!pip.\_vendor.pkg\_resources.WorkingSet@{pip.\_vendor.pkg\_resources.WorkingSet}}
+\doxysubsubsection{\texorpdfstring{normalized\_to\_canonical\_keys}{normalized\_to\_canonical\_keys}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pkg\+\_\+resources.\+Working\+Set.\+normalized\+\_\+to\+\_\+canonical\+\_\+keys}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pkg\+\_\+resources/\mbox{\hyperlink{__vendor_2pkg__resources_2____init_____8py}{\+\_\+\+\_\+init\+\_\+\+\_\+.\+py}}\end{DoxyCompactItemize}

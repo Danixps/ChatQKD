@@ -1,0 +1,81 @@
+\hypertarget{namespacepip_1_1__internal_1_1locations_1_1base}{}\doxysection{pip.\+\_\+internal.\+locations.\+base Namespace Reference}
+\label{namespacepip_1_1__internal_1_1locations_1_1base}\index{pip.\_internal.locations.base@{pip.\_internal.locations.base}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}} \mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_aa6a0cb09f9b0d74683c251409f4ff456}{get\+\_\+major\+\_\+minor\+\_\+version}} ()
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}} \mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_a82393276635e5704a67332d7dac4deec}{change\+\_\+root}} (\mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}} new\+\_\+root, \mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}} pathname)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}} \mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_a0a7999ea17a16f9f0e7cf3fc625182a5}{get\+\_\+src\+\_\+prefix}} ()
+\item 
+bool \mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_a4875831a8e84371a0ce768a879577cb1}{is\+\_\+osx\+\_\+framework}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_a9560ef3b9092e974dbb8246a86cd6ed3}{USER\+\_\+\+CACHE\+\_\+\+DIR}} = appdirs.\+user\+\_\+cache\+\_\+dir(\char`\"{}pip\char`\"{})
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_a40dffd9a1453f8ce97cbd16e4a7ab1d8}{user\+\_\+site}} = site.\+USER\+\_\+\+SITE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1base_a82393276635e5704a67332d7dac4deec}\label{namespacepip_1_1__internal_1_1locations_1_1base_a82393276635e5704a67332d7dac4deec}} 
+\index{pip.\_internal.locations.base@{pip.\_internal.locations.base}!change\_root@{change\_root}}
+\index{change\_root@{change\_root}!pip.\_internal.locations.base@{pip.\_internal.locations.base}}
+\doxysubsubsection{\texorpdfstring{change\_root()}{change\_root()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}} pip.\+\_\+internal.\+locations.\+base.\+change\+\_\+root (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}}}]{new\+\_\+root,  }\item[{\mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}}}]{pathname }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return 'pathname' with 'new_root' prepended.
+
+If 'pathname' is relative, this is equivalent to os.path.join(new_root, pathname).
+Otherwise, it requires making 'pathname' relative and then joining the
+two, which is tricky on DOS/Windows and Mac OS.
+
+This is borrowed from Python's standard library's distutils module.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1base_aa6a0cb09f9b0d74683c251409f4ff456}\label{namespacepip_1_1__internal_1_1locations_1_1base_aa6a0cb09f9b0d74683c251409f4ff456}} 
+\index{pip.\_internal.locations.base@{pip.\_internal.locations.base}!get\_major\_minor\_version@{get\_major\_minor\_version}}
+\index{get\_major\_minor\_version@{get\_major\_minor\_version}!pip.\_internal.locations.base@{pip.\_internal.locations.base}}
+\doxysubsubsection{\texorpdfstring{get\_major\_minor\_version()}{get\_major\_minor\_version()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}} pip.\+\_\+internal.\+locations.\+base.\+get\+\_\+major\+\_\+minor\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the major-minor version of the current Python as a string, e.g.
+"3.7" or "3.10".
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1base_a0a7999ea17a16f9f0e7cf3fc625182a5}\label{namespacepip_1_1__internal_1_1locations_1_1base_a0a7999ea17a16f9f0e7cf3fc625182a5}} 
+\index{pip.\_internal.locations.base@{pip.\_internal.locations.base}!get\_src\_prefix@{get\_src\_prefix}}
+\index{get\_src\_prefix@{get\_src\_prefix}!pip.\_internal.locations.base@{pip.\_internal.locations.base}}
+\doxysubsubsection{\texorpdfstring{get\_src\_prefix()}{get\_src\_prefix()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}{str}} pip.\+\_\+internal.\+locations.\+base.\+get\+\_\+src\+\_\+prefix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1base_a4875831a8e84371a0ce768a879577cb1}\label{namespacepip_1_1__internal_1_1locations_1_1base_a4875831a8e84371a0ce768a879577cb1}} 
+\index{pip.\_internal.locations.base@{pip.\_internal.locations.base}!is\_osx\_framework@{is\_osx\_framework}}
+\index{is\_osx\_framework@{is\_osx\_framework}!pip.\_internal.locations.base@{pip.\_internal.locations.base}}
+\doxysubsubsection{\texorpdfstring{is\_osx\_framework()}{is\_osx\_framework()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+locations.\+base.\+is\+\_\+osx\+\_\+framework (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}\label{namespacepip_1_1__internal_1_1locations_1_1base_ab10217b0d5244f215022369b2fa53797}} 
+\index{pip.\_internal.locations.base@{pip.\_internal.locations.base}!str@{str}}
+\index{str@{str}!pip.\_internal.locations.base@{pip.\_internal.locations.base}}
+\doxysubsubsection{\texorpdfstring{str}{str}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+locations.\+base.\+str}
+
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1base_a9560ef3b9092e974dbb8246a86cd6ed3}\label{namespacepip_1_1__internal_1_1locations_1_1base_a9560ef3b9092e974dbb8246a86cd6ed3}} 
+\index{pip.\_internal.locations.base@{pip.\_internal.locations.base}!USER\_CACHE\_DIR@{USER\_CACHE\_DIR}}
+\index{USER\_CACHE\_DIR@{USER\_CACHE\_DIR}!pip.\_internal.locations.base@{pip.\_internal.locations.base}}
+\doxysubsubsection{\texorpdfstring{USER\_CACHE\_DIR}{USER\_CACHE\_DIR}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+locations.\+base.\+USER\+\_\+\+CACHE\+\_\+\+DIR = appdirs.\+user\+\_\+cache\+\_\+dir(\char`\"{}pip\char`\"{})}
+
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1base_a40dffd9a1453f8ce97cbd16e4a7ab1d8}\label{namespacepip_1_1__internal_1_1locations_1_1base_a40dffd9a1453f8ce97cbd16e4a7ab1d8}} 
+\index{pip.\_internal.locations.base@{pip.\_internal.locations.base}!user\_site@{user\_site}}
+\index{user\_site@{user\_site}!pip.\_internal.locations.base@{pip.\_internal.locations.base}}
+\doxysubsubsection{\texorpdfstring{user\_site}{user\_site}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+locations.\+base.\+user\+\_\+site = site.\+USER\+\_\+\+SITE}
+

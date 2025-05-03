@@ -1,0 +1,245 @@
+\hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter}{}\doxysection{pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter Class Reference}
+\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter}\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ae64dbeb7fb5ff70529132b91326c6ffd}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a9750fa342ff1b56d411e46463b5cace2}{options}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ac6fb80f9770e48bdf351c4119e4c0416}{format\+\_\+unencoded}} (self, tokensource, outfile)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a81b8d1b246841f7e70f293ade0cfa670}{nowrap}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a58611ad381975e039ecda86a764b61f7}{fontfamily}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a4aa0b9711c32c8176cf14bbcbed4c272}{fontsize}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a4137cdb99084d504167da7620ef273e2}{xoffset}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ab67d45bd8336efb43d2620355afc9d06}{yoffset}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ab4987f0534a11625c1368d1d707cb16a}{ystep}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a463882e765dfcb3d45c20d180b1df687}{spacehack}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ae630fb1c9ad7eb4850c5e42ba8b979c7}{linenos}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a69617a87a5a0d14424a4ad32d3553fb3}{linenostart}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ae139d31d96ae6f36434fec8d5f53f7cb}{linenostep}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a2ed49a6a627215b3269d7076dea3a7ee}{linenowidth}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a987c483fd8cdd1cc1a30591e773b1540}{name}} = \textquotesingle{}SVG\textquotesingle{}
+\item 
+list \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_aa84217b1e346bfd83119ba0a00a8dc74}{aliases}} = \mbox{[}\textquotesingle{}svg\textquotesingle{}\mbox{]}
+\item 
+list \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a940b42289a262ecd620d43feb2e9ec2e}{filenames}} = \mbox{[}\textquotesingle{}$\ast$.svg\textquotesingle{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Format tokens as an SVG graphics file.  This formatter is still experimental.
+Each line of code is a ``<text>`` element with explicit ``x`` and ``y``
+coordinates containing ``<tspan>`` elements with the individual token styles.
+
+By default, this formatter outputs a full SVG document including doctype
+declaration and the ``<svg>`` root element.
+
+.. versionadded:: 0.9
+
+Additional options accepted:
+
+`nowrap`
+    Don't wrap the SVG ``<text>`` elements in ``<svg><g>`` elements and
+    don't add a XML declaration and a doctype.  If true, the `fontfamily`
+    and `fontsize` options are ignored.  Defaults to ``False``.
+
+`fontfamily`
+    The value to give the wrapping ``<g>`` element's ``font-family``
+    attribute, defaults to ``"monospace"``.
+
+`fontsize`
+    The value to give the wrapping ``<g>`` element's ``font-size``
+    attribute, defaults to ``"14px"``.
+
+`linenos`
+    If ``True``, add line numbers (default: ``False``).
+
+`linenostart`
+    The line number for the first line (default: ``1``).
+
+`linenostep`
+    If set to a number n > 1, only every nth line number is printed.
+    
+`linenowidth`
+    Maximum width devoted to line numbers (default: ``3*ystep``, sufficient
+    for up to 4-digit line numbers. Increase width for longer code blocks).  
+    
+`xoffset`
+    Starting offset in X direction, defaults to ``0``.
+
+`yoffset`
+    Starting offset in Y direction, defaults to the font size if it is given
+    in pixels, or ``20`` else.  (This is necessary since text coordinates
+    refer to the text baseline, not the top edge.)
+
+`ystep`
+    Offset to add to the Y coordinate for each subsequent line.  This should
+    roughly be the text size plus 5.  It defaults to that value if the text
+    size is given in pixels, or ``25`` else.
+
+`spacehack`
+    Convert spaces in the source to ``&#160;``, which are non-breaking
+    spaces.  SVG provides the ``xml:space`` attribute to control how
+    whitespace inside tags is handled, in theory, the ``preserve`` value
+    could be used to keep all whitespace as-is.  However, many current SVG
+    viewers don't obey that rule, so this option is provided as a workaround
+    and defaults to ``True``.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ae64dbeb7fb5ff70529132b91326c6ffd}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ae64dbeb7fb5ff70529132b91326c6ffd}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}As with lexers, this constructor takes arbitrary optional arguments,
+and if you override it, you should first process your own options, then
+call the base class implementation.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1formatter_1_1Formatter_a4d4129ec27422a1f72011427e29ffcec}{pip.\+\_\+vendor.\+pygments.\+formatter.\+Formatter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ac6fb80f9770e48bdf351c4119e4c0416}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ac6fb80f9770e48bdf351c4119e4c0416}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!format\_unencoded@{format\_unencoded}}
+\index{format\_unencoded@{format\_unencoded}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{format\_unencoded()}{format\_unencoded()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+format\+\_\+unencoded (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tokensource,  }\item[{}]{outfile }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Format ``tokensource``, an iterable of ``(tokentype, tokenstring)``
+tuples and write it into ``outfile``.
+
+For our implementation we put all lines in their own 'line group'.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_aa84217b1e346bfd83119ba0a00a8dc74}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_aa84217b1e346bfd83119ba0a00a8dc74}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!aliases@{aliases}}
+\index{aliases@{aliases}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{aliases}{aliases}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+aliases = \mbox{[}\textquotesingle{}svg\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a940b42289a262ecd620d43feb2e9ec2e}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a940b42289a262ecd620d43feb2e9ec2e}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!filenames@{filenames}}
+\index{filenames@{filenames}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{filenames}{filenames}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+filenames = \mbox{[}\textquotesingle{}$\ast$.svg\textquotesingle{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a58611ad381975e039ecda86a764b61f7}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a58611ad381975e039ecda86a764b61f7}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!fontfamily@{fontfamily}}
+\index{fontfamily@{fontfamily}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{fontfamily}{fontfamily}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+fontfamily}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a4aa0b9711c32c8176cf14bbcbed4c272}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a4aa0b9711c32c8176cf14bbcbed4c272}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!fontsize@{fontsize}}
+\index{fontsize@{fontsize}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{fontsize}{fontsize}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+fontsize}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ae630fb1c9ad7eb4850c5e42ba8b979c7}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ae630fb1c9ad7eb4850c5e42ba8b979c7}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!linenos@{linenos}}
+\index{linenos@{linenos}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{linenos}{linenos}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+linenos}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a69617a87a5a0d14424a4ad32d3553fb3}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a69617a87a5a0d14424a4ad32d3553fb3}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!linenostart@{linenostart}}
+\index{linenostart@{linenostart}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{linenostart}{linenostart}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+linenostart}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ae139d31d96ae6f36434fec8d5f53f7cb}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ae139d31d96ae6f36434fec8d5f53f7cb}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!linenostep@{linenostep}}
+\index{linenostep@{linenostep}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{linenostep}{linenostep}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+linenostep}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a2ed49a6a627215b3269d7076dea3a7ee}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a2ed49a6a627215b3269d7076dea3a7ee}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!linenowidth@{linenowidth}}
+\index{linenowidth@{linenowidth}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{linenowidth}{linenowidth}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+linenowidth}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a987c483fd8cdd1cc1a30591e773b1540}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a987c483fd8cdd1cc1a30591e773b1540}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!name@{name}}
+\index{name@{name}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+name = \textquotesingle{}SVG\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a81b8d1b246841f7e70f293ade0cfa670}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a81b8d1b246841f7e70f293ade0cfa670}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!nowrap@{nowrap}}
+\index{nowrap@{nowrap}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{nowrap}{nowrap}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+nowrap}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a463882e765dfcb3d45c20d180b1df687}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a463882e765dfcb3d45c20d180b1df687}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!spacehack@{spacehack}}
+\index{spacehack@{spacehack}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{spacehack}{spacehack}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+spacehack}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a4137cdb99084d504167da7620ef273e2}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_a4137cdb99084d504167da7620ef273e2}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!xoffset@{xoffset}}
+\index{xoffset@{xoffset}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{xoffset}{xoffset}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+xoffset}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ab67d45bd8336efb43d2620355afc9d06}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ab67d45bd8336efb43d2620355afc9d06}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!yoffset@{yoffset}}
+\index{yoffset@{yoffset}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{yoffset}{yoffset}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+yoffset}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ab4987f0534a11625c1368d1d707cb16a}\label{classpip_1_1__vendor_1_1pygments_1_1formatters_1_1svg_1_1SvgFormatter_ab4987f0534a11625c1368d1d707cb16a}} 
+\index{pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}!ystep@{ystep}}
+\index{ystep@{ystep}!pip.\_vendor.pygments.formatters.svg.SvgFormatter@{pip.\_vendor.pygments.formatters.svg.SvgFormatter}}
+\doxysubsubsection{\texorpdfstring{ystep}{ystep}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+formatters.\+svg.\+Svg\+Formatter.\+ystep}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pygments/formatters/\mbox{\hyperlink{svg_8py}{svg.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,96 @@
+\hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter}{}\doxysection{pip.\+\_\+vendor.\+pygments.\+filters.\+Gobble\+Filter Class Reference}
+\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter}\index{pip.\_vendor.pygments.filters.GobbleFilter@{pip.\_vendor.pygments.filters.GobbleFilter}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pygments.\+filters.\+Gobble\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pygments.\+filters.\+Gobble\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_aa27780c9219a1c1124c9df0e620cb163}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a03e1be4af2e18f9d33c21efb2190784b}{options}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_adfeb35963c596446c91766304954401d}{gobble}} (self, value, left)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_ac773713a413a4d61c51fe238cdaec7ed}{filter}} (self, lexer, stream)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_a4091a998444f353db620925a72a806c5}{n}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Gobbles source code lines (eats initial characters).
+
+This filter drops the first ``n`` characters off every line of code.  This
+may be useful when the source code fed to the lexer is indented by a fixed
+amount of space that isn't desired in the output.
+
+Options accepted:
+
+`n` : int
+   The number of characters to gobble.
+
+.. versionadded:: 1.2
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_aa27780c9219a1c1124c9df0e620cb163}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_aa27780c9219a1c1124c9df0e620cb163}} 
+\index{pip.\_vendor.pygments.filters.GobbleFilter@{pip.\_vendor.pygments.filters.GobbleFilter}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pygments.filters.GobbleFilter@{pip.\_vendor.pygments.filters.GobbleFilter}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+filters.\+Gobble\+Filter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a271e8db1f91ca7e179cf41a5f1a7df12}{pip.\+\_\+vendor.\+pygments.\+filter.\+Filter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_ac773713a413a4d61c51fe238cdaec7ed}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_ac773713a413a4d61c51fe238cdaec7ed}} 
+\index{pip.\_vendor.pygments.filters.GobbleFilter@{pip.\_vendor.pygments.filters.GobbleFilter}!filter@{filter}}
+\index{filter@{filter}!pip.\_vendor.pygments.filters.GobbleFilter@{pip.\_vendor.pygments.filters.GobbleFilter}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+filters.\+Gobble\+Filter.\+filter (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lexer,  }\item[{}]{stream }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a11062d7fa15df23e907b69e6843c1714}{pip.\+\_\+vendor.\+pygments.\+filter.\+Filter}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_adfeb35963c596446c91766304954401d}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_adfeb35963c596446c91766304954401d}} 
+\index{pip.\_vendor.pygments.filters.GobbleFilter@{pip.\_vendor.pygments.filters.GobbleFilter}!gobble@{gobble}}
+\index{gobble@{gobble}!pip.\_vendor.pygments.filters.GobbleFilter@{pip.\_vendor.pygments.filters.GobbleFilter}}
+\doxysubsubsection{\texorpdfstring{gobble()}{gobble()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+filters.\+Gobble\+Filter.\+gobble (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value,  }\item[{}]{left }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_a4091a998444f353db620925a72a806c5}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1GobbleFilter_a4091a998444f353db620925a72a806c5}} 
+\index{pip.\_vendor.pygments.filters.GobbleFilter@{pip.\_vendor.pygments.filters.GobbleFilter}!n@{n}}
+\index{n@{n}!pip.\_vendor.pygments.filters.GobbleFilter@{pip.\_vendor.pygments.filters.GobbleFilter}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+filters.\+Gobble\+Filter.\+n}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pygments/filters/\mbox{\hyperlink{__vendor_2pygments_2filters_2____init_____8py}{\+\_\+\+\_\+init\+\_\+\+\_\+.\+py}}\end{DoxyCompactItemize}

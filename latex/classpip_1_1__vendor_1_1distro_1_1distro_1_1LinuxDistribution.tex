@@ -1,0 +1,455 @@
+\hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution}{}\doxysection{pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution Class Reference}
+\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution}\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a03c88129b0577a643a1d4d557725a26b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Optional\mbox{[}bool\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aa211273fb508eb6aa5f9e938b836c67c}{include\+\_\+lsb}}=None, str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a898b16dfb477b8e8fa082d8969c30ca3}{os\+\_\+release\+\_\+file}}=\char`\"{}\char`\"{}, str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_ad21f2327879df6212b83c8c4b17b3260}{distro\+\_\+release\+\_\+file}}=\char`\"{}\char`\"{}, Optional\mbox{[}bool\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_afcc5249bd42cc7700e0d32ee9114b80e}{include\+\_\+uname}}=None, Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aabff1c5ec90d7cf81135234aedd2c802}{root\+\_\+dir}}=None, Optional\mbox{[}bool\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a85f12350ea1f9efa736696f5fcd99bb8}{include\+\_\+oslevel}}=None)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_ac45368430fe71a3084fb1860f6dee62f}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+Tuple\mbox{[}str, str, str\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a3babc6762bf16e331f59bf3b90d820ee}{linux\+\_\+distribution}} (self, bool full\+\_\+distribution\+\_\+name=True)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aec57d97b3bd82778371db7afa1d5b877}{id}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a0f30009e5f86e89a27bd187e8a759e32}{name}} (self, bool pretty=False)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a35f4d1557d49774f4cb5c3f52fca0676}{version}} (self, bool pretty=False, bool best=False)
+\item 
+Tuple\mbox{[}str, str, str\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a16ec2677d8fd6ab243987ec48b614d11}{version\+\_\+parts}} (self, bool best=False)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a5cdaffad25af14c8b803fd66b4433b54}{major\+\_\+version}} (self, bool best=False)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a2cc63143508996fabe72c91e3dbfee71}{minor\+\_\+version}} (self, bool best=False)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a8f6fbc8591642ac663eea6ad9fd14242}{build\+\_\+number}} (self, bool best=False)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_af76abe2ec871ec06a5c2c4a311be86f4}{like}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a0358d9d8b02ce55672f3571d2cb6cdc7}{codename}} (self)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1InfoDict}{Info\+Dict}} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a006af842ff29a5797a718d5b6f853c95}{info}} (self, bool pretty=False, bool best=False)
+\item 
+Dict\mbox{[}str, str\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_af9f530b7b826b247c2852c0da0508951}{os\+\_\+release\+\_\+info}} (self)
+\item 
+Dict\mbox{[}str, str\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aad20ac1fb3bb1412756800a41f5762e0}{lsb\+\_\+release\+\_\+info}} (self)
+\item 
+Dict\mbox{[}str, str\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a86220998f39c4fe4ad8b7a85c6c070d9}{distro\+\_\+release\+\_\+info}} (self)
+\item 
+Dict\mbox{[}str, str\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a4ab41e0efd524c8295bb83483d4c2dfc}{uname\+\_\+info}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_ac8a698476164f2b6082683e73939943f}{oslevel\+\_\+info}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a968f52bb8dde8bdf6141e68c66dfa779}{os\+\_\+release\+\_\+attr}} (self, str attribute)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a3e181ce742dc66ccfcf15ef2d404861c}{lsb\+\_\+release\+\_\+attr}} (self, str attribute)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a69a78e152aeaccb753c30d3cf86c5686}{distro\+\_\+release\+\_\+attr}} (self, str attribute)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a41ed985a34cdca25cac350af802e86d4}{uname\+\_\+attr}} (self, str attribute)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aabff1c5ec90d7cf81135234aedd2c802}{root\+\_\+dir}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a96ba2fb1d728c8dfd26b06ece0bc4816}{etc\+\_\+dir}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a36714d384e979618ebdef4ff2ac48e8d}{usr\+\_\+lib\+\_\+dir}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a898b16dfb477b8e8fa082d8969c30ca3}{os\+\_\+release\+\_\+file}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_ad21f2327879df6212b83c8c4b17b3260}{distro\+\_\+release\+\_\+file}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aa211273fb508eb6aa5f9e938b836c67c}{include\+\_\+lsb}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_afcc5249bd42cc7700e0d32ee9114b80e}{include\+\_\+uname}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a85f12350ea1f9efa736696f5fcd99bb8}{include\+\_\+oslevel}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Provides information about a OS distribution.
+
+This package creates a private module-global instance of this class with
+default initialization arguments, that is used by the
+`consolidated accessor functions`_ and `single source accessor functions`_.
+By using default initialization arguments, that module-global instance
+returns data about the current OS distribution (i.e. the distro this
+package runs on).
+
+Normally, it is not necessary to create additional instances of this class.
+However, in situations where control is needed over the exact data sources
+that are used, instances of this class can be created with a specific
+distro release file, or a specific os-release file, or without invoking the
+lsb_release command.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a03c88129b0577a643a1d4d557725a26b}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a03c88129b0577a643a1d4d557725a26b}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}bool\mbox{]} }]{include\+\_\+lsb = {\ttfamily None},  }\item[{str }]{os\+\_\+release\+\_\+file = {\ttfamily \char`\"{}\char`\"{}},  }\item[{str }]{distro\+\_\+release\+\_\+file = {\ttfamily \char`\"{}\char`\"{}},  }\item[{Optional\mbox{[}bool\mbox{]} }]{include\+\_\+uname = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{root\+\_\+dir = {\ttfamily None},  }\item[{Optional\mbox{[}bool\mbox{]} }]{include\+\_\+oslevel = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The initialization method of this class gathers information from the
+available data sources, and stores that in private instance attributes.
+Subsequent access to the information items uses these private instance
+attributes, so that the data sources are read only once.
+
+Parameters:
+
+* ``include_lsb`` (bool): Controls whether the
+  `lsb_release command output`_ is included as a data source.
+
+  If the lsb_release command is not available in the program execution
+  path, the data source for the lsb_release command will be empty.
+
+* ``os_release_file`` (string): The path name of the
+  `os-release file`_ that is to be used as a data source.
+
+  An empty string (the default) will cause the default path name to
+  be used (see `os-release file`_ for details).
+
+  If the specified or defaulted os-release file does not exist, the
+  data source for the os-release file will be empty.
+
+* ``distro_release_file`` (string): The path name of the
+  `distro release file`_ that is to be used as a data source.
+
+  An empty string (the default) will cause a default search algorithm
+  to be used (see `distro release file`_ for details).
+
+  If the specified distro release file does not exist, or if no default
+  distro release file can be found, the data source for the distro
+  release file will be empty.
+
+* ``include_uname`` (bool): Controls whether uname command output is
+  included as a data source. If the uname command is not available in
+  the program execution path the data source for the uname command will
+  be empty.
+
+* ``root_dir`` (string): The absolute path to the root directory to use
+  to find distro-related information files. Note that ``include_*``
+  parameters must not be enabled in combination with ``root_dir``.
+
+* ``include_oslevel`` (bool): Controls whether (AIX) oslevel command
+  output is included as a data source. If the oslevel command is not
+  available in the program execution path the data source will be
+  empty.
+
+Public instance attributes:
+
+* ``os_release_file`` (string): The path name of the
+  `os-release file`_ that is actually used as a data source. The
+  empty string if no distro release file is used as a data source.
+
+* ``distro_release_file`` (string): The path name of the
+  `distro release file`_ that is actually used as a data source. The
+  empty string if no distro release file is used as a data source.
+
+* ``include_lsb`` (bool): The result of the ``include_lsb`` parameter.
+  This controls whether the lsb information will be loaded.
+
+* ``include_uname`` (bool): The result of the ``include_uname``
+  parameter. This controls whether the uname information will
+  be loaded.
+
+* ``include_oslevel`` (bool): The result of the ``include_oslevel``
+  parameter. This controls whether (AIX) oslevel information will be
+  loaded.
+
+* ``root_dir`` (string): The result of the ``root_dir`` parameter.
+  The absolute path to the root directory to use to find distro-related
+  information files.
+
+Raises:
+
+* :py:exc:`ValueError`: Initialization parameters combination is not
+   supported.
+
+* :py:exc:`OSError`: Some I/O issue with an os-release file or distro
+  release file.
+
+* :py:exc:`UnicodeError`: A data source has unexpected characters or
+  uses an unexpected encoding.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_ac45368430fe71a3084fb1860f6dee62f}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_ac45368430fe71a3084fb1860f6dee62f}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return repr of all info\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a8f6fbc8591642ac663eea6ad9fd14242}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a8f6fbc8591642ac663eea6ad9fd14242}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!build\_number@{build\_number}}
+\index{build\_number@{build\_number}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{build\_number()}{build\_number()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+build\+\_\+number (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool }]{best = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the build number of the current distribution.
+
+For details, see :func:`distro.build_number`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a0358d9d8b02ce55672f3571d2cb6cdc7}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a0358d9d8b02ce55672f3571d2cb6cdc7}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!codename@{codename}}
+\index{codename@{codename}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{codename()}{codename()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+codename (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the codename of the OS distribution.
+
+For details, see :func:`distro.codename`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a69a78e152aeaccb753c30d3cf86c5686}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a69a78e152aeaccb753c30d3cf86c5686}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!distro\_release\_attr@{distro\_release\_attr}}
+\index{distro\_release\_attr@{distro\_release\_attr}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{distro\_release\_attr()}{distro\_release\_attr()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+distro\+\_\+release\+\_\+attr (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{attribute }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a single named information item from the distro release file
+data source of the OS distribution.
+
+For details, see :func:`distro.distro_release_attr`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a86220998f39c4fe4ad8b7a85c6c070d9}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a86220998f39c4fe4ad8b7a85c6c070d9}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!distro\_release\_info@{distro\_release\_info}}
+\index{distro\_release\_info@{distro\_release\_info}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{distro\_release\_info()}{distro\_release\_info()}}
+{\footnotesize\ttfamily  Dict\mbox{[}str, str\mbox{]} pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+distro\+\_\+release\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a dictionary containing key-value pairs for the information
+items from the distro release file data source of the OS
+distribution.
+
+For details, see :func:`distro.distro_release_info`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aec57d97b3bd82778371db7afa1d5b877}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aec57d97b3bd82778371db7afa1d5b877}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!id@{id}}
+\index{id@{id}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+id (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the distro ID of the OS distribution, as a string.
+
+For details, see :func:`distro.id`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a006af842ff29a5797a718d5b6f853c95}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a006af842ff29a5797a718d5b6f853c95}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!info@{info}}
+\index{info@{info}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1distro_1_1distro_1_1InfoDict}{Info\+Dict}} pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+info (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool }]{pretty = {\ttfamily False},  }\item[{bool }]{best = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return certain machine-readable information about the OS
+distribution.
+
+For details, see :func:`distro.info`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_af76abe2ec871ec06a5c2c4a311be86f4}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_af76abe2ec871ec06a5c2c4a311be86f4}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!like@{like}}
+\index{like@{like}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{like()}{like()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+like (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the IDs of distributions that are like the OS distribution.
+
+For details, see :func:`distro.like`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a3babc6762bf16e331f59bf3b90d820ee}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a3babc6762bf16e331f59bf3b90d820ee}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!linux\_distribution@{linux\_distribution}}
+\index{linux\_distribution@{linux\_distribution}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{linux\_distribution()}{linux\_distribution()}}
+{\footnotesize\ttfamily  Tuple\mbox{[}str, str, str\mbox{]} pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+linux\+\_\+distribution (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool }]{full\+\_\+distribution\+\_\+name = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return information about the OS distribution that is compatible
+with Python's :func:`platform.linux_distribution`, supporting a subset
+of its parameters.
+
+For details, see :func:`distro.linux_distribution`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a3e181ce742dc66ccfcf15ef2d404861c}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a3e181ce742dc66ccfcf15ef2d404861c}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!lsb\_release\_attr@{lsb\_release\_attr}}
+\index{lsb\_release\_attr@{lsb\_release\_attr}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{lsb\_release\_attr()}{lsb\_release\_attr()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+lsb\+\_\+release\+\_\+attr (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{attribute }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a single named information item from the lsb_release command
+output data source of the OS distribution.
+
+For details, see :func:`distro.lsb_release_attr`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aad20ac1fb3bb1412756800a41f5762e0}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aad20ac1fb3bb1412756800a41f5762e0}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!lsb\_release\_info@{lsb\_release\_info}}
+\index{lsb\_release\_info@{lsb\_release\_info}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{lsb\_release\_info()}{lsb\_release\_info()}}
+{\footnotesize\ttfamily  Dict\mbox{[}str, str\mbox{]} pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+lsb\+\_\+release\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a dictionary containing key-value pairs for the information
+items from the lsb_release command data source of the OS
+distribution.
+
+For details, see :func:`distro.lsb_release_info`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a5cdaffad25af14c8b803fd66b4433b54}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a5cdaffad25af14c8b803fd66b4433b54}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!major\_version@{major\_version}}
+\index{major\_version@{major\_version}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{major\_version()}{major\_version()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+major\+\_\+version (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool }]{best = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the major version number of the current distribution.
+
+For details, see :func:`distro.major_version`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a2cc63143508996fabe72c91e3dbfee71}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a2cc63143508996fabe72c91e3dbfee71}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!minor\_version@{minor\_version}}
+\index{minor\_version@{minor\_version}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{minor\_version()}{minor\_version()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+minor\+\_\+version (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool }]{best = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the minor version number of the current distribution.
+
+For details, see :func:`distro.minor_version`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a0f30009e5f86e89a27bd187e8a759e32}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a0f30009e5f86e89a27bd187e8a759e32}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!name@{name}}
+\index{name@{name}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+name (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool }]{pretty = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the name of the OS distribution, as a string.
+
+For details, see :func:`distro.name`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a968f52bb8dde8bdf6141e68c66dfa779}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a968f52bb8dde8bdf6141e68c66dfa779}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!os\_release\_attr@{os\_release\_attr}}
+\index{os\_release\_attr@{os\_release\_attr}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{os\_release\_attr()}{os\_release\_attr()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+os\+\_\+release\+\_\+attr (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{attribute }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a single named information item from the os-release file data
+source of the OS distribution.
+
+For details, see :func:`distro.os_release_attr`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_af9f530b7b826b247c2852c0da0508951}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_af9f530b7b826b247c2852c0da0508951}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!os\_release\_info@{os\_release\_info}}
+\index{os\_release\_info@{os\_release\_info}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{os\_release\_info()}{os\_release\_info()}}
+{\footnotesize\ttfamily  Dict\mbox{[}str, str\mbox{]} pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+os\+\_\+release\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a dictionary containing key-value pairs for the information
+items from the os-release file data source of the OS distribution.
+
+For details, see :func:`distro.os_release_info`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_ac8a698476164f2b6082683e73939943f}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_ac8a698476164f2b6082683e73939943f}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!oslevel\_info@{oslevel\_info}}
+\index{oslevel\_info@{oslevel\_info}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{oslevel\_info()}{oslevel\_info()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+oslevel\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return AIX' oslevel command output.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a41ed985a34cdca25cac350af802e86d4}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a41ed985a34cdca25cac350af802e86d4}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!uname\_attr@{uname\_attr}}
+\index{uname\_attr@{uname\_attr}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{uname\_attr()}{uname\_attr()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+uname\+\_\+attr (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{attribute }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a single named information item from the uname command
+output data source of the OS distribution.
+
+For details, see :func:`distro.uname_attr`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a4ab41e0efd524c8295bb83483d4c2dfc}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a4ab41e0efd524c8295bb83483d4c2dfc}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!uname\_info@{uname\_info}}
+\index{uname\_info@{uname\_info}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{uname\_info()}{uname\_info()}}
+{\footnotesize\ttfamily  Dict\mbox{[}str, str\mbox{]} pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+uname\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a dictionary containing key-value pairs for the information
+items from the uname command data source of the OS distribution.
+
+For details, see :func:`distro.uname_info`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a35f4d1557d49774f4cb5c3f52fca0676}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a35f4d1557d49774f4cb5c3f52fca0676}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!version@{version}}
+\index{version@{version}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{version()}{version()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+version (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool }]{pretty = {\ttfamily False},  }\item[{bool }]{best = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the version of the OS distribution, as a string.
+
+For details, see :func:`distro.version`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a16ec2677d8fd6ab243987ec48b614d11}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a16ec2677d8fd6ab243987ec48b614d11}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!version\_parts@{version\_parts}}
+\index{version\_parts@{version\_parts}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{version\_parts()}{version\_parts()}}
+{\footnotesize\ttfamily  Tuple\mbox{[}str, str, str\mbox{]} pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+version\+\_\+parts (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool }]{best = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the version of the OS distribution, as a tuple of version
+numbers.
+
+For details, see :func:`distro.version_parts`.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_ad21f2327879df6212b83c8c4b17b3260}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_ad21f2327879df6212b83c8c4b17b3260}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!distro\_release\_file@{distro\_release\_file}}
+\index{distro\_release\_file@{distro\_release\_file}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{distro\_release\_file}{distro\_release\_file}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+distro\+\_\+release\+\_\+file}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a96ba2fb1d728c8dfd26b06ece0bc4816}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a96ba2fb1d728c8dfd26b06ece0bc4816}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!etc\_dir@{etc\_dir}}
+\index{etc\_dir@{etc\_dir}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{etc\_dir}{etc\_dir}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+etc\+\_\+dir}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aa211273fb508eb6aa5f9e938b836c67c}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aa211273fb508eb6aa5f9e938b836c67c}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!include\_lsb@{include\_lsb}}
+\index{include\_lsb@{include\_lsb}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{include\_lsb}{include\_lsb}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+include\+\_\+lsb}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a85f12350ea1f9efa736696f5fcd99bb8}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a85f12350ea1f9efa736696f5fcd99bb8}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!include\_oslevel@{include\_oslevel}}
+\index{include\_oslevel@{include\_oslevel}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{include\_oslevel}{include\_oslevel}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+include\+\_\+oslevel}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_afcc5249bd42cc7700e0d32ee9114b80e}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_afcc5249bd42cc7700e0d32ee9114b80e}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!include\_uname@{include\_uname}}
+\index{include\_uname@{include\_uname}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{include\_uname}{include\_uname}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+include\+\_\+uname}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a898b16dfb477b8e8fa082d8969c30ca3}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a898b16dfb477b8e8fa082d8969c30ca3}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!os\_release\_file@{os\_release\_file}}
+\index{os\_release\_file@{os\_release\_file}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{os\_release\_file}{os\_release\_file}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+os\+\_\+release\+\_\+file}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aabff1c5ec90d7cf81135234aedd2c802}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_aabff1c5ec90d7cf81135234aedd2c802}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!root\_dir@{root\_dir}}
+\index{root\_dir@{root\_dir}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{root\_dir}{root\_dir}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+root\+\_\+dir}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a36714d384e979618ebdef4ff2ac48e8d}\label{classpip_1_1__vendor_1_1distro_1_1distro_1_1LinuxDistribution_a36714d384e979618ebdef4ff2ac48e8d}} 
+\index{pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}!usr\_lib\_dir@{usr\_lib\_dir}}
+\index{usr\_lib\_dir@{usr\_lib\_dir}!pip.\_vendor.distro.distro.LinuxDistribution@{pip.\_vendor.distro.distro.LinuxDistribution}}
+\doxysubsubsection{\texorpdfstring{usr\_lib\_dir}{usr\_lib\_dir}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distro.\+distro.\+Linux\+Distribution.\+usr\+\_\+lib\+\_\+dir}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/distro/\mbox{\hyperlink{distro_8py}{distro.\+py}}\end{DoxyCompactItemize}

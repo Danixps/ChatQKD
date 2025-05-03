@@ -1,0 +1,93 @@
+\hypertarget{namespacepip_1_1__internal_1_1req_1_1req__uninstall}{}\doxysection{pip.\+\_\+internal.\+req.\+req\+\_\+uninstall Namespace Reference}
+\label{namespacepip_1_1__internal_1_1req_1_1req__uninstall}\index{pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__uninstall_1_1StashedUninstallPathSet}{Stashed\+Uninstall\+Path\+Set}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__uninstall_1_1UninstallPathSet}{Uninstall\+Path\+Set}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__uninstall_1_1UninstallPthEntries}{Uninstall\+Pth\+Entries}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Generator\mbox{[}str, None, None\mbox{]} \mbox{\hyperlink{namespacepip_1_1__internal_1_1req_1_1req__uninstall_abd85e083f3721bb1893f8591a4b33f0a}{uninstallation\+\_\+paths}} (\mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1BaseDistribution}{Base\+Distribution}} dist)
+\item 
+Set\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacepip_1_1__internal_1_1req_1_1req__uninstall_a634681c37a53ec41c50fb77a1b300413}{compact}} (Iterable\mbox{[}str\mbox{]} paths)
+\item 
+Set\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacepip_1_1__internal_1_1req_1_1req__uninstall_a04e0c9068ced6e3b9d6f65927e0d7126}{compress\+\_\+for\+\_\+rename}} (Iterable\mbox{[}str\mbox{]} paths)
+\item 
+Tuple\mbox{[}Set\mbox{[}str\mbox{]}, Set\mbox{[}str\mbox{]}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__internal_1_1req_1_1req__uninstall_af7152d05220ca611b0695a0de0c5aaa9}{compress\+\_\+for\+\_\+output\+\_\+listing}} (Iterable\mbox{[}str\mbox{]} paths)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1req_1_1req__uninstall_a017517f271cc4ab3f9bd8b440c3f95d2}{logger}} = get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1req_1_1req__uninstall_a634681c37a53ec41c50fb77a1b300413}\label{namespacepip_1_1__internal_1_1req_1_1req__uninstall_a634681c37a53ec41c50fb77a1b300413}} 
+\index{pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}!compact@{compact}}
+\index{compact@{compact}!pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}}
+\doxysubsubsection{\texorpdfstring{compact()}{compact()}}
+{\footnotesize\ttfamily  Set\mbox{[}str\mbox{]} pip.\+\_\+internal.\+req.\+req\+\_\+uninstall.\+compact (\begin{DoxyParamCaption}\item[{Iterable\mbox{[}str\mbox{]}}]{paths }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Compact a path set to contain the minimal number of paths
+necessary to contain all paths in the set. If /a/path/ and
+/a/path/to/a/file.txt are both in the set, leave only the
+shorter path.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1req_1_1req__uninstall_af7152d05220ca611b0695a0de0c5aaa9}\label{namespacepip_1_1__internal_1_1req_1_1req__uninstall_af7152d05220ca611b0695a0de0c5aaa9}} 
+\index{pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}!compress\_for\_output\_listing@{compress\_for\_output\_listing}}
+\index{compress\_for\_output\_listing@{compress\_for\_output\_listing}!pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}}
+\doxysubsubsection{\texorpdfstring{compress\_for\_output\_listing()}{compress\_for\_output\_listing()}}
+{\footnotesize\ttfamily  Tuple\mbox{[}Set\mbox{[}str\mbox{]}, Set\mbox{[}str\mbox{]}\mbox{]} pip.\+\_\+internal.\+req.\+req\+\_\+uninstall.\+compress\+\_\+for\+\_\+output\+\_\+listing (\begin{DoxyParamCaption}\item[{Iterable\mbox{[}str\mbox{]}}]{paths }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a tuple of 2 sets of which paths to display to user
+
+The first set contains paths that would be deleted. Files of a package
+are not added and the top-level directory of the package has a '*' added
+at the end - to signify that all it's contents are removed.
+
+The second set contains files that would have been skipped in the above
+folders.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1req_1_1req__uninstall_a04e0c9068ced6e3b9d6f65927e0d7126}\label{namespacepip_1_1__internal_1_1req_1_1req__uninstall_a04e0c9068ced6e3b9d6f65927e0d7126}} 
+\index{pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}!compress\_for\_rename@{compress\_for\_rename}}
+\index{compress\_for\_rename@{compress\_for\_rename}!pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}}
+\doxysubsubsection{\texorpdfstring{compress\_for\_rename()}{compress\_for\_rename()}}
+{\footnotesize\ttfamily  Set\mbox{[}str\mbox{]} pip.\+\_\+internal.\+req.\+req\+\_\+uninstall.\+compress\+\_\+for\+\_\+rename (\begin{DoxyParamCaption}\item[{Iterable\mbox{[}str\mbox{]}}]{paths }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a set containing the paths that need to be renamed.
+
+This set may include directories when the original sequence of paths
+included every file on disk.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1req_1_1req__uninstall_abd85e083f3721bb1893f8591a4b33f0a}\label{namespacepip_1_1__internal_1_1req_1_1req__uninstall_abd85e083f3721bb1893f8591a4b33f0a}} 
+\index{pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}!uninstallation\_paths@{uninstallation\_paths}}
+\index{uninstallation\_paths@{uninstallation\_paths}!pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}}
+\doxysubsubsection{\texorpdfstring{uninstallation\_paths()}{uninstallation\_paths()}}
+{\footnotesize\ttfamily  Generator\mbox{[}str, None, None\mbox{]} pip.\+\_\+internal.\+req.\+req\+\_\+uninstall.\+uninstallation\+\_\+paths (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1BaseDistribution}{Base\+Distribution}}}]{dist }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Yield all the uninstallation paths for dist based on RECORD-without-.py[co]
+
+Yield paths to all the files in RECORD. For each .py file in RECORD, add
+the .pyc and .pyo in the same directory.
+
+UninstallPathSet.add() takes care of the __pycache__ .py[co].
+
+If RECORD is not found, raises UninstallationError,
+with possible information from the INSTALLER file.
+
+https://packaging.python.org/specifications/recording-installed-packages/
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1req_1_1req__uninstall_a017517f271cc4ab3f9bd8b440c3f95d2}\label{namespacepip_1_1__internal_1_1req_1_1req__uninstall_a017517f271cc4ab3f9bd8b440c3f95d2}} 
+\index{pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}!logger@{logger}}
+\index{logger@{logger}!pip.\_internal.req.req\_uninstall@{pip.\_internal.req.req\_uninstall}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+uninstall.\+logger = get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+

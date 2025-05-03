@@ -1,0 +1,91 @@
+\hypertarget{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node}{}\doxysection{pip.\+\_\+vendor.\+rich.\+pretty.\+Node Class Reference}
+\label{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node}\index{pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a48b626aeadb156612d6356a20f35fb4d}{str}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a0aa14e355c4ac08308ae1a96f9d3ebc2}{iter\+\_\+tokens}} (self)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_aeb52108e6910ceb7c09891e22e4f6cac}{bool}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a7c73705ed0b7cbd789b1e2d60ef4071a}{check\+\_\+length}} (self, int start\+\_\+length, int max\+\_\+length)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a48b626aeadb156612d6356a20f35fb4d}{str}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a2559264bc8c2cf5921c7c004d302e967}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a48b626aeadb156612d6356a20f35fb4d}{str}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a493de7605c16801a273e789b93de1808}{render}} (self, int max\+\_\+width=80, int indent\+\_\+size=4, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_aeb52108e6910ceb7c09891e22e4f6cac}{bool}} expand\+\_\+all=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a48b626aeadb156612d6356a20f35fb4d}{str}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_aeb52108e6910ceb7c09891e22e4f6cac}{bool}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A node in a repr tree. May be atomic or a container.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a2559264bc8c2cf5921c7c004d302e967}\label{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a2559264bc8c2cf5921c7c004d302e967}} 
+\index{pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a48b626aeadb156612d6356a20f35fb4d}{str}} pip.\+\_\+vendor.\+rich.\+pretty.\+Node.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a7c73705ed0b7cbd789b1e2d60ef4071a}\label{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a7c73705ed0b7cbd789b1e2d60ef4071a}} 
+\index{pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}!check\_length@{check\_length}}
+\index{check\_length@{check\_length}!pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}}
+\doxysubsubsection{\texorpdfstring{check\_length()}{check\_length()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_aeb52108e6910ceb7c09891e22e4f6cac}{bool}} pip.\+\_\+vendor.\+rich.\+pretty.\+Node.\+check\+\_\+length (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{start\+\_\+length,  }\item[{int}]{max\+\_\+length }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check the length fits within a limit.
+
+Args:
+    start_length (int): Starting length of the line (indent, prefix, suffix).
+    max_length (int): Maximum length.
+
+Returns:
+    bool: True if the node can be rendered within max length, otherwise False.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a0aa14e355c4ac08308ae1a96f9d3ebc2}\label{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a0aa14e355c4ac08308ae1a96f9d3ebc2}} 
+\index{pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}!iter\_tokens@{iter\_tokens}}
+\index{iter\_tokens@{iter\_tokens}!pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}}
+\doxysubsubsection{\texorpdfstring{iter\_tokens()}{iter\_tokens()}}
+{\footnotesize\ttfamily  Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a48b626aeadb156612d6356a20f35fb4d}{str}}\mbox{]} pip.\+\_\+vendor.\+rich.\+pretty.\+Node.\+iter\+\_\+tokens (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate tokens for this node.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a493de7605c16801a273e789b93de1808}\label{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a493de7605c16801a273e789b93de1808}} 
+\index{pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}!render@{render}}
+\index{render@{render}!pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a48b626aeadb156612d6356a20f35fb4d}{str}} pip.\+\_\+vendor.\+rich.\+pretty.\+Node.\+render (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int }]{max\+\_\+width = {\ttfamily 80},  }\item[{int }]{indent\+\_\+size = {\ttfamily 4},  }\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_aeb52108e6910ceb7c09891e22e4f6cac}{bool}} }]{expand\+\_\+all = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Render the node to a pretty repr.
+
+Args:
+    max_width (int, optional): Maximum width of the repr. Defaults to 80.
+    indent_size (int, optional): Size of indents. Defaults to 4.
+    expand_all (bool, optional): Expand all levels. Defaults to False.
+
+Returns:
+    str: A repr string of the original object.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_aeb52108e6910ceb7c09891e22e4f6cac}\label{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_aeb52108e6910ceb7c09891e22e4f6cac}} 
+\index{pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}!bool@{bool}}
+\index{bool@{bool}!pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}}
+\doxysubsubsection{\texorpdfstring{bool}{bool}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+pretty.\+Node.\+bool\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a48b626aeadb156612d6356a20f35fb4d}\label{classpip_1_1__vendor_1_1rich_1_1pretty_1_1Node_a48b626aeadb156612d6356a20f35fb4d}} 
+\index{pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}!str@{str}}
+\index{str@{str}!pip.\_vendor.rich.pretty.Node@{pip.\_vendor.rich.pretty.Node}}
+\doxysubsubsection{\texorpdfstring{str}{str}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+pretty.\+Node.\+str\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/rich/\mbox{\hyperlink{pretty_8py}{pretty.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,133 @@
+\hypertarget{namespacepip_1_1__vendor_1_1pygments}{}\doxysection{pip.\+\_\+vendor.\+pygments Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1pygments}\index{pip.\_vendor.pygments@{pip.\_vendor.pygments}}
+
+
+\+::{\bfseries{main}}  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1____main____}{\+\_\+\+\_\+main\+\_\+\+\_\+}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1cmdline}{cmdline}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1console}{console}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1filter}{filter}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1filters}{filters}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1formatter}{formatter}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1formatters}{formatters}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1lexer}{lexer}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1lexers}{lexers}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1modeline}{modeline}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1plugin}{plugin}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1regexopt}{regexopt}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1scanner}{scanner}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1sphinxext}{sphinxext}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1style}{style}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1styles}{styles}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1token}{token}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1unistring}{unistring}}
+\item 
+ \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_1_1util}{util}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_ad11569860d84b5933a77f21614396b3c}{lex}} (code, lexer)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_a18f1ca24be2b740453d4a696f8549598}{format}} (tokens, formatter, outfile=None)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pygments_a4493e3a3e3caa22028328b33d68651cc}{highlight}} (code, lexer, formatter, outfile=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+::{\bfseries{main}} 
+
+\begin{DoxyVerb}    Pygments
+    ~~~~~~~~
+
+    Pygments is a syntax highlighting package written in Python.
+
+    It is a generic syntax highlighter for general use in all kinds of software
+    such as forum systems, wikis or other applications that need to prettify
+    source code. Highlights are:
+
+    * a wide range of common languages and markup formats is supported
+    * special attention is paid to details, increasing quality by a fair amount
+    * support for new languages and formats are added easily
+    * a number of output formats, presently HTML, LaTeX, RTF, SVG, all image
+      formats that PIL supports, and ANSI sequences
+    * it is usable as a command-line tool and as a library
+    * ... and it highlights even Brainfuck!
+
+    The `Pygments master branch`_ is installable with ``easy_install Pygments==dev``.
+
+    .. _Pygments master branch:
+       https://github.com/pygments/pygments/archive/master.zip#egg=Pygments-dev
+
+    :copyright: Copyright 2006-2023 by the Pygments team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+\end{DoxyVerb}
+
+
+\begin{DoxyVerb}    pygments.__main__
+    ~~~~~~~~~~~~~~~~~
+
+    Main entry point for ``python -m pygments``.
+
+    :copyright: Copyright 2006-2023 by the Pygments team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pygments_a18f1ca24be2b740453d4a696f8549598}\label{namespacepip_1_1__vendor_1_1pygments_a18f1ca24be2b740453d4a696f8549598}} 
+\index{pip.\_vendor.pygments@{pip.\_vendor.pygments}!format@{format}}
+\index{format@{format}!pip.\_vendor.pygments@{pip.\_vendor.pygments}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+format (\begin{DoxyParamCaption}\item[{}]{tokens,  }\item[{}]{formatter,  }\item[{}]{outfile = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Format ``tokens`` (an iterable of tokens) with the formatter ``formatter``
+(a `Formatter` instance).
+
+If ``outfile`` is given and a valid file object (an object with a
+``write`` method), the result will be written to it, otherwise it
+is returned as a string.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pygments_a4493e3a3e3caa22028328b33d68651cc}\label{namespacepip_1_1__vendor_1_1pygments_a4493e3a3e3caa22028328b33d68651cc}} 
+\index{pip.\_vendor.pygments@{pip.\_vendor.pygments}!highlight@{highlight}}
+\index{highlight@{highlight}!pip.\_vendor.pygments@{pip.\_vendor.pygments}}
+\doxysubsubsection{\texorpdfstring{highlight()}{highlight()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+highlight (\begin{DoxyParamCaption}\item[{}]{code,  }\item[{}]{lexer,  }\item[{}]{formatter,  }\item[{}]{outfile = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is the most high-level highlighting function. It combines `lex` and
+`format` in one function.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pygments_ad11569860d84b5933a77f21614396b3c}\label{namespacepip_1_1__vendor_1_1pygments_ad11569860d84b5933a77f21614396b3c}} 
+\index{pip.\_vendor.pygments@{pip.\_vendor.pygments}!lex@{lex}}
+\index{lex@{lex}!pip.\_vendor.pygments@{pip.\_vendor.pygments}}
+\doxysubsubsection{\texorpdfstring{lex()}{lex()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+lex (\begin{DoxyParamCaption}\item[{}]{code,  }\item[{}]{lexer }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Lex `code` with the `lexer` (must be a `Lexer` instance)
+and return an iterable of tokens. Currently, this only calls
+`lexer.get_tokens()`.
+\end{DoxyVerb}
+ 

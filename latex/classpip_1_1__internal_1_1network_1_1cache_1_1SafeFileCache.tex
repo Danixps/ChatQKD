@@ -1,0 +1,132 @@
+\hypertarget{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache}{}\doxysection{pip.\+\_\+internal.\+network.\+cache.\+Safe\+File\+Cache Class Reference}
+\label{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache}\index{pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+network.\+cache.\+Safe\+File\+Cache\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+internal.\+network.\+cache.\+Safe\+File\+Cache\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_af80bba1ff14bcd2c9f0c7e20ae25ec20}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a62ff25cd7db4f2f2651454fe827dc8f2}{directory}})
+\item 
+Optional\mbox{[}bytes\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a90732aeeb2a03d8df792c0b663291200}{get}} (self, str key)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a9f3b2e9f928775e5e043eb0b2fff5e7e}{set}} (self, str key, bytes value, Union\mbox{[}int, datetime, None\mbox{]} expires=None)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_acd56ba8bed0346d9ff5e04f88be484e1}{delete}} (self, str key)
+\item 
+Optional\mbox{[}Binary\+IO\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a91cbbbd1ccbe3c5caf947ec4937c9c62}{get\+\_\+body}} (self, str key)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a9f8fecbfb2071386ede8912774d1b110}{set\+\_\+body}} (self, str key, bytes body)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a62ff25cd7db4f2f2651454fe827dc8f2}{directory}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A file based cache which is safe to use even when the target directory may
+not be accessible or writable.
+
+There is a race condition when two processes try to write and/or read the
+same entry at the same time, since each entry consists of two separate
+files (https://github.com/psf/cachecontrol/issues/324).  We therefore have
+additional logic that makes sure that both files to be present before
+returning an entry; this fixes the read side of the race condition.
+
+For the write side, we assume that the server will only ever return the
+same data for the same URL, which ought to be the case for files pip is
+downloading.  PyPI does not have a mechanism to swap out a wheel for
+another wheel, for example.  If this assumption is not true, the
+CacheControl issue will need to be fixed.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_af80bba1ff14bcd2c9f0c7e20ae25ec20}\label{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_af80bba1ff14bcd2c9f0c7e20ae25ec20}} 
+\index{pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+network.\+cache.\+Safe\+File\+Cache.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{directory }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_acd56ba8bed0346d9ff5e04f88be484e1}\label{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_acd56ba8bed0346d9ff5e04f88be484e1}} 
+\index{pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}!delete@{delete}}
+\index{delete@{delete}!pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+network.\+cache.\+Safe\+File\+Cache.\+delete (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{key }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1cache_1_1BaseCache_a87dbfead33e33cc5f56646d24e8219e6}{pip.\+\_\+vendor.\+cachecontrol.\+cache.\+Base\+Cache}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a90732aeeb2a03d8df792c0b663291200}\label{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a90732aeeb2a03d8df792c0b663291200}} 
+\index{pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}!get@{get}}
+\index{get@{get}!pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily  Optional\mbox{[}bytes\mbox{]} pip.\+\_\+internal.\+network.\+cache.\+Safe\+File\+Cache.\+get (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{key }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1cache_1_1BaseCache_ad7d890e521ad3cdea7d47c810e342cc6}{pip.\+\_\+vendor.\+cachecontrol.\+cache.\+Base\+Cache}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a91cbbbd1ccbe3c5caf947ec4937c9c62}\label{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a91cbbbd1ccbe3c5caf947ec4937c9c62}} 
+\index{pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}!get\_body@{get\_body}}
+\index{get\_body@{get\_body}!pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}}
+\doxysubsubsection{\texorpdfstring{get\_body()}{get\_body()}}
+{\footnotesize\ttfamily  Optional\mbox{[}Binary\+IO\mbox{]} pip.\+\_\+internal.\+network.\+cache.\+Safe\+File\+Cache.\+get\+\_\+body (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the body as file-like object.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1cache_1_1SeparateBodyBaseCache_aaf62ca8f9091e69b1dff6924222e35bb}{pip.\+\_\+vendor.\+cachecontrol.\+cache.\+Separate\+Body\+Base\+Cache}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a9f3b2e9f928775e5e043eb0b2fff5e7e}\label{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a9f3b2e9f928775e5e043eb0b2fff5e7e}} 
+\index{pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}!set@{set}}
+\index{set@{set}!pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+network.\+cache.\+Safe\+File\+Cache.\+set (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{key,  }\item[{bytes}]{value,  }\item[{Union\mbox{[}int, datetime, None\mbox{]} }]{expires = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a9f8fecbfb2071386ede8912774d1b110}\label{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a9f8fecbfb2071386ede8912774d1b110}} 
+\index{pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}!set\_body@{set\_body}}
+\index{set\_body@{set\_body}!pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}}
+\doxysubsubsection{\texorpdfstring{set\_body()}{set\_body()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+network.\+cache.\+Safe\+File\+Cache.\+set\+\_\+body (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{key,  }\item[{bytes}]{body }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1cache_1_1SeparateBodyBaseCache_a10be6f262da8f25bb5f218bfd4be78cf}{pip.\+\_\+vendor.\+cachecontrol.\+cache.\+Separate\+Body\+Base\+Cache}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a62ff25cd7db4f2f2651454fe827dc8f2}\label{classpip_1_1__internal_1_1network_1_1cache_1_1SafeFileCache_a62ff25cd7db4f2f2651454fe827dc8f2}} 
+\index{pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}!directory@{directory}}
+\index{directory@{directory}!pip.\_internal.network.cache.SafeFileCache@{pip.\_internal.network.cache.SafeFileCache}}
+\doxysubsubsection{\texorpdfstring{directory}{directory}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+network.\+cache.\+Safe\+File\+Cache.\+directory}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/network/\mbox{\hyperlink{__internal_2network_2cache_8py}{cache.\+py}}\end{DoxyCompactItemize}

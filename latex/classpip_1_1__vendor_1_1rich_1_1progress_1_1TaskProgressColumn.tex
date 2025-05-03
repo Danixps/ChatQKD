@@ -1,0 +1,108 @@
+\hypertarget{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn}{}\doxysection{pip.\+\_\+vendor.\+rich.\+progress.\+Task\+Progress\+Column Class Reference}
+\label{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn}\index{pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+rich.\+progress.\+Task\+Progress\+Column\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+rich.\+progress.\+Task\+Progress\+Column\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_a758a749b193f18d283b0788c6a8f1118}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TextColumn_a3e45ec330b5b6eb50d5b40963d6bae59}{text\+\_\+format}}=\char`\"{}\mbox{[}progress.\+percentage\mbox{]}\{task.\+percentage\+:$>$3.\+0f\}\%\char`\"{}, str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ab929a53eaf692723292fa9da3a7a7d6f}{text\+\_\+format\+\_\+no\+\_\+percentage}}=\char`\"{}\char`\"{}, Style\+Type \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TextColumn_ab9427e65ff45c568a8fba64dfad91857}{style}}=\char`\"{}none\char`\"{}, Justify\+Method justify=\char`\"{}left\char`\"{}, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TextColumn_a97ecf53c621e8319d63e9b647f6d2a42}{markup}}=True, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1highlighter_1_1Highlighter}{Highlighter}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TextColumn_a0f1f4529567dde26308b8325936c0615}{highlighter}}=None, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1table_1_1Column}{Column}}\mbox{]} table\+\_\+column=None, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ad0340977a686c2e7905aa462a83d4774}{show\+\_\+speed}}=False)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ab489f074875d341e52364423699d2e7b}{render\+\_\+speed}} (cls, Optional\mbox{[}float\mbox{]} speed)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_a39186ddfd0fd02b8b7d78f0a09d0ae87}{render}} (self, \char`\"{}Task\char`\"{} task)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ab929a53eaf692723292fa9da3a7a7d6f}{text\+\_\+format\+\_\+no\+\_\+percentage}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ad0340977a686c2e7905aa462a83d4774}{show\+\_\+speed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Show task progress as a percentage.
+
+Args:
+    text_format (str, optional): Format for percentage display. Defaults to "[progress.percentage]{task.percentage:>3.0f}%".
+    text_format_no_percentage (str, optional): Format if percentage is unknown. Defaults to "".
+    style (StyleType, optional): Style of output. Defaults to "none".
+    justify (JustifyMethod, optional): Text justification. Defaults to "left".
+    markup (bool, optional): Enable markup. Defaults to True.
+    highlighter (Optional[Highlighter], optional): Highlighter to apply to output. Defaults to None.
+    table_column (Optional[Column], optional): Table Column to use. Defaults to None.
+    show_speed (bool, optional): Show speed if total is unknown. Defaults to False.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_a758a749b193f18d283b0788c6a8f1118}\label{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_a758a749b193f18d283b0788c6a8f1118}} 
+\index{pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+rich.\+progress.\+Task\+Progress\+Column.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str }]{text\+\_\+format = {\ttfamily \char`\"{}\mbox{[}progress.percentage\mbox{]}\{task.percentage\+:$>$3.0f\}\%\char`\"{}},  }\item[{str }]{text\+\_\+format\+\_\+no\+\_\+percentage = {\ttfamily \char`\"{}\char`\"{}},  }\item[{Style\+Type }]{style = {\ttfamily \char`\"{}none\char`\"{}},  }\item[{Justify\+Method }]{justify = {\ttfamily \char`\"{}left\char`\"{}},  }\item[{bool }]{markup = {\ttfamily True},  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1highlighter_1_1Highlighter}{Highlighter}}\mbox{]} }]{highlighter = {\ttfamily None},  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1table_1_1Column}{Column}}\mbox{]} }]{table\+\_\+column = {\ttfamily None},  }\item[{bool }]{show\+\_\+speed = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_a39186ddfd0fd02b8b7d78f0a09d0ae87}\label{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_a39186ddfd0fd02b8b7d78f0a09d0ae87}} 
+\index{pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}!render@{render}}
+\index{render@{render}!pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}} pip.\+\_\+vendor.\+rich.\+progress.\+Task\+Progress\+Column.\+render (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Task\char`\"{}}]{task }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Should return a renderable object.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1progress_1_1TextColumn_aa566414ed53b0899afd058be186dce96}{pip.\+\_\+vendor.\+rich.\+progress.\+Text\+Column}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ab489f074875d341e52364423699d2e7b}\label{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ab489f074875d341e52364423699d2e7b}} 
+\index{pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}!render\_speed@{render\_speed}}
+\index{render\_speed@{render\_speed}!pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}}
+\doxysubsubsection{\texorpdfstring{render\_speed()}{render\_speed()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1text_1_1Text}{Text}} pip.\+\_\+vendor.\+rich.\+progress.\+Task\+Progress\+Column.\+render\+\_\+speed (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{Optional\mbox{[}float\mbox{]}}]{speed }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Render the speed in iterations per second.
+
+Args:
+    task (Task): A Task object.
+
+Returns:
+    Text: Text object containing the task speed.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ad0340977a686c2e7905aa462a83d4774}\label{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ad0340977a686c2e7905aa462a83d4774}} 
+\index{pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}!show\_speed@{show\_speed}}
+\index{show\_speed@{show\_speed}!pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}}
+\doxysubsubsection{\texorpdfstring{show\_speed}{show\_speed}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+Task\+Progress\+Column.\+show\+\_\+speed}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ab929a53eaf692723292fa9da3a7a7d6f}\label{classpip_1_1__vendor_1_1rich_1_1progress_1_1TaskProgressColumn_ab929a53eaf692723292fa9da3a7a7d6f}} 
+\index{pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}!text\_format\_no\_percentage@{text\_format\_no\_percentage}}
+\index{text\_format\_no\_percentage@{text\_format\_no\_percentage}!pip.\_vendor.rich.progress.TaskProgressColumn@{pip.\_vendor.rich.progress.TaskProgressColumn}}
+\doxysubsubsection{\texorpdfstring{text\_format\_no\_percentage}{text\_format\_no\_percentage}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+progress.\+Task\+Progress\+Column.\+text\+\_\+format\+\_\+no\+\_\+percentage}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/rich/\mbox{\hyperlink{progress_8py}{progress.\+py}}\end{DoxyCompactItemize}

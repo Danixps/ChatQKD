@@ -1,0 +1,110 @@
+\hypertarget{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text}{}\doxysection{pip.\+\_\+internal.\+utils.\+\_\+jaraco\+\_\+text Namespace Reference}
+\label{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text}\index{pip.\_internal.utils.\_jaraco\_text@{pip.\_internal.utils.\_jaraco\_text}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text_a7389cdb9d6c1b429b9522b97f93ee5af}{yield\+\_\+lines}} (iterable)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text_ab7f6844844919d9c0234197e5428015b}{drop\+\_\+comment}} (line)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text_a93845f66410603d185f1c18097e6d781}{join\+\_\+continuation}} (lines)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Functions brought over from jaraco.text.
+
+These functions are not supposed to be used within `pip._internal`. These are
+helper functions brought over from `jaraco.text` to enable vendoring newer
+copies of `pkg_resources` without having to vendor `jaraco.text` and its entire
+dependency cone; something that our vendoring setup is not currently capable of
+handling.
+
+License reproduced from original source below:
+
+Copyright Jason R. Coombs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text_ab7f6844844919d9c0234197e5428015b}\label{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text_ab7f6844844919d9c0234197e5428015b}} 
+\index{pip.\_internal.utils.\_jaraco\_text@{pip.\_internal.utils.\_jaraco\_text}!drop\_comment@{drop\_comment}}
+\index{drop\_comment@{drop\_comment}!pip.\_internal.utils.\_jaraco\_text@{pip.\_internal.utils.\_jaraco\_text}}
+\doxysubsubsection{\texorpdfstring{drop\_comment()}{drop\_comment()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+\_\+jaraco\+\_\+text.\+drop\+\_\+comment (\begin{DoxyParamCaption}\item[{}]{line }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Drop comments.
+
+>>> drop_comment('foo # bar')
+'foo'
+
+A hash without a space may be in a URL.
+
+>>> drop_comment('http://example.com/foo#bar')
+'http://example.com/foo#bar'
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text_a93845f66410603d185f1c18097e6d781}\label{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text_a93845f66410603d185f1c18097e6d781}} 
+\index{pip.\_internal.utils.\_jaraco\_text@{pip.\_internal.utils.\_jaraco\_text}!join\_continuation@{join\_continuation}}
+\index{join\_continuation@{join\_continuation}!pip.\_internal.utils.\_jaraco\_text@{pip.\_internal.utils.\_jaraco\_text}}
+\doxysubsubsection{\texorpdfstring{join\_continuation()}{join\_continuation()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+\_\+jaraco\+\_\+text.\+join\+\_\+continuation (\begin{DoxyParamCaption}\item[{}]{lines }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Join lines continued by a trailing backslash.
+
+>>> list(join_continuation(['foo \\', 'bar', 'baz']))
+['foobar', 'baz']
+>>> list(join_continuation(['foo \\', 'bar', 'baz']))
+['foobar', 'baz']
+>>> list(join_continuation(['foo \\', 'bar \\', 'baz']))
+['foobarbaz']
+
+Not sure why, but...
+The character preceeding the backslash is also elided.
+
+>>> list(join_continuation(['goo\\', 'dly']))
+['godly']
+
+A terrible idea, but...
+If no line is available to continue, suppress the lines.
+
+>>> list(join_continuation(['foo', 'bar\\', 'baz\\']))
+['foo']
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text_a7389cdb9d6c1b429b9522b97f93ee5af}\label{namespacepip_1_1__internal_1_1utils_1_1__jaraco__text_a7389cdb9d6c1b429b9522b97f93ee5af}} 
+\index{pip.\_internal.utils.\_jaraco\_text@{pip.\_internal.utils.\_jaraco\_text}!yield\_lines@{yield\_lines}}
+\index{yield\_lines@{yield\_lines}!pip.\_internal.utils.\_jaraco\_text@{pip.\_internal.utils.\_jaraco\_text}}
+\doxysubsubsection{\texorpdfstring{yield\_lines()}{yield\_lines()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+\_\+jaraco\+\_\+text.\+yield\+\_\+lines (\begin{DoxyParamCaption}\item[{}]{iterable }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Yield valid lines of a string or iterable.
+
+>>> list(yield_lines(''))
+[]
+>>> list(yield_lines(['foo', 'bar']))
+['foo', 'bar']
+>>> list(yield_lines('foo\nbar'))
+['foo', 'bar']
+>>> list(yield_lines('\nfoo\n#bar\nbaz #comment'))
+['foo', 'baz #comment']
+>>> list(yield_lines(['foo\nbar', 'baz', 'bing\n\n\n']))
+['foo', 'bar', 'baz', 'bing']
+\end{DoxyVerb}
+ 

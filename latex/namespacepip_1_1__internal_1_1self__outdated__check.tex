@@ -1,0 +1,56 @@
+\hypertarget{namespacepip_1_1__internal_1_1self__outdated__check}{}\doxysection{pip.\+\_\+internal.\+self\+\_\+outdated\+\_\+check Namespace Reference}
+\label{namespacepip_1_1__internal_1_1self__outdated__check}\index{pip.\_internal.self\_outdated\_check@{pip.\_internal.self\_outdated\_check}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1self__outdated__check_1_1SelfCheckState}{Self\+Check\+State}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1self__outdated__check_1_1UpgradePrompt}{Upgrade\+Prompt}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacepip_1_1__internal_1_1self__outdated__check_aa03ec1bd5ecf824fc81d5d421e4aacd6}{was\+\_\+installed\+\_\+by\+\_\+pip}} (str pkg)
+\item 
+None \mbox{\hyperlink{namespacepip_1_1__internal_1_1self__outdated__check_aa9ec6c8db15db9806e565589d57643a6}{pip\+\_\+self\+\_\+version\+\_\+check}} (\mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1session_1_1PipSession}{Pip\+Session}} session, optparse.\+Values options)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1self__outdated__check_a588d105ffdaf709ec245d8bff02d38eb}{logger}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1self__outdated__check_aa9ec6c8db15db9806e565589d57643a6}\label{namespacepip_1_1__internal_1_1self__outdated__check_aa9ec6c8db15db9806e565589d57643a6}} 
+\index{pip.\_internal.self\_outdated\_check@{pip.\_internal.self\_outdated\_check}!pip\_self\_version\_check@{pip\_self\_version\_check}}
+\index{pip\_self\_version\_check@{pip\_self\_version\_check}!pip.\_internal.self\_outdated\_check@{pip.\_internal.self\_outdated\_check}}
+\doxysubsubsection{\texorpdfstring{pip\_self\_version\_check()}{pip\_self\_version\_check()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+self\+\_\+outdated\+\_\+check.\+pip\+\_\+self\+\_\+version\+\_\+check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1session_1_1PipSession}{Pip\+Session}}}]{session,  }\item[{optparse.\+Values}]{options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check for an update for pip.
+
+Limit the frequency of checks to once per week. State is stored either in
+the active virtualenv or in the user's USER_CACHE_DIR keyed off the prefix
+of the pip script path.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1self__outdated__check_aa03ec1bd5ecf824fc81d5d421e4aacd6}\label{namespacepip_1_1__internal_1_1self__outdated__check_aa03ec1bd5ecf824fc81d5d421e4aacd6}} 
+\index{pip.\_internal.self\_outdated\_check@{pip.\_internal.self\_outdated\_check}!was\_installed\_by\_pip@{was\_installed\_by\_pip}}
+\index{was\_installed\_by\_pip@{was\_installed\_by\_pip}!pip.\_internal.self\_outdated\_check@{pip.\_internal.self\_outdated\_check}}
+\doxysubsubsection{\texorpdfstring{was\_installed\_by\_pip()}{was\_installed\_by\_pip()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+self\+\_\+outdated\+\_\+check.\+was\+\_\+installed\+\_\+by\+\_\+pip (\begin{DoxyParamCaption}\item[{str}]{pkg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks whether pkg was installed by pip
+
+This is used not to display the upgrade message when pip is in fact
+installed by system package manager, such as dnf on Fedora.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1self__outdated__check_a588d105ffdaf709ec245d8bff02d38eb}\label{namespacepip_1_1__internal_1_1self__outdated__check_a588d105ffdaf709ec245d8bff02d38eb}} 
+\index{pip.\_internal.self\_outdated\_check@{pip.\_internal.self\_outdated\_check}!logger@{logger}}
+\index{logger@{logger}!pip.\_internal.self\_outdated\_check@{pip.\_internal.self\_outdated\_check}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+self\+\_\+outdated\+\_\+check.\+logger = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+

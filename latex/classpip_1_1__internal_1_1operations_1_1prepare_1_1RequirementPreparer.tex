@@ -1,0 +1,174 @@
+\hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer}{}\doxysection{pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer Class Reference}
+\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer}\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_add5339d9cd0b6ad71bf388988b8d7ae1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a93f833daaa57d658c139553530967f4a}{build\+\_\+dir}}, Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_acf0adba9dd168d050c1ba87ac61c5ee8}{download\+\_\+dir}}, str \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a3b03911c99e31032ac046f43f5e12aee}{src\+\_\+dir}}, bool \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a53e52b0114bffe5935d05c3b63ea443a}{build\+\_\+isolation}}, bool \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_acc0b9645914f3748dd33b662576157fd}{check\+\_\+build\+\_\+deps}}, \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1build_1_1build__tracker_1_1BuildTracker}{Build\+Tracker}} \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_ad0e839f4b9e314a1a4636d92f9065bd1}{build\+\_\+tracker}}, \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1session_1_1PipSession}{Pip\+Session}} session, str progress\+\_\+bar, \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1PackageFinder}{Package\+Finder}} \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a89e868222c54eb36df489027e0be83ac}{finder}}, bool \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_aa8f605003b9a038167f777754f71f33c}{require\+\_\+hashes}}, bool \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_ad70d699208bc934d03c389c44e53325b}{use\+\_\+user\+\_\+site}}, bool lazy\+\_\+wheel, int \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_af2225d70391d87778d2d14d485286660}{verbosity}}, bool \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a0bd594abd93ba89ef451f87bed2a8060}{legacy\+\_\+resolver}})
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1BaseDistribution}{Base\+Distribution}} \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a8d120986c2bd2e9690aeb865f508be91}{prepare\+\_\+linked\+\_\+requirement}} (self, \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}} req, bool parallel\+\_\+builds=False)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a396b18550205e1d5051fe34409545674}{prepare\+\_\+linked\+\_\+requirements\+\_\+more}} (self, Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}\mbox{]} reqs, bool parallel\+\_\+builds=False)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a7dfa7af659394f605830d0bbcbc0ce02}{save\+\_\+linked\+\_\+requirement}} (self, \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}} req)
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1BaseDistribution}{Base\+Distribution}} \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a6d67d8cfccc8a1eafe2addeda476025d}{prepare\+\_\+editable\+\_\+requirement}} (self, \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}} req)
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1BaseDistribution}{Base\+Distribution}} \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a918f49b41b183ddd853ece300d599208}{prepare\+\_\+installed\+\_\+requirement}} (self, \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}} req, str skip\+\_\+reason)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a3b03911c99e31032ac046f43f5e12aee}{src\+\_\+dir}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a93f833daaa57d658c139553530967f4a}{build\+\_\+dir}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_ad0e839f4b9e314a1a4636d92f9065bd1}{build\+\_\+tracker}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a89e868222c54eb36df489027e0be83ac}{finder}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_acf0adba9dd168d050c1ba87ac61c5ee8}{download\+\_\+dir}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a53e52b0114bffe5935d05c3b63ea443a}{build\+\_\+isolation}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_acc0b9645914f3748dd33b662576157fd}{check\+\_\+build\+\_\+deps}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_aa8f605003b9a038167f777754f71f33c}{require\+\_\+hashes}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_ad70d699208bc934d03c389c44e53325b}{use\+\_\+user\+\_\+site}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a75366151f809402f695cffbee0a35fd7}{use\+\_\+lazy\+\_\+wheel}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_af2225d70391d87778d2d14d485286660}{verbosity}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a0bd594abd93ba89ef451f87bed2a8060}{legacy\+\_\+resolver}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Prepares a Requirement\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_add5339d9cd0b6ad71bf388988b8d7ae1}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_add5339d9cd0b6ad71bf388988b8d7ae1}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{build\+\_\+dir,  }\item[{Optional\mbox{[}str\mbox{]}}]{download\+\_\+dir,  }\item[{str}]{src\+\_\+dir,  }\item[{bool}]{build\+\_\+isolation,  }\item[{bool}]{check\+\_\+build\+\_\+deps,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1build_1_1build__tracker_1_1BuildTracker}{Build\+Tracker}}}]{build\+\_\+tracker,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1session_1_1PipSession}{Pip\+Session}}}]{session,  }\item[{str}]{progress\+\_\+bar,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1PackageFinder}{Package\+Finder}}}]{finder,  }\item[{bool}]{require\+\_\+hashes,  }\item[{bool}]{use\+\_\+user\+\_\+site,  }\item[{bool}]{lazy\+\_\+wheel,  }\item[{int}]{verbosity,  }\item[{bool}]{legacy\+\_\+resolver }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a6d67d8cfccc8a1eafe2addeda476025d}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a6d67d8cfccc8a1eafe2addeda476025d}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!prepare\_editable\_requirement@{prepare\_editable\_requirement}}
+\index{prepare\_editable\_requirement@{prepare\_editable\_requirement}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{prepare\_editable\_requirement()}{prepare\_editable\_requirement()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1BaseDistribution}{Base\+Distribution}} pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+prepare\+\_\+editable\+\_\+requirement (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}}]{req }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prepare an editable requirement.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a918f49b41b183ddd853ece300d599208}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a918f49b41b183ddd853ece300d599208}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!prepare\_installed\_requirement@{prepare\_installed\_requirement}}
+\index{prepare\_installed\_requirement@{prepare\_installed\_requirement}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{prepare\_installed\_requirement()}{prepare\_installed\_requirement()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1BaseDistribution}{Base\+Distribution}} pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+prepare\+\_\+installed\+\_\+requirement (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}}]{req,  }\item[{str}]{skip\+\_\+reason }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prepare an already-installed requirement.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a8d120986c2bd2e9690aeb865f508be91}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a8d120986c2bd2e9690aeb865f508be91}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!prepare\_linked\_requirement@{prepare\_linked\_requirement}}
+\index{prepare\_linked\_requirement@{prepare\_linked\_requirement}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{prepare\_linked\_requirement()}{prepare\_linked\_requirement()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1BaseDistribution}{Base\+Distribution}} pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+prepare\+\_\+linked\+\_\+requirement (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}}]{req,  }\item[{bool }]{parallel\+\_\+builds = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prepare a requirement to be obtained from req.link.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a396b18550205e1d5051fe34409545674}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a396b18550205e1d5051fe34409545674}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!prepare\_linked\_requirements\_more@{prepare\_linked\_requirements\_more}}
+\index{prepare\_linked\_requirements\_more@{prepare\_linked\_requirements\_more}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{prepare\_linked\_requirements\_more()}{prepare\_linked\_requirements\_more()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+prepare\+\_\+linked\+\_\+requirements\+\_\+more (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}\mbox{]}}]{reqs,  }\item[{bool }]{parallel\+\_\+builds = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prepare linked requirements more, if needed.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a7dfa7af659394f605830d0bbcbc0ce02}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a7dfa7af659394f605830d0bbcbc0ce02}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!save\_linked\_requirement@{save\_linked\_requirement}}
+\index{save\_linked\_requirement@{save\_linked\_requirement}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{save\_linked\_requirement()}{save\_linked\_requirement()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+save\+\_\+linked\+\_\+requirement (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}}]{req }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a93f833daaa57d658c139553530967f4a}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a93f833daaa57d658c139553530967f4a}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!build\_dir@{build\_dir}}
+\index{build\_dir@{build\_dir}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{build\_dir}{build\_dir}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+build\+\_\+dir}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a53e52b0114bffe5935d05c3b63ea443a}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a53e52b0114bffe5935d05c3b63ea443a}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!build\_isolation@{build\_isolation}}
+\index{build\_isolation@{build\_isolation}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{build\_isolation}{build\_isolation}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+build\+\_\+isolation}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_ad0e839f4b9e314a1a4636d92f9065bd1}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_ad0e839f4b9e314a1a4636d92f9065bd1}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!build\_tracker@{build\_tracker}}
+\index{build\_tracker@{build\_tracker}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{build\_tracker}{build\_tracker}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+build\+\_\+tracker}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_acc0b9645914f3748dd33b662576157fd}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_acc0b9645914f3748dd33b662576157fd}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!check\_build\_deps@{check\_build\_deps}}
+\index{check\_build\_deps@{check\_build\_deps}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{check\_build\_deps}{check\_build\_deps}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+check\+\_\+build\+\_\+deps}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_acf0adba9dd168d050c1ba87ac61c5ee8}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_acf0adba9dd168d050c1ba87ac61c5ee8}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!download\_dir@{download\_dir}}
+\index{download\_dir@{download\_dir}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{download\_dir}{download\_dir}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+download\+\_\+dir}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a89e868222c54eb36df489027e0be83ac}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a89e868222c54eb36df489027e0be83ac}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!finder@{finder}}
+\index{finder@{finder}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{finder}{finder}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+finder}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a0bd594abd93ba89ef451f87bed2a8060}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a0bd594abd93ba89ef451f87bed2a8060}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!legacy\_resolver@{legacy\_resolver}}
+\index{legacy\_resolver@{legacy\_resolver}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{legacy\_resolver}{legacy\_resolver}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+legacy\+\_\+resolver}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_aa8f605003b9a038167f777754f71f33c}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_aa8f605003b9a038167f777754f71f33c}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!require\_hashes@{require\_hashes}}
+\index{require\_hashes@{require\_hashes}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{require\_hashes}{require\_hashes}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+require\+\_\+hashes}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a3b03911c99e31032ac046f43f5e12aee}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a3b03911c99e31032ac046f43f5e12aee}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!src\_dir@{src\_dir}}
+\index{src\_dir@{src\_dir}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{src\_dir}{src\_dir}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+src\+\_\+dir}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a75366151f809402f695cffbee0a35fd7}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_a75366151f809402f695cffbee0a35fd7}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!use\_lazy\_wheel@{use\_lazy\_wheel}}
+\index{use\_lazy\_wheel@{use\_lazy\_wheel}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{use\_lazy\_wheel}{use\_lazy\_wheel}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+use\+\_\+lazy\+\_\+wheel}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_ad70d699208bc934d03c389c44e53325b}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_ad70d699208bc934d03c389c44e53325b}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!use\_user\_site@{use\_user\_site}}
+\index{use\_user\_site@{use\_user\_site}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{use\_user\_site}{use\_user\_site}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+use\+\_\+user\+\_\+site}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_af2225d70391d87778d2d14d485286660}\label{classpip_1_1__internal_1_1operations_1_1prepare_1_1RequirementPreparer_af2225d70391d87778d2d14d485286660}} 
+\index{pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}!verbosity@{verbosity}}
+\index{verbosity@{verbosity}!pip.\_internal.operations.prepare.RequirementPreparer@{pip.\_internal.operations.prepare.RequirementPreparer}}
+\doxysubsubsection{\texorpdfstring{verbosity}{verbosity}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+operations.\+prepare.\+Requirement\+Preparer.\+verbosity}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/operations/\mbox{\hyperlink{prepare_8py}{prepare.\+py}}\end{DoxyCompactItemize}

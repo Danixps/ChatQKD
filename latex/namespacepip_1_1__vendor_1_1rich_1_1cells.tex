@@ -1,0 +1,79 @@
+\hypertarget{namespacepip_1_1__vendor_1_1rich_1_1cells}{}\doxysection{pip.\+\_\+vendor.\+rich.\+cells Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1rich_1_1cells}\index{pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1cells_a0a7509ebce1015fe35b0f06a84395b13}{cached\+\_\+cell\+\_\+len}} (str text)
+\item 
+int \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1cells_aa52a3891aeecb63556bd8932919f8d02}{cell\+\_\+len}} (str text, Callable\mbox{[}\mbox{[}str\mbox{]}, int\mbox{]} \+\_\+cell\+\_\+len=\mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1cells_a0a7509ebce1015fe35b0f06a84395b13}{cached\+\_\+cell\+\_\+len}})
+\item 
+int \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1cells_aa00054391baec6530cb40dfc0ff6e2ac}{get\+\_\+character\+\_\+cell\+\_\+size}} (str character)
+\item 
+str \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1cells_a26b7e839acf661bbfd6428bda1d7752a}{set\+\_\+cell\+\_\+size}} (str text, int total)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1cells_a1098970d25bfd4dc9e2be9f5a03ebff1}{chop\+\_\+cells}} (str text, int max\+\_\+size, int position=0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1cells_a0a7509ebce1015fe35b0f06a84395b13}\label{namespacepip_1_1__vendor_1_1rich_1_1cells_a0a7509ebce1015fe35b0f06a84395b13}} 
+\index{pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}!cached\_cell\_len@{cached\_cell\_len}}
+\index{cached\_cell\_len@{cached\_cell\_len}!pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}}
+\doxysubsubsection{\texorpdfstring{cached\_cell\_len()}{cached\_cell\_len()}}
+{\footnotesize\ttfamily  int pip.\+\_\+vendor.\+rich.\+cells.\+cached\+\_\+cell\+\_\+len (\begin{DoxyParamCaption}\item[{str}]{text }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the number of cells required to display text.
+
+This method always caches, which may use up a lot of memory. It is recommended to use
+`cell_len` over this method.
+
+Args:
+    text (str): Text to display.
+
+Returns:
+    int: Get the number of cells required to display text.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1cells_aa52a3891aeecb63556bd8932919f8d02}\label{namespacepip_1_1__vendor_1_1rich_1_1cells_aa52a3891aeecb63556bd8932919f8d02}} 
+\index{pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}!cell\_len@{cell\_len}}
+\index{cell\_len@{cell\_len}!pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}}
+\doxysubsubsection{\texorpdfstring{cell\_len()}{cell\_len()}}
+{\footnotesize\ttfamily  int pip.\+\_\+vendor.\+rich.\+cells.\+cell\+\_\+len (\begin{DoxyParamCaption}\item[{str}]{text,  }\item[{Callable\mbox{[}\mbox{[}str\mbox{]}, int\mbox{]} }]{\+\_\+cell\+\_\+len = {\ttfamily \mbox{\hyperlink{namespacepip_1_1__vendor_1_1rich_1_1cells_a0a7509ebce1015fe35b0f06a84395b13}{cached\+\_\+cell\+\_\+len}}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the number of cells required to display text.
+
+Args:
+    text (str): Text to display.
+
+Returns:
+    int: Get the number of cells required to display text.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1cells_a1098970d25bfd4dc9e2be9f5a03ebff1}\label{namespacepip_1_1__vendor_1_1rich_1_1cells_a1098970d25bfd4dc9e2be9f5a03ebff1}} 
+\index{pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}!chop\_cells@{chop\_cells}}
+\index{chop\_cells@{chop\_cells}!pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}}
+\doxysubsubsection{\texorpdfstring{chop\_cells()}{chop\_cells()}}
+{\footnotesize\ttfamily  List\mbox{[}str\mbox{]} pip.\+\_\+vendor.\+rich.\+cells.\+chop\+\_\+cells (\begin{DoxyParamCaption}\item[{str}]{text,  }\item[{int}]{max\+\_\+size,  }\item[{int }]{position = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Break text in to equal (cell) length strings, returning the characters in reverse
+order\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1cells_aa00054391baec6530cb40dfc0ff6e2ac}\label{namespacepip_1_1__vendor_1_1rich_1_1cells_aa00054391baec6530cb40dfc0ff6e2ac}} 
+\index{pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}!get\_character\_cell\_size@{get\_character\_cell\_size}}
+\index{get\_character\_cell\_size@{get\_character\_cell\_size}!pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}}
+\doxysubsubsection{\texorpdfstring{get\_character\_cell\_size()}{get\_character\_cell\_size()}}
+{\footnotesize\ttfamily  int pip.\+\_\+vendor.\+rich.\+cells.\+get\+\_\+character\+\_\+cell\+\_\+size (\begin{DoxyParamCaption}\item[{str}]{character }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the cell size of a character.
+
+Args:
+    character (str): A single character.
+
+Returns:
+    int: Number of cells (0, 1 or 2) occupied by that character.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1rich_1_1cells_a26b7e839acf661bbfd6428bda1d7752a}\label{namespacepip_1_1__vendor_1_1rich_1_1cells_a26b7e839acf661bbfd6428bda1d7752a}} 
+\index{pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}!set\_cell\_size@{set\_cell\_size}}
+\index{set\_cell\_size@{set\_cell\_size}!pip.\_vendor.rich.cells@{pip.\_vendor.rich.cells}}
+\doxysubsubsection{\texorpdfstring{set\_cell\_size()}{set\_cell\_size()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+rich.\+cells.\+set\+\_\+cell\+\_\+size (\begin{DoxyParamCaption}\item[{str}]{text,  }\item[{int}]{total }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the length of a string to fit within given number of cells.\end{DoxyVerb}
+ 

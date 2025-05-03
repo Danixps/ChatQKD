@@ -1,0 +1,148 @@
+\hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding}{}\doxysection{pip.\+\_\+vendor.\+rich.\+padding.\+Padding Class Reference}
+\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding}\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+rich.\+padding.\+Padding\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+rich.\+padding.\+Padding\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a0cd8655a29b588f25531ec12135cea47}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \char`\"{}Renderable\+Type\char`\"{} renderable, \char`\"{}Padding\+Dimensions\char`\"{} pad=(0, 0, 0, 0), $\ast$Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_af43bfc59e2e0ca9f9bd63a6a77651f00}{style}}=\char`\"{}none\char`\"{}, bool \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a2cfa2962d6646dd04c112b69fc721f34}{expand}}=True)
+\item 
+\char`\"{}Padding\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_abb6784da1907e3486c3a9ea715a04ed2}{indent}} (cls, \char`\"{}Renderable\+Type\char`\"{} renderable, int level)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a54228d2ccc0ef391011d76499baea0c9}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+\char`\"{}Render\+Result\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a23e27b4fb591fa1a4b6a04c497729077}{\+\_\+\+\_\+rich\+\_\+console\+\_\+\+\_\+}} (self, \char`\"{}Console\char`\"{} console, \char`\"{}Console\+Options\char`\"{} options)
+\item 
+\char`\"{}Measurement\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a54c9564b765b9835d72f4390b0753b1d}{\+\_\+\+\_\+rich\+\_\+measure\+\_\+\+\_\+}} (self, \char`\"{}Console\char`\"{} console, \char`\"{}Console\+Options\char`\"{} options)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Tuple\mbox{[}int, int, int, int\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a7807f0229ad870cf2f706dbf3cf3d397}{unpack}} (\char`\"{}Padding\+Dimensions\char`\"{} pad)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_aefe4eff01adfe0bd2d8499885eb33e0a}{renderable}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a5a78d26a121ad94d8dbbd3e7bcc61f1b}{left}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_af43bfc59e2e0ca9f9bd63a6a77651f00}{style}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a2cfa2962d6646dd04c112b69fc721f34}{expand}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Draw space around content.
+
+Example:
+    >>> print(Padding("Hello", (2, 4), style="on blue"))
+
+Args:
+    renderable (RenderableType): String or other renderable.
+    pad (Union[int, Tuple[int]]): Padding for top, right, bottom, and left borders.
+        May be specified with 1, 2, or 4 integers (CSS style).
+    style (Union[str, Style], optional): Style for padding characters. Defaults to "none".
+    expand (bool, optional): Expand padding to fit available width. Defaults to True.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a0cd8655a29b588f25531ec12135cea47}\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a0cd8655a29b588f25531ec12135cea47}} 
+\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+rich.\+padding.\+Padding.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Renderable\+Type\char`\"{}}]{renderable,  }\item[{\char`\"{}Padding\+Dimensions\char`\"{} }]{pad = {\ttfamily (0,~0,~0,~0)},  }\item[{$\ast$Union\mbox{[}str, \mbox{\hyperlink{classpip_1_1__vendor_1_1rich_1_1style_1_1Style}{Style}}\mbox{]} }]{style = {\ttfamily \char`\"{}none\char`\"{}},  }\item[{bool }]{expand = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a54228d2ccc0ef391011d76499baea0c9}\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a54228d2ccc0ef391011d76499baea0c9}} 
+\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+rich.\+padding.\+Padding.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a23e27b4fb591fa1a4b6a04c497729077}\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a23e27b4fb591fa1a4b6a04c497729077}} 
+\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}!\_\_rich\_console\_\_@{\_\_rich\_console\_\_}}
+\index{\_\_rich\_console\_\_@{\_\_rich\_console\_\_}!pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+\doxysubsubsection{\texorpdfstring{\_\_rich\_console\_\_()}{\_\_rich\_console\_\_()}}
+{\footnotesize\ttfamily  \char`\"{}Render\+Result\char`\"{} pip.\+\_\+vendor.\+rich.\+padding.\+Padding.\+\_\+\+\_\+rich\+\_\+console\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Console\char`\"{}}]{console,  }\item[{\char`\"{}Console\+Options\char`\"{}     }]{options }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a54c9564b765b9835d72f4390b0753b1d}\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a54c9564b765b9835d72f4390b0753b1d}} 
+\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}!\_\_rich\_measure\_\_@{\_\_rich\_measure\_\_}}
+\index{\_\_rich\_measure\_\_@{\_\_rich\_measure\_\_}!pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+\doxysubsubsection{\texorpdfstring{\_\_rich\_measure\_\_()}{\_\_rich\_measure\_\_()}}
+{\footnotesize\ttfamily  \char`\"{}Measurement\char`\"{} pip.\+\_\+vendor.\+rich.\+padding.\+Padding.\+\_\+\+\_\+rich\+\_\+measure\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Console\char`\"{}}]{console,  }\item[{\char`\"{}Console\+Options\char`\"{}     }]{options }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_abb6784da1907e3486c3a9ea715a04ed2}\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_abb6784da1907e3486c3a9ea715a04ed2}} 
+\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}!indent@{indent}}
+\index{indent@{indent}!pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+\doxysubsubsection{\texorpdfstring{indent()}{indent()}}
+{\footnotesize\ttfamily  \char`\"{}Padding\char`\"{} pip.\+\_\+vendor.\+rich.\+padding.\+Padding.\+indent (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{\char`\"{}Renderable\+Type\char`\"{}}]{renderable,  }\item[{int}]{level }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Make padding instance to render an indent.
+
+Args:
+    renderable (RenderableType): String or other renderable.
+    level (int): Number of characters to indent.
+
+Returns:
+    Padding: A Padding instance.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a7807f0229ad870cf2f706dbf3cf3d397}\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a7807f0229ad870cf2f706dbf3cf3d397}} 
+\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}!unpack@{unpack}}
+\index{unpack@{unpack}!pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily  Tuple\mbox{[}int, int, int, int\mbox{]} pip.\+\_\+vendor.\+rich.\+padding.\+Padding.\+unpack (\begin{DoxyParamCaption}\item[{\char`\"{}Padding\+Dimensions\char`\"{}}]{pad }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Unpack padding specified in CSS style.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a2cfa2962d6646dd04c112b69fc721f34}\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a2cfa2962d6646dd04c112b69fc721f34}} 
+\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}!expand@{expand}}
+\index{expand@{expand}!pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+\doxysubsubsection{\texorpdfstring{expand}{expand}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+padding.\+Padding.\+expand}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a5a78d26a121ad94d8dbbd3e7bcc61f1b}\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_a5a78d26a121ad94d8dbbd3e7bcc61f1b}} 
+\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}!left@{left}}
+\index{left@{left}!pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+padding.\+Padding.\+left}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_aefe4eff01adfe0bd2d8499885eb33e0a}\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_aefe4eff01adfe0bd2d8499885eb33e0a}} 
+\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}!renderable@{renderable}}
+\index{renderable@{renderable}!pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+\doxysubsubsection{\texorpdfstring{renderable}{renderable}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+padding.\+Padding.\+renderable}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_af43bfc59e2e0ca9f9bd63a6a77651f00}\label{classpip_1_1__vendor_1_1rich_1_1padding_1_1Padding_af43bfc59e2e0ca9f9bd63a6a77651f00}} 
+\index{pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}!style@{style}}
+\index{style@{style}!pip.\_vendor.rich.padding.Padding@{pip.\_vendor.rich.padding.Padding}}
+\doxysubsubsection{\texorpdfstring{style}{style}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+rich.\+padding.\+Padding.\+style}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/rich/\mbox{\hyperlink{padding_8py}{padding.\+py}}\end{DoxyCompactItemize}

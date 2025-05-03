@@ -1,0 +1,152 @@
+\hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport}{}\doxysection{pip.\+\_\+vendor.\+urllib3.\+contrib.\+securetransport Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport}\index{pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_1_1WrappedSocket}{Wrapped\+Socket}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_1_1SecureTransportContext}{Secure\+Transport\+Context}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a1d3a599e9615c078c3ccca4aa5a131c0}{inject\+\_\+into\+\_\+urllib3}} ()
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a319448b077a361bc39ae54bc15db4348}{extract\+\_\+from\+\_\+urllib3}} ()
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a498d39e3a7d94de7f5d4fe2d946ca74d}{makefile}} (self, mode, bufsize=-\/1)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a9a90cbfc4970509bb6c3408e35a15171}{makefile}} (self, mode=\char`\"{}r\char`\"{}, buffering=None, $\ast$args, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_aec9a5185c107e235556cf68158bfde6a}{HAS\+\_\+\+SNI}} = True
+\item 
+bool \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a0001a30ac862678a29e2312049ab9579}{orig\+\_\+util\+\_\+\+HAS\+\_\+\+SNI}} = util.\+HAS\+\_\+\+SNI
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a2fa95454ff47b415803d6ee27a6d6bb7}{orig\+\_\+util\+\_\+\+SSLContext}} = \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1util_1_1ssl___1_1SSLContext}{util.\+ssl\+\_\+.\+SSLContext}}
+\item 
+int \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a42f6ffdc5cccef7db2ee0f8dfd483117}{SSL\+\_\+\+WRITE\+\_\+\+BLOCKSIZE}} = 16384
+\item 
+list \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_aafa3d61af3c63948bd3fefa871e4e325}{CIPHER\+\_\+\+SUITES}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}SecureTranport support for urllib3 via ctypes.
+
+This makes platform-native TLS available to urllib3 users on macOS without the
+use of a compiler. This is an important feature because the Python Package
+Index is moving to become a TLSv1.2-or-higher server, and the default OpenSSL
+that ships with macOS is not capable of doing TLSv1.2. The only way to resolve
+this is to give macOS users an alternative solution to the problem, and that
+solution is to use SecureTransport.
+
+We use ctypes here because this solution must not require a compiler. That's
+because pip is not allowed to require a compiler either.
+
+This is not intended to be a seriously long-term solution to this problem.
+The hope is that PEP 543 will eventually solve this issue for us, at which
+point we can retire this contrib module. But in the short term, we need to
+solve the impending tire fire that is Python on Mac without this kind of
+contrib module. So...here we are.
+
+To use this module, simply import and inject it::
+
+    import pip._vendor.urllib3.contrib.securetransport as securetransport
+    securetransport.inject_into_urllib3()
+
+Happy TLSing!
+
+This code is a bastardised version of the code found in Will Bond's oscrypto
+library. An enormous debt is owed to him for blazing this trail for us. For
+that reason, this code should be considered to be covered both by urllib3's
+license and by oscrypto's:
+
+.. code-block::
+
+    Copyright (c) 2015-2016 Will Bond <will@wbond.net>
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a319448b077a361bc39ae54bc15db4348}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a319448b077a361bc39ae54bc15db4348}} 
+\index{pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}!extract\_from\_urllib3@{extract\_from\_urllib3}}
+\index{extract\_from\_urllib3@{extract\_from\_urllib3}!pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}}
+\doxysubsubsection{\texorpdfstring{extract\_from\_urllib3()}{extract\_from\_urllib3()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+contrib.\+securetransport.\+extract\+\_\+from\+\_\+urllib3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Undo monkey-patching by :func:`inject_into_urllib3`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a1d3a599e9615c078c3ccca4aa5a131c0}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a1d3a599e9615c078c3ccca4aa5a131c0}} 
+\index{pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}!inject\_into\_urllib3@{inject\_into\_urllib3}}
+\index{inject\_into\_urllib3@{inject\_into\_urllib3}!pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}}
+\doxysubsubsection{\texorpdfstring{inject\_into\_urllib3()}{inject\_into\_urllib3()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+contrib.\+securetransport.\+inject\+\_\+into\+\_\+urllib3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Monkey-patch urllib3 with SecureTransport-backed SSL-support.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a498d39e3a7d94de7f5d4fe2d946ca74d}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a498d39e3a7d94de7f5d4fe2d946ca74d}} 
+\index{pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}!makefile@{makefile}}
+\index{makefile@{makefile}!pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}}
+\doxysubsubsection{\texorpdfstring{makefile()}{makefile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+contrib.\+securetransport.\+makefile (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode,  }\item[{}]{bufsize = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a9a90cbfc4970509bb6c3408e35a15171}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a9a90cbfc4970509bb6c3408e35a15171}} 
+\index{pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}!makefile@{makefile}}
+\index{makefile@{makefile}!pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}}
+\doxysubsubsection{\texorpdfstring{makefile()}{makefile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+contrib.\+securetransport.\+makefile (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode = {\ttfamily \char`\"{}r\char`\"{}},  }\item[{}]{buffering = {\ttfamily None},  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_aafa3d61af3c63948bd3fefa871e4e325}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_aafa3d61af3c63948bd3fefa871e4e325}} 
+\index{pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}!CIPHER\_SUITES@{CIPHER\_SUITES}}
+\index{CIPHER\_SUITES@{CIPHER\_SUITES}!pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}}
+\doxysubsubsection{\texorpdfstring{CIPHER\_SUITES}{CIPHER\_SUITES}}
+{\footnotesize\ttfamily list pip.\+\_\+vendor.\+urllib3.\+contrib.\+securetransport.\+CIPHER\+\_\+\+SUITES}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_aec9a5185c107e235556cf68158bfde6a}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_aec9a5185c107e235556cf68158bfde6a}} 
+\index{pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}!HAS\_SNI@{HAS\_SNI}}
+\index{HAS\_SNI@{HAS\_SNI}!pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}}
+\doxysubsubsection{\texorpdfstring{HAS\_SNI}{HAS\_SNI}}
+{\footnotesize\ttfamily bool pip.\+\_\+vendor.\+urllib3.\+contrib.\+securetransport.\+HAS\+\_\+\+SNI = True}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a0001a30ac862678a29e2312049ab9579}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a0001a30ac862678a29e2312049ab9579}} 
+\index{pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}!orig\_util\_HAS\_SNI@{orig\_util\_HAS\_SNI}}
+\index{orig\_util\_HAS\_SNI@{orig\_util\_HAS\_SNI}!pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}}
+\doxysubsubsection{\texorpdfstring{orig\_util\_HAS\_SNI}{orig\_util\_HAS\_SNI}}
+{\footnotesize\ttfamily bool pip.\+\_\+vendor.\+urllib3.\+contrib.\+securetransport.\+orig\+\_\+util\+\_\+\+HAS\+\_\+\+SNI = util.\+HAS\+\_\+\+SNI}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a2fa95454ff47b415803d6ee27a6d6bb7}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a2fa95454ff47b415803d6ee27a6d6bb7}} 
+\index{pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}!orig\_util\_SSLContext@{orig\_util\_SSLContext}}
+\index{orig\_util\_SSLContext@{orig\_util\_SSLContext}!pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}}
+\doxysubsubsection{\texorpdfstring{orig\_util\_SSLContext}{orig\_util\_SSLContext}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+urllib3.\+contrib.\+securetransport.\+orig\+\_\+util\+\_\+\+SSLContext = \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1util_1_1ssl___1_1SSLContext}{util.\+ssl\+\_\+.\+SSLContext}}}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a42f6ffdc5cccef7db2ee0f8dfd483117}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1securetransport_a42f6ffdc5cccef7db2ee0f8dfd483117}} 
+\index{pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}!SSL\_WRITE\_BLOCKSIZE@{SSL\_WRITE\_BLOCKSIZE}}
+\index{SSL\_WRITE\_BLOCKSIZE@{SSL\_WRITE\_BLOCKSIZE}!pip.\_vendor.urllib3.contrib.securetransport@{pip.\_vendor.urllib3.contrib.securetransport}}
+\doxysubsubsection{\texorpdfstring{SSL\_WRITE\_BLOCKSIZE}{SSL\_WRITE\_BLOCKSIZE}}
+{\footnotesize\ttfamily int pip.\+\_\+vendor.\+urllib3.\+contrib.\+securetransport.\+SSL\+\_\+\+WRITE\+\_\+\+BLOCKSIZE = 16384}
+

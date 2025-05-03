@@ -1,0 +1,125 @@
+\hypertarget{classpip_1_1__internal_1_1exceptions_1_1HashMismatch}{}\doxysection{pip.\+\_\+internal.\+exceptions.\+Hash\+Mismatch Class Reference}
+\label{classpip_1_1__internal_1_1exceptions_1_1HashMismatch}\index{pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+exceptions.\+Hash\+Mismatch\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classpip_1_1__internal_1_1exceptions_1_1HashMismatch__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+internal.\+exceptions.\+Hash\+Mismatch\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classpip_1_1__internal_1_1exceptions_1_1HashMismatch__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a89b96c614c9c81ba7b4ecd23e51c8a30}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Dict\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a75f1e4930d8d7dca662cfa12bd05842f}{allowed}}, Dict\mbox{[}str, \char`\"{}\+\_\+\+Hash\char`\"{}\mbox{]} gots)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a24c9ffc7b9a48c74ac53439d56a05dc6}{body}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a75f1e4930d8d7dca662cfa12bd05842f}{allowed}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_abae5463ebcc1108c4695cad4065133ce}{gots}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1HashError_a1d1b2323fec4165878134cdf6c385743}{int}} \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a0583f085398d071f963d74ad6977b01c}{order}} = 4
+\item 
+tuple \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_afdf713626f29a3408c26d54c0624b6b0}{head}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Distribution file hash values don't match.
+
+:ivar package_name: The name of the package that triggered the hash
+    mismatch. Feel free to write to this after the exception is raise to
+    improve its error message.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a89b96c614c9c81ba7b4ecd23e51c8a30}\label{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a89b96c614c9c81ba7b4ecd23e51c8a30}} 
+\index{pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+exceptions.\+Hash\+Mismatch.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Dict\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}}]{allowed,  }\item[{Dict\mbox{[}str, \char`\"{}\+\_\+\+Hash\char`\"{}\mbox{]}}]{gots }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param allowed: A dict of algorithm names pointing to lists of allowed
+    hex digests
+:param gots: A dict of algorithm names pointing to hashes we
+    actually got from the files under suspicion
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a24c9ffc7b9a48c74ac53439d56a05dc6}\label{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a24c9ffc7b9a48c74ac53439d56a05dc6}} 
+\index{pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}!body@{body}}
+\index{body@{body}!pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}}
+\doxysubsubsection{\texorpdfstring{body()}{body()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+exceptions.\+Hash\+Mismatch.\+body (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a summary of me for display under the heading.
+
+This default implementation simply prints a description of the
+triggering requirement.
+
+:param req: The InstallRequirement that provoked this error, with
+    its link already populated by the resolver's _populate_link().\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1HashError_a8b1a0890122218544dd1a3e23c416431}{pip.\+\_\+internal.\+exceptions.\+Hash\+Error}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a75f1e4930d8d7dca662cfa12bd05842f}\label{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a75f1e4930d8d7dca662cfa12bd05842f}} 
+\index{pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}!allowed@{allowed}}
+\index{allowed@{allowed}!pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}}
+\doxysubsubsection{\texorpdfstring{allowed}{allowed}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+Hash\+Mismatch.\+allowed}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_abae5463ebcc1108c4695cad4065133ce}\label{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_abae5463ebcc1108c4695cad4065133ce}} 
+\index{pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}!gots@{gots}}
+\index{gots@{gots}!pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}}
+\doxysubsubsection{\texorpdfstring{gots}{gots}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+Hash\+Mismatch.\+gots}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_afdf713626f29a3408c26d54c0624b6b0}\label{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_afdf713626f29a3408c26d54c0624b6b0}} 
+\index{pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}!head@{head}}
+\index{head@{head}!pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily tuple pip.\+\_\+internal.\+exceptions.\+Hash\+Mismatch.\+head\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS "{}}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}FILE. If you have updated the package versions, please update "{}}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}the hashes. Otherwise, examine the package contents carefully; "{}}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}someone may have tampered with them."{}}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a0583f085398d071f963d74ad6977b01c}\label{classpip_1_1__internal_1_1exceptions_1_1HashMismatch_a0583f085398d071f963d74ad6977b01c}} 
+\index{pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}!order@{order}}
+\index{order@{order}!pip.\_internal.exceptions.HashMismatch@{pip.\_internal.exceptions.HashMismatch}}
+\doxysubsubsection{\texorpdfstring{order}{order}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1HashError_a1d1b2323fec4165878134cdf6c385743}{int}} pip.\+\_\+internal.\+exceptions.\+Hash\+Mismatch.\+order = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/\mbox{\hyperlink{__internal_2exceptions_8py}{exceptions.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,138 @@
+\hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState}{}\doxysection{pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State Class Reference}
+\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState}\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a1e4c87242078c7bab93e8a8daed59a41}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1BaseRetrying}{Base\+Retrying}} \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a96aa4e59f71d78a34569ba15b5e3b0db}{retry\+\_\+object}}, t.\+Optional\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1tenacity_a8f769ca8e15c471b0617bc0906a9a517}{Wrapped\+Fn}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a784592906d31c66702e6bff5bfcffcb2}{fn}}, t.\+Any \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_af945258bad647b4be99f509628811b59}{args}}, t.\+Any \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a5c01b0ac2d5c80396247d3b2e913b4c3}{kwargs}})
+\item 
+t.\+Optional\mbox{[}float\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a03d303df14095e66d24006bd808cf7d5}{seconds\+\_\+since\+\_\+start}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a8b0dd1f1692f2092cf5a900be0886162}{prepare\+\_\+for\+\_\+next\+\_\+attempt}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_ac9a543e89af85e585ed30dfb8bd64dc1}{set\+\_\+result}} (self, t.\+Any val)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_ae3e8741df8c24bee9dce799646031a93}{set\+\_\+exception}} (self, t.\+Tuple\mbox{[}t.\+Type\mbox{[}Base\+Exception\mbox{]}, Base\+Exception, \char`\"{}types.\+Traceback\+Type$\vert$ None\char`\"{}\mbox{]} exc\+\_\+info)
+\item 
+str \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a34469b65852709b9b7d2817998e673d6}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_ac3428488f702dbd79ada0ea5e16f6f9d}{start\+\_\+time}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a96aa4e59f71d78a34569ba15b5e3b0db}{retry\+\_\+object}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a784592906d31c66702e6bff5bfcffcb2}{fn}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_af945258bad647b4be99f509628811b59}{args}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a5c01b0ac2d5c80396247d3b2e913b4c3}{kwargs}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a1f083eb19763a11af42e28c056d5d4cc}{outcome}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a0e142db6b4815d8e8b9fbed5dffb070c}{outcome\+\_\+timestamp}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_abbada559edd5410f5aa7e1bca111119b}{next\+\_\+action}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}State related to a single call wrapped with Retrying.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a1e4c87242078c7bab93e8a8daed59a41}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a1e4c87242078c7bab93e8a8daed59a41}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1BaseRetrying}{Base\+Retrying}}}]{retry\+\_\+object,  }\item[{t.\+Optional\mbox{[}\mbox{\hyperlink{namespacepip_1_1__vendor_1_1tenacity_a8f769ca8e15c471b0617bc0906a9a517}{Wrapped\+Fn}}\mbox{]}}]{fn,  }\item[{t.\+Any}]{args,  }\item[{t.\+Any}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a34469b65852709b9b7d2817998e673d6}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a34469b65852709b9b7d2817998e673d6}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a8b0dd1f1692f2092cf5a900be0886162}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a8b0dd1f1692f2092cf5a900be0886162}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!prepare\_for\_next\_attempt@{prepare\_for\_next\_attempt}}
+\index{prepare\_for\_next\_attempt@{prepare\_for\_next\_attempt}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{prepare\_for\_next\_attempt()}{prepare\_for\_next\_attempt()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+prepare\+\_\+for\+\_\+next\+\_\+attempt (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a03d303df14095e66d24006bd808cf7d5}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a03d303df14095e66d24006bd808cf7d5}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!seconds\_since\_start@{seconds\_since\_start}}
+\index{seconds\_since\_start@{seconds\_since\_start}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{seconds\_since\_start()}{seconds\_since\_start()}}
+{\footnotesize\ttfamily  t.\+Optional\mbox{[}float\mbox{]} pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+seconds\+\_\+since\+\_\+start (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_ae3e8741df8c24bee9dce799646031a93}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_ae3e8741df8c24bee9dce799646031a93}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!set\_exception@{set\_exception}}
+\index{set\_exception@{set\_exception}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{set\_exception()}{set\_exception()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+set\+\_\+exception (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{t.\+Tuple\mbox{[}t.\+Type\mbox{[}Base\+Exception\mbox{]}, Base\+Exception, \char`\"{}types.\+Traceback\+Type$\vert$ None\char`\"{}\mbox{]}     }]{exc\+\_\+info }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_ac9a543e89af85e585ed30dfb8bd64dc1}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_ac9a543e89af85e585ed30dfb8bd64dc1}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!set\_result@{set\_result}}
+\index{set\_result@{set\_result}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{set\_result()}{set\_result()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+set\+\_\+result (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{t.\+Any}]{val }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_af945258bad647b4be99f509628811b59}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_af945258bad647b4be99f509628811b59}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!args@{args}}
+\index{args@{args}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+args}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a784592906d31c66702e6bff5bfcffcb2}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a784592906d31c66702e6bff5bfcffcb2}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!fn@{fn}}
+\index{fn@{fn}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{fn}{fn}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+fn}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a5c01b0ac2d5c80396247d3b2e913b4c3}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a5c01b0ac2d5c80396247d3b2e913b4c3}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!kwargs@{kwargs}}
+\index{kwargs@{kwargs}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{kwargs}{kwargs}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+kwargs}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_abbada559edd5410f5aa7e1bca111119b}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_abbada559edd5410f5aa7e1bca111119b}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!next\_action@{next\_action}}
+\index{next\_action@{next\_action}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{next\_action}{next\_action}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+next\+\_\+action}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a1f083eb19763a11af42e28c056d5d4cc}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a1f083eb19763a11af42e28c056d5d4cc}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!outcome@{outcome}}
+\index{outcome@{outcome}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{outcome}{outcome}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+outcome}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a0e142db6b4815d8e8b9fbed5dffb070c}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a0e142db6b4815d8e8b9fbed5dffb070c}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!outcome\_timestamp@{outcome\_timestamp}}
+\index{outcome\_timestamp@{outcome\_timestamp}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{outcome\_timestamp}{outcome\_timestamp}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+outcome\+\_\+timestamp}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a96aa4e59f71d78a34569ba15b5e3b0db}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_a96aa4e59f71d78a34569ba15b5e3b0db}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!retry\_object@{retry\_object}}
+\index{retry\_object@{retry\_object}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{retry\_object}{retry\_object}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+retry\+\_\+object}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_ac3428488f702dbd79ada0ea5e16f6f9d}\label{classpip_1_1__vendor_1_1tenacity_1_1RetryCallState_ac3428488f702dbd79ada0ea5e16f6f9d}} 
+\index{pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}!start\_time@{start\_time}}
+\index{start\_time@{start\_time}!pip.\_vendor.tenacity.RetryCallState@{pip.\_vendor.tenacity.RetryCallState}}
+\doxysubsubsection{\texorpdfstring{start\_time}{start\_time}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+tenacity.\+Retry\+Call\+State.\+start\+\_\+time}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/tenacity/\mbox{\hyperlink{__vendor_2tenacity_2____init_____8py}{\+\_\+\+\_\+init\+\_\+\+\_\+.\+py}}\end{DoxyCompactItemize}

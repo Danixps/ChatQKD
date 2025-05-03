@@ -1,0 +1,75 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+testing.\+pyparsing\+\_\+test.\+Test\+Parse\+Results\+Asserts Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts}\index{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a45cf0a18fec702d87a6bc6c7491f3345}{assert\+Parse\+Results\+Equals}} (self, result, expected\+\_\+list=None, expected\+\_\+dict=None, msg=None)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a23b977776e988ac20a44f994a465a54e}{assert\+Parse\+And\+Check\+List}} (self, expr, test\+\_\+string, expected\+\_\+list, msg=None, verbose=True)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a656de619428bd8b8205e91b6973e82fb}{assert\+Parse\+And\+Check\+Dict}} (self, expr, test\+\_\+string, expected\+\_\+dict, msg=None, verbose=True)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_abaac60bca018ec26fb8e7845a231b9ed}{assert\+Run\+Test\+Results}} (self, run\+\_\+tests\+\_\+report, expected\+\_\+parse\+\_\+results=None, msg=None)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a01c7fbbd486307641dba6d7b37f88fac}{assert\+Raises\+Parse\+Exception}} (self, exc\+\_\+type=\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1exceptions_1_1ParseException}{Parse\+Exception}}, msg=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A mixin class to add parse results assertion methods to normal unittest.TestCase classes.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a656de619428bd8b8205e91b6973e82fb}\label{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a656de619428bd8b8205e91b6973e82fb}} 
+\index{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}!assertParseAndCheckDict@{assertParseAndCheckDict}}
+\index{assertParseAndCheckDict@{assertParseAndCheckDict}!pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}}
+\doxysubsubsection{\texorpdfstring{assertParseAndCheckDict()}{assertParseAndCheckDict()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+testing.\+pyparsing\+\_\+test.\+Test\+Parse\+Results\+Asserts.\+assert\+Parse\+And\+Check\+Dict (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expr,  }\item[{}]{test\+\_\+string,  }\item[{}]{expected\+\_\+dict,  }\item[{}]{msg = {\ttfamily None},  }\item[{}]{verbose = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convenience wrapper assert to test a parser element and input string, and assert that
+the resulting ``ParseResults.asDict()`` is equal to the ``expected_dict``.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a23b977776e988ac20a44f994a465a54e}\label{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a23b977776e988ac20a44f994a465a54e}} 
+\index{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}!assertParseAndCheckList@{assertParseAndCheckList}}
+\index{assertParseAndCheckList@{assertParseAndCheckList}!pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}}
+\doxysubsubsection{\texorpdfstring{assertParseAndCheckList()}{assertParseAndCheckList()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+testing.\+pyparsing\+\_\+test.\+Test\+Parse\+Results\+Asserts.\+assert\+Parse\+And\+Check\+List (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expr,  }\item[{}]{test\+\_\+string,  }\item[{}]{expected\+\_\+list,  }\item[{}]{msg = {\ttfamily None},  }\item[{}]{verbose = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convenience wrapper assert to test a parser element and input string, and assert that
+the resulting ``ParseResults.asList()`` is equal to the ``expected_list``.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a45cf0a18fec702d87a6bc6c7491f3345}\label{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a45cf0a18fec702d87a6bc6c7491f3345}} 
+\index{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}!assertParseResultsEquals@{assertParseResultsEquals}}
+\index{assertParseResultsEquals@{assertParseResultsEquals}!pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}}
+\doxysubsubsection{\texorpdfstring{assertParseResultsEquals()}{assertParseResultsEquals()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+testing.\+pyparsing\+\_\+test.\+Test\+Parse\+Results\+Asserts.\+assert\+Parse\+Results\+Equals (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{result,  }\item[{}]{expected\+\_\+list = {\ttfamily None},  }\item[{}]{expected\+\_\+dict = {\ttfamily None},  }\item[{}]{msg = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Unit test assertion to compare a :class:`ParseResults` object with an optional ``expected_list``,
+and compare any defined results names with an optional ``expected_dict``.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a01c7fbbd486307641dba6d7b37f88fac}\label{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_a01c7fbbd486307641dba6d7b37f88fac}} 
+\index{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}!assertRaisesParseException@{assertRaisesParseException}}
+\index{assertRaisesParseException@{assertRaisesParseException}!pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}}
+\doxysubsubsection{\texorpdfstring{assertRaisesParseException()}{assertRaisesParseException()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+testing.\+pyparsing\+\_\+test.\+Test\+Parse\+Results\+Asserts.\+assert\+Raises\+Parse\+Exception (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exc\+\_\+type = {\ttfamily \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1exceptions_1_1ParseException}{Parse\+Exception}}},  }\item[{}]{msg = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_abaac60bca018ec26fb8e7845a231b9ed}\label{classpip_1_1__vendor_1_1pyparsing_1_1testing_1_1pyparsing__test_1_1TestParseResultsAsserts_abaac60bca018ec26fb8e7845a231b9ed}} 
+\index{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}!assertRunTestResults@{assertRunTestResults}}
+\index{assertRunTestResults@{assertRunTestResults}!pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts@{pip.\_vendor.pyparsing.testing.pyparsing\_test.TestParseResultsAsserts}}
+\doxysubsubsection{\texorpdfstring{assertRunTestResults()}{assertRunTestResults()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+testing.\+pyparsing\+\_\+test.\+Test\+Parse\+Results\+Asserts.\+assert\+Run\+Test\+Results (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{run\+\_\+tests\+\_\+report,  }\item[{}]{expected\+\_\+parse\+\_\+results = {\ttfamily None},  }\item[{}]{msg = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Unit test assertion to evaluate output of ``ParserElement.runTests()``. If a list of
+list-dict tuples is given as the ``expected_parse_results`` argument, then these are zipped
+with the report tuples returned by ``runTests`` and evaluated using ``assertParseResultsEquals``.
+Finally, asserts that the overall ``runTests()`` success value is ``True``.
+
+:param run_tests_report: tuple(bool, [tuple(str, ParseResults or Exception)]) returned from runTests
+:param expected_parse_results (optional): [tuple(str, list, dict, Exception)]
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pyparsing/\mbox{\hyperlink{testing_8py}{testing.\+py}}\end{DoxyCompactItemize}

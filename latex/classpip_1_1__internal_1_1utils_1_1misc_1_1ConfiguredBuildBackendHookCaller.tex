@@ -1,0 +1,120 @@
+\hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller}{}\doxysection{pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller Class Reference}
+\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller}\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_ab6c1252612c30872c69efa3287e4358b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Any \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a1ba91dee6368c14d0fb068378f9b1522}{config\+\_\+holder}}, str source\+\_\+dir, str build\+\_\+backend, Optional\mbox{[}str\mbox{]} backend\+\_\+path=None, Optional\mbox{[}Callable\mbox{[}..., None\mbox{]}\mbox{]} runner=None, Optional\mbox{[}str\mbox{]} python\+\_\+executable=None)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a07c3b0624811a9cf3733e1838e4dc75a}{build\+\_\+wheel}} (self, str wheel\+\_\+directory, Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} config\+\_\+settings=None, Optional\mbox{[}str\mbox{]} metadata\+\_\+directory=None)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a6d254a26f0aaa12d9a61084044a19114}{build\+\_\+sdist}} (self, str sdist\+\_\+directory, Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} config\+\_\+settings=None)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_ae35829505364b8ed9334a827c5d69db2}{build\+\_\+editable}} (self, str wheel\+\_\+directory, Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} config\+\_\+settings=None, Optional\mbox{[}str\mbox{]} metadata\+\_\+directory=None)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a85ee4ea124c67923d3c5c074f02fef67}{get\+\_\+requires\+\_\+for\+\_\+build\+\_\+wheel}} (self, Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} config\+\_\+settings=None)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a8f9c2a580a2a36022af185cd66b9d789}{get\+\_\+requires\+\_\+for\+\_\+build\+\_\+sdist}} (self, Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} config\+\_\+settings=None)
+\item 
+List\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_ae81cac6377f58ae0a5f387ffe945ce96}{get\+\_\+requires\+\_\+for\+\_\+build\+\_\+editable}} (self, Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} config\+\_\+settings=None)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a3a661ba3e274aa42b16646e956281682}{prepare\+\_\+metadata\+\_\+for\+\_\+build\+\_\+wheel}} (self, str metadata\+\_\+directory, Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} config\+\_\+settings=None, bool \+\_\+allow\+\_\+fallback=True)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_af2b69ad9c4a83afaf1a9b0ac357e5a8d}{prepare\+\_\+metadata\+\_\+for\+\_\+build\+\_\+editable}} (self, str metadata\+\_\+directory, Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} config\+\_\+settings=None, bool \+\_\+allow\+\_\+fallback=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a1ba91dee6368c14d0fb068378f9b1522}{config\+\_\+holder}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_ab6c1252612c30872c69efa3287e4358b}\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_ab6c1252612c30872c69efa3287e4358b}} 
+\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Any}]{config\+\_\+holder,  }\item[{str}]{source\+\_\+dir,  }\item[{str}]{build\+\_\+backend,  }\item[{Optional\mbox{[}str\mbox{]} }]{backend\+\_\+path = {\ttfamily None},  }\item[{Optional\mbox{[}Callable\mbox{[}..., None\mbox{]}\mbox{]} }]{runner = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{python\+\_\+executable = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_ae35829505364b8ed9334a827c5d69db2}\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_ae35829505364b8ed9334a827c5d69db2}} 
+\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}!build\_editable@{build\_editable}}
+\index{build\_editable@{build\_editable}!pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+\doxysubsubsection{\texorpdfstring{build\_editable()}{build\_editable()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller.\+build\+\_\+editable (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{wheel\+\_\+directory,  }\item[{Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} }]{config\+\_\+settings = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{metadata\+\_\+directory = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a6d254a26f0aaa12d9a61084044a19114}\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a6d254a26f0aaa12d9a61084044a19114}} 
+\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}!build\_sdist@{build\_sdist}}
+\index{build\_sdist@{build\_sdist}!pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+\doxysubsubsection{\texorpdfstring{build\_sdist()}{build\_sdist()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller.\+build\+\_\+sdist (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{sdist\+\_\+directory,  }\item[{Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} }]{config\+\_\+settings = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a07c3b0624811a9cf3733e1838e4dc75a}\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a07c3b0624811a9cf3733e1838e4dc75a}} 
+\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}!build\_wheel@{build\_wheel}}
+\index{build\_wheel@{build\_wheel}!pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+\doxysubsubsection{\texorpdfstring{build\_wheel()}{build\_wheel()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller.\+build\+\_\+wheel (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{wheel\+\_\+directory,  }\item[{Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} }]{config\+\_\+settings = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{metadata\+\_\+directory = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_ae81cac6377f58ae0a5f387ffe945ce96}\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_ae81cac6377f58ae0a5f387ffe945ce96}} 
+\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}!get\_requires\_for\_build\_editable@{get\_requires\_for\_build\_editable}}
+\index{get\_requires\_for\_build\_editable@{get\_requires\_for\_build\_editable}!pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+\doxysubsubsection{\texorpdfstring{get\_requires\_for\_build\_editable()}{get\_requires\_for\_build\_editable()}}
+{\footnotesize\ttfamily  List\mbox{[}str\mbox{]} pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller.\+get\+\_\+requires\+\_\+for\+\_\+build\+\_\+editable (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} }]{config\+\_\+settings = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a8f9c2a580a2a36022af185cd66b9d789}\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a8f9c2a580a2a36022af185cd66b9d789}} 
+\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}!get\_requires\_for\_build\_sdist@{get\_requires\_for\_build\_sdist}}
+\index{get\_requires\_for\_build\_sdist@{get\_requires\_for\_build\_sdist}!pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+\doxysubsubsection{\texorpdfstring{get\_requires\_for\_build\_sdist()}{get\_requires\_for\_build\_sdist()}}
+{\footnotesize\ttfamily  List\mbox{[}str\mbox{]} pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller.\+get\+\_\+requires\+\_\+for\+\_\+build\+\_\+sdist (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} }]{config\+\_\+settings = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a85ee4ea124c67923d3c5c074f02fef67}\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a85ee4ea124c67923d3c5c074f02fef67}} 
+\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}!get\_requires\_for\_build\_wheel@{get\_requires\_for\_build\_wheel}}
+\index{get\_requires\_for\_build\_wheel@{get\_requires\_for\_build\_wheel}!pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+\doxysubsubsection{\texorpdfstring{get\_requires\_for\_build\_wheel()}{get\_requires\_for\_build\_wheel()}}
+{\footnotesize\ttfamily  List\mbox{[}str\mbox{]} pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller.\+get\+\_\+requires\+\_\+for\+\_\+build\+\_\+wheel (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} }]{config\+\_\+settings = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_af2b69ad9c4a83afaf1a9b0ac357e5a8d}\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_af2b69ad9c4a83afaf1a9b0ac357e5a8d}} 
+\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}!prepare\_metadata\_for\_build\_editable@{prepare\_metadata\_for\_build\_editable}}
+\index{prepare\_metadata\_for\_build\_editable@{prepare\_metadata\_for\_build\_editable}!pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+\doxysubsubsection{\texorpdfstring{prepare\_metadata\_for\_build\_editable()}{prepare\_metadata\_for\_build\_editable()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller.\+prepare\+\_\+metadata\+\_\+for\+\_\+build\+\_\+editable (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{metadata\+\_\+directory,  }\item[{Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} }]{config\+\_\+settings = {\ttfamily None},  }\item[{bool }]{\+\_\+allow\+\_\+fallback = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a3a661ba3e274aa42b16646e956281682}\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a3a661ba3e274aa42b16646e956281682}} 
+\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}!prepare\_metadata\_for\_build\_wheel@{prepare\_metadata\_for\_build\_wheel}}
+\index{prepare\_metadata\_for\_build\_wheel@{prepare\_metadata\_for\_build\_wheel}!pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+\doxysubsubsection{\texorpdfstring{prepare\_metadata\_for\_build\_wheel()}{prepare\_metadata\_for\_build\_wheel()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller.\+prepare\+\_\+metadata\+\_\+for\+\_\+build\+\_\+wheel (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{metadata\+\_\+directory,  }\item[{Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} }]{config\+\_\+settings = {\ttfamily None},  }\item[{bool }]{\+\_\+allow\+\_\+fallback = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a1ba91dee6368c14d0fb068378f9b1522}\label{classpip_1_1__internal_1_1utils_1_1misc_1_1ConfiguredBuildBackendHookCaller_a1ba91dee6368c14d0fb068378f9b1522}} 
+\index{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}!config\_holder@{config\_holder}}
+\index{config\_holder@{config\_holder}!pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller@{pip.\_internal.utils.misc.ConfiguredBuildBackendHookCaller}}
+\doxysubsubsection{\texorpdfstring{config\_holder}{config\_holder}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+utils.\+misc.\+Configured\+Build\+Backend\+Hook\+Caller.\+config\+\_\+holder}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/utils/\mbox{\hyperlink{misc_8py}{misc.\+py}}\end{DoxyCompactItemize}

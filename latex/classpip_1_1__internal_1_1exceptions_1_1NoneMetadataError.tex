@@ -1,0 +1,86 @@
+\hypertarget{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError}{}\doxysection{pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error Class Reference}
+\label{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError}\index{pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_aea5de65c8dd60ba87ed2e63b3e1226b7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \char`\"{}Base\+Distribution\char`\"{} dist, str \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_a481999145818b3f67f84c05fde8ab1eb}{metadata\+\_\+name}})
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_a98590571e303910c6bffb57bddba2d36}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_abb15dea81454b2d82a0bd4460aeb47f5}{dist}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_a481999145818b3f67f84c05fde8ab1eb}{metadata\+\_\+name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Raised when accessing a Distribution's "METADATA" or "PKG-INFO".
+
+This signifies an inconsistency, when the Distribution claims to have
+the metadata file (if not, raise ``FileNotFoundError`` instead), but is
+not actually able to produce its content. This may be due to permission
+errors.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_aea5de65c8dd60ba87ed2e63b3e1226b7}\label{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_aea5de65c8dd60ba87ed2e63b3e1226b7}} 
+\index{pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\char`\"{}Base\+Distribution\char`\"{}}]{dist,  }\item[{str}]{metadata\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param dist: A Distribution object.
+:param metadata_name: The name of the metadata being accessed
+    (can be "METADATA" or "PKG-INFO").
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_a98590571e303910c6bffb57bddba2d36}\label{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_a98590571e303910c6bffb57bddba2d36}} 
+\index{pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_abb15dea81454b2d82a0bd4460aeb47f5}\label{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_abb15dea81454b2d82a0bd4460aeb47f5}} 
+\index{pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}!dist@{dist}}
+\index{dist@{dist}!pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}}
+\doxysubsubsection{\texorpdfstring{dist}{dist}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error.\+dist}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_a481999145818b3f67f84c05fde8ab1eb}\label{classpip_1_1__internal_1_1exceptions_1_1NoneMetadataError_a481999145818b3f67f84c05fde8ab1eb}} 
+\index{pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}!metadata\_name@{metadata\_name}}
+\index{metadata\_name@{metadata\_name}!pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}}
+\doxysubsubsection{\texorpdfstring{metadata\_name}{metadata\_name}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error.\+metadata\+\_\+name}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/\mbox{\hyperlink{__internal_2exceptions_8py}{exceptions.\+py}}\end{DoxyCompactItemize}

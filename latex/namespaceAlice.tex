@@ -1,0 +1,172 @@
+\hypertarget{namespaceAlice}{}\doxysection{Alice Namespace Reference}
+\label{namespaceAlice}\index{Alice@{Alice}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceAlice_a35913fd05a675b283d187a81a5d2070e}{ejecutar\+\_\+protocolo}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceAlice_a7f830ab76e928f3572d746946622f136}{base\+\_\+dir}} = os.\+path.\+dirname(os.\+path.\+abspath(\+\_\+\+\_\+file\+\_\+\+\_\+))
+\item 
+\mbox{\hyperlink{namespaceAlice_a4a8595d8f83178a6db9d45056dfef173}{ruta\+\_\+bb84}} = os.\+path.\+join(\mbox{\hyperlink{namespaceAlice_a7f830ab76e928f3572d746946622f136}{base\+\_\+dir}}, \char`\"{}BB84\char`\"{}, \char`\"{}sender.\+py\char`\"{})
+\item 
+\mbox{\hyperlink{namespaceAlice_a2869d3a10ce567f5266c60e41ee535c3}{ruta\+\_\+bbm92}} = os.\+path.\+join(\mbox{\hyperlink{namespaceAlice_a7f830ab76e928f3572d746946622f136}{base\+\_\+dir}}, \char`\"{}BBM92\char`\"{}, \char`\"{}sender.\+py\char`\"{})
+\item 
+\mbox{\hyperlink{namespaceAlice_a82cfd8fb9cee1df3357057f9018c4bd7}{ruta\+\_\+\+E91}} = os.\+path.\+join(\mbox{\hyperlink{namespaceAlice_a7f830ab76e928f3572d746946622f136}{base\+\_\+dir}}, \char`\"{}E91\char`\"{}, \char`\"{}sender.\+py\char`\"{})
+\item 
+dictionary \mbox{\hyperlink{namespaceAlice_a92c8cb195739e037f3624fb628cac616}{protocol\+\_\+files}}
+\item 
+\mbox{\hyperlink{namespaceAlice_aa25e195b6d3fa442e16afabae812c8b6}{root}} = tk.\+Tk()
+\item 
+\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}} = ttk.\+Frame(\mbox{\hyperlink{namespaceAlice_aa25e195b6d3fa442e16afabae812c8b6}{root}}, padding=20)
+\item 
+\mbox{\hyperlink{namespaceAlice_a9abec6f62cce00e3e1f1a2bdb477d579}{row}}
+\item 
+\mbox{\hyperlink{namespaceAlice_ae3c8f30fa427733c385a62b774ad0457}{column}}
+\item 
+\mbox{\hyperlink{namespaceAlice_a97887c1d4abad0001d4c2807828d0264}{sticky}}
+\item 
+\mbox{\hyperlink{namespaceAlice_ad52c08078bfbc66cec3c5a9ddcb4ffcc}{label\+\_\+proto}} = ttk.\+Label(\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}}, text=\char`\"{}Seleccione un protocolo\+:\char`\"{})
+\item 
+\mbox{\hyperlink{namespaceAlice_a2d204e8a1eb8b2efe72796d4482aea85}{pady}}
+\item 
+\mbox{\hyperlink{namespaceAlice_a8af9e3658822ffefbcf6b6fee0b01c2c}{combo}} = ttk.\+Combobox(\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}}, values=list(protocol\+\_\+files.\+keys()), state=\char`\"{}readonly\char`\"{})
+\item 
+\mbox{\hyperlink{namespaceAlice_a29d661d16e03dd77a7f1e664d4c8f745}{label\+\_\+num}} = ttk.\+Label(\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}}, text=\char`\"{}Ingrese el número de qubits a enviar\+:\char`\"{})
+\item 
+\mbox{\hyperlink{namespaceAlice_a3a66aaea2ff6a3812ad0c8e30ef71f36}{entry\+\_\+num}} = ttk.\+Entry(\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}}, width=20)
+\item 
+\mbox{\hyperlink{namespaceAlice_a7f9cf27131a0755e576a9f09d79d62f5}{button}} = ttk.\+Button(\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}}, text=\char`\"{}Ejecutar\char`\"{}, command=\mbox{\hyperlink{namespaceAlice_a35913fd05a675b283d187a81a5d2070e}{ejecutar\+\_\+protocolo}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file Alice.py
+@brief Breve descripción del propósito del archivo.
+@author TuNombre
+@date Fecha (por ejemplo, Mayo 2025)
+@version 1.0
+@details Descripción detallada del contenido del archivo, incluyendo su rol en el proyecto (por ejemplo, implementación de un protocolo QKD).
+
+Este archivo contiene las funciones y clases necesarias para [descripción específica, por ejemplo, implementar el protocolo E91 de distribución cuántica de claves]. Se integra con otros módulos del proyecto para [explicar cómo encaja en el sistema].
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceAlice_a35913fd05a675b283d187a81a5d2070e}\label{namespaceAlice_a35913fd05a675b283d187a81a5d2070e}} 
+\index{Alice@{Alice}!ejecutar\_protocolo@{ejecutar\_protocolo}}
+\index{ejecutar\_protocolo@{ejecutar\_protocolo}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{ejecutar\_protocolo()}{ejecutar\_protocolo()}}
+{\footnotesize\ttfamily def Alice.\+ejecutar\+\_\+protocolo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceAlice_a7f830ab76e928f3572d746946622f136}\label{namespaceAlice_a7f830ab76e928f3572d746946622f136}} 
+\index{Alice@{Alice}!base\_dir@{base\_dir}}
+\index{base\_dir@{base\_dir}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{base\_dir}{base\_dir}}
+{\footnotesize\ttfamily Alice.\+base\+\_\+dir = os.\+path.\+dirname(os.\+path.\+abspath(\+\_\+\+\_\+file\+\_\+\+\_\+))}
+
+\mbox{\Hypertarget{namespaceAlice_a7f9cf27131a0755e576a9f09d79d62f5}\label{namespaceAlice_a7f9cf27131a0755e576a9f09d79d62f5}} 
+\index{Alice@{Alice}!button@{button}}
+\index{button@{button}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{button}{button}}
+{\footnotesize\ttfamily Alice.\+button = ttk.\+Button(\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}}, text=\char`\"{}Ejecutar\char`\"{}, command=\mbox{\hyperlink{namespaceAlice_a35913fd05a675b283d187a81a5d2070e}{ejecutar\+\_\+protocolo}})}
+
+\mbox{\Hypertarget{namespaceAlice_ae3c8f30fa427733c385a62b774ad0457}\label{namespaceAlice_ae3c8f30fa427733c385a62b774ad0457}} 
+\index{Alice@{Alice}!column@{column}}
+\index{column@{column}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{column}{column}}
+{\footnotesize\ttfamily Alice.\+column}
+
+\mbox{\Hypertarget{namespaceAlice_a8af9e3658822ffefbcf6b6fee0b01c2c}\label{namespaceAlice_a8af9e3658822ffefbcf6b6fee0b01c2c}} 
+\index{Alice@{Alice}!combo@{combo}}
+\index{combo@{combo}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{combo}{combo}}
+{\footnotesize\ttfamily Alice.\+combo = ttk.\+Combobox(\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}}, values=list(protocol\+\_\+files.\+keys()), state=\char`\"{}readonly\char`\"{})}
+
+\mbox{\Hypertarget{namespaceAlice_a3a66aaea2ff6a3812ad0c8e30ef71f36}\label{namespaceAlice_a3a66aaea2ff6a3812ad0c8e30ef71f36}} 
+\index{Alice@{Alice}!entry\_num@{entry\_num}}
+\index{entry\_num@{entry\_num}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{entry\_num}{entry\_num}}
+{\footnotesize\ttfamily Alice.\+entry\+\_\+num = ttk.\+Entry(\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}}, width=20)}
+
+\mbox{\Hypertarget{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}\label{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}} 
+\index{Alice@{Alice}!frame@{frame}}
+\index{frame@{frame}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily Alice.\+frame = ttk.\+Frame(\mbox{\hyperlink{namespaceAlice_aa25e195b6d3fa442e16afabae812c8b6}{root}}, padding=20)}
+
+\mbox{\Hypertarget{namespaceAlice_a29d661d16e03dd77a7f1e664d4c8f745}\label{namespaceAlice_a29d661d16e03dd77a7f1e664d4c8f745}} 
+\index{Alice@{Alice}!label\_num@{label\_num}}
+\index{label\_num@{label\_num}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{label\_num}{label\_num}}
+{\footnotesize\ttfamily Alice.\+label\+\_\+num = ttk.\+Label(\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}}, text=\char`\"{}Ingrese el número de qubits a enviar\+:\char`\"{})}
+
+\mbox{\Hypertarget{namespaceAlice_ad52c08078bfbc66cec3c5a9ddcb4ffcc}\label{namespaceAlice_ad52c08078bfbc66cec3c5a9ddcb4ffcc}} 
+\index{Alice@{Alice}!label\_proto@{label\_proto}}
+\index{label\_proto@{label\_proto}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{label\_proto}{label\_proto}}
+{\footnotesize\ttfamily Alice.\+label\+\_\+proto = ttk.\+Label(\mbox{\hyperlink{namespaceAlice_a4a3311636ceead4222ca43fa4a07dc80}{frame}}, text=\char`\"{}Seleccione un protocolo\+:\char`\"{})}
+
+\mbox{\Hypertarget{namespaceAlice_a2d204e8a1eb8b2efe72796d4482aea85}\label{namespaceAlice_a2d204e8a1eb8b2efe72796d4482aea85}} 
+\index{Alice@{Alice}!pady@{pady}}
+\index{pady@{pady}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{pady}{pady}}
+{\footnotesize\ttfamily Alice.\+pady}
+
+\mbox{\Hypertarget{namespaceAlice_a92c8cb195739e037f3624fb628cac616}\label{namespaceAlice_a92c8cb195739e037f3624fb628cac616}} 
+\index{Alice@{Alice}!protocol\_files@{protocol\_files}}
+\index{protocol\_files@{protocol\_files}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{protocol\_files}{protocol\_files}}
+{\footnotesize\ttfamily dictionary Alice.\+protocol\+\_\+files}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{"{}BB84"{}}: ruta\_bb84,}
+\DoxyCodeLine{3     \textcolor{stringliteral}{"{}BBM92"{}}: ruta\_bbm92,}
+\DoxyCodeLine{4     \textcolor{stringliteral}{"{}E91"{}}: ruta\_E91,     }
+\DoxyCodeLine{5     \textcolor{stringliteral}{"{}SARG04"{}}: os.path.join(base\_dir, \textcolor{stringliteral}{"{}SARG04"{}}, \textcolor{stringliteral}{"{}otro\_script.py"{}})     \textcolor{comment}{\# Actualizar ruta según corresponda}}
+\DoxyCodeLine{6 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceAlice_aa25e195b6d3fa442e16afabae812c8b6}\label{namespaceAlice_aa25e195b6d3fa442e16afabae812c8b6}} 
+\index{Alice@{Alice}!root@{root}}
+\index{root@{root}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily Alice.\+root = tk.\+Tk()}
+
+\mbox{\Hypertarget{namespaceAlice_a9abec6f62cce00e3e1f1a2bdb477d579}\label{namespaceAlice_a9abec6f62cce00e3e1f1a2bdb477d579}} 
+\index{Alice@{Alice}!row@{row}}
+\index{row@{row}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily Alice.\+row}
+
+\mbox{\Hypertarget{namespaceAlice_a4a8595d8f83178a6db9d45056dfef173}\label{namespaceAlice_a4a8595d8f83178a6db9d45056dfef173}} 
+\index{Alice@{Alice}!ruta\_bb84@{ruta\_bb84}}
+\index{ruta\_bb84@{ruta\_bb84}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{ruta\_bb84}{ruta\_bb84}}
+{\footnotesize\ttfamily Alice.\+ruta\+\_\+bb84 = os.\+path.\+join(\mbox{\hyperlink{namespaceAlice_a7f830ab76e928f3572d746946622f136}{base\+\_\+dir}}, \char`\"{}BB84\char`\"{}, \char`\"{}sender.\+py\char`\"{})}
+
+\mbox{\Hypertarget{namespaceAlice_a2869d3a10ce567f5266c60e41ee535c3}\label{namespaceAlice_a2869d3a10ce567f5266c60e41ee535c3}} 
+\index{Alice@{Alice}!ruta\_bbm92@{ruta\_bbm92}}
+\index{ruta\_bbm92@{ruta\_bbm92}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{ruta\_bbm92}{ruta\_bbm92}}
+{\footnotesize\ttfamily Alice.\+ruta\+\_\+bbm92 = os.\+path.\+join(\mbox{\hyperlink{namespaceAlice_a7f830ab76e928f3572d746946622f136}{base\+\_\+dir}}, \char`\"{}BBM92\char`\"{}, \char`\"{}sender.\+py\char`\"{})}
+
+\mbox{\Hypertarget{namespaceAlice_a82cfd8fb9cee1df3357057f9018c4bd7}\label{namespaceAlice_a82cfd8fb9cee1df3357057f9018c4bd7}} 
+\index{Alice@{Alice}!ruta\_E91@{ruta\_E91}}
+\index{ruta\_E91@{ruta\_E91}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{ruta\_E91}{ruta\_E91}}
+{\footnotesize\ttfamily Alice.\+ruta\+\_\+\+E91 = os.\+path.\+join(\mbox{\hyperlink{namespaceAlice_a7f830ab76e928f3572d746946622f136}{base\+\_\+dir}}, \char`\"{}E91\char`\"{}, \char`\"{}sender.\+py\char`\"{})}
+
+\mbox{\Hypertarget{namespaceAlice_a97887c1d4abad0001d4c2807828d0264}\label{namespaceAlice_a97887c1d4abad0001d4c2807828d0264}} 
+\index{Alice@{Alice}!sticky@{sticky}}
+\index{sticky@{sticky}!Alice@{Alice}}
+\doxysubsubsection{\texorpdfstring{sticky}{sticky}}
+{\footnotesize\ttfamily Alice.\+sticky}
+

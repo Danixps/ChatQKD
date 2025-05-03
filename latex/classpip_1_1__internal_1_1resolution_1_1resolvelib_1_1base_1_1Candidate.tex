@@ -1,0 +1,141 @@
+\hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}{}\doxysection{pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate Class Reference}
+\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate}\index{pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Normalized\+Name \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_aceefc46c594fc32f62a567eafa8ff507}{project\+\_\+name}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a7000e68e912182072a011f9df0c142ee}{name}} (self)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_a8682b7cdbe043314a124e3ddecee4429}{Candidate\+Version}} \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a9c16dfa9e4f9aefc73ba5e64b22a8475}{version}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a55f4a4790cd4066fd90ba6b975ce911a}{is\+\_\+installed}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a0668bf4135535913f12aa234ef7f9ed9}{is\+\_\+editable}} (self)
+\item 
+Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1link_1_1Link}{Link}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a24d39ad79f5d6971bf636628c2713649}{source\+\_\+link}} (self)
+\item 
+Iterable\mbox{[}Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Requirement}{Requirement}}\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a4dcbeb0255f9b5f056b1f9f934f9f7bd}{iter\+\_\+dependencies}} (self, bool with\+\_\+requires)
+\item 
+Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_aa2ba125e0684ee56a7c729e917cb42f7}{get\+\_\+install\+\_\+requirement}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_abcd89b4bc5ef620a655efe73bceeac7f}{format\+\_\+for\+\_\+error}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_abcd89b4bc5ef620a655efe73bceeac7f}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_abcd89b4bc5ef620a655efe73bceeac7f}} 
+\index{pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}!format\_for\_error@{format\_for\_error}}
+\index{format\_for\_error@{format\_for\_error}!pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}}
+\doxysubsubsection{\texorpdfstring{format\_for\_error()}{format\_for\_error()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate.\+format\+\_\+for\+\_\+error (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1RequiresPythonCandidate_a1aae019afc459138c158c81c3a75c351}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Requires\+Python\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1ExtrasCandidate_a9079d8f8aa6e6fb0e40bfd80ee8681da}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Extras\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1AlreadyInstalledCandidate_a2dbadd19a565189a9b0b7644a21dc0e4}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Already\+Installed\+Candidate}}, and \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1__InstallRequirementBackedCandidate_abc21e22dab2ca183af55242d8a6873d6}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+\_\+\+Install\+Requirement\+Backed\+Candidate}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_aa2ba125e0684ee56a7c729e917cb42f7}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_aa2ba125e0684ee56a7c729e917cb42f7}} 
+\index{pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}!get\_install\_requirement@{get\_install\_requirement}}
+\index{get\_install\_requirement@{get\_install\_requirement}!pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}}
+\doxysubsubsection{\texorpdfstring{get\_install\_requirement()}{get\_install\_requirement()}}
+{\footnotesize\ttfamily  Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{Install\+Requirement}}\mbox{]} pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate.\+get\+\_\+install\+\_\+requirement (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1RequiresPythonCandidate_ac1f48f451175ff9b07edf4d35b6cd87a}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Requires\+Python\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1ExtrasCandidate_a527f0292823212d69b67d6b2fdcecebc}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Extras\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1AlreadyInstalledCandidate_a004c44b4be6e3896d3f9e04907a35cc3}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Already\+Installed\+Candidate}}, and \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1__InstallRequirementBackedCandidate_a158d2a10208b7ef748391eac86aecb24}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+\_\+\+Install\+Requirement\+Backed\+Candidate}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a0668bf4135535913f12aa234ef7f9ed9}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a0668bf4135535913f12aa234ef7f9ed9}} 
+\index{pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}!is\_editable@{is\_editable}}
+\index{is\_editable@{is\_editable}!pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}}
+\doxysubsubsection{\texorpdfstring{is\_editable()}{is\_editable()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate.\+is\+\_\+editable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1ExtrasCandidate_a5a73dec16dc070c718c23adf2312462c}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Extras\+Candidate}}, and \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1AlreadyInstalledCandidate_a7ddb3bdb65c3cf879137f414fbcd1551}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Already\+Installed\+Candidate}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a55f4a4790cd4066fd90ba6b975ce911a}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a55f4a4790cd4066fd90ba6b975ce911a}} 
+\index{pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}!is\_installed@{is\_installed}}
+\index{is\_installed@{is\_installed}!pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}}
+\doxysubsubsection{\texorpdfstring{is\_installed()}{is\_installed()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate.\+is\+\_\+installed (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1ExtrasCandidate_a305bd9933d599dfe8c778f45809c1cfa}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Extras\+Candidate}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a4dcbeb0255f9b5f056b1f9f934f9f7bd}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a4dcbeb0255f9b5f056b1f9f934f9f7bd}} 
+\index{pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}!iter\_dependencies@{iter\_dependencies}}
+\index{iter\_dependencies@{iter\_dependencies}!pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}}
+\doxysubsubsection{\texorpdfstring{iter\_dependencies()}{iter\_dependencies()}}
+{\footnotesize\ttfamily  Iterable\mbox{[}Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Requirement}{Requirement}}\mbox{]}\mbox{]} pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate.\+iter\+\_\+dependencies (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool}]{with\+\_\+requires }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1RequiresPythonCandidate_a0fec7df2341aab12246123b89938f054}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Requires\+Python\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1ExtrasCandidate_a1802ad4aa28b3ba7ad4e250aa22fcdd1}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Extras\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1AlreadyInstalledCandidate_a44cbf63518d4217ff552af9073d398a1}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Already\+Installed\+Candidate}}, and \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1__InstallRequirementBackedCandidate_adaaf9ec271a4b8bfda3fee7671bddd22}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+\_\+\+Install\+Requirement\+Backed\+Candidate}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a7000e68e912182072a011f9df0c142ee}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a7000e68e912182072a011f9df0c142ee}} 
+\index{pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}!name@{name}}
+\index{name@{name}!pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate.\+name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The name identifying this candidate in the resolver.
+
+This is different from ``project_name`` if this candidate contains
+extras, where ``project_name`` would not contain the ``[...]`` part.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1RequiresPythonCandidate_aeff13058676b07d1b67feed53749d838}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Requires\+Python\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1ExtrasCandidate_a6e13b1ab724cd7af8b22cadb37352b31}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Extras\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1AlreadyInstalledCandidate_a0f4ae3f092daa140dc8bda04e8d0f2d0}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Already\+Installed\+Candidate}}, and \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1__InstallRequirementBackedCandidate_a1538a825241b855a4abf51d6bf616cde}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+\_\+\+Install\+Requirement\+Backed\+Candidate}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_aceefc46c594fc32f62a567eafa8ff507}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_aceefc46c594fc32f62a567eafa8ff507}} 
+\index{pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}!project\_name@{project\_name}}
+\index{project\_name@{project\_name}!pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}}
+\doxysubsubsection{\texorpdfstring{project\_name()}{project\_name()}}
+{\footnotesize\ttfamily  Normalized\+Name pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate.\+project\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The "project name" of the candidate.
+
+This is different from ``name`` if this candidate contains extras,
+in which case ``name`` would contain the ``[...]`` part, while this
+refers to the name of the project.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1RequiresPythonCandidate_a3e210595f49465f9b592a12dcaf29a69}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Requires\+Python\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1ExtrasCandidate_afd5cf51e5e0260ce36e402b61fdba92f}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Extras\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1AlreadyInstalledCandidate_a7a8c464f07a539f78d39fa5283b6e785}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Already\+Installed\+Candidate}}, and \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1__InstallRequirementBackedCandidate_afb29636cf2105645e2e535afe69ee58b}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+\_\+\+Install\+Requirement\+Backed\+Candidate}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a24d39ad79f5d6971bf636628c2713649}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a24d39ad79f5d6971bf636628c2713649}} 
+\index{pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}!source\_link@{source\_link}}
+\index{source\_link@{source\_link}!pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}}
+\doxysubsubsection{\texorpdfstring{source\_link()}{source\_link()}}
+{\footnotesize\ttfamily  Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1link_1_1Link}{Link}}\mbox{]} pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate.\+source\+\_\+link (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1ExtrasCandidate_ac1653710e1e4581074f3558c003683ac}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Extras\+Candidate}}, and \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1__InstallRequirementBackedCandidate_af5d0ef20bce4de137aab3f4efae0e4c6}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+\_\+\+Install\+Requirement\+Backed\+Candidate}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a9c16dfa9e4f9aefc73ba5e64b22a8475}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1Candidate_a9c16dfa9e4f9aefc73ba5e64b22a8475}} 
+\index{pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}!version@{version}}
+\index{version@{version}!pip.\_internal.resolution.resolvelib.base.Candidate@{pip.\_internal.resolution.resolvelib.base.Candidate}}
+\doxysubsubsection{\texorpdfstring{version()}{version()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{namespacepip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_a8682b7cdbe043314a124e3ddecee4429}{Candidate\+Version}} pip.\+\_\+internal.\+resolution.\+resolvelib.\+base.\+Candidate.\+version (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1RequiresPythonCandidate_a2ec46fa71f2669b413ba5b9943c19dfc}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Requires\+Python\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1ExtrasCandidate_afd11c944b3a60218acccf10656b4c59e}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Extras\+Candidate}}, \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1AlreadyInstalledCandidate_a00f06d15e6d65f9278521c4818effeef}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+Already\+Installed\+Candidate}}, and \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1candidates_1_1__InstallRequirementBackedCandidate_a4f4a974e66da6155fd19dedc8149f7a9}{pip.\+\_\+internal.\+resolution.\+resolvelib.\+candidates.\+\_\+\+Install\+Requirement\+Backed\+Candidate}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/resolution/resolvelib/\mbox{\hyperlink{resolution_2resolvelib_2base_8py}{base.\+py}}\end{DoxyCompactItemize}

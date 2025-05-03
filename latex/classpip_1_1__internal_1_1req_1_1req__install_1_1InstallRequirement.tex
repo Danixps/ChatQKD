@@ -1,0 +1,584 @@
+\hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}{}\doxysection{pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement Class Reference}
+\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement}\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_af00599e954c1ab1797d67dd220613779}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1requirements_1_1Requirement}{Requirement}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aaee69841707efebe8e49d5703b009d60}{req}}, Optional\mbox{[}Union\mbox{[}str, \char`\"{}Install\+Requirement\char`\"{}\mbox{]}\mbox{]} comes\+\_\+from, bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_af54ea235448a85686c44afef87d655f5}{editable}}=False, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1link_1_1Link}{Link}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5a8e4ca3a4f956652eaf8520f37e0d30}{link}}=None, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1markers_1_1Marker}{Marker}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a97aa3af631824ff3e11d72ec549b6501}{markers}}=None, Optional\mbox{[}bool\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad688bc289caaa467ca07f7d0b0e13487}{use\+\_\+pep517}}=None, bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acbaec81e55f7b4c95d8d982b619502d6}{isolated}}=False, $\ast$Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a8a1032af0b8f1ac7076fd95a4b52206e}{global\+\_\+options}}=None, Optional\mbox{[}Dict\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad941ff790502f4481dc30c19ad01b70e}{hash\+\_\+options}}=None, Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ae5bea874b0eb0154536133be283f6581}{config\+\_\+settings}}=None, bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a283488228d8ee8f7bf9ef4f1269d71c2}{constraint}}=False, Collection\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab1585bbb5f553842ff44717dbead7408}{extras}}=(), bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad169522897c2e481973f2f8723d666de}{user\+\_\+supplied}}=False, bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5525254e9f7c6d7ea9b7272577c30024}{permit\+\_\+editable\+\_\+wheels}}=False)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a837c246def32f68224a9bdf67f3371e8}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aae51f53dbce58de8febe8f02ece7cd57}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a06f3d0db0791f2956eef5ca02123869f}{format\+\_\+debug}} (self)
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a6b019e16ae98576ae64c68e0f5824e34}{name}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a3c605f27d7f15646efba4e52445c8aad}{supports\+\_\+pyproject\+\_\+editable}} (self)
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1specifiers_1_1SpecifierSet}{Specifier\+Set}} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acae90848c7cc902a1454d87d4697647b}{specifier}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a993a5397ebe68129739e047961282a0a}{is\+\_\+direct}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab4012e9314318b6bc6e3fb0d3dfc298f}{is\+\_\+pinned}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab240cb537c06a25463ac3ba05e973154}{match\+\_\+markers}} (self, Optional\mbox{[}Iterable\mbox{[}str\mbox{]}\mbox{]} extras\+\_\+requested=None)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aeb56fa342f53db6fce1b5998e6b85309}{has\+\_\+hash\+\_\+options}} (self)
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes}{Hashes}} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acf56120e2e7c5046433147b7b496f74a}{hashes}} (self, bool trust\+\_\+internet=True)
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a04a6f333531ab23495691b7ee959f2af}{from\+\_\+path}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a7c89ea187dcd060c3bcb1e71a4a243ae}{ensure\+\_\+build\+\_\+location}} (self, str build\+\_\+dir, bool autodelete, bool parallel\+\_\+builds)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a01d1156c435f26a28b01b741bce7ef08}{warn\+\_\+on\+\_\+mismatching\+\_\+name}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a98770a7353bddcf660dedd02e6841f70}{check\+\_\+if\+\_\+exists}} (self, bool use\+\_\+user\+\_\+site)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a96a0dcbdfe1836b1f995bbd2bed7a64a}{is\+\_\+wheel}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a405e2dd591bf8b90756ff5fa580a03f3}{is\+\_\+wheel\+\_\+from\+\_\+cache}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5ab0a3e7fc47a239a44648bd184d6cb0}{unpacked\+\_\+source\+\_\+directory}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a6b208bcb6ac76a7cda84ae710896f2bb}{setup\+\_\+py\+\_\+path}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a7b7687c5ac53e9985af5bb46a0ae2b21}{setup\+\_\+cfg\+\_\+path}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a12bbc4f38e3a14d6df3ebfc3a3e778db}{pyproject\+\_\+toml\+\_\+path}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a9550a298cb1c3257a738f30ee725a39f}{load\+\_\+pyproject\+\_\+toml}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a1027e32cc506a6e5358fbb69a982af3b}{isolated\+\_\+editable\+\_\+sanity\+\_\+check}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a0cddcae8523c5e6a484f0213c09caea8}{prepare\+\_\+metadata}} (self)
+\item 
+Any \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a212fdd382933af2966e6a94c2db91bca}{metadata}} (self)
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1BaseDistribution}{Base\+Distribution}} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ac0844f92dadafdf2c210fa6d5046a8d6}{get\+\_\+dist}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab9a997e64cd50a33caf4722295a9cbf3}{assert\+\_\+source\+\_\+matches\+\_\+version}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ae215f70f8db5a17b9d0040f040448e21}{ensure\+\_\+has\+\_\+source\+\_\+dir}} (self, str parent\+\_\+dir, bool autodelete=False, bool parallel\+\_\+builds=False)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acb41ef38844d0ddfe023612da46bc55c}{needs\+\_\+unpacked\+\_\+archive}} (self, Path archive\+\_\+source)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a25780ddcce228d601fbaf9f179c2619f}{ensure\+\_\+pristine\+\_\+source\+\_\+checkout}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a138ffc98065172cbd29af90e6cd25871}{update\+\_\+editable}} (self)
+\item 
+Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__uninstall_1_1UninstallPathSet}{Uninstall\+Path\+Set}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a28df225bae018c3db4e563158ee780f2}{uninstall}} (self, bool auto\+\_\+confirm=False, bool verbose=False)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aef2764402e45a5e5555e22d5965f1350}{archive}} (self, Optional\mbox{[}str\mbox{]} build\+\_\+dir)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a318000d0045df8d4eb514dc87b6a366f}{install}} (self, Optional\mbox{[}Sequence\mbox{[}str\mbox{]}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a8a1032af0b8f1ac7076fd95a4b52206e}{global\+\_\+options}}=None, Optional\mbox{[}str\mbox{]} root=None, Optional\mbox{[}str\mbox{]} home=None, Optional\mbox{[}str\mbox{]} prefix=None, bool warn\+\_\+script\+\_\+location=True, bool use\+\_\+user\+\_\+site=False, bool pycompile=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aaee69841707efebe8e49d5703b009d60}{req}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a2f4681a19ef01f5d79b0c78f5efba577}{comes\+\_\+from}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a283488228d8ee8f7bf9ef4f1269d71c2}{constraint}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_af54ea235448a85686c44afef87d655f5}{editable}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5525254e9f7c6d7ea9b7272577c30024}{permit\+\_\+editable\+\_\+wheels}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab4f0a9baf8f7626c0e143288c3beedf0}{source\+\_\+dir}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5a8e4ca3a4f956652eaf8520f37e0d30}{link}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a481d31cb3e5b36c41dc402b6573e8e71}{original\+\_\+link}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aab616e73e88fc94f0435433edc2a5f7a}{local\+\_\+file\+\_\+path}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab1585bbb5f553842ff44717dbead7408}{extras}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a97aa3af631824ff3e11d72ec549b6501}{markers}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ae963869e3111a55c1b690c51d899c459}{should\+\_\+reinstall}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a8a1032af0b8f1ac7076fd95a4b52206e}{global\+\_\+options}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad941ff790502f4481dc30c19ad01b70e}{hash\+\_\+options}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ae5bea874b0eb0154536133be283f6581}{config\+\_\+settings}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_adb6e321cd064d4a49a08511bb75eeb45}{prepared}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad169522897c2e481973f2f8723d666de}{user\+\_\+supplied}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acbaec81e55f7b4c95d8d982b619502d6}{isolated}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad688bc289caaa467ca07f7d0b0e13487}{use\+\_\+pep517}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aadee09f58c30ba783f05f241bf749e36}{needs\+\_\+more\+\_\+preparation}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a65b4589beb1a91e14b2e533f0a32912e}{satisfied\+\_\+by}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a883eb2e460b98aada90b3cc4acb4ba38}{requirements\+\_\+to\+\_\+check}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_afd3aaad604d36703fb7e1989fdd5c892}{pyproject\+\_\+requires}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a778159e5a28abcaf9caaac346b0f8221}{pep517\+\_\+backend}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a741ff49463ed7d76d0c02eef8bafdd24}{metadata\+\_\+directory}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a39282c26d8cc56df8c01d6f398aca6e0}{install\+\_\+succeeded}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Represents something that may be installed later on, may have information
+about where to fetch the relevant requirement and also contains logic for
+installing the said requirement.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_af00599e954c1ab1797d67dd220613779}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_af00599e954c1ab1797d67dd220613779}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1requirements_1_1Requirement}{Requirement}}\mbox{]}}]{req,  }\item[{Optional\mbox{[}Union\mbox{[}str, \char`\"{}Install\+Requirement\char`\"{}\mbox{]}\mbox{]}}]{comes\+\_\+from,  }\item[{bool }]{editable = {\ttfamily False},  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1link_1_1Link}{Link}}\mbox{]} }]{link = {\ttfamily None},  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1markers_1_1Marker}{Marker}}\mbox{]} }]{markers = {\ttfamily None},  }\item[{Optional\mbox{[}bool\mbox{]} }]{use\+\_\+pep517 = {\ttfamily None},  }\item[{bool }]{isolated = {\ttfamily False},  }\item[{$\ast$Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} }]{global\+\_\+options = {\ttfamily None},  }\item[{Optional\mbox{[}Dict\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]} }]{hash\+\_\+options = {\ttfamily None},  }\item[{Optional\mbox{[}Dict\mbox{[}str, Union\mbox{[}str, List\mbox{[}str\mbox{]}\mbox{]}\mbox{]}\mbox{]} }]{config\+\_\+settings = {\ttfamily None},  }\item[{bool }]{constraint = {\ttfamily False},  }\item[{Collection\mbox{[}str\mbox{]} }]{extras = {\ttfamily ()},  }\item[{bool }]{user\+\_\+supplied = {\ttfamily False},  }\item[{bool }]{permit\+\_\+editable\+\_\+wheels = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aae51f53dbce58de8febe8f02ece7cd57}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aae51f53dbce58de8febe8f02ece7cd57}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a837c246def32f68224a9bdf67f3371e8}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a837c246def32f68224a9bdf67f3371e8}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aef2764402e45a5e5555e22d5965f1350}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aef2764402e45a5e5555e22d5965f1350}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!archive@{archive}}
+\index{archive@{archive}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{archive()}{archive()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+archive (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}str\mbox{]}}]{build\+\_\+dir }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Saves archive to provided build_dir.
+
+Used for saving downloaded VCS requirements as part of `pip download`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab9a997e64cd50a33caf4722295a9cbf3}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab9a997e64cd50a33caf4722295a9cbf3}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!assert\_source\_matches\_version@{assert\_source\_matches\_version}}
+\index{assert\_source\_matches\_version@{assert\_source\_matches\_version}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{assert\_source\_matches\_version()}{assert\_source\_matches\_version()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+assert\+\_\+source\+\_\+matches\+\_\+version (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a98770a7353bddcf660dedd02e6841f70}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a98770a7353bddcf660dedd02e6841f70}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!check\_if\_exists@{check\_if\_exists}}
+\index{check\_if\_exists@{check\_if\_exists}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{check\_if\_exists()}{check\_if\_exists()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+check\+\_\+if\+\_\+exists (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool}]{use\+\_\+user\+\_\+site }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find an installed distribution that satisfies or conflicts
+with this requirement, and set self.satisfied_by or
+self.should_reinstall appropriately.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a7c89ea187dcd060c3bcb1e71a4a243ae}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a7c89ea187dcd060c3bcb1e71a4a243ae}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!ensure\_build\_location@{ensure\_build\_location}}
+\index{ensure\_build\_location@{ensure\_build\_location}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{ensure\_build\_location()}{ensure\_build\_location()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+ensure\+\_\+build\+\_\+location (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{build\+\_\+dir,  }\item[{bool}]{autodelete,  }\item[{bool     }]{parallel\+\_\+builds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ae215f70f8db5a17b9d0040f040448e21}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ae215f70f8db5a17b9d0040f040448e21}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!ensure\_has\_source\_dir@{ensure\_has\_source\_dir}}
+\index{ensure\_has\_source\_dir@{ensure\_has\_source\_dir}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{ensure\_has\_source\_dir()}{ensure\_has\_source\_dir()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+ensure\+\_\+has\+\_\+source\+\_\+dir (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{parent\+\_\+dir,  }\item[{bool }]{autodelete = {\ttfamily False},  }\item[{bool }]{parallel\+\_\+builds = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ensure that a source_dir is set.
+
+This will create a temporary build dir if the name of the requirement
+isn't known yet.
+
+:param parent_dir: The ideal pip parent_dir for the source_dir.
+    Generally src_dir for editables and build_dir for sdists.
+:return: self.source_dir
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a25780ddcce228d601fbaf9f179c2619f}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a25780ddcce228d601fbaf9f179c2619f}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!ensure\_pristine\_source\_checkout@{ensure\_pristine\_source\_checkout}}
+\index{ensure\_pristine\_source\_checkout@{ensure\_pristine\_source\_checkout}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{ensure\_pristine\_source\_checkout()}{ensure\_pristine\_source\_checkout()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+ensure\+\_\+pristine\+\_\+source\+\_\+checkout (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ensure the source directory has not yet been built in.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a06f3d0db0791f2956eef5ca02123869f}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a06f3d0db0791f2956eef5ca02123869f}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!format\_debug@{format\_debug}}
+\index{format\_debug@{format\_debug}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{format\_debug()}{format\_debug()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+format\+\_\+debug (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}An un-tested helper for getting state, for debugging.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a04a6f333531ab23495691b7ee959f2af}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a04a6f333531ab23495691b7ee959f2af}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!from\_path@{from\_path}}
+\index{from\_path@{from\_path}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{from\_path()}{from\_path()}}
+{\footnotesize\ttfamily  Optional\mbox{[}str\mbox{]} pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+from\+\_\+path (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Format a nice indicator to show where this "comes from" \end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ac0844f92dadafdf2c210fa6d5046a8d6}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ac0844f92dadafdf2c210fa6d5046a8d6}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!get\_dist@{get\_dist}}
+\index{get\_dist@{get\_dist}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{get\_dist()}{get\_dist()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1BaseDistribution}{Base\+Distribution}} pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+get\+\_\+dist (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aeb56fa342f53db6fce1b5998e6b85309}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aeb56fa342f53db6fce1b5998e6b85309}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!has\_hash\_options@{has\_hash\_options}}
+\index{has\_hash\_options@{has\_hash\_options}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{has\_hash\_options()}{has\_hash\_options()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+has\+\_\+hash\+\_\+options (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return whether any known-good hashes are specified as options.
+
+These activate --require-hashes mode; hashes specified as part of a
+URL do not.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acf56120e2e7c5046433147b7b496f74a}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acf56120e2e7c5046433147b7b496f74a}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!hashes@{hashes}}
+\index{hashes@{hashes}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{hashes()}{hashes()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1Hashes}{Hashes}} pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+hashes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool }]{trust\+\_\+internet = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a hash-comparer that considers my option- and URL-based
+hashes to be known-good.
+
+Hashes in URLs--ones embedded in the requirements file, not ones
+downloaded from an index server--are almost peers with ones from
+flags. They satisfy --require-hashes (whether it was implicitly or
+explicitly activated) but do not activate it. md5 and sha224 are not
+allowed in flags, which should nudge people toward good algos. We
+always OR all hashes together, even ones from URLs.
+
+:param trust_internet: Whether to trust URL-based (#md5=...) hashes
+    downloaded from the internet, as by populate_link()\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a318000d0045df8d4eb514dc87b6a366f}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a318000d0045df8d4eb514dc87b6a366f}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!install@{install}}
+\index{install@{install}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{install()}{install()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+install (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}Sequence\mbox{[}str\mbox{]}\mbox{]} }]{global\+\_\+options = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{root = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{home = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{prefix = {\ttfamily None},  }\item[{bool }]{warn\+\_\+script\+\_\+location = {\ttfamily True},  }\item[{bool }]{use\+\_\+user\+\_\+site = {\ttfamily False},  }\item[{bool }]{pycompile = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a993a5397ebe68129739e047961282a0a}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a993a5397ebe68129739e047961282a0a}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!is\_direct@{is\_direct}}
+\index{is\_direct@{is\_direct}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{is\_direct()}{is\_direct()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+is\+\_\+direct (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Whether this requirement was specified as a direct URL.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab4012e9314318b6bc6e3fb0d3dfc298f}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab4012e9314318b6bc6e3fb0d3dfc298f}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!is\_pinned@{is\_pinned}}
+\index{is\_pinned@{is\_pinned}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{is\_pinned()}{is\_pinned()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+is\+\_\+pinned (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return whether I am pinned to an exact version.
+
+For example, some-package==1.2 is pinned; some-package>1.2 is not.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a96a0dcbdfe1836b1f995bbd2bed7a64a}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a96a0dcbdfe1836b1f995bbd2bed7a64a}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!is\_wheel@{is\_wheel}}
+\index{is\_wheel@{is\_wheel}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{is\_wheel()}{is\_wheel()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+is\+\_\+wheel (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a405e2dd591bf8b90756ff5fa580a03f3}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a405e2dd591bf8b90756ff5fa580a03f3}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!is\_wheel\_from\_cache@{is\_wheel\_from\_cache}}
+\index{is\_wheel\_from\_cache@{is\_wheel\_from\_cache}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{is\_wheel\_from\_cache()}{is\_wheel\_from\_cache()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+is\+\_\+wheel\+\_\+from\+\_\+cache (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a1027e32cc506a6e5358fbb69a982af3b}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a1027e32cc506a6e5358fbb69a982af3b}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!isolated\_editable\_sanity\_check@{isolated\_editable\_sanity\_check}}
+\index{isolated\_editable\_sanity\_check@{isolated\_editable\_sanity\_check}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{isolated\_editable\_sanity\_check()}{isolated\_editable\_sanity\_check()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+isolated\+\_\+editable\+\_\+sanity\+\_\+check (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check that an editable requirement if valid for use with PEP 517/518.
+
+This verifies that an editable that has a pyproject.toml either supports PEP 660
+or as a setup.py or a setup.cfg
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a9550a298cb1c3257a738f30ee725a39f}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a9550a298cb1c3257a738f30ee725a39f}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!load\_pyproject\_toml@{load\_pyproject\_toml}}
+\index{load\_pyproject\_toml@{load\_pyproject\_toml}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{load\_pyproject\_toml()}{load\_pyproject\_toml()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+load\+\_\+pyproject\+\_\+toml (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load the pyproject.toml file.
+
+After calling this routine, all of the attributes related to PEP 517
+processing for this requirement have been set. In particular, the
+use_pep517 attribute can be used to determine whether we should
+follow the PEP 517 or legacy (setup.py) code path.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab240cb537c06a25463ac3ba05e973154}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab240cb537c06a25463ac3ba05e973154}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!match\_markers@{match\_markers}}
+\index{match\_markers@{match\_markers}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{match\_markers()}{match\_markers()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+match\+\_\+markers (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Optional\mbox{[}Iterable\mbox{[}str\mbox{]}\mbox{]} }]{extras\+\_\+requested = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a212fdd382933af2966e6a94c2db91bca}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a212fdd382933af2966e6a94c2db91bca}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!metadata@{metadata}}
+\index{metadata@{metadata}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{metadata()}{metadata()}}
+{\footnotesize\ttfamily  Any pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+metadata (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a6b019e16ae98576ae64c68e0f5824e34}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a6b019e16ae98576ae64c68e0f5824e34}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!name@{name}}
+\index{name@{name}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily  Optional\mbox{[}str\mbox{]} pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acb41ef38844d0ddfe023612da46bc55c}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acb41ef38844d0ddfe023612da46bc55c}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!needs\_unpacked\_archive@{needs\_unpacked\_archive}}
+\index{needs\_unpacked\_archive@{needs\_unpacked\_archive}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{needs\_unpacked\_archive()}{needs\_unpacked\_archive()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+needs\+\_\+unpacked\+\_\+archive (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Path}]{archive\+\_\+source }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a0cddcae8523c5e6a484f0213c09caea8}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a0cddcae8523c5e6a484f0213c09caea8}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!prepare\_metadata@{prepare\_metadata}}
+\index{prepare\_metadata@{prepare\_metadata}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{prepare\_metadata()}{prepare\_metadata()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+prepare\+\_\+metadata (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ensure that project metadata is available.
+
+Under PEP 517 and PEP 660, call the backend hook to prepare the metadata.
+Under legacy processing, call setup.py egg-info.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a12bbc4f38e3a14d6df3ebfc3a3e778db}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a12bbc4f38e3a14d6df3ebfc3a3e778db}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!pyproject\_toml\_path@{pyproject\_toml\_path}}
+\index{pyproject\_toml\_path@{pyproject\_toml\_path}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{pyproject\_toml\_path()}{pyproject\_toml\_path()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+pyproject\+\_\+toml\+\_\+path (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a7b7687c5ac53e9985af5bb46a0ae2b21}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a7b7687c5ac53e9985af5bb46a0ae2b21}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!setup\_cfg\_path@{setup\_cfg\_path}}
+\index{setup\_cfg\_path@{setup\_cfg\_path}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{setup\_cfg\_path()}{setup\_cfg\_path()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+setup\+\_\+cfg\+\_\+path (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a6b208bcb6ac76a7cda84ae710896f2bb}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a6b208bcb6ac76a7cda84ae710896f2bb}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!setup\_py\_path@{setup\_py\_path}}
+\index{setup\_py\_path@{setup\_py\_path}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{setup\_py\_path()}{setup\_py\_path()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+setup\+\_\+py\+\_\+path (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acae90848c7cc902a1454d87d4697647b}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acae90848c7cc902a1454d87d4697647b}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!specifier@{specifier}}
+\index{specifier@{specifier}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{specifier()}{specifier()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1specifiers_1_1SpecifierSet}{Specifier\+Set}} pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+specifier (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a3c605f27d7f15646efba4e52445c8aad}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a3c605f27d7f15646efba4e52445c8aad}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!supports\_pyproject\_editable@{supports\_pyproject\_editable}}
+\index{supports\_pyproject\_editable@{supports\_pyproject\_editable}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{supports\_pyproject\_editable()}{supports\_pyproject\_editable()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+supports\+\_\+pyproject\+\_\+editable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a28df225bae018c3db4e563158ee780f2}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a28df225bae018c3db4e563158ee780f2}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!uninstall@{uninstall}}
+\index{uninstall@{uninstall}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{uninstall()}{uninstall()}}
+{\footnotesize\ttfamily  Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1req_1_1req__uninstall_1_1UninstallPathSet}{Uninstall\+Path\+Set}}\mbox{]} pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+uninstall (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool }]{auto\+\_\+confirm = {\ttfamily False},  }\item[{bool }]{verbose = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Uninstall the distribution currently satisfying this requirement.
+
+Prompts before removing or modifying files unless
+``auto_confirm`` is True.
+
+Refuses to delete or modify files outside of ``sys.prefix`` -
+thus uninstallation within a virtual environment can only
+modify that virtual environment, even if the virtualenv is
+linked to global site-packages.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5ab0a3e7fc47a239a44648bd184d6cb0}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5ab0a3e7fc47a239a44648bd184d6cb0}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!unpacked\_source\_directory@{unpacked\_source\_directory}}
+\index{unpacked\_source\_directory@{unpacked\_source\_directory}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{unpacked\_source\_directory()}{unpacked\_source\_directory()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+unpacked\+\_\+source\+\_\+directory (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a138ffc98065172cbd29af90e6cd25871}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a138ffc98065172cbd29af90e6cd25871}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!update\_editable@{update\_editable}}
+\index{update\_editable@{update\_editable}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{update\_editable()}{update\_editable()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+update\+\_\+editable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a01d1156c435f26a28b01b741bce7ef08}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a01d1156c435f26a28b01b741bce7ef08}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!warn\_on\_mismatching\_name@{warn\_on\_mismatching\_name}}
+\index{warn\_on\_mismatching\_name@{warn\_on\_mismatching\_name}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{warn\_on\_mismatching\_name()}{warn\_on\_mismatching\_name()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+warn\+\_\+on\+\_\+mismatching\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a2f4681a19ef01f5d79b0c78f5efba577}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a2f4681a19ef01f5d79b0c78f5efba577}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!comes\_from@{comes\_from}}
+\index{comes\_from@{comes\_from}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{comes\_from}{comes\_from}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+comes\+\_\+from}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ae5bea874b0eb0154536133be283f6581}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ae5bea874b0eb0154536133be283f6581}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!config\_settings@{config\_settings}}
+\index{config\_settings@{config\_settings}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{config\_settings}{config\_settings}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+config\+\_\+settings}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a283488228d8ee8f7bf9ef4f1269d71c2}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a283488228d8ee8f7bf9ef4f1269d71c2}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!constraint@{constraint}}
+\index{constraint@{constraint}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{constraint}{constraint}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+constraint}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_af54ea235448a85686c44afef87d655f5}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_af54ea235448a85686c44afef87d655f5}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!editable@{editable}}
+\index{editable@{editable}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{editable}{editable}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+editable}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab1585bbb5f553842ff44717dbead7408}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab1585bbb5f553842ff44717dbead7408}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!extras@{extras}}
+\index{extras@{extras}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{extras}{extras}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+extras}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a8a1032af0b8f1ac7076fd95a4b52206e}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a8a1032af0b8f1ac7076fd95a4b52206e}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!global\_options@{global\_options}}
+\index{global\_options@{global\_options}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{global\_options}{global\_options}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+global\+\_\+options}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad941ff790502f4481dc30c19ad01b70e}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad941ff790502f4481dc30c19ad01b70e}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!hash\_options@{hash\_options}}
+\index{hash\_options@{hash\_options}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{hash\_options}{hash\_options}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+hash\+\_\+options}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a39282c26d8cc56df8c01d6f398aca6e0}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a39282c26d8cc56df8c01d6f398aca6e0}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!install\_succeeded@{install\_succeeded}}
+\index{install\_succeeded@{install\_succeeded}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{install\_succeeded}{install\_succeeded}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+install\+\_\+succeeded}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acbaec81e55f7b4c95d8d982b619502d6}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_acbaec81e55f7b4c95d8d982b619502d6}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!isolated@{isolated}}
+\index{isolated@{isolated}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{isolated}{isolated}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+isolated}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5a8e4ca3a4f956652eaf8520f37e0d30}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5a8e4ca3a4f956652eaf8520f37e0d30}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!link@{link}}
+\index{link@{link}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{link}{link}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+link}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aab616e73e88fc94f0435433edc2a5f7a}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aab616e73e88fc94f0435433edc2a5f7a}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!local\_file\_path@{local\_file\_path}}
+\index{local\_file\_path@{local\_file\_path}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{local\_file\_path}{local\_file\_path}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+local\+\_\+file\+\_\+path}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a97aa3af631824ff3e11d72ec549b6501}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a97aa3af631824ff3e11d72ec549b6501}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!markers@{markers}}
+\index{markers@{markers}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{markers}{markers}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+markers}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a741ff49463ed7d76d0c02eef8bafdd24}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a741ff49463ed7d76d0c02eef8bafdd24}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!metadata\_directory@{metadata\_directory}}
+\index{metadata\_directory@{metadata\_directory}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{metadata\_directory}{metadata\_directory}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+metadata\+\_\+directory}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aadee09f58c30ba783f05f241bf749e36}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aadee09f58c30ba783f05f241bf749e36}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!needs\_more\_preparation@{needs\_more\_preparation}}
+\index{needs\_more\_preparation@{needs\_more\_preparation}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{needs\_more\_preparation}{needs\_more\_preparation}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+needs\+\_\+more\+\_\+preparation}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a481d31cb3e5b36c41dc402b6573e8e71}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a481d31cb3e5b36c41dc402b6573e8e71}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!original\_link@{original\_link}}
+\index{original\_link@{original\_link}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{original\_link}{original\_link}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+original\+\_\+link}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a778159e5a28abcaf9caaac346b0f8221}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a778159e5a28abcaf9caaac346b0f8221}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!pep517\_backend@{pep517\_backend}}
+\index{pep517\_backend@{pep517\_backend}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{pep517\_backend}{pep517\_backend}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+pep517\+\_\+backend}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5525254e9f7c6d7ea9b7272577c30024}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a5525254e9f7c6d7ea9b7272577c30024}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!permit\_editable\_wheels@{permit\_editable\_wheels}}
+\index{permit\_editable\_wheels@{permit\_editable\_wheels}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{permit\_editable\_wheels}{permit\_editable\_wheels}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+permit\+\_\+editable\+\_\+wheels}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_adb6e321cd064d4a49a08511bb75eeb45}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_adb6e321cd064d4a49a08511bb75eeb45}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!prepared@{prepared}}
+\index{prepared@{prepared}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{prepared}{prepared}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+prepared}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_afd3aaad604d36703fb7e1989fdd5c892}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_afd3aaad604d36703fb7e1989fdd5c892}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!pyproject\_requires@{pyproject\_requires}}
+\index{pyproject\_requires@{pyproject\_requires}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{pyproject\_requires}{pyproject\_requires}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+pyproject\+\_\+requires}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aaee69841707efebe8e49d5703b009d60}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_aaee69841707efebe8e49d5703b009d60}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!req@{req}}
+\index{req@{req}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{req}{req}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+req}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a883eb2e460b98aada90b3cc4acb4ba38}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a883eb2e460b98aada90b3cc4acb4ba38}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!requirements\_to\_check@{requirements\_to\_check}}
+\index{requirements\_to\_check@{requirements\_to\_check}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{requirements\_to\_check}{requirements\_to\_check}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+requirements\+\_\+to\+\_\+check}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a65b4589beb1a91e14b2e533f0a32912e}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_a65b4589beb1a91e14b2e533f0a32912e}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!satisfied\_by@{satisfied\_by}}
+\index{satisfied\_by@{satisfied\_by}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{satisfied\_by}{satisfied\_by}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+satisfied\+\_\+by}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ae963869e3111a55c1b690c51d899c459}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ae963869e3111a55c1b690c51d899c459}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!should\_reinstall@{should\_reinstall}}
+\index{should\_reinstall@{should\_reinstall}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{should\_reinstall}{should\_reinstall}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+should\+\_\+reinstall}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab4f0a9baf8f7626c0e143288c3beedf0}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ab4f0a9baf8f7626c0e143288c3beedf0}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!source\_dir@{source\_dir}}
+\index{source\_dir@{source\_dir}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{source\_dir}{source\_dir}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+source\+\_\+dir}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad688bc289caaa467ca07f7d0b0e13487}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad688bc289caaa467ca07f7d0b0e13487}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!use\_pep517@{use\_pep517}}
+\index{use\_pep517@{use\_pep517}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{use\_pep517}{use\_pep517}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+use\+\_\+pep517}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad169522897c2e481973f2f8723d666de}\label{classpip_1_1__internal_1_1req_1_1req__install_1_1InstallRequirement_ad169522897c2e481973f2f8723d666de}} 
+\index{pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}!user\_supplied@{user\_supplied}}
+\index{user\_supplied@{user\_supplied}!pip.\_internal.req.req\_install.InstallRequirement@{pip.\_internal.req.req\_install.InstallRequirement}}
+\doxysubsubsection{\texorpdfstring{user\_supplied}{user\_supplied}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+req.\+req\+\_\+install.\+Install\+Requirement.\+user\+\_\+supplied}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/req/\mbox{\hyperlink{req__install_8py}{req\+\_\+install.\+py}}\end{DoxyCompactItemize}

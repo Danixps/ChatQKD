@@ -1,0 +1,81 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+core.\+At\+String\+Start Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart}\index{pip.\_vendor.pyparsing.core.AtStringStart@{pip.\_vendor.pyparsing.core.AtStringStart}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+At\+String\+Start\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pyparsing.\+core.\+At\+String\+Start\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart_a4635dc72f3f233c2355efaabc4c058a5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Union\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement}{Parser\+Element}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}}\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParseElementEnhance_a447bd5fdb8e511e4939647f4d3df3433}{expr}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart_ad36321854bc1b6cb9ecb2811fa67cb11}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart_a9e7414a240a9a54f3be46ff9fb10cf6f}{call\+Preparse}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Matches if expression matches at the beginning of the parse
+string::
+
+    AtStringStart(Word(nums)).parse_string("123")
+    # prints ["123"]
+
+    AtStringStart(Word(nums)).parse_string("    123")
+    # raises ParseException
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart_a4635dc72f3f233c2355efaabc4c058a5}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart_a4635dc72f3f233c2355efaabc4c058a5}} 
+\index{pip.\_vendor.pyparsing.core.AtStringStart@{pip.\_vendor.pyparsing.core.AtStringStart}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pyparsing.core.AtStringStart@{pip.\_vendor.pyparsing.core.AtStringStart}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+At\+String\+Start.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Union\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement}{Parser\+Element}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParserElement_acd00eec0df5e8ea1dda183cecb8bfd1c}{str}}\mbox{]}}]{expr }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart_ad36321854bc1b6cb9ecb2811fa67cb11}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart_ad36321854bc1b6cb9ecb2811fa67cb11}} 
+\index{pip.\_vendor.pyparsing.core.AtStringStart@{pip.\_vendor.pyparsing.core.AtStringStart}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pip.\_vendor.pyparsing.core.AtStringStart@{pip.\_vendor.pyparsing.core.AtStringStart}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+core.\+At\+String\+Start.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1ParseElementEnhance_a349ba4fb88c86f595b50f03eafbf47a6}{pip.\+\_\+vendor.\+pyparsing.\+core.\+Parse\+Element\+Enhance}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart_a9e7414a240a9a54f3be46ff9fb10cf6f}\label{classpip_1_1__vendor_1_1pyparsing_1_1core_1_1AtStringStart_a9e7414a240a9a54f3be46ff9fb10cf6f}} 
+\index{pip.\_vendor.pyparsing.core.AtStringStart@{pip.\_vendor.pyparsing.core.AtStringStart}!callPreparse@{callPreparse}}
+\index{callPreparse@{callPreparse}!pip.\_vendor.pyparsing.core.AtStringStart@{pip.\_vendor.pyparsing.core.AtStringStart}}
+\doxysubsubsection{\texorpdfstring{callPreparse}{callPreparse}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+core.\+At\+String\+Start.\+call\+Preparse}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pyparsing/\mbox{\hyperlink{pyparsing_2core_8py}{core.\+py}}\end{DoxyCompactItemize}

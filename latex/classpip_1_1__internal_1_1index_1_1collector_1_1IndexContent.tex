@@ -1,0 +1,88 @@
+\hypertarget{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent}{}\doxysection{pip.\+\_\+internal.\+index.\+collector.\+Index\+Content Class Reference}
+\label{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent}\index{pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a54f3681d8eae60c2dada4ff266a21bcd}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, bytes \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a6abbbaaf902ee91d067ca57e4a75ab35}{content}}, str \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a10a5a90d35acfcaa17b687b47a778446}{content\+\_\+type}}, Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a88821d0fe867a67a8c9f747f8846a3f5}{encoding}}, str \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_aa8dffc3bdf414597ad814614eb5ec873}{url}}, bool \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_af80e07d0bd856969bc84e0c2806bea7d}{cache\+\_\+link\+\_\+parsing}}=True)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_af5fe548306ec90891fc50673b6803dea}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a6abbbaaf902ee91d067ca57e4a75ab35}{content}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a10a5a90d35acfcaa17b687b47a778446}{content\+\_\+type}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a88821d0fe867a67a8c9f747f8846a3f5}{encoding}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_aa8dffc3bdf414597ad814614eb5ec873}{url}}
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_af80e07d0bd856969bc84e0c2806bea7d}{cache\+\_\+link\+\_\+parsing}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Represents one response (or page), along with its URL\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a54f3681d8eae60c2dada4ff266a21bcd}\label{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a54f3681d8eae60c2dada4ff266a21bcd}} 
+\index{pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+index.\+collector.\+Index\+Content.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bytes}]{content,  }\item[{str}]{content\+\_\+type,  }\item[{Optional\mbox{[}str\mbox{]}}]{encoding,  }\item[{str}]{url,  }\item[{bool }]{cache\+\_\+link\+\_\+parsing = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param encoding: the encoding to decode the given content.
+:param url: the URL from which the HTML was downloaded.
+:param cache_link_parsing: whether links parsed from this page's url
+                           should be cached. PyPI index urls should
+                           have this set to False, for example.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_af5fe548306ec90891fc50673b6803dea}\label{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_af5fe548306ec90891fc50673b6803dea}} 
+\index{pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+index.\+collector.\+Index\+Content.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_af80e07d0bd856969bc84e0c2806bea7d}\label{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_af80e07d0bd856969bc84e0c2806bea7d}} 
+\index{pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}!cache\_link\_parsing@{cache\_link\_parsing}}
+\index{cache\_link\_parsing@{cache\_link\_parsing}!pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}}
+\doxysubsubsection{\texorpdfstring{cache\_link\_parsing}{cache\_link\_parsing}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+index.\+collector.\+Index\+Content.\+cache\+\_\+link\+\_\+parsing}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a6abbbaaf902ee91d067ca57e4a75ab35}\label{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a6abbbaaf902ee91d067ca57e4a75ab35}} 
+\index{pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}!content@{content}}
+\index{content@{content}!pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}}
+\doxysubsubsection{\texorpdfstring{content}{content}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+index.\+collector.\+Index\+Content.\+content}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a10a5a90d35acfcaa17b687b47a778446}\label{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a10a5a90d35acfcaa17b687b47a778446}} 
+\index{pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}!content\_type@{content\_type}}
+\index{content\_type@{content\_type}!pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}}
+\doxysubsubsection{\texorpdfstring{content\_type}{content\_type}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+index.\+collector.\+Index\+Content.\+content\+\_\+type}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a88821d0fe867a67a8c9f747f8846a3f5}\label{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_a88821d0fe867a67a8c9f747f8846a3f5}} 
+\index{pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}!encoding@{encoding}}
+\index{encoding@{encoding}!pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}}
+\doxysubsubsection{\texorpdfstring{encoding}{encoding}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+index.\+collector.\+Index\+Content.\+encoding}
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_aa8dffc3bdf414597ad814614eb5ec873}\label{classpip_1_1__internal_1_1index_1_1collector_1_1IndexContent_aa8dffc3bdf414597ad814614eb5ec873}} 
+\index{pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}!url@{url}}
+\index{url@{url}!pip.\_internal.index.collector.IndexContent@{pip.\_internal.index.collector.IndexContent}}
+\doxysubsubsection{\texorpdfstring{url}{url}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+index.\+collector.\+Index\+Content.\+url}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+internal/index/\mbox{\hyperlink{collector_8py}{collector.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,156 @@
+\hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32}{}\doxysection{pip.\+\_\+vendor.\+colorama.\+win32 Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1colorama_1_1win32}\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1colorama_1_1win32_1_1CONSOLE__SCREEN__BUFFER__INFO}{CONSOLE\+\_\+\+SCREEN\+\_\+\+BUFFER\+\_\+\+INFO}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_af1772bab7a04129ce588abcfc63db4fd}{Get\+Console\+Screen\+Buffer\+Info}} (stream\+\_\+id=\mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a8531af7914607bd879a2c02b12387f61}{STDOUT}})
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a24a5828e9d832b314b4ea411a1c71897}{Set\+Console\+Text\+Attribute}} (stream\+\_\+id, attrs)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a4864707416b7461fd98af96750e9c0c4}{Set\+Console\+Cursor\+Position}} (stream\+\_\+id, position, adjust=True)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a3081852364f4c549911bd8e198f3173c}{Fill\+Console\+Output\+Character}} (stream\+\_\+id, char, length, start)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a4b50b314551c78876b1c13ad217ff870}{Fill\+Console\+Output\+Attribute}} (stream\+\_\+id, attr, length, start)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a0a6a755d59fade096e884966fed77803}{Set\+Console\+Title}} (title)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a70d987830aba1411fb2824d31d897640}{Get\+Console\+Mode}} (handle)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a301dad13cdfbf1838ba3e37e87cb139b}{Set\+Console\+Mode}} (handle, mode)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a8531af7914607bd879a2c02b12387f61}{STDOUT}} = -\/11
+\item 
+int \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a22a76243ec3fd8f9b7da62abaf0da323}{STDERR}} = -\/12
+\item 
+int \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a3a60d8b36a570fda42e5b36fcff04280}{ENABLE\+\_\+\+VIRTUAL\+\_\+\+TERMINAL\+\_\+\+PROCESSING}} = 0x0004
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a24cd7c52ced147d7d6118d8d7a5573da}{windll}} = Library\+Loader(ctypes.\+Win\+DLL)
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a4ab345a4d73e42a89c0f51cf34750b85}{Set\+Console\+Text\+Attribute}} = lambda $\ast$\+\_\+\+: None
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a471283912f6da56f4759f47ef2bdfcec}{winapi\+\_\+test}} = lambda $\ast$\+\_\+\+: None
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_afc2e2673fd8218862c4ed0320c84855a}{COORD}} = wintypes.\+\_\+\+COORD
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a079ba87fc2d1aeb156199c0289bb629d}{argtypes}}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a98133acca9490e6845499d945c07b933}{restype}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a4b50b314551c78876b1c13ad217ff870}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a4b50b314551c78876b1c13ad217ff870}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!FillConsoleOutputAttribute@{FillConsoleOutputAttribute}}
+\index{FillConsoleOutputAttribute@{FillConsoleOutputAttribute}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{FillConsoleOutputAttribute()}{FillConsoleOutputAttribute()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+colorama.\+win32.\+Fill\+Console\+Output\+Attribute (\begin{DoxyParamCaption}\item[{}]{stream\+\_\+id,  }\item[{}]{attr,  }\item[{}]{length,  }\item[{}]{start }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} FillConsoleOutputAttribute( hConsole, csbi.wAttributes, dwConSize, coordScreen, &cCharsWritten )\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a3081852364f4c549911bd8e198f3173c}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a3081852364f4c549911bd8e198f3173c}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!FillConsoleOutputCharacter@{FillConsoleOutputCharacter}}
+\index{FillConsoleOutputCharacter@{FillConsoleOutputCharacter}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{FillConsoleOutputCharacter()}{FillConsoleOutputCharacter()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+colorama.\+win32.\+Fill\+Console\+Output\+Character (\begin{DoxyParamCaption}\item[{}]{stream\+\_\+id,  }\item[{}]{char,  }\item[{}]{length,  }\item[{}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a70d987830aba1411fb2824d31d897640}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a70d987830aba1411fb2824d31d897640}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!GetConsoleMode@{GetConsoleMode}}
+\index{GetConsoleMode@{GetConsoleMode}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{GetConsoleMode()}{GetConsoleMode()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+colorama.\+win32.\+Get\+Console\+Mode (\begin{DoxyParamCaption}\item[{}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_af1772bab7a04129ce588abcfc63db4fd}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_af1772bab7a04129ce588abcfc63db4fd}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!GetConsoleScreenBufferInfo@{GetConsoleScreenBufferInfo}}
+\index{GetConsoleScreenBufferInfo@{GetConsoleScreenBufferInfo}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{GetConsoleScreenBufferInfo()}{GetConsoleScreenBufferInfo()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+colorama.\+win32.\+Get\+Console\+Screen\+Buffer\+Info (\begin{DoxyParamCaption}\item[{}]{stream\+\_\+id = {\ttfamily \mbox{\hyperlink{namespacepip_1_1__vendor_1_1colorama_1_1win32_a8531af7914607bd879a2c02b12387f61}{STDOUT}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a4864707416b7461fd98af96750e9c0c4}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a4864707416b7461fd98af96750e9c0c4}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!SetConsoleCursorPosition@{SetConsoleCursorPosition}}
+\index{SetConsoleCursorPosition@{SetConsoleCursorPosition}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{SetConsoleCursorPosition()}{SetConsoleCursorPosition()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+colorama.\+win32.\+Set\+Console\+Cursor\+Position (\begin{DoxyParamCaption}\item[{}]{stream\+\_\+id,  }\item[{}]{position,  }\item[{}]{adjust = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a301dad13cdfbf1838ba3e37e87cb139b}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a301dad13cdfbf1838ba3e37e87cb139b}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!SetConsoleMode@{SetConsoleMode}}
+\index{SetConsoleMode@{SetConsoleMode}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{SetConsoleMode()}{SetConsoleMode()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+colorama.\+win32.\+Set\+Console\+Mode (\begin{DoxyParamCaption}\item[{}]{handle,  }\item[{}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a24a5828e9d832b314b4ea411a1c71897}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a24a5828e9d832b314b4ea411a1c71897}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!SetConsoleTextAttribute@{SetConsoleTextAttribute}}
+\index{SetConsoleTextAttribute@{SetConsoleTextAttribute}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{SetConsoleTextAttribute()}{SetConsoleTextAttribute()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+colorama.\+win32.\+Set\+Console\+Text\+Attribute (\begin{DoxyParamCaption}\item[{}]{stream\+\_\+id,  }\item[{}]{attrs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a0a6a755d59fade096e884966fed77803}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a0a6a755d59fade096e884966fed77803}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!SetConsoleTitle@{SetConsoleTitle}}
+\index{SetConsoleTitle@{SetConsoleTitle}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{SetConsoleTitle()}{SetConsoleTitle()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+colorama.\+win32.\+Set\+Console\+Title (\begin{DoxyParamCaption}\item[{}]{title }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a079ba87fc2d1aeb156199c0289bb629d}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a079ba87fc2d1aeb156199c0289bb629d}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!argtypes@{argtypes}}
+\index{argtypes@{argtypes}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{argtypes}{argtypes}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+colorama.\+win32.\+argtypes}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_afc2e2673fd8218862c4ed0320c84855a}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_afc2e2673fd8218862c4ed0320c84855a}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!COORD@{COORD}}
+\index{COORD@{COORD}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{COORD}{COORD}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+colorama.\+win32.\+COORD = wintypes.\+\_\+\+COORD}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a3a60d8b36a570fda42e5b36fcff04280}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a3a60d8b36a570fda42e5b36fcff04280}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!ENABLE\_VIRTUAL\_TERMINAL\_PROCESSING@{ENABLE\_VIRTUAL\_TERMINAL\_PROCESSING}}
+\index{ENABLE\_VIRTUAL\_TERMINAL\_PROCESSING@{ENABLE\_VIRTUAL\_TERMINAL\_PROCESSING}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{ENABLE\_VIRTUAL\_TERMINAL\_PROCESSING}{ENABLE\_VIRTUAL\_TERMINAL\_PROCESSING}}
+{\footnotesize\ttfamily int pip.\+\_\+vendor.\+colorama.\+win32.\+ENABLE\+\_\+\+VIRTUAL\+\_\+\+TERMINAL\+\_\+\+PROCESSING = 0x0004}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a98133acca9490e6845499d945c07b933}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a98133acca9490e6845499d945c07b933}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!restype@{restype}}
+\index{restype@{restype}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{restype}{restype}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+colorama.\+win32.\+restype}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a4ab345a4d73e42a89c0f51cf34750b85}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a4ab345a4d73e42a89c0f51cf34750b85}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!SetConsoleTextAttribute@{SetConsoleTextAttribute}}
+\index{SetConsoleTextAttribute@{SetConsoleTextAttribute}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{SetConsoleTextAttribute}{SetConsoleTextAttribute}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+colorama.\+win32.\+Set\+Console\+Text\+Attribute = lambda $\ast$\+\_\+\+: None}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a22a76243ec3fd8f9b7da62abaf0da323}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a22a76243ec3fd8f9b7da62abaf0da323}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!STDERR@{STDERR}}
+\index{STDERR@{STDERR}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{STDERR}{STDERR}}
+{\footnotesize\ttfamily int pip.\+\_\+vendor.\+colorama.\+win32.\+STDERR = -\/12}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a8531af7914607bd879a2c02b12387f61}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a8531af7914607bd879a2c02b12387f61}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!STDOUT@{STDOUT}}
+\index{STDOUT@{STDOUT}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{STDOUT}{STDOUT}}
+{\footnotesize\ttfamily int pip.\+\_\+vendor.\+colorama.\+win32.\+STDOUT = -\/11}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a471283912f6da56f4759f47ef2bdfcec}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a471283912f6da56f4759f47ef2bdfcec}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!winapi\_test@{winapi\_test}}
+\index{winapi\_test@{winapi\_test}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{winapi\_test}{winapi\_test}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+colorama.\+win32.\+winapi\+\_\+test = lambda $\ast$\+\_\+\+: None}
+
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1colorama_1_1win32_a24cd7c52ced147d7d6118d8d7a5573da}\label{namespacepip_1_1__vendor_1_1colorama_1_1win32_a24cd7c52ced147d7d6118d8d7a5573da}} 
+\index{pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}!windll@{windll}}
+\index{windll@{windll}!pip.\_vendor.colorama.win32@{pip.\_vendor.colorama.win32}}
+\doxysubsubsection{\texorpdfstring{windll}{windll}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+colorama.\+win32.\+windll = Library\+Loader(ctypes.\+Win\+DLL)}
+

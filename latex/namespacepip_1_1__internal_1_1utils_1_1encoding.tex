@@ -1,0 +1,33 @@
+\hypertarget{namespacepip_1_1__internal_1_1utils_1_1encoding}{}\doxysection{pip.\+\_\+internal.\+utils.\+encoding Namespace Reference}
+\label{namespacepip_1_1__internal_1_1utils_1_1encoding}\index{pip.\_internal.utils.encoding@{pip.\_internal.utils.encoding}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1encoding_a587cf016fd896202a9f7fa02e1e6d62a}{auto\+\_\+decode}} (bytes data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1encoding_af27297a9b4c563a9e1f1f5791f6e5d4d}{ENCODING\+\_\+\+RE}} = re.\+compile(rb\char`\"{}coding\mbox{[}\+:=\mbox{]}\textbackslash{}s$\ast$(\mbox{[}-\/\textbackslash{}w.\mbox{]}+)\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1encoding_a587cf016fd896202a9f7fa02e1e6d62a}\label{namespacepip_1_1__internal_1_1utils_1_1encoding_a587cf016fd896202a9f7fa02e1e6d62a}} 
+\index{pip.\_internal.utils.encoding@{pip.\_internal.utils.encoding}!auto\_decode@{auto\_decode}}
+\index{auto\_decode@{auto\_decode}!pip.\_internal.utils.encoding@{pip.\_internal.utils.encoding}}
+\doxysubsubsection{\texorpdfstring{auto\_decode()}{auto\_decode()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+utils.\+encoding.\+auto\+\_\+decode (\begin{DoxyParamCaption}\item[{bytes}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check a bytes string for a BOM to correctly detect the encoding
+
+Fallback to locale.getpreferredencoding(False) like open() on Python3\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1encoding_af27297a9b4c563a9e1f1f5791f6e5d4d}\label{namespacepip_1_1__internal_1_1utils_1_1encoding_af27297a9b4c563a9e1f1f5791f6e5d4d}} 
+\index{pip.\_internal.utils.encoding@{pip.\_internal.utils.encoding}!ENCODING\_RE@{ENCODING\_RE}}
+\index{ENCODING\_RE@{ENCODING\_RE}!pip.\_internal.utils.encoding@{pip.\_internal.utils.encoding}}
+\doxysubsubsection{\texorpdfstring{ENCODING\_RE}{ENCODING\_RE}}
+{\footnotesize\ttfamily pip.\+\_\+internal.\+utils.\+encoding.\+ENCODING\+\_\+\+RE = re.\+compile(rb\char`\"{}coding\mbox{[}\+:=\mbox{]}\textbackslash{}s$\ast$(\mbox{[}-\/\textbackslash{}w.\mbox{]}+)\char`\"{})}
+

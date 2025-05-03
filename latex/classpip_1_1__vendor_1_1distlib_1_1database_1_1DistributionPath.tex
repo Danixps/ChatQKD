@@ -1,0 +1,190 @@
+\hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath}{}\doxysection{pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path Class Reference}
+\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath}\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a17a2afe7db83a808ad93c909d99ed955}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_af45026e55efb1a3e265aa4eb5b4ca5c7}{path}}=None, include\+\_\+egg=False)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a576c17cc01238d807b4cc7b833001b0b}{clear\+\_\+cache}} (self)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a1500e9cf278065339a256b7a18a26aa1}{distinfo\+\_\+dirname}} (cls, name, version)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a7648bdf2f1bf2a7e9f9e55aea3e1b1b3}{get\+\_\+distributions}} (self)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_af76df55542d7cd100793ca54b893c808}{get\+\_\+distribution}} (self, name)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a149d6da691331a1302cad987fd42d23e}{provides\+\_\+distribution}} (self, name, version=None)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_aad37e3c8f1659cb307dcd5472a563f96}{get\+\_\+file\+\_\+path}} (self, name, relative\+\_\+path)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a69e5ea3ce433f4ff77e0fae760f09605}{get\+\_\+exported\+\_\+entries}} (self, category, name=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_af45026e55efb1a3e265aa4eb5b4ca5c7}{path}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_ad4ec28f31f9d2152d69afda83c18bda8}{cache\+\_\+enabled}} = property(\+\_\+get\+\_\+cache\+\_\+enabled, \+\_\+set\+\_\+cache\+\_\+enabled)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Represents a set of distributions installed on a path (typically sys.path).
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a17a2afe7db83a808ad93c909d99ed955}\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a17a2afe7db83a808ad93c909d99ed955}} 
+\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path = {\ttfamily None},  }\item[{}]{include\+\_\+egg = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create an instance from a path, optionally including legacy (distutils/
+setuptools/distribute) distributions.
+:param path: The path to use, as a list of directories. If not specified,
+             sys.path is used.
+:param include_egg: If True, this instance will look for and return legacy
+                    distributions as well as those based on PEP 376.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a576c17cc01238d807b4cc7b833001b0b}\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a576c17cc01238d807b4cc7b833001b0b}} 
+\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}!clear\_cache@{clear\_cache}}
+\index{clear\_cache@{clear\_cache}!pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+\doxysubsubsection{\texorpdfstring{clear\_cache()}{clear\_cache()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path.\+clear\+\_\+cache (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Clears the internal cache.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a1500e9cf278065339a256b7a18a26aa1}\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a1500e9cf278065339a256b7a18a26aa1}} 
+\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}!distinfo\_dirname@{distinfo\_dirname}}
+\index{distinfo\_dirname@{distinfo\_dirname}!pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+\doxysubsubsection{\texorpdfstring{distinfo\_dirname()}{distinfo\_dirname()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path.\+distinfo\+\_\+dirname (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{name,  }\item[{}]{version }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The *name* and *version* parameters are converted into their
+filename-escaped form, i.e. any ``'-'`` characters are replaced
+with ``'_'`` other than the one in ``'dist-info'`` and the one
+separating the name from the version number.
+
+:parameter name: is converted to a standard distribution name by replacing
+                 any runs of non- alphanumeric characters with a single
+                 ``'-'``.
+:type name: string
+:parameter version: is converted to a standard version string. Spaces
+                    become dots, and all other non-alphanumeric characters
+                    (except dots) become dashes, with runs of multiple
+                    dashes condensed to a single dash.
+:type version: string
+:returns: directory name
+:rtype: string\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_af76df55542d7cd100793ca54b893c808}\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_af76df55542d7cd100793ca54b893c808}} 
+\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}!get\_distribution@{get\_distribution}}
+\index{get\_distribution@{get\_distribution}!pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+\doxysubsubsection{\texorpdfstring{get\_distribution()}{get\_distribution()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path.\+get\+\_\+distribution (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Looks for a named distribution on the path.
+
+This function only returns the first result found, as no more than one
+value is expected. If nothing is found, ``None`` is returned.
+
+:rtype: :class:`InstalledDistribution`, :class:`EggInfoDistribution`
+        or ``None``
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a7648bdf2f1bf2a7e9f9e55aea3e1b1b3}\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a7648bdf2f1bf2a7e9f9e55aea3e1b1b3}} 
+\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}!get\_distributions@{get\_distributions}}
+\index{get\_distributions@{get\_distributions}!pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+\doxysubsubsection{\texorpdfstring{get\_distributions()}{get\_distributions()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path.\+get\+\_\+distributions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides an iterator that looks for distributions and returns
+:class:`InstalledDistribution` or
+:class:`EggInfoDistribution` instances for each one of them.
+
+:rtype: iterator of :class:`InstalledDistribution` and
+        :class:`EggInfoDistribution` instances
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a69e5ea3ce433f4ff77e0fae760f09605}\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a69e5ea3ce433f4ff77e0fae760f09605}} 
+\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}!get\_exported\_entries@{get\_exported\_entries}}
+\index{get\_exported\_entries@{get\_exported\_entries}!pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+\doxysubsubsection{\texorpdfstring{get\_exported\_entries()}{get\_exported\_entries()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path.\+get\+\_\+exported\+\_\+entries (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{category,  }\item[{}]{name = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return all of the exported entries in a particular category.
+
+:param category: The category to search for entries.
+:param name: If specified, only entries with that name are returned.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_aad37e3c8f1659cb307dcd5472a563f96}\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_aad37e3c8f1659cb307dcd5472a563f96}} 
+\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}!get\_file\_path@{get\_file\_path}}
+\index{get\_file\_path@{get\_file\_path}!pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+\doxysubsubsection{\texorpdfstring{get\_file\_path()}{get\_file\_path()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path.\+get\+\_\+file\+\_\+path (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{relative\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the path to a resource file.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a149d6da691331a1302cad987fd42d23e}\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_a149d6da691331a1302cad987fd42d23e}} 
+\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}!provides\_distribution@{provides\_distribution}}
+\index{provides\_distribution@{provides\_distribution}!pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+\doxysubsubsection{\texorpdfstring{provides\_distribution()}{provides\_distribution()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path.\+provides\+\_\+distribution (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{version = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Iterates over all distributions to find which distributions provide *name*.
+If a *version* is provided, it will be used to filter the results.
+
+This function only returns the first result found, since no more than
+one values are expected. If the directory is not found, returns ``None``.
+
+:parameter version: a version specifier that indicates the version
+                    required, conforming to the format in ``PEP-345``
+
+:type name: string
+:type version: string
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_af45026e55efb1a3e265aa4eb5b4ca5c7}\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_af45026e55efb1a3e265aa4eb5b4ca5c7}} 
+\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}!path@{path}}
+\index{path@{path}!pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path.\+path}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_ad4ec28f31f9d2152d69afda83c18bda8}\label{classpip_1_1__vendor_1_1distlib_1_1database_1_1DistributionPath_ad4ec28f31f9d2152d69afda83c18bda8}} 
+\index{pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}!cache\_enabled@{cache\_enabled}}
+\index{cache\_enabled@{cache\_enabled}!pip.\_vendor.distlib.database.DistributionPath@{pip.\_vendor.distlib.database.DistributionPath}}
+\doxysubsubsection{\texorpdfstring{cache\_enabled}{cache\_enabled}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+database.\+Distribution\+Path.\+cache\+\_\+enabled = property(\+\_\+get\+\_\+cache\+\_\+enabled, \+\_\+set\+\_\+cache\+\_\+enabled)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/distlib/\mbox{\hyperlink{database_8py}{database.\+py}}\end{DoxyCompactItemize}

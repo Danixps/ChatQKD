@@ -1,0 +1,115 @@
+\hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache}{}\doxysection{pip.\+\_\+vendor.\+cachecontrol.\+caches.\+redis\+\_\+cache.\+Redis\+Cache Class Reference}
+\label{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache}\index{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+cachecontrol.\+caches.\+redis\+\_\+cache.\+Redis\+Cache\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+cachecontrol.\+caches.\+redis\+\_\+cache.\+Redis\+Cache\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a1ba727745c0445787fcb4b76d4f86436}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Redis\mbox{[}bytes\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a10af698fe87d97c642a6624368d99f59}{conn}})
+\item 
+bytes$\vert$None \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a7d70a0b4644bf649d9d346681b63061f}{get}} (self, str key)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a89e1e6e47ef9e7ef576b3116e4239206}{set}} (self, str key, bytes value, int$\vert$datetime$\vert$None expires=None)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a37412d1920a4c5160bb0d14282e0dc77}{delete}} (self, str key)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a217ee5834664749fd4d9cc65de5c7a4f}{clear}} (self)
+\item 
+None \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a3703f11cd74de5a2d416b33208df6710}{close}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a10af698fe87d97c642a6624368d99f59}{conn}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a1ba727745c0445787fcb4b76d4f86436}\label{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a1ba727745c0445787fcb4b76d4f86436}} 
+\index{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+cachecontrol.\+caches.\+redis\+\_\+cache.\+Redis\+Cache.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Redis\mbox{[}bytes\mbox{]}}]{conn }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a217ee5834664749fd4d9cc65de5c7a4f}\label{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a217ee5834664749fd4d9cc65de5c7a4f}} 
+\index{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}!clear@{clear}}
+\index{clear@{clear}!pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+cachecontrol.\+caches.\+redis\+\_\+cache.\+Redis\+Cache.\+clear (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Helper for clearing all the keys in a database. Use with
+caution!\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a3703f11cd74de5a2d416b33208df6710}\label{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a3703f11cd74de5a2d416b33208df6710}} 
+\index{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}!close@{close}}
+\index{close@{close}!pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+cachecontrol.\+caches.\+redis\+\_\+cache.\+Redis\+Cache.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Redis uses connection pooling, no need to close the connection.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1cache_1_1BaseCache_aed3b918393d941c531ffda7afa8968c5}{pip.\+\_\+vendor.\+cachecontrol.\+cache.\+Base\+Cache}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a37412d1920a4c5160bb0d14282e0dc77}\label{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a37412d1920a4c5160bb0d14282e0dc77}} 
+\index{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}!delete@{delete}}
+\index{delete@{delete}!pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+cachecontrol.\+caches.\+redis\+\_\+cache.\+Redis\+Cache.\+delete (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{key }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1cache_1_1BaseCache_a87dbfead33e33cc5f56646d24e8219e6}{pip.\+\_\+vendor.\+cachecontrol.\+cache.\+Base\+Cache}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a7d70a0b4644bf649d9d346681b63061f}\label{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a7d70a0b4644bf649d9d346681b63061f}} 
+\index{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}!get@{get}}
+\index{get@{get}!pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily  bytes $\vert$ None pip.\+\_\+vendor.\+cachecontrol.\+caches.\+redis\+\_\+cache.\+Redis\+Cache.\+get (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{key }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1cache_1_1BaseCache_ad7d890e521ad3cdea7d47c810e342cc6}{pip.\+\_\+vendor.\+cachecontrol.\+cache.\+Base\+Cache}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a89e1e6e47ef9e7ef576b3116e4239206}\label{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a89e1e6e47ef9e7ef576b3116e4239206}} 
+\index{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}!set@{set}}
+\index{set@{set}!pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily  None pip.\+\_\+vendor.\+cachecontrol.\+caches.\+redis\+\_\+cache.\+Redis\+Cache.\+set (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{key,  }\item[{bytes}]{value,  }\item[{int $\vert$ datetime $\vert$ None }]{expires = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1cache_1_1BaseCache_a106ca80629a1d69ad384fdddb00afc3d}{pip.\+\_\+vendor.\+cachecontrol.\+cache.\+Base\+Cache}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a10af698fe87d97c642a6624368d99f59}\label{classpip_1_1__vendor_1_1cachecontrol_1_1caches_1_1redis__cache_1_1RedisCache_a10af698fe87d97c642a6624368d99f59}} 
+\index{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}!conn@{conn}}
+\index{conn@{conn}!pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache@{pip.\_vendor.cachecontrol.caches.redis\_cache.RedisCache}}
+\doxysubsubsection{\texorpdfstring{conn}{conn}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+cachecontrol.\+caches.\+redis\+\_\+cache.\+Redis\+Cache.\+conn}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/cachecontrol/caches/\mbox{\hyperlink{redis__cache_8py}{redis\+\_\+cache.\+py}}\end{DoxyCompactItemize}

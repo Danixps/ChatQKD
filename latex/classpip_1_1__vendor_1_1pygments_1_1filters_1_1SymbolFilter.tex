@@ -1,0 +1,114 @@
+\hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter}{}\doxysection{pip.\+\_\+vendor.\+pygments.\+filters.\+Symbol\+Filter Class Reference}
+\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter}\index{pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pygments.\+filters.\+Symbol\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pygments.\+filters.\+Symbol\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a49ae1f0f8e78f21948f98d398335b5a5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a03e1be4af2e18f9d33c21efb2190784b}{options}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_abfb8cb7c83660bb4f2857823f1047abf}{filter}} (self, lexer, stream)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_ae75f41994a5bbfa8a77823b9751b1500}{symbols}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_afd4a2081b78528b589115e7e9226b3a9}{latex\+\_\+symbols}}
+\item 
+dictionary \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a78600e006dee1b2f2c350e1497ac917d}{isabelle\+\_\+symbols}}
+\item 
+dictionary \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a5999f0e5af8789011beac01f49d779f7}{lang\+\_\+map}} = \{\textquotesingle{}isabelle\textquotesingle{} \+: \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a78600e006dee1b2f2c350e1497ac917d}{isabelle\+\_\+symbols}}, \textquotesingle{}latex\textquotesingle{} \+: \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_afd4a2081b78528b589115e7e9226b3a9}{latex\+\_\+symbols}}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Convert mathematical symbols such as \\<longrightarrow> in Isabelle
+or \\longrightarrow in LaTeX into Unicode characters.
+
+This is mostly useful for HTML or console output when you want to
+approximate the source rendering you'd see in an IDE.
+
+Options accepted:
+
+`lang` : string
+   The symbol language. Must be one of ``'isabelle'`` or
+   ``'latex'``.  The default is ``'isabelle'``.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a49ae1f0f8e78f21948f98d398335b5a5}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a49ae1f0f8e78f21948f98d398335b5a5}} 
+\index{pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+filters.\+Symbol\+Filter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a271e8db1f91ca7e179cf41a5f1a7df12}{pip.\+\_\+vendor.\+pygments.\+filter.\+Filter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_abfb8cb7c83660bb4f2857823f1047abf}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_abfb8cb7c83660bb4f2857823f1047abf}} 
+\index{pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}!filter@{filter}}
+\index{filter@{filter}!pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pygments.\+filters.\+Symbol\+Filter.\+filter (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lexer,  }\item[{}]{stream }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filter_1_1Filter_a11062d7fa15df23e907b69e6843c1714}{pip.\+\_\+vendor.\+pygments.\+filter.\+Filter}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a78600e006dee1b2f2c350e1497ac917d}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a78600e006dee1b2f2c350e1497ac917d}} 
+\index{pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}!isabelle\_symbols@{isabelle\_symbols}}
+\index{isabelle\_symbols@{isabelle\_symbols}!pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}}
+\doxysubsubsection{\texorpdfstring{isabelle\_symbols}{isabelle\_symbols}}
+{\footnotesize\ttfamily dictionary pip.\+\_\+vendor.\+pygments.\+filters.\+Symbol\+Filter.\+isabelle\+\_\+symbols\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a5999f0e5af8789011beac01f49d779f7}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a5999f0e5af8789011beac01f49d779f7}} 
+\index{pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}!lang\_map@{lang\_map}}
+\index{lang\_map@{lang\_map}!pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}}
+\doxysubsubsection{\texorpdfstring{lang\_map}{lang\_map}}
+{\footnotesize\ttfamily dictionary pip.\+\_\+vendor.\+pygments.\+filters.\+Symbol\+Filter.\+lang\+\_\+map = \{\textquotesingle{}isabelle\textquotesingle{} \+: \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_a78600e006dee1b2f2c350e1497ac917d}{isabelle\+\_\+symbols}}, \textquotesingle{}latex\textquotesingle{} \+: \mbox{\hyperlink{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_afd4a2081b78528b589115e7e9226b3a9}{latex\+\_\+symbols}}\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_afd4a2081b78528b589115e7e9226b3a9}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_afd4a2081b78528b589115e7e9226b3a9}} 
+\index{pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}!latex\_symbols@{latex\_symbols}}
+\index{latex\_symbols@{latex\_symbols}!pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}}
+\doxysubsubsection{\texorpdfstring{latex\_symbols}{latex\_symbols}}
+{\footnotesize\ttfamily dictionary pip.\+\_\+vendor.\+pygments.\+filters.\+Symbol\+Filter.\+latex\+\_\+symbols\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_ae75f41994a5bbfa8a77823b9751b1500}\label{classpip_1_1__vendor_1_1pygments_1_1filters_1_1SymbolFilter_ae75f41994a5bbfa8a77823b9751b1500}} 
+\index{pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}!symbols@{symbols}}
+\index{symbols@{symbols}!pip.\_vendor.pygments.filters.SymbolFilter@{pip.\_vendor.pygments.filters.SymbolFilter}}
+\doxysubsubsection{\texorpdfstring{symbols}{symbols}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pygments.\+filters.\+Symbol\+Filter.\+symbols}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/pygments/filters/\mbox{\hyperlink{__vendor_2pygments_2filters_2____init_____8py}{\+\_\+\+\_\+init\+\_\+\+\_\+.\+py}}\end{DoxyCompactItemize}

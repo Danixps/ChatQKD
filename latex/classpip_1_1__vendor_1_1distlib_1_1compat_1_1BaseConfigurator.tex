@@ -1,0 +1,191 @@
+\hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator}{}\doxysection{pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator Class Reference}
+\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator}\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a84644a9fa51fa50c1639f6f7e043f80b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a6472e0443febc69e1e2771c1cd5a9c02}{config}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a7ac14d003fbddaa51c132a99ea9ea309}{resolve}} (self, s)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a99583d9b1713e0e7ed6f5e6024f6146c}{ext\+\_\+convert}} (self, value)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aa85372bd47adbd78337efd2e63716e5b}{cfg\+\_\+convert}} (self, value)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a9a6c1c008baaf93514e9e760b9d44fce}{convert}} (self, value)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a413001393d55f20868bf168573a1ff1d}{configure\+\_\+custom}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a6472e0443febc69e1e2771c1cd5a9c02}{config}})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_ae736e3174fb056998a66ebdc08b28b65}{as\+\_\+tuple}} (self, value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a6472e0443febc69e1e2771c1cd5a9c02}{config}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a2cfcd861c003fc6270157f0ea30865b9}{CONVERT\+\_\+\+PATTERN}} = re.\+compile(r\textquotesingle{}$^\wedge$(?P$<$prefix$>$\mbox{[}a-\/z\mbox{]}+)\+://(?P$<$suffix$>$.$\ast$)\$\textquotesingle{})
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a8531abf5f0c847aee7235a8827ccb4bc}{WORD\+\_\+\+PATTERN}} = re.\+compile(r\textquotesingle{}$^\wedge$\textbackslash{}s$\ast$(\textbackslash{}w+)\textbackslash{}s$\ast$\textquotesingle{})
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_acf7eb948c627fb1ec0fc035f8175a15a}{DOT\+\_\+\+PATTERN}} = re.\+compile(r\textquotesingle{}$^\wedge$\textbackslash{}.\textbackslash{}s$\ast$(\textbackslash{}w+)\textbackslash{}s$\ast$\textquotesingle{})
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aaf951c11bfdc4d991a6539dcb6bb84ae}{INDEX\+\_\+\+PATTERN}} = re.\+compile(r\textquotesingle{}$^\wedge$\textbackslash{}\mbox{[}\textbackslash{}s$\ast$(\textbackslash{}w+)\textbackslash{}s$\ast$\textbackslash{}\mbox{]}\textbackslash{}s$\ast$\textquotesingle{})
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aa8f29b8586c3cfbc6e3264d3f2862b4b}{DIGIT\+\_\+\+PATTERN}} = re.\+compile(r\textquotesingle{}$^\wedge$\textbackslash{}d+\$\textquotesingle{})
+\item 
+dictionary \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aeeb25749431dfb6fc0a851b1d9d2d07b}{value\+\_\+converters}}
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_ac30b4328024f6206d4691733dcfe0283}{importer}} = staticmethod(\+\_\+\+\_\+import\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}The configurator base class which defines some useful defaults.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a84644a9fa51fa50c1639f6f7e043f80b}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a84644a9fa51fa50c1639f6f7e043f80b}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{config }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_ae736e3174fb056998a66ebdc08b28b65}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_ae736e3174fb056998a66ebdc08b28b65}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!as\_tuple@{as\_tuple}}
+\index{as\_tuple@{as\_tuple}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{as\_tuple()}{as\_tuple()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+as\+\_\+tuple (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Utility function which converts lists to tuples.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aa85372bd47adbd78337efd2e63716e5b}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aa85372bd47adbd78337efd2e63716e5b}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!cfg\_convert@{cfg\_convert}}
+\index{cfg\_convert@{cfg\_convert}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{cfg\_convert()}{cfg\_convert()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+cfg\+\_\+convert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Default converter for the cfg:// protocol.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a413001393d55f20868bf168573a1ff1d}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a413001393d55f20868bf168573a1ff1d}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!configure\_custom@{configure\_custom}}
+\index{configure\_custom@{configure\_custom}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{configure\_custom()}{configure\_custom()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+configure\+\_\+custom (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Configure an object with a user-supplied factory.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1distlib_1_1util_1_1Configurator_a0d009327a85c6a6843254c1f00907b99}{pip.\+\_\+vendor.\+distlib.\+util.\+Configurator}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a9a6c1c008baaf93514e9e760b9d44fce}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a9a6c1c008baaf93514e9e760b9d44fce}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!convert@{convert}}
+\index{convert@{convert}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+convert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert values to an appropriate type. dicts, lists and tuples are
+replaced by their converting alternatives. Strings are checked to
+see if they have a conversion format and are converted if they do.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a99583d9b1713e0e7ed6f5e6024f6146c}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a99583d9b1713e0e7ed6f5e6024f6146c}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!ext\_convert@{ext\_convert}}
+\index{ext\_convert@{ext\_convert}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{ext\_convert()}{ext\_convert()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+ext\+\_\+convert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Default converter for the ext:// protocol.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a7ac14d003fbddaa51c132a99ea9ea309}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a7ac14d003fbddaa51c132a99ea9ea309}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!resolve@{resolve}}
+\index{resolve@{resolve}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+resolve (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{s }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Resolve strings to objects using standard import and attribute
+syntax.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a6472e0443febc69e1e2771c1cd5a9c02}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a6472e0443febc69e1e2771c1cd5a9c02}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!config@{config}}
+\index{config@{config}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+config}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a2cfcd861c003fc6270157f0ea30865b9}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a2cfcd861c003fc6270157f0ea30865b9}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!CONVERT\_PATTERN@{CONVERT\_PATTERN}}
+\index{CONVERT\_PATTERN@{CONVERT\_PATTERN}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{CONVERT\_PATTERN}{CONVERT\_PATTERN}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+CONVERT\+\_\+\+PATTERN = re.\+compile(r\textquotesingle{}$^\wedge$(?P$<$prefix$>$\mbox{[}a-\/z\mbox{]}+)\+://(?P$<$suffix$>$.$\ast$)\$\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aa8f29b8586c3cfbc6e3264d3f2862b4b}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aa8f29b8586c3cfbc6e3264d3f2862b4b}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!DIGIT\_PATTERN@{DIGIT\_PATTERN}}
+\index{DIGIT\_PATTERN@{DIGIT\_PATTERN}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{DIGIT\_PATTERN}{DIGIT\_PATTERN}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+DIGIT\+\_\+\+PATTERN = re.\+compile(r\textquotesingle{}$^\wedge$\textbackslash{}d+\$\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_acf7eb948c627fb1ec0fc035f8175a15a}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_acf7eb948c627fb1ec0fc035f8175a15a}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!DOT\_PATTERN@{DOT\_PATTERN}}
+\index{DOT\_PATTERN@{DOT\_PATTERN}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{DOT\_PATTERN}{DOT\_PATTERN}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+DOT\+\_\+\+PATTERN = re.\+compile(r\textquotesingle{}$^\wedge$\textbackslash{}.\textbackslash{}s$\ast$(\textbackslash{}w+)\textbackslash{}s$\ast$\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_ac30b4328024f6206d4691733dcfe0283}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_ac30b4328024f6206d4691733dcfe0283}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!importer@{importer}}
+\index{importer@{importer}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{importer}{importer}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+importer = staticmethod(\+\_\+\+\_\+import\+\_\+\+\_\+)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aaf951c11bfdc4d991a6539dcb6bb84ae}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aaf951c11bfdc4d991a6539dcb6bb84ae}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!INDEX\_PATTERN@{INDEX\_PATTERN}}
+\index{INDEX\_PATTERN@{INDEX\_PATTERN}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{INDEX\_PATTERN}{INDEX\_PATTERN}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+INDEX\+\_\+\+PATTERN = re.\+compile(r\textquotesingle{}$^\wedge$\textbackslash{}\mbox{[}\textbackslash{}s$\ast$(\textbackslash{}w+)\textbackslash{}s$\ast$\textbackslash{}\mbox{]}\textbackslash{}s$\ast$\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aeeb25749431dfb6fc0a851b1d9d2d07b}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_aeeb25749431dfb6fc0a851b1d9d2d07b}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!value\_converters@{value\_converters}}
+\index{value\_converters@{value\_converters}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{value\_converters}{value\_converters}}
+{\footnotesize\ttfamily dictionary pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+value\+\_\+converters\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{            \textcolor{stringliteral}{'ext'}: \textcolor{stringliteral}{'ext\_convert'},}
+\DoxyCodeLine{            \textcolor{stringliteral}{'cfg'}: \textcolor{stringliteral}{'cfg\_convert'},}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a8531abf5f0c847aee7235a8827ccb4bc}\label{classpip_1_1__vendor_1_1distlib_1_1compat_1_1BaseConfigurator_a8531abf5f0c847aee7235a8827ccb4bc}} 
+\index{pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}!WORD\_PATTERN@{WORD\_PATTERN}}
+\index{WORD\_PATTERN@{WORD\_PATTERN}!pip.\_vendor.distlib.compat.BaseConfigurator@{pip.\_vendor.distlib.compat.BaseConfigurator}}
+\doxysubsubsection{\texorpdfstring{WORD\_PATTERN}{WORD\_PATTERN}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+distlib.\+compat.\+Base\+Configurator.\+WORD\+\_\+\+PATTERN = re.\+compile(r\textquotesingle{}$^\wedge$\textbackslash{}s$\ast$(\textbackslash{}w+)\textbackslash{}s$\ast$\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Recursos/src\+\_\+final/mi\+\_\+entorno/lib/python3.\+12/site-\/packages/pip/\+\_\+vendor/distlib/\mbox{\hyperlink{__vendor_2distlib_2compat_8py}{compat.\+py}}\end{DoxyCompactItemize}
