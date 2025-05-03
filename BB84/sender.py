@@ -147,8 +147,13 @@ def start_sender():
         print("Alice's bases: ", alice_bases)
         matching_bases = alice_bases == bob_bases
         print("Coincidencia en las bases:", matching_bases)
-
-        
+        indices_coincidentes = []
+        for i in range(len(matching_bases)):
+            if matching_bases[i]:
+              
+                indices_coincidentes.append(i)  # +1 para convertir a 1-indexed
+        print("Índices de coincidencia:", indices_coincidentes)
+ 
         bases_coincidentes = alice_bases[matching_bases]
         bits_coincidentes = alice_bits[matching_bases]
         coincidentes_indices = np.where(bases_coincidentes)[0]
@@ -158,6 +163,12 @@ def start_sender():
         alice_bits_seleccionados = [bits_coincidentes[i-1] for i in selected_indices]
         alice_bits_seleccionados = np.array(list(alice_bits_seleccionados), dtype=int)
         print("Bits de comprbación", alice_bits_seleccionados)
+
+        remaining_indices = list(set(indices_coincidentes).difference( set(selected_indices)))
+        print(remaining_indices)
+        alice_key_bits_result = [alice_bits[i] for i in remaining_indices]
+        
+        print(alice_key_bits_result)
 
 
 
@@ -213,11 +224,16 @@ def start_sender():
             print ("Los bits coincidentes son: ", bits_coincidentes)
             #quiitar a bits_coincidentes los bits de comprobación
            
-            key = [x for i, x in enumerate(bits_coincidentes) if i not in selected_indices-1]
-            print("The complete key is:", key)
+            shared_key = np.array(alice_key_bits_result)
+            
+            #aes_key = derive_aes_key(shared_key.tobytes())  # Derivamos la clave AES
+            print("Clave compartida segura:", shared_key)
            
-            aes_key = derive_aes_key(bytes(key))
+            
 
+            aes_key = derive_aes_key(shared_key.tobytes())
+            print("Clave AES derivada:", aes_key.hex())
+ 
             def send_message():
                 message = message_entry.get()
                 message = message.encode()
@@ -226,8 +242,11 @@ def start_sender():
                     root.quit()
                 else:
                     encrypted_message = encrypt_message(message, aes_key)
-                    array_aeskey_and_message = [aes_key, encrypted_message]
-                    conn2.sendall(pickle.dumps(array_aeskey_and_message))
+                    array_message = encrypted_message
+                    print(array_message)
+                    conn2.sendall(pickle.dumps(array_message))
+                
+                 
                     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                     display_message(f"Yo - {timestamp}: {message.decode('utf-8')}")
                     print(f"Mensaje enviado: {message}")
@@ -238,10 +257,10 @@ def start_sender():
                         data = conn2.recv(1024)
                         if not data:
                             break
-                        array_aeskey_and_message = pickle.loads(data)
-                        aes_key_received, encrypted_message_received = array_aeskey_and_message
+                        array_message = pickle.loads(data)
+                        encrypted_message_received = array_message
                         ciphertext, tag, nonce = encrypted_message_received
-                        decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+                        decrypted_message = decrypt_message(ciphertext, aes_key, tag, nonce)
                         print(f"\033[1;32mMensaje recibido: {decrypted_message}\033[0m")
                         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                         display_message(f"Bob - {timestamp}: {decrypted_message}")

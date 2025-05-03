@@ -13,6 +13,29 @@ import tkinter as tk
 from Crypto.Random import get_random_bytes
 
 import time
+
+def remove_indices(array, indices):
+    """Elimina elementos de un array en las posiciones especificadas por indices.
+    
+    Args:
+        array (list): Array original.
+        indices (list): Lista de índices a eliminar.
+    
+    Returns:
+        list: Nuevo array sin los elementos en los índices especificados.
+    
+    Raises:
+        ValueError: Si algún índice es inválido.
+    """
+    # Valida los índices
+    max_index = len(array) - 1
+    for idx in indices:
+        if not isinstance(idx, int) or idx < 0 or idx > max_index:
+            raise ValueError(f"Índice inválido: {idx}")
+    
+    # Crea un nuevo array excluyendo los índices
+    return [array[i] for i in range(len(array)) if i not in set(indices)]
+
 # Función para derivar una clave AES a partir de la clave compartida
 def derive_aes_key(shared_key):
     # Derivamos una clave de 16 bytes para AES-128
@@ -127,8 +150,20 @@ def start_receiver():
 
         matching_bases = alice_bases == bob_bases
         bases_coincidentes = alice_bases[matching_bases]
-      
+        print("Coincidencia en las bases:", matching_bases)
+        indices_coincidentes = []
+        # queiro las posivciones de esto cuando es true bases_coincidentes = alice_bases[matching_bases]
+        for i in range(len(matching_bases)):
+            if matching_bases[i]:
+           
+                indices_coincidentes.append(i)  # +1 para convertir a 1-indexed
+        print("Índices de coincidencia:", indices_coincidentes)
+        # Aquí Bob recibe los índices de comprobación
+        # Recibir los índices de comprobación   
+
         indices_comprobacion_enteros = [ord(x) for x in indices]
+        # Resta 1 para obtener los índices originales
+    
         print("Índices para comprobación:",  indices_comprobacion_enteros)
 
        # Verifica que bits_coincidentes tenga el tipo correcto
@@ -161,16 +196,28 @@ def start_receiver():
         # Simulación de la clave derivada
         shared_key = np.array(bob_result)  # La clave compartida derivada de los resultados
         aes_key = derive_aes_key(shared_key.tobytes())  # Derivamos la clave AES
+        # Calcula la diferencia: índices que están en matching_indices pero no en check_indices
+        remaining_indices = list(set(indices_coincidentes).difference( set(indices_comprobacion_enteros)))
+        print("Índices restantes:", remaining_indices)
+        key_values = [shared_key[i] for i in remaining_indices]
+        shared_key = np.array(key_values)
+        print("Clave compartida segura:", shared_key)
+        
+        
 
+                        
+        aes_key = derive_aes_key(shared_key.tobytes())
+        print("Clave AES derivada:", aes_key.hex())
+    
         data = client_socket2.recv(1024)  # Tamaño del buffer (ajústalo según sea necesario)
         array_aeskey_and_message = pickle.loads(data)
 
         # Extraer la clave AES y el mensaje cifrado
-        aes_key_received, encrypted_message_received = array_aeskey_and_message
+        encrypted_message_received = array_aeskey_and_message
         ciphertext, tag, nonce = encrypted_message_received
 
         # Descifrar el mensaje
-        decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+        decrypted_message = decrypt_message(ciphertext, aes_key, tag, nonce)
         if decrypted_message:
             # Código para imprimir en verde y negrita
         
@@ -189,8 +236,8 @@ def start_receiver():
                 root.quit()
             else:
                 encrypted_message = encrypt_message(message, aes_key)
-                array_aeskey_and_message = [aes_key, encrypted_message]
-                client_socket2.sendall(pickle.dumps(array_aeskey_and_message))
+                array_message = encrypted_message
+                client_socket2.sendall(pickle.dumps(array_message))
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 display_message(f"Yo    - {timestamp}: {message.decode('utf-8')}")
                 print(f"Mensaje enviado: {message.decode('utf-8')}")
@@ -199,12 +246,16 @@ def start_receiver():
             while True:
                 try:
                     data = client_socket2.recv(1024)
+                    
                     if not data:
                         break
-                    array_aeskey_and_message = pickle.loads(data)
-                    aes_key_received, encrypted_message_received = array_aeskey_and_message
+                 
+                    array_message = pickle.loads(data)
+                    encrypted_message_received = array_message
+                    print(encrypted_message_received)
                     ciphertext, tag, nonce = encrypted_message_received
-                    decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+                    
+                    decrypted_message = decrypt_message(ciphertext, aes_key, tag, nonce)
                     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                     display_message(f"Alice - {timestamp}: {decrypted_message}")
                 except Exception as e:
