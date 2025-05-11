@@ -129,46 +129,93 @@ def start_receiver():
             # Crear una copia del circuito de Alice y medir en la base de Bob
             qc = circuits[i].copy()
             random_base = random.choice(['C', 'H']) #Elecion random de aplicar hadamard adamard o comutacional
-            sv = Statevector.from_instruction(qc)
+            if random_base == 'H':
+                qc.h(0)
+            qc.measure(0, 0)  # Medir el qubit
+
+            # Transpilar y ejecutar en el backend
+            compiled_circuit = transpile(qc, backend)
+            job = backend.run(compiled_circuit, shots=1)  # Ejecutar el circuito.
+
+            resultado = job.result()
+            measured_bit = int(list(resultado.get_counts().keys())[0])  # Obtener el bit medido
             
             # print(sv)
             # Identificar el estado antes de la medición
-            state = identify_state(sv)
+          
+         
+            # # # Aplicar la puerta Hadamard o Comutacional según la base de Bob
+            # print(f"medición: {measured_bit}, index: {i}, base: {random_base}")
+            # # print(f"Estado antes de la medición: {pairs_list[i][1]}, medición: {measured_bit}")
+
            
-            if random_base == 'H':
-                qc.h(0)
-                print(f"SE APLICÓ HADAMARD al Qubit {i}")
+                # print(f"Aplicando Hadamard, estado antes de la medición: {pairs_list[i][0]}, medición: {measured_bit}")
+            if pairs_list[i][0] == '0' and pairs_list[i][1] == '-' and random_base == 'H'and measured_bit == 1: # caso de que el estado sea  0
+                result.append(pairs_list[i][1])
+                index.append(i)
+                if pairs_list[i][1] == '+':
+                    key.append(1)
+                else:
+                    key.append(0)
+            elif pairs_list[i][0] == '1' and pairs_list[i][1] != '-' and random_base == 'H' and measured_bit == 0: #caso de que el estado sea 1
+                result.append(pairs_list[i][1])
+                index.append(i)
+                if pairs_list[i][1] == '+':
+                    key.append(1)
+                else:
+                    key.append(0)
+            
+
+        
+                # print(f"Aplicando Computacional, estado antes de la medición: {pairs_list[i][0]}, medición: {measured_bit}")
+            elif pairs_list[i][1] == '+' and pairs_list[i][0] != '1' and random_base == 'C' and measured_bit == 1:
+                result.append(pairs_list[i][0])
+                index.append(i)
+                if pairs_list[i][0] == '0':
+                    key.append(0)
+                else:
+                    key.append(1)
+                    
+            elif pairs_list[i][1] == '-' and pairs_list[i][0] != '0' and random_base == 'C' and measured_bit == 0:
+                result.append(pairs_list[i][0])
+                index.append(i)
+                if pairs_list[i][0] == '0':
+                    key.append(0)
+
+
+
+           
+                
          
             
             
             
-            sv = Statevector.from_instruction(qc)
+            
             
             # print(sv)
             # Identificar el estado antes de la medición
-            state = identify_state(sv)
-            array_states.append(state)
-            if (state != pairs_list[i][0] and state == '1'):
-                result.append(pairs_list[i][0])
-                index.append(i)
-                qc.measure(0, 0)
-                key.append(qc)
+          
+            # if (state != pairs_list[i][0] and state == '1'):
+            #     result.append(pairs_list[i][0])
+            #     index.append(i)
+            #     qc.measure(0, 0)
+            #     key.append(qc)
 
-            elif (state != pairs_list[i][0] and state == '0'):
-                result.append(pairs_list[i][0])
-                index.append(i)
-                qc.measure(0, 0)
-                key.append(qc)
-            elif (state != pairs_list[i][1] and state == '-'):
-                result.append(pairs_list[i][1])
-                index.append(i)
-                qc.measure(0, 0)
-                key.append(qc)
-            elif (state != pairs_list[i][1] and state == '+'):
-                result.append(pairs_list[i][1])
-                index.append(i)
-                qc.measure(0, 0)
-                key.append(qc)
+            # elif (state != pairs_list[i][0] and state == '0'):
+            #     result.append(pairs_list[i][0])
+            #     index.append(i)
+            #     qc.measure(0, 0)
+            #     key.append(qc)
+            # elif (state != pairs_list[i][1] and state == '-'):
+            #     result.append(pairs_list[i][1])
+            #     index.append(i)
+            #     qc.measure(0, 0)
+            #     key.append(qc)
+            # elif (state != pairs_list[i][1] and state == '+'):
+            #     result.append(pairs_list[i][1])
+            #     index.append(i)
+            #     qc.measure(0, 0)
+            #     key.append(qc)
             
            
             
@@ -198,9 +245,13 @@ def start_receiver():
         client_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket1.connect(('localhost', 65489))
         # Serializar los circuito
-        index_str = bytes(index)
+
+
         
+        #### index_str = bytes(index)
+        index_str = b"".join(struct.pack('!i', index) for index in index)
         
+        time.sleep(1)
         client_socket1.sendall(index_str)
     
        
@@ -218,7 +269,7 @@ def start_receiver():
 
         shared_key_bit = ['0' if x == '+' else '1' if x == '-' else x for x in result]
         client_socket1.close()
-        time.sleep(2)
+        time.sleep(1)
         client_socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket2.connect(('localhost', 65480))
         print("Clave compartidad descodificada:", shared_key_bit)

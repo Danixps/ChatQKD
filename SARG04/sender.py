@@ -115,15 +115,15 @@ def start_sender():
             elif state == '1':
                 qc.x(0)  # X|0⟩ = |1⟩
             elif state == '+':
+                qc.x(0)      # Primero |1⟩
                 qc.h(0)  # H|0⟩ = |+⟩
             elif state == '-':
-                qc.x(0)      # Primero |1⟩
                 qc.h(0)      # H|1⟩ = |−⟩
 
             circuits.append(qc)
 
             # Mostrar información
-            print(f"Qubit {i}: Estado {state}")
+           
             if state == '-' or state == '+':
                 random_state = random.choice(['0', '1'])
                 pairs_to_key.append(random_state)
@@ -135,11 +135,11 @@ def start_sender():
 
               
             
-            print(qc.draw())
+           
             # Opcional: obtener el estado vectorial de alguno
-            print("\nEstado cuántico real (ejemplo para el primero):")
+
             sv = Statevector.from_instruction(qc)
-            print(sv)
+        
         serialized_circuits = pickle.dumps(circuits)
         data_length = struct.pack('!I', len(serialized_circuits))
         conn.sendall(data_length)
@@ -189,23 +189,43 @@ def start_sender():
 
         data = []
        
+        # # # while len(b"".join(data)) < SIZE:
+        # # #     packet = conn1.recv(99999)
+        # # #     if not packet:
+        # # #         break
+        # # #     data.append(packet)
+
+        
+        # # # indices_str = b"".join(data).decode().strip()
+        
+        # # # indices = np.array(list(indices_str))
+        # # # lista_indice_enteros = [ord(c) for c in indices]
         while len(b"".join(data)) < SIZE:
-            packet = conn1.recv(4096)
+            packet = conn1.recv(99999)
             if not packet:
                 break
             data.append(packet)
 
         
-        indices_str = b"".join(data).decode().strip()
-        indices = np.array(list(indices_str))
-        lista_indice_enteros = [ord(c) for c in indices]
-
+        # Concatenar todos los bytes
+        received_bytes = b"".join(data)
+        
+        # Deserializar índices como enteros (4 bytes por índice)
+        indices = []
+        for i in range(0, len(received_bytes), 4):  # Cada índice ocupa 4 bytes
+            index_bytes = received_bytes[i:i+4]
+            if len(index_bytes) == 4:  # Asegura que hay suficientes bytes
+                index = struct.unpack('!i', index_bytes)[0]
+                indices.append(index)
+        lista_indice_enteros = indices
         print("Indices de la clave compartida Bob:", lista_indice_enteros)
         
         shared_key = [pairs_to_key[i] for i in lista_indice_enteros]
-        shared_key_bit = ['0' if x == '+' else '1' if x == '-' else x for x in shared_key]
+        shared_key_str = [str(item) for item in shared_key]
+        shared_key_bit = ['0' if x == '+' else '1' if x == '-' else x for x in shared_key_str]
+        
 
-        print("Clave compartida:",shared_key)
+        print("Clave compartida:",shared_key_str)
         print("Clave compartidad descodificada:", shared_key_bit)
         
 
