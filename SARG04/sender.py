@@ -1,3 +1,12 @@
+"""
+@file: sender.py
+@brief: Este archivo contiene la implementación de un servidor que envía qubits a un cliente (Bob) y permite la comunicación segura entre Alice y Bob utilizando criptografía cuántica.
+@author Daniel Bensa Exposito Paz
+@details: El servidor utiliza sockets para la comunicación y AES para cifrar los mensajes. Se implementa un protocolo de intercambio de claves cuánticas (QKD) para generar una clave compartida segura entre Alice y Bob.
+@date: 2025-05-03
+@version: 1.0
+@note: Este código es parte de un sistema de intercambio de claves cuánticas y utiliza la biblioteca Qiskit para simular circuitos cuánticos.
+"""
 import socket
 import threading
 import numpy as np
@@ -6,11 +15,11 @@ import struct
 import random
 from qiskit import QuantumCircuit
 from Crypto.Cipher import AES
-from qiskit.quantum_info import Statevector
 from datetime import datetime
 import hashlib
 import tkinter as tk
 import os
+import time
 
 SIZE = 10
 
@@ -98,8 +107,9 @@ def start_sender():
 
         alice_bits = np.random.randint(2, size=SIZE)
         alice_states = np.random.choice(['1', '0', '-', '+'], size=SIZE)
+        print("\n-----------------FASE DE ENVÍO DE CÚBITS A BOB-----------------")
         print("Estados a enviar", alice_states)
-        print("Alice's bits: ", alice_bits)
+        print("Bits de Alice: ", alice_bits)
         circuits = []
         pairs_to_key = []
         pairs = []
@@ -152,7 +162,6 @@ def start_sender():
         # Imprimir el resultado
         print(send_pairs)
         data_length= struct.pack('!I', len(send_pairs))
-        import time
         time.sleep(0.01)
         conn.sendall(data_length)
         conn.sendall(send_pairs)
@@ -164,19 +173,7 @@ def start_sender():
 
 
 
-        ####################################################################
-        ####################################################################
-        ####################################################################
-        ####################################################################
-        ####################################################################
-        ####################################################################
-        ####################################################################
-        ####################################################################
-        ####################################################################
-        ####################################################################
-        ####################################################################
-        ####################################################################
-        ####################################################################
+      
 
         server_socket3 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server_socket3.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -188,17 +185,7 @@ def start_sender():
 
         data = []
        
-        # # # while len(b"".join(data)) < SIZE:
-        # # #     packet = conn1.recv(99999)
-        # # #     if not packet:
-        # # #         break
-        # # #     data.append(packet)
-
-        
-        # # # indices_str = b"".join(data).decode().strip()
-        
-        # # # indices = np.array(list(indices_str))
-        # # # lista_indice_enteros = [ord(c) for c in indices]
+    
         while len(b"".join(data)) < SIZE:
             packet = conn1.recv(99999)
             if not packet:
@@ -217,125 +204,182 @@ def start_sender():
                 index = struct.unpack('!i', index_bytes)[0]
                 indices.append(index)
         lista_indice_enteros = indices
+
+
+        server_socket9 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket9.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+       
+        server_socket9.bind(('localhost', 62222))
+        server_socket9.listen(1)
+        conn9, addr9 = server_socket9.accept()
+        data = []
+        while len(b"".join(data)) < (len(lista_indice_enteros) // 3):
+            packet = conn9.recv(99999)
+            if not packet:
+                break
+            data.append(packet)
+        received_bytes = b"".join(data)
+        
+        # Deserializar índices como enteros (4 bytes por índice)
+        indices_comprobacion = []
+        for i in range(0, len(received_bytes), 4):  # Cada índice ocupa 4 bytes
+            index_bytes = received_bytes[i:i+4]
+            if len(index_bytes) == 4:  # Asegura que hay suficientes bytes
+                index = struct.unpack('!i', index_bytes)[0]
+                indices_comprobacion.append(index)
+        indices_comprobacion_enteros = indices_comprobacion
+        
+        print(f"indices recibidos: {indices}")
+        print(f"Indices de comprobación recibidos: {indices_comprobacion_enteros}")
+
+
+
+        data = []
+        while len(b"".join(data)) < (len(lista_indice_enteros) // 3):
+            packet = conn9.recv(99999)
+            if not packet:
+                break
+            data.append(packet)
+        received_bytes = b"".join(data)
+
+        # Deserializar índices como enteros (4 bytes por índice)
+        bits_comprobacion = []
+        for i in range(0, len(received_bytes), 4):  # Cada índice ocupa 4 bytes
+            index_bytes = received_bytes[i:i+4]
+            if len(index_bytes) == 4:  # Asegura que hay suficientes bytes
+                bit = struct.unpack('!i', index_bytes)[0]
+                bits_comprobacion.append(bit)
+        bits_comprobacion_enteros = bits_comprobacion
+        print(f"Bit de comprobación recibidos: {bits_comprobacion_enteros}")
+
+
+
+
+
+        print("\n-----------------FASE DE COMPROBACIÓN-----------------")
         print("Indices de la clave compartida Bob:", lista_indice_enteros)
         
         shared_key = [pairs_to_key[i] for i in lista_indice_enteros]
         shared_key_str = [str(item) for item in shared_key]
         shared_key_bit = ['0' if x == '+' else '1' if x == '-' else x for x in shared_key_str]
-        
-
-        print("Clave compartida:",shared_key_str)
-        print("Clave compartidad descodificada:", shared_key_bit)
-        
-
-        data = []
-       
-        conn1.close()
-        server_socket3.close()
-        server_socket4 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket4.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-       
-        server_socket4.bind(('localhost', 65480))
-        server_socket4.listen(1)
-        conn2, addr1 = server_socket4.accept()
-
-       
-        print("The complete key is:", shared_key_bit)
-      
-            
-
-
-        #listas de posiciones aleatorias de las bases coincidentes
-
-
-     
-
-
-
-        
-
-           
         key = [int(bit) for bit in shared_key_bit]
-        print("La clave compartida segura es:", key)
-        shared_key = np.array(key)
-
-        aes_key = derive_aes_key(shared_key.tobytes())
-        print("Clave AES derivada:", aes_key.hex())
-
-        def send_message():
-            message = message_entry.get()
-            message = message.encode()
-            if message == b"exit":
-                conn2.close()
-                root.quit()
-            else:
-                encrypted_message = encrypt_message(message, aes_key)
-                array_message = encrypted_message
+        
        
-                conn2.sendall(pickle.dumps(array_message))
-                
-                 
-                timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                display_message(f"Yo - {timestamp}: {message.decode('utf-8')}")
-                print(f"Mensaje enviado: {message}")
+        pairs_to_key_str = ['0' if x == '+' else '1' if x == '-' else x for x in pairs_to_key]
+        pairs_to_key_int = [int(bit) for bit in pairs_to_key_str]
 
-        def receive_messages():
-            while True:
-                try:
-                    data = conn2.recv(1024)
-                    if not data:
-                        break
-                    array_message = pickle.loads(data)
-                    encrypted_message_received = array_message
-                    ciphertext, tag, nonce = encrypted_message_received
-                    decrypted_message = decrypt_message(ciphertext, aes_key, tag, nonce)
-                    print(f"\033[1;32mMensaje recibido: {decrypted_message}\033[0m")
-                    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                    display_message(f"Bob - {timestamp}: {decrypted_message}")
-                except Exception as e:
-                    print(f"Error al recibir mensaje: {e}")
-                    break
+        bits_comrpobacion_alice = [pairs_to_key_int[i] for i in indices_comprobacion]
+        print("Bits de comprobación Bob:", bits_comprobacion_enteros)
+        print("Bits de comprobación Alice:", bits_comrpobacion_alice)
+        if bits_comrpobacion_alice == bits_comprobacion_enteros:
+            print("\nLas claves coinciden. La clave compartida es segura.")
+         
 
-        def display_message(message):
-            message_display.config(state=tk.NORMAL)
-            message_display.insert(tk.END, message + "\n")
-            message_display.config(state=tk.DISABLED)
-            message_display.see(tk.END)
-        receive_thread = threading.Thread(target=receive_messages)
-        receive_thread.start()
-
-        root = tk.Tk()
-        root.title("Alice - Enviar Mensaje")
-
+        
+            print("Clave compartida:",shared_key_str)
+            print("Clave compartidad descodificada:", shared_key_bit)
             
 
-            
-
-        send_button = tk.Button(root, text="Enviar", command=send_message)
-        send_button.pack(pady=20)
-
-        message_display = tk.Text(root, state=tk.DISABLED, width=50, height=15)
-        message_display.pack(pady=10)
-
-        message_label = tk.Label(root, text="Escribe tu mensaje:")
-        message_label.pack(pady=10)
-
-        message_entry = tk.Entry(root, width=50)
-        message_entry.pack(pady=10)
-
-        def quit_and_close():
-            conn2.close()
-            server_socket1.close()
-            server_socket2.close()
+            data = []
+        
+            conn1.close()
             server_socket3.close()
-            root.destroy()
-            os._exit(0)
+            server_socket9.close()
 
-        exit_button = tk.Button(root, text="Salir", command=quit_and_close)
-        exit_button.pack(pady=5)
-        root.mainloop()
+            server_socket4 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            server_socket4.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        
+            server_socket4.bind(('localhost', 65480))
+            server_socket4.listen(1)
+            conn2, addr1 = server_socket4.accept()
 
-        receive_thread.join()
+        
+            #listas de posiciones aleatorias de las bases coincidentes
+
+            
+        
+            print("La clave compartida segura es:", key)
+            shared_key = np.array(key)
+
+            aes_key = derive_aes_key(shared_key.tobytes())
+            print("Clave AES derivada:", aes_key.hex())
+
+            def send_message():
+                message = message_entry.get()
+                message = message.encode()
+                if message == b"exit":
+                    conn2.close()
+                    root.quit()
+                else:
+                    encrypted_message = encrypt_message(message, aes_key)
+                    array_message = encrypted_message
+        
+                    conn2.sendall(pickle.dumps(array_message))
+                    
+                    
+                    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    display_message(f"Yo - {timestamp}: {message.decode('utf-8')}")
+                    print(f"Mensaje enviado: {message}")
+
+            def receive_messages():
+                while True:
+                    try:
+                        data = conn2.recv(1024)
+                        if not data:
+                            break
+                        array_message = pickle.loads(data)
+                        encrypted_message_received = array_message
+                        ciphertext, tag, nonce = encrypted_message_received
+                        decrypted_message = decrypt_message(ciphertext, aes_key, tag, nonce)
+                        print(f"\033[1;32mMensaje recibido: {decrypted_message}\033[0m")
+                        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                        display_message(f"Bob - {timestamp}: {decrypted_message}")
+                    except Exception as e:
+                        print(f"Error al recibir mensaje: {e}")
+                        break
+
+            def display_message(message):
+                message_display.config(state=tk.NORMAL)
+                message_display.insert(tk.END, message + "\n")
+                message_display.config(state=tk.DISABLED)
+                message_display.see(tk.END)
+            receive_thread = threading.Thread(target=receive_messages)
+            receive_thread.start()
+
+            root = tk.Tk()
+            root.title("Alice - Enviar Mensaje")
+
+                
+
+                
+
+            send_button = tk.Button(root, text="Enviar", command=send_message)
+            send_button.pack(pady=20)
+
+            message_display = tk.Text(root, state=tk.DISABLED, width=50, height=15)
+            message_display.pack(pady=10)
+
+            message_label = tk.Label(root, text="Escribe tu mensaje:")
+            message_label.pack(pady=10)
+
+            message_entry = tk.Entry(root, width=50)
+            message_entry.pack(pady=10)
+
+            def quit_and_close():
+                conn2.close()
+                server_socket1.close()
+                server_socket2.close()
+                server_socket3.close()
+                root.destroy()
+                os._exit(0)
+
+            exit_button = tk.Button(root, text="Salir", command=quit_and_close)
+            exit_button.pack(pady=5)
+            root.mainloop()
+
+            receive_thread.join()
+        else:
+            print("❌ ¡Intercambio de claves fallido!")
     # else:
     #         print("\nThe keys do not match. Potential interception detected.")
     #         print("Alice's subkey: ", alice_bits_seleccionados)
@@ -347,11 +391,14 @@ def start_sender():
             conn1.close()
         if conn2:
             conn2.close()
+        if conn9:
+            conn9.close()
 
         server_socket1.close()
         server_socket2.close()
         server_socket3.close()
         server_socket4.close()
+        server_socket9.close()
 
 
     except KeyboardInterrupt:
@@ -362,10 +409,13 @@ def start_sender():
             conn1.close()
         if conn2:
             conn2.close()
+        if conn9:
+            conn9.close()
         server_socket1.close()
         server_socket2.close()
         server_socket3.close()
         server_socket4.close()
+        server_socket9.close()
 
 
     finally:
@@ -375,10 +425,13 @@ def start_sender():
             conn.close()
         if conn1:
             conn1.close()
+        if conn9:
+            conn9.close()
         server_socket1.close()
         server_socket2.close()
         server_socket3.close()
         server_socket4.close()
+        server_socket9.close()
 
         print("Socket cerrado")
 

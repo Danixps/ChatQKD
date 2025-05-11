@@ -1,3 +1,12 @@
+"""
+@file: reciever.py
+@brief: Este archivo contiene el código para la parte de Bob en el protocolo de intercambio de claves cuánticas (QKD) utilizando el protocolo SARG04.
+@author Daniel Bensa Exposito Paz
+@details: Bob recibe los circuitos de Alice y mide los qubits en bases aleatorias. Luego, comparte su resultado con Alice y descifra un mensaje cifrado utilizando una clave AES derivada de la clave compartida.
+@date: 2025-05-03
+@version: 1.0
+@note: Este código es parte de un sistema de intercambio de claves cuánticas y utiliza la biblioteca Qiskit para simular circuitos cuánticos.
+"""
 import socket
 import struct
 import numpy as np
@@ -9,7 +18,6 @@ from qiskit import transpile
 import re
 from qiskit_aer import Aer
 from Crypto.Cipher import AES
-from qiskit.quantum_info import Statevector
 import hashlib
 from datetime import datetime
 import tkinter as tk
@@ -122,6 +130,7 @@ def start_receiver():
         result =[]
         index =[]
         key = []
+        print("\n-----------------FASE DE MEDICIÓN-----------------")
         # Qubits de Alice a Bob
         circuits = received_circuits
         backend = Aer.get_backend('qasm_simulator')
@@ -140,16 +149,7 @@ def start_receiver():
             resultado = job.result()
             measured_bit = int(list(resultado.get_counts().keys())[0])  # Obtener el bit medido
             
-            # print(sv)
-            # Identificar el estado antes de la medición
-          
-         
-            # # # Aplicar la puerta Hadamard o Comutacional según la base de Bob
-            # print(f"medición: {measured_bit}, index: {i}, base: {random_base}")
-            # # print(f"Estado antes de la medición: {pairs_list[i][1]}, medición: {measured_bit}")
-
            
-                # print(f"Aplicando Hadamard, estado antes de la medición: {pairs_list[i][0]}, medición: {measured_bit}")
             if pairs_list[i][0] == '0' and pairs_list[i][1] == '-' and random_base == 'H'and measured_bit == 1: # caso de que el estado sea  0
                 result.append(pairs_list[i][1])
                 index.append(i)
@@ -165,9 +165,6 @@ def start_receiver():
                 else:
                     key.append(0)
             
-
-        
-                # print(f"Aplicando Computacional, estado antes de la medición: {pairs_list[i][0]}, medición: {measured_bit}")
             elif pairs_list[i][1] == '+' and pairs_list[i][0] != '1' and random_base == 'C' and measured_bit == 1:
                 result.append(pairs_list[i][0])
                 index.append(i)
@@ -184,58 +181,6 @@ def start_receiver():
 
 
 
-           
-                
-         
-            
-            
-            
-            
-            
-            # print(sv)
-            # Identificar el estado antes de la medición
-          
-            # if (state != pairs_list[i][0] and state == '1'):
-            #     result.append(pairs_list[i][0])
-            #     index.append(i)
-            #     qc.measure(0, 0)
-            #     key.append(qc)
-
-            # elif (state != pairs_list[i][0] and state == '0'):
-            #     result.append(pairs_list[i][0])
-            #     index.append(i)
-            #     qc.measure(0, 0)
-            #     key.append(qc)
-            # elif (state != pairs_list[i][1] and state == '-'):
-            #     result.append(pairs_list[i][1])
-            #     index.append(i)
-            #     qc.measure(0, 0)
-            #     key.append(qc)
-            # elif (state != pairs_list[i][1] and state == '+'):
-            #     result.append(pairs_list[i][1])
-            #     index.append(i)
-            #     qc.measure(0, 0)
-            #     key.append(qc)
-            
-           
-            
-            
-
-            
-            
-            # if bob_bases[i] == 'X':
-            #     qc.h(0)  # Cambiar a la base X para medir si Bob usa la base X
-
-            # qc.measure(0, 0)  # Medir el qubit
-
-            # # Transpilar y ejecutar en el backend
-            # compiled_circuit = transpile(qc, backend)
-            # job = backend.run(compiled_circuit, shots=1)  # Ejecutar el circuito.
-
-            # result = job.result()
-            # measured_bit = int(list(result.get_counts().keys())[0])  # Obtener el bit medido
-            # bob_result.append(measured_bit)
-
         # print("Resultados de Bob:", bob_result)
         
         print("Indices de resultados:", index)
@@ -244,37 +189,58 @@ def start_receiver():
         # Serializar las bases de Bob
         client_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket1.connect(('localhost', 65489))
+    
         # Serializar los circuito
 
-
-        
-        #### index_str = bytes(index)
         index_str = b"".join(struct.pack('!i', index) for index in index)
         
         time.sleep(1)
         client_socket1.sendall(index_str)
     
-       
-        #################
-        ################
-        ################
-        ################
-        ################
-        ################
-        ################
-        ################
-        ################
-        ################
+        indice_comprobacion = np.random.choice(index, size=(len(index) // 3), replace=False)
+        print("Indices de comprobación:", indice_comprobacion)
+        indices_resultados_list = indice_comprobacion.tolist()
+        posiciones = [index.index(i) for i in indices_resultados_list]
 
+        print("Posiciones de comprobación:", posiciones)
+        indice_comprobacion_str = b"".join(struct.pack('!i', indice_comprobacion) for indice_comprobacion in indice_comprobacion)
+        client_socket1.close()
+        
+        for attempt in range(5):
+            try:
+                client_socket9 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                client_socket9.connect(('localhost', 62222))
+                
+                break  # éxito
+            except ConnectionRefusedError:
+                
+                time.sleep(1)
+      
+       
+        client_socket9.sendall(indice_comprobacion_str)
+       
+            
+        
+        
+        
 
         shared_key_bit = ['0' if x == '+' else '1' if x == '-' else x for x in result]
-        client_socket1.close()
+        key = [int(bit) for bit in shared_key_bit]
+
+        bits_comprobacion = [key[i] for i in posiciones]
+        
+        print("Bits de comprobación:", bits_comprobacion)
+        indice_comprobacion_str = b"".join(struct.pack('!i', int(bit)) for bit in bits_comprobacion)
+
+        client_socket9.sendall(indice_comprobacion_str)
+        client_socket9.close()
         time.sleep(1)
+        
         client_socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket2.connect(('localhost', 65480))
         print("Clave compartidad descodificada:", shared_key_bit)
 
-        key = [int(bit) for bit in shared_key_bit]
+        
 
         print("La clave compartida segura es:", key)
         shared_key = np.array(key)
