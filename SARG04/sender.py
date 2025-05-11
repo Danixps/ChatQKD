@@ -42,7 +42,7 @@ def bind_socket(server_socket, address, event, stop_event, conn_list):
                 break
             except socket.timeout:
                 if stop_event.is_set():
-                    print(f"Terminando espera en {address}")
+                    #print(f"Terminando espera en {address}")
                     break
     except Exception as e:
         print(f"Error en {address}: {e}")
@@ -94,7 +94,7 @@ def start_sender():
         thread2.join()
 
         conn = conn_list[0]
-        print(f"Conexión establecida exitosamente con: {conn.getpeername()}")
+        
 
         alice_bits = np.random.randint(2, size=SIZE)
         alice_states = np.random.choice(['1', '0', '-', '+'], size=SIZE)
@@ -138,7 +138,6 @@ def start_sender():
            
             # Opcional: obtener el estado vectorial de alguno
 
-            sv = Statevector.from_instruction(qc)
         
         serialized_circuits = pickle.dumps(circuits)
         data_length = struct.pack('!I', len(serialized_circuits))
@@ -185,7 +184,7 @@ def start_sender():
         server_socket3.bind(('localhost', 65489))
         server_socket3.listen(1)
         conn1, addr1 = server_socket3.accept()
-        print(f"Conectado con {addr1}")
+        
 
         data = []
        
@@ -257,9 +256,11 @@ def start_sender():
 
            
         key = [int(bit) for bit in shared_key_bit]
-        print("The complete key is:", key)
-           
-        aes_key = derive_aes_key(bytes(key))
+        print("La clave compartida segura es:", key)
+        shared_key = np.array(key)
+
+        aes_key = derive_aes_key(shared_key.tobytes())
+        print("Clave AES derivada:", aes_key.hex())
 
         def send_message():
             message = message_entry.get()
@@ -269,8 +270,11 @@ def start_sender():
                 root.quit()
             else:
                 encrypted_message = encrypt_message(message, aes_key)
-                array_aeskey_and_message = [aes_key, encrypted_message]
-                conn2.sendall(pickle.dumps(array_aeskey_and_message))
+                array_message = encrypted_message
+       
+                conn2.sendall(pickle.dumps(array_message))
+                
+                 
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 display_message(f"Yo - {timestamp}: {message.decode('utf-8')}")
                 print(f"Mensaje enviado: {message}")
@@ -281,10 +285,10 @@ def start_sender():
                     data = conn2.recv(1024)
                     if not data:
                         break
-                    array_aeskey_and_message = pickle.loads(data)
-                    aes_key_received, encrypted_message_received = array_aeskey_and_message
+                    array_message = pickle.loads(data)
+                    encrypted_message_received = array_message
                     ciphertext, tag, nonce = encrypted_message_received
-                    decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+                    decrypted_message = decrypt_message(ciphertext, aes_key, tag, nonce)
                     print(f"\033[1;32mMensaje recibido: {decrypted_message}\033[0m")
                     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                     display_message(f"Bob - {timestamp}: {decrypted_message}")

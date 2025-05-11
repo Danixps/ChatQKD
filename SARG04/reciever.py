@@ -237,7 +237,7 @@ def start_receiver():
             # bob_result.append(measured_bit)
 
         # print("Resultados de Bob:", bob_result)
-        print("Indices de resultados de todos qbits:", array_states)
+        
         print("Indices de resultados:", index)
         print("Resultados:", result)
         
@@ -273,26 +273,32 @@ def start_receiver():
         client_socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket2.connect(('localhost', 65480))
         print("Clave compartidad descodificada:", shared_key_bit)
+
+        key = [int(bit) for bit in shared_key_bit]
+
+        print("La clave compartida segura es:", key)
+        shared_key = np.array(key)
+        aes_key = derive_aes_key(shared_key.tobytes())
         
-      
+        print("Clave AES derivada:", aes_key.hex())
       
        
   
 
         # Aquí Bob recibe la clave compartida y la utiliza para descifrar un mensaje (simulado)
         # Simulación de la clave derivada
-        shared_key = np.array(shared_key_bit)
-        aes_key = derive_aes_key(shared_key.tobytes())  # Derivamos la clave AES
+        
+      
 
         data = client_socket2.recv(1024)  # Tamaño del buffer (ajústalo según sea necesario)
         array_aeskey_and_message = pickle.loads(data)
 
         # Extraer la clave AES y el mensaje cifrado
-        aes_key_received, encrypted_message_received = array_aeskey_and_message
+        encrypted_message_received = array_aeskey_and_message
         ciphertext, tag, nonce = encrypted_message_received
 
         # Descifrar el mensaje
-        decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+        decrypted_message = decrypt_message(ciphertext, aes_key, tag, nonce)
         if decrypted_message:
             # Código para imprimir en verde y negrita
         
@@ -311,8 +317,8 @@ def start_receiver():
                 root.quit()
             else:
                 encrypted_message = encrypt_message(message, aes_key)
-                array_aeskey_and_message = [aes_key, encrypted_message]
-                client_socket2.sendall(pickle.dumps(array_aeskey_and_message))
+                array_message = encrypted_message
+                client_socket2.sendall(pickle.dumps(array_message))
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 display_message(f"Yo    - {timestamp}: {message.decode('utf-8')}")
                 print(f"Mensaje enviado: {message.decode('utf-8')}")
@@ -321,12 +327,16 @@ def start_receiver():
             while True:
                 try:
                     data = client_socket2.recv(1024)
+                    
                     if not data:
                         break
-                    array_aeskey_and_message = pickle.loads(data)
-                    aes_key_received, encrypted_message_received = array_aeskey_and_message
+                 
+                    array_message = pickle.loads(data)
+                    encrypted_message_received = array_message
+                  
                     ciphertext, tag, nonce = encrypted_message_received
-                    decrypted_message = decrypt_message(ciphertext, aes_key_received, tag, nonce)
+                    
+                    decrypted_message = decrypt_message(ciphertext, aes_key, tag, nonce)
                     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                     display_message(f"Alice - {timestamp}: {decrypted_message}")
                 except Exception as e:
