@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import tkinter as tk
 from tkinter import ttk, messagebox
+import time
 import subprocess
 import os
 import sys
@@ -12,12 +13,13 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 ruta_bb84 = os.path.join(base_dir, "BB84",  "reciever.py")
 ruta_bbm92 =  os.path.join(base_dir, "BBM92",  "reciever.py")
 ruta_E91 =  os.path.join(base_dir, "E91",  "reciever.py")
+ruta_SARG04 = os.path.join(base_dir, "SARG04",  "reciever.py")
 
 protocol_files = {
     "BB84": ruta_bb84,
     "BBM92": ruta_bbm92,  # Reemplaza esta ruta con la del otro protocolo
     "E91": ruta_E91,
-    "SARG04": "/ruta/a/otro_archivo.py"  # Reemplaza esta ruta con la del otro protocolo
+    "SARG04": ruta_SARG04
 }
 
 
@@ -38,7 +40,30 @@ def ejecutar_protocolo():
         return
 
 
+    import socket
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind(("", 59006))
+    s.listen(1)
+    conn, addr = s.accept()
 
+    # Recibir el nombre del protocolo del cliente (Alice)
+    protocolo_recibido = conn.recv(1024).decode().strip()
+    conn.sendall(protocolo.encode())
+    if protocolo_recibido[-1] == 'E':
+        #quitar ultima letra 
+        protocolo_recibido = protocolo_recibido[:-1]
+        time.sleep(20)
+    if protocolo_recibido != protocolo:
+        print(f"[ERROR] Protocolo incompatible: se esperaba {protocolo} pero se recibió {protocolo_recibido}")
+        conn.sendall(b"ERROR: Protocolo no coincide.")
+        conn.close()
+        s.close()
+        exit(1)
+    s.close()
+    print(f"Conectado con éxito a {addr[0]}:{addr[1]}")
+    ###############
+    
+    time.sleep(3)
     try:
 
         proc = subprocess.Popen(["python3", archivo])
@@ -61,7 +86,7 @@ def ejecutar_protocolo():
 
 # Configuración de la ventana principal
 root = tk.Tk()
-root.title("Selector de Protocolo")
+root.title("ChatQKD - Cliente")  # Cambiado a "ChatQKD"
 
 # Creación y ubicación de los componentes (widgets)
 frame = ttk.Frame(root, padding=100)
@@ -80,5 +105,7 @@ combo.grid(row=1, column=0, pady=5)
 button = ttk.Button(frame, text="Ejecutar", command=ejecutar_protocolo)
 button.grid(row=2, column=0, pady=10)
 
+label_author = ttk.Label(frame, text="Creado por Daniel Bensa Expósito Paz", foreground="gray")
+label_author.grid(row=7, column=0, pady=(10, 5), sticky=tk.W)
 # Inicia el bucle principal de la GUI
 root.mainloop()

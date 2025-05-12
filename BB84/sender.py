@@ -81,7 +81,7 @@ def start_sender():
         server_socket2.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
         thread1 = threading.Thread(target=bind_socket, args=(server_socket1, ('localhost', 65431), connection_event, stop_event, conn_list))
-        thread2 = threading.Thread(target=bind_socket, args=(server_socket2, ('localhost', 65458), connection_event, stop_event, conn_list))
+        thread2 = threading.Thread(target=bind_socket, args=(server_socket2, ('localhost', 65460), connection_event, stop_event, conn_list))
 
         thread1.start()
         thread2.start()

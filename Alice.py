@@ -5,37 +5,41 @@
 @author Daniel Bensa Exposito Paz
 @date 2025-05-03
 @version 1.0
-@details Esta aplicación permite al usuario seleccionar entre varios protocolos de QKD (BB84, BBM92, E91 y SARG04) y ejecutar el protocolo seleccionado con un número específico de qubits a enviar. La interfaz gráfica está construida utilizando Tkinter.
-Este script es parte de un proyecto más grande que incluye varios protocolos de QKD, cada uno implementado en su propio archivo Python.
 """
+
 import tkinter as tk
 from tkinter import ttk, messagebox
 import subprocess
 import os
+import time
 import sys
-
+import socket
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Construcción de rutas relativas
-ruta_bb84 = os.path.join(base_dir, "BB84", "sender.py")
-ruta_bbm92 = os.path.join(base_dir, "BBM92", "sender.py")
-ruta_E91 = os.path.join(base_dir, "E91", "sender.py")
-
-# Definición de un diccionario que mapea los nombres de los protocolos a sus rutas de archivos correspondientes
+# Rutas relativas a los protocolos
 protocol_files = {
-    "BB84": ruta_bb84,
-    "BBM92": ruta_bbm92,
-    "E91": ruta_E91,     
-    "SARG04": os.path.join(base_dir, "SARG04", "otro_script.py")     # Actualizar ruta según corresponda
+    "BB84": os.path.join(base_dir, "BB84", "sender.py"),
+    "BBM92": os.path.join(base_dir, "BBM92", "sender.py"),
+    "E91": os.path.join(base_dir, "E91", "sender.py"),
+    "SARG04": os.path.join(base_dir, "SARG04", "sender.py")
 }
 
+# Niveles de seguridad predefinidos
+security_levels = {
+    "Bajo": 100,
+    "Medio": 200,
+    "Alto": 400
+}
+
+def actualizar_qubits(*args):
+    """Actualiza el campo de entrada de qubits según el nivel de seguridad seleccionado."""
+    nivel = combo_qubits.get()
+    if nivel in security_levels:
+        entry_num.delete(0, tk.END)
+        entry_num.insert(0, str(security_levels[nivel]))
+
 def ejecutar_protocolo():
-    """
-    @brief Función para ejecutar el protocolo seleccionado.
-    @details Esta función se activa al presionar el botón "Ejecutar". Verifica que el protocolo seleccionado y el número de qubits sean válidos, y luego ejecuta el protocolo correspondiente.
-    @param None
-    @return None
-    """
+    """Ejecuta el protocolo seleccionado con los parámetros introducidos por el usuario."""
     protocolo = combo.get()
     if protocolo not in protocol_files:
         messagebox.showerror("Error", "Protocolo no válido.")
@@ -43,68 +47,118 @@ def ejecutar_protocolo():
 
     archivo = protocol_files[protocolo]
 
-    # Verificar que el archivo exista
+    # Verificar existencia del archivo
     if not os.path.exists(archivo):
         messagebox.showerror("Error", f"El archivo {archivo} no se encontró.")
         return
 
-    # Obtenemos el valor numérico introducido por el usuario
+    # Obtener número de qubits
     valor_str = entry_num.get()
     try:
         argumento = int(valor_str)
+        if argumento <= 0:
+            raise ValueError
     except ValueError:
-        messagebox.showerror("Error", "Por favor, ingresa un número entero válido.")
+        messagebox.showerror("Error", "Por favor, ingresa un número entero válido mayor que 0.")
         return
 
-    try:
-        # Ejecutamos el proceso con Popen (para tener control sobre la finalización)
-        proc = subprocess.Popen(["python3", archivo, str(argumento)])
-        proc.wait()  # Espera a que el proceso termine
+    # Obtener IP del servidor (opcional)
+    ip = ip_entry.get().strip() or "localhost"
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    
+    
+    max_reintentos = 5
+    reintento = 0
+    conectado = False
+    # si se conecaa a 59001 no conecta a 59000
+    if s.connect_ex((ip, 59009)) == 0:
+        print(f"Conectado a {ip}:59000")
+        conectado = True
+    else:
+        while reintento < max_reintentos:
+            try:
 
-        # Se muestra mensaje de éxito
+                s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                s.connect((ip, 59006))
+                conectado = True
+                break
+            except socket.error as e:
+                print(f"[ERROR] No se pudo conectar a {ip}:59001. Reintentando... ({reintento + 1}/{max_reintentos})")
+                time.sleep(1)
+                reintento += 1
+        # Si no se pudo conectar después de varios intentos, abortar
+    
+
+    if not conectado:
+        print("No se pudo establecer conexión con Bob. Abortando.")
+        exit(1)
+    # Enviar el nombre del protocolo
+    print(f"Conectado con éxito a {ip}:{59000}")
+    s.sendall(protocolo.encode())
+
+    # Recibir el nombre del protocolo del cliente (Bob)
+    protocolo_recibido = s.recv(1024).decode().strip()
+    s.close()
+    if protocolo_recibido != protocolo:
+        print(f"[ERROR] Protocolo incompatible: se esperaba {protocolo} pero se recibió {protocolo_recibido}")
+        s.close()
+        exit(1)
+    try:
+        proc = subprocess.Popen(["python3", archivo, str(argumento), ip])
+        proc.wait()
         messagebox.showinfo("Éxito", f"El protocolo {protocolo} se ejecutó correctamente.")
 
-        # En caso de que aún el proceso siga en ejecución, se termina
         if proc.poll() is None:
             proc.terminate()
             proc.wait()
 
-        # Finalizamos la ejecución del script actual
         sys.exit(0)
-        
+
     except subprocess.CalledProcessError as error:
         messagebox.showerror("Error", f"Error al ejecutar el protocolo {protocolo}.\nDetalles: {error}")
     except Exception as err:
         messagebox.showerror("Error", f"Ocurrió un error inesperado:\n{err}")
 
-# Configuración de la ventana principal
+# ---------------- INTERFAZ ----------------
 root = tk.Tk()
-root.title("Selector de Protocolo")
+root.title("ChatQKD - Servidor")
 
-# Creación y ubicación de los componentes (widgets)
 frame = ttk.Frame(root, padding=20)
 frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
 
-# Etiqueta para la selección del protocolo
-label_proto = ttk.Label(frame, text="Seleccione un protocolo:")
-label_proto.grid(row=0, column=0, pady=5, sticky=tk.W)
-
-# Combobox para seleccionar el protocolo
+# Protocolo
+ttk.Label(frame, text="Seleccione un protocolo:").grid(row=0, column=0, pady=5, sticky=tk.W)
 combo = ttk.Combobox(frame, values=list(protocol_files.keys()), state="readonly")
-combo.set("BB84")  # Valor por defecto
+combo.set("SARG04")
 combo.grid(row=1, column=0, pady=5, sticky=tk.W)
 
-# Etiqueta y campo para introducir el número
-label_num = ttk.Label(frame, text="Ingrese el número de qubits a enviar:")
-label_num.grid(row=2, column=0, pady=(15, 5), sticky=tk.W)
+# Nivel de seguridad
+ttk.Label(frame, text="Seleccione el nivel de seguridad:").grid(row=2, column=0, pady=(15, 5), sticky=tk.W)
+combo_qubits = ttk.Combobox(frame, values=list(security_levels.keys()), state="readonly")
+combo_qubits.set("Medio")
+combo_qubits.grid(row=3, column=0, pady=5, sticky=tk.W)
+combo_qubits.bind("<<ComboboxSelected>>", actualizar_qubits)
 
+# Número de qubits editable
+ttk.Label(frame, text="Cantidad de qubits a enviar (puede editarse):").grid(row=4, column=0, pady=(15, 5), sticky=tk.W)
 entry_num = ttk.Entry(frame, width=20)
-entry_num.insert(0, "100")  # Valor por defecto
-entry_num.grid(row=3, column=0, pady=5, sticky=tk.W)
+entry_num.insert(0, str(security_levels["Medio"]))  # Inicializa con "Medio"
+entry_num.grid(row=5, column=0, pady=5, sticky=tk.W)
 
-# Botón para ejecutar el protocolo seleccionado
-button = ttk.Button(frame, text="Ejecutar", command=ejecutar_protocolo)
-button.grid(row=4, column=0, pady=15, sticky=tk.W)
+# IP del servidor
+ttk.Label(frame, text="IP del servidor (deja en blanco para localhost):").grid(row=6, column=0, pady=(15, 5), sticky=tk.W)
+ip_entry = ttk.Entry(frame, width=20)
+ip_entry.insert(0, "")
+ip_entry.grid(row=7, column=0, pady=5, sticky=tk.W)
 
-# Inicia el bucle principal de la GUI
+# Botón ejecutar
+ttk.Button(frame, text="Ejecutar", command=ejecutar_protocolo).grid(row=8, column=0, pady=15, sticky=tk.W)
+
+# Autoría
+ttk.Label(frame, text="Creado por Daniel Bensa Expósito Paz", foreground="gray").grid(row=9, column=0, pady=(10, 5), sticky=tk.W)
+
+# Llamar a actualización inicial
+actualizar_qubits()
+
+# Inicia la GUI
 root.mainloop()
