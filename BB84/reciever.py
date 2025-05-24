@@ -7,6 +7,8 @@ from qiskit import transpile
 from qiskit_aer import Aer
 from Crypto.Cipher import AES
 import hashlib
+import os
+from tkinter import filedialog
 from datetime import datetime
 import tkinter as tk
 
@@ -219,7 +221,22 @@ def start_receiver():
         aes_key = derive_aes_key(shared_key.tobytes())
         print("Clave AES derivada:", aes_key.hex())
     
-        data = client_socket2.recv(1024)  # Tamaño del buffer (ajústalo según sea necesario)
+        data_length = client_socket2.recv(4)
+        if not data_length:
+            print("No se recibió la longitud de los datos")
+            return
+        data_length = struct.unpack('!I', data_length)[0]
+        print(f"Longitud de los datos recibidos: {data_length} bytes")
+
+        data = b""
+        while len(data) < data_length:
+            packet = client_socket2.recv(4096)
+            if not packet:
+                break
+            data += packet
+
+
+        
         array_aeskey_and_message = pickle.loads(data)
 
         # Extraer la clave AES y el mensaje cifrado
@@ -238,6 +255,33 @@ def start_receiver():
        
                     # Ahora, vamos a permitir que Alice y Bob se envíen mensajes cifrados
   # Ahora, vamos a permitir que Alice y Bob se envíen mensajes cifrados
+  
+        def send_file():
+            filepath = filedialog.askopenfilename()
+            if not filepath:
+                print("No se seleccionó ningún archivo.")
+                return
+                
+            with open(filepath, "rb") as f:
+                file_data = f.read()
+
+            file_name = os.path.basename(filepath)
+                
+                # Indicador especial que es un archivo + nombre del archivo
+            file_packet = {
+                "type": "file",
+                "filename": os.path.basename(filepath),
+                "data": encrypt_message(file_data, aes_key)  # Debe ser una tupla (ciphertext, tag, nonce)
+            }
+            print(f"Tamaño del archivo cifrado: {len(pickle.dumps(file_packet))} bytes")
+
+            data_pickle = pickle.dumps(file_packet)
+            data_length = struct.pack('!I', len(data_pickle))  # 4 bytes indicando el tamaño
+            client_socket2.sendall(data_length)  # Enviar el tamaño del archivo
+            client_socket2.sendall(data_pickle)
+            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            display_message(f"Yo    - {timestamp}: Archivo enviado: {file_name}")
+
         def send_message():
             message = message_entry.get()
             message = message.encode()
@@ -247,27 +291,68 @@ def start_receiver():
             else:
                 encrypted_message = encrypt_message(message, aes_key)
                 array_message = encrypted_message
+                data_length = struct.pack('!I', len(array_message))  # 4 bytes indicando el tamaño
+                client_socket2.sendall(data_length)  # Enviar el tamaño del mensaje
+
                 client_socket2.sendall(pickle.dumps(array_message))
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 display_message(f"Yo    - {timestamp}: {message.decode('utf-8')}")
                 print(f"Mensaje enviado: {message.decode('utf-8')}")
+                message_entry.delete(0, tk.END)
 
+
+       
         def receive_messages():
             while True:
                 try:
-                    data = client_socket2.recv(1024)
+                        
+                        
+                        
                     
-                    if not data:
-                        break
+                    
+                        
                  
-                    array_message = pickle.loads(data)
-                    encrypted_message_received = array_message
-                    print(encrypted_message_received)
-                    ciphertext, tag, nonce = encrypted_message_received
-                    
-                    decrypted_message = decrypt_message(ciphertext, aes_key, tag, nonce)
+                    data_length = client_socket2.recv(4)
+                    if not data_length:
+                        print("No se recibió la longitud de los datos")
+                        return
+                    data_length = struct.unpack('!I', data_length)[0]
+                    print(f"Longitud de los datos recibidos: {data_length} bytes")
+
+                    data = b""
+                    while len(data) < data_length:
+                        packet = client_socket2.recv(4096)
+                        if not packet:
+                            break
+                        data += packet
+
+                        
+                       
+                    message_data = pickle.loads(data)
                     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                    display_message(f"Alice - {timestamp}: {decrypted_message}")
+                    if isinstance(message_data, dict) and message_data.get("type") == "file":
+                        # Manejar archivo recibido
+                        ciphertext, tag, nonce = message_data["data"]
+                        print(f"Recibiendo archivo cifrado: {type(ciphertext)}")
+                        decrypted_data = decrypt_message(ciphertext, aes_key, tag, nonce)
+                        filename = message_data["filename"]
+                        # Guardar el archivo (por ejemplo, en el directorio actual)
+                        
+                        f = open(f"recibido_{filename}", "w")
+                        f.write(decrypted_data)
+                        f.close()
+                        display_message(f"Alice - {timestamp}: Archivo recibido: {filename}")
+                    
+
+                    else:
+                        
+                        encrypted_message_received = message_data
+                        print(encrypted_message_received)
+                        ciphertext, tag, nonce = encrypted_message_received
+                        decrypted_message = decrypt_message(ciphertext, aes_key, tag, nonce)
+                        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                        display_message(f"Alice - {timestamp}: {decrypted_message}")
+                        print(f"Mensaje recibido: {decrypted_message}")
                 except Exception as e:
                     print(f"Error al recibir mensaje: {e}")
                     break
@@ -277,7 +362,7 @@ def start_receiver():
             message_display.insert(tk.END, message + "\n")
             message_display.config(state=tk.DISABLED)
             message_display.see(tk.END)
-
+        
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         
         receive_thread = threading.Thread(target=receive_messages)
@@ -287,11 +372,7 @@ def start_receiver():
         root.title("Bob - Enviar Mensaje")
 
         
-
         
-
-        send_button = tk.Button(root, text="Enviar", command=send_message)
-        send_button.pack(pady=20)
 
         message_display = tk.Text(root, state=tk.DISABLED, width=50, height=15)
         message_display.pack(pady=10)
@@ -303,7 +384,14 @@ def start_receiver():
 
         message_entry = tk.Entry(root, width=50)
         message_entry.pack(pady=10)
-
+        
+        send_button = tk.Button(root, text="Enviar", command=send_message)
+        send_button.pack(pady=20)
+        send_file_button = tk.Button(root, text="Enviar Archivo", command=send_file)
+        send_file_button.pack(pady=5)
+        author_label = tk.Label(root, text="Creado por Daniel Bensa Expósito Paz", font=("Arial", 11), fg="gray")
+        author_label.pack(side="bottom", pady=5)
+        
         def quit_and_close():
             root.destroy()
             client_socket2.close()

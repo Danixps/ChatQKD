@@ -84,7 +84,7 @@ def ejecutar_protocolo():
                 break
             except socket.error as e:
                 print(f"[ERROR] No se pudo conectar a {ip}:59001. Reintentando... ({reintento + 1}/{max_reintentos})")
-                time.sleep(1)
+                time.sleep(2)
                 reintento += 1
         # Si no se pudo conectar después de varios intentos, abortar
     
